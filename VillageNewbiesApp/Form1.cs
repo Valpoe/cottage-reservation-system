@@ -13,6 +13,8 @@ namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
+        // Formin reunojen pyöristys
+        
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn
@@ -24,23 +26,44 @@ namespace VillageNewbiesApp
         int nWidthEllipse,
         int nHeightEllipse
     );
+       
         public Form1()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        // Buttonin taustavärin vaihto ja otsikon tekstin vaihto
+        private void ChangeColor(Button button)
+        {
+            panelNavigation.Visible = true;
+            labelOtsikko.Visible = true;
+            panelNavigation.Height = button.Height;
+            panelNavigation.Top = button.Top;
+            button.BackColor = Color.FromArgb(46, 51, 73);
+            labelOtsikko.Text = button.Text;
+        }
+
+        // Buttonin taustavärin vaihto takaisin
+        private void ChangeColorLeave(Button button)
+        {
+            button.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void btnAlueet_Click(object sender, EventArgs e)
         {
-            pnlNavigation.Height = btnAlueet.Height;
-            pnlNav.Top = btnAlueet.Top;
-            pnlNav.Left = btnAlueet.Left;
-            btnAlueet.BackColor = Color.FromArgb(46, 51, 73);
+            
+            ChangeColor(sender as Button);
+        }
+
+        private void btnAlueet_Leave(object sender, EventArgs e)
+        {
+            ChangeColorLeave(sender as Button);
         }
     }
 }
