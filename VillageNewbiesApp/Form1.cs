@@ -30,14 +30,16 @@ namespace VillageNewbiesApp
         public Form1()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));         
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));      
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
-
+        // mikko
+        //anttu
+        // mikko
         // Buttonin taustavärin vaihto ja otsikon tekstin vaihto
         private void ChangeColor(Button button)
         {
@@ -45,14 +47,14 @@ namespace VillageNewbiesApp
             labelOtsikko.Visible = true;
             panelNavigation.Height = button.Height;
             panelNavigation.Top = button.Top;
-            button.BackColor = Color.FromArgb(46, 51, 73);
+            button.BackColor = Color.DimGray;
             labelOtsikko.Text = button.Text;
         }
 
         // Buttonin taustavärin vaihto takaisin
         private void ChangeColorLeave(Button button)
         {
-            button.BackColor = Color.FromArgb(24, 30, 54);
+            button.BackColor = Color.FromArgb(69,69,69);
         }
 
         private void btnAlueet_Click(object sender, EventArgs e)
@@ -63,6 +65,21 @@ namespace VillageNewbiesApp
         private void btnAlueet_Leave(object sender, EventArgs e)
         {
             ChangeColorLeave(sender as Button);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
