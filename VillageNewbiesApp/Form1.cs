@@ -38,6 +38,7 @@ namespace VillageNewbiesApp
             
         }
         // mikko
+        //anttu
         // Buttonin taustavärin vaihto ja otsikon tekstin vaihto
         private void ChangeColor(Button button)
         {
