@@ -57,7 +57,6 @@ namespace VillageNewbiesApp
 
         private void btnAlueet_Click(object sender, EventArgs e)
         {
-            
             ChangeColor(sender as Button);
         }
 
