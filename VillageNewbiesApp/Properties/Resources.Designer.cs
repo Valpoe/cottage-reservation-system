@@ -63,9 +63,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Asiakkaat35x35 {
+        internal static System.Drawing.Bitmap AsiakkaatIcon {
             get {
-                object obj = ResourceManager.GetObject("Asiakkaat35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("AsiakkaatIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Home {
+        internal static System.Drawing.Bitmap EtusivuIcon {
             get {
-                object obj = ResourceManager.GetObject("Home", resourceCulture);
+                object obj = ResourceManager.GetObject("EtusivuIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Laskut35x35 {
+        internal static System.Drawing.Bitmap exit25x25 {
             get {
-                object obj = ResourceManager.GetObject("Laskut35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("exit25x25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Loc35x35 {
+        internal static System.Drawing.Bitmap LaskutusIcon {
             get {
-                object obj = ResourceManager.GetObject("Loc35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("LaskutusIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Palvelut35x35 {
+        internal static System.Drawing.Bitmap LocationIcon {
             get {
-                object obj = ResourceManager.GetObject("Palvelut35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("LocationIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Raportit35x35 {
+        internal static System.Drawing.Bitmap maximize25x25 {
             get {
-                object obj = ResourceManager.GetObject("Raportit35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("maximize25x25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,59 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Varaukset35x35 {
+        internal static System.Drawing.Bitmap minimize25x251 {
             get {
-                object obj = ResourceManager.GetObject("Varaukset35x35", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize25x251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NapsuSoftware {
+            get {
+                object obj = ResourceManager.GetObject("NapsuSoftware", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PalvelutIcon {
+            get {
+                object obj = ResourceManager.GetObject("PalvelutIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RaportitIcon {
+            get {
+                object obj = ResourceManager.GetObject("RaportitIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VarauksetIcon {
+            get {
+                object obj = ResourceManager.GetObject("VarauksetIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VillageNewbiesLogo {
+            get {
+                object obj = ResourceManager.GetObject("VillageNewbiesLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

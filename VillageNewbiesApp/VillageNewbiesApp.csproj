@@ -67,10 +67,74 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAlueet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlueet.Designer.cs">
+      <DependentUpon>frmAlueet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsiakkaat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsiakkaat.Designer.cs">
+      <DependentUpon>frmAsiakkaat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEtusivu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEtusivu.Designer.cs">
+      <DependentUpon>frmEtusivu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLaskutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLaskutus.Designer.cs">
+      <DependentUpon>frmLaskutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalvelut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalvelut.Designer.cs">
+      <DependentUpon>frmPalvelut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRaportit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaportit.Designer.cs">
+      <DependentUpon>frmRaportit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVaraukset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVaraukset.Designer.cs">
+      <DependentUpon>frmVaraukset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainFormToiminnallisuus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlueet.resx">
+      <DependentUpon>frmAlueet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsiakkaat.resx">
+      <DependentUpon>frmAsiakkaat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEtusivu.resx">
+      <DependentUpon>frmEtusivu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLaskutus.resx">
+      <DependentUpon>frmLaskutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalvelut.resx">
+      <DependentUpon>frmPalvelut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaportit.resx">
+      <DependentUpon>frmRaportit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVaraukset.resx">
+      <DependentUpon>frmVaraukset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,27 +172,40 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Raportit35x35.png" />
+    <None Include="Resources\maximize25x25.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Asiakkaat35x35.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <None Include="Resources\minimize25x251.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Laskut35x35.png" />
+    <None Include="Resources\exit25x25.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Varaukset35x35.png" />
+    <None Include="Resources\VillageNewbiesLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Palvelut35x35.png" />
+    <None Include="Resources\AsiakkaatIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Loc35x35.png" />
+    <None Include="Resources\LocationIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Home.png" />
+    <None Include="Resources\PalvelutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VarauksetIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaskutusIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RaportitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EtusivuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NapsuSoftware.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,73 +13,100 @@ namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
-        // Formin reunojen pyöristys
-        
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
-        private static extern IntPtr CreateRoundRectRgn
-    (
-        int nLeftRect,
-        int nTopRect,
-        int nRightRect,
-        int nBottomRect,
-        int nWidthEllipse,
-        int nHeightEllipse
-    );
-       
+        // Dictionary kaikille formeille
+
+        private Dictionary<string, System.Windows.Forms.Form> screens = new Dictionary<string, System.Windows.Forms.Form>();
+
         public Form1()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));      
+            Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            screens.Add("Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
+            screens.Add("Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
-        // mikko
-        //anttu
-        // mikko
-        // Buttonin taustavärin vaihto ja otsikon tekstin vaihto
-        private void ChangeColor(Button button)
+
+        // Eri formien avaus paneeliin
+        private void loadPanel(string otsikko)
+        {
+            System.Windows.Forms.Form form = screens[otsikko];
+            this.panelFormLoader.Controls.Clear();
+            this.panelFormLoader.Controls.Add(form);
+            form.Show();
+        }
+        // Navigointipalkin siirto ja otsikon tekstin vaihto
+        private void ChangeNavbarAndTitle(Button button)
         {
             panelNavigation.Visible = true;
             labelOtsikko.Visible = true;
             panelNavigation.Height = button.Height;
             panelNavigation.Top = button.Top;
-            button.BackColor = Color.DimGray;
             labelOtsikko.Text = button.Text;
-        }
-
-        // Buttonin taustavärin vaihto takaisin
-        private void ChangeColorLeave(Button button)
-        {
-            button.BackColor = Color.FromArgb(69,69,69);
         }
 
         private void btnAlueet_Click(object sender, EventArgs e)
         {
-            ChangeColor(sender as Button);
+            ChangeNavbarAndTitle(sender as Button);
+            loadPanel(labelOtsikko.Text);
         }
-
-        private void btnAlueet_Leave(object sender, EventArgs e)
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            ChangeColorLeave(sender as Button);
+            if (e.Button == MouseButtons.Left)
+            {
+                mainFormToiminnallisuus.ReleaseCapture();
+                mainFormToiminnallisuus.SendMessage(Handle, mainFormToiminnallisuus.WM_NCLBUTTONDOWN, mainFormToiminnallisuus.HT_CAPTION, 0);
+            }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbMaximize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void mouseHover(PictureBox pictureBox)
         {
-            WindowState = FormWindowState.Maximized;
+            pictureBox.Size = new Size(32, 32);
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void mouseLeave(PictureBox pictureBox)
         {
-            WindowState = FormWindowState.Minimized;
+            pictureBox.Size = new Size(25, 25);
+        }
+        private void pbMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHover(sender as PictureBox);
+        }
+
+        private void pbMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            mouseLeave(sender as PictureBox);
         }
     }
 }
