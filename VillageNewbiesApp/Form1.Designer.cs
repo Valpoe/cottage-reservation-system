@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelNavigation = new System.Windows.Forms.Panel();
-            this.panelTopLeft = new System.Windows.Forms.Panel();
-            this.panelFormLoader = new System.Windows.Forms.Panel();
-            this.labelOtsikko = new System.Windows.Forms.Label();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pbMaximize = new System.Windows.Forms.PictureBox();
-            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelNavigation = new System.Windows.Forms.Panel();
             this.btnRaportit = new System.Windows.Forms.Button();
             this.btnLaskut = new System.Windows.Forms.Button();
             this.btnAsiakkaat = new System.Windows.Forms.Button();
@@ -44,14 +38,20 @@
             this.btnPalvelut = new System.Windows.Forms.Button();
             this.btnAlueet = new System.Windows.Forms.Button();
             this.btnEtusivu = new System.Windows.Forms.Button();
+            this.panelTopLeft = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelFormLoader = new System.Windows.Forms.Panel();
+            this.labelOtsikko = new System.Windows.Forms.Label();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pbMaximize = new System.Windows.Forms.PictureBox();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTopLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -73,84 +73,6 @@
             this.panelLeft.Size = new System.Drawing.Size(186, 577);
             this.panelLeft.TabIndex = 0;
             // 
-            // panelNavigation
-            // 
-            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.panelNavigation.Location = new System.Drawing.Point(0, 193);
-            this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(3, 100);
-            this.panelNavigation.TabIndex = 1;
-            this.panelNavigation.Visible = false;
-            // 
-            // panelTopLeft
-            // 
-            this.panelTopLeft.Controls.Add(this.pictureBox2);
-            this.panelTopLeft.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelTopLeft.Name = "panelTopLeft";
-            this.panelTopLeft.Size = new System.Drawing.Size(186, 144);
-            this.panelTopLeft.TabIndex = 1;
-            // 
-            // panelFormLoader
-            // 
-            this.panelFormLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFormLoader.Location = new System.Drawing.Point(186, 100);
-            this.panelFormLoader.Name = "panelFormLoader";
-            this.panelFormLoader.Size = new System.Drawing.Size(765, 477);
-            this.panelFormLoader.TabIndex = 1;
-            // 
-            // labelOtsikko
-            // 
-            this.labelOtsikko.AutoSize = true;
-            this.labelOtsikko.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOtsikko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.labelOtsikko.Location = new System.Drawing.Point(222, 32);
-            this.labelOtsikko.Name = "labelOtsikko";
-            this.labelOtsikko.Size = new System.Drawing.Size(221, 37);
-            this.labelOtsikko.TabIndex = 0;
-            this.labelOtsikko.Text = "Toiminta-alueet";
-            this.labelOtsikko.Visible = false;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Image = global::VillageNewbiesApp.Properties.Resources.exit25x25;
-            this.pbExit.Location = new System.Drawing.Point(914, 12);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(25, 25);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbExit.TabIndex = 5;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            this.pbExit.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
-            this.pbExit.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
-            // 
-            // pbMaximize
-            // 
-            this.pbMaximize.Image = global::VillageNewbiesApp.Properties.Resources.maximize25x25;
-            this.pbMaximize.Location = new System.Drawing.Point(883, 12);
-            this.pbMaximize.Name = "pbMaximize";
-            this.pbMaximize.Size = new System.Drawing.Size(25, 25);
-            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbMaximize.TabIndex = 4;
-            this.pbMaximize.TabStop = false;
-            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
-            this.pbMaximize.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
-            this.pbMaximize.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
-            // 
-            // pbMinimize
-            // 
-            this.pbMinimize.Image = global::VillageNewbiesApp.Properties.Resources.minimize25x251;
-            this.pbMinimize.Location = new System.Drawing.Point(852, 12);
-            this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(25, 25);
-            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbMinimize.TabIndex = 0;
-            this.pbMinimize.TabStop = false;
-            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
-            this.pbMinimize.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
-            this.pbMinimize.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.NapsuSoftware;
@@ -160,6 +82,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelNavigation
+            // 
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.panelNavigation.Location = new System.Drawing.Point(0, 193);
+            this.panelNavigation.Name = "panelNavigation";
+            this.panelNavigation.Size = new System.Drawing.Size(3, 100);
+            this.panelNavigation.TabIndex = 1;
             // 
             // btnRaportit
             // 
@@ -301,6 +231,15 @@
             this.btnEtusivu.UseVisualStyleBackColor = true;
             this.btnEtusivu.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
+            // panelTopLeft
+            // 
+            this.panelTopLeft.Controls.Add(this.pictureBox2);
+            this.panelTopLeft.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelTopLeft.Name = "panelTopLeft";
+            this.panelTopLeft.Size = new System.Drawing.Size(186, 144);
+            this.panelTopLeft.TabIndex = 1;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::VillageNewbiesApp.Properties.Resources.VillageNewbiesLogo;
@@ -310,6 +249,65 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // panelFormLoader
+            // 
+            this.panelFormLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelFormLoader.Location = new System.Drawing.Point(186, 100);
+            this.panelFormLoader.Name = "panelFormLoader";
+            this.panelFormLoader.Size = new System.Drawing.Size(765, 477);
+            this.panelFormLoader.TabIndex = 1;
+            // 
+            // labelOtsikko
+            // 
+            this.labelOtsikko.AutoSize = true;
+            this.labelOtsikko.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOtsikko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.labelOtsikko.Location = new System.Drawing.Point(222, 32);
+            this.labelOtsikko.Name = "labelOtsikko";
+            this.labelOtsikko.Size = new System.Drawing.Size(221, 37);
+            this.labelOtsikko.TabIndex = 0;
+            this.labelOtsikko.Text = "Toiminta-alueet";
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = global::VillageNewbiesApp.Properties.Resources.exit25x25;
+            this.pbExit.Location = new System.Drawing.Point(914, 12);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(25, 25);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbExit.TabIndex = 5;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            this.pbExit.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
+            this.pbExit.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
+            // 
+            // pbMaximize
+            // 
+            this.pbMaximize.Image = global::VillageNewbiesApp.Properties.Resources.maximize25x25;
+            this.pbMaximize.Location = new System.Drawing.Point(883, 12);
+            this.pbMaximize.Name = "pbMaximize";
+            this.pbMaximize.Size = new System.Drawing.Size(25, 25);
+            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMaximize.TabIndex = 4;
+            this.pbMaximize.TabStop = false;
+            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
+            this.pbMaximize.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
+            this.pbMaximize.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.Image = global::VillageNewbiesApp.Properties.Resources.minimize25x251;
+            this.pbMinimize.Location = new System.Drawing.Point(852, 12);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(25, 25);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMinimize.TabIndex = 0;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            this.pbMinimize.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
+            this.pbMinimize.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
             // 
             // Form1
             // 
@@ -328,14 +326,15 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panelLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTopLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,7 +351,6 @@
         private System.Windows.Forms.Button btnVaraukset;
         private System.Windows.Forms.Button btnPalvelut;
         private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.Panel panelFormLoader;
         private System.Windows.Forms.Label labelOtsikko;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbMaximize;
@@ -360,6 +358,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnEtusivu;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel panelFormLoader;
     }
 }
 

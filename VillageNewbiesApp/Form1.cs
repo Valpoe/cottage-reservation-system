@@ -13,51 +13,36 @@ namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
-
-        // Dictionary kaikille formeille
-
-        private Dictionary<string, System.Windows.Forms.Form> screens = new Dictionary<string, System.Windows.Forms.Form>();
-
+        mainFormToiminnallisuus toiminnallisuus = new mainFormToiminnallisuus();
+ 
         public Form1()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            screens.Add("Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
-            screens.Add("Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true });
         }
 
+        // Kotisivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panelNavigation.Height = btnEtusivu.Height;
+            panelNavigation.Top = btnEtusivu.Top;
+            labelOtsikko.Text = "Etusivu";
+            this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Etusivu"]);
+            toiminnallisuus.screens["Etusivu"].Show();
         }
 
-        // Eri formien avaus paneeliin
-        private void loadPanel(string otsikko)
-        {
-            System.Windows.Forms.Form form = screens[otsikko];
-            this.panelFormLoader.Controls.Clear();
-            this.panelFormLoader.Controls.Add(form);
-            form.Show();
-        }
         // Navigointipalkin siirto ja otsikon tekstin vaihto
         private void ChangeNavbarAndTitle(Button button)
         {
-            panelNavigation.Visible = true;
-            labelOtsikko.Visible = true;
             panelNavigation.Height = button.Height;
             panelNavigation.Top = button.Top;
             labelOtsikko.Text = button.Text;
         }
-
+        
         private void btnAlueet_Click(object sender, EventArgs e)
         {
             ChangeNavbarAndTitle(sender as Button);
-            loadPanel(labelOtsikko.Text);
+            toiminnallisuus.loadScreen(labelOtsikko.Text, this);
         }
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {

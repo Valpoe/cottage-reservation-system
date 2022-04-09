@@ -8,8 +8,31 @@ using System.Windows.Forms;
 
 namespace VillageNewbiesApp
 {
+    
     internal class mainFormToiminnallisuus
     {
+        // Luodaan dictionary ja lisätään sinne kaikki formit
+        
+        public Dictionary<string, System.Windows.Forms.Form> screens = new Dictionary<string, System.Windows.Forms.Form>()
+        {
+            { "Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } }
+        };
+
+        // Formien avaus paneeliin
+        public void loadScreen(string name, Form1 form1)
+        {
+                System.Windows.Forms.Form form = screens[name];
+                form1.panelFormLoader.Controls.Clear();
+                form1.panelFormLoader.Controls.Add(screens[name]);
+                screens[name].Show();
+        }
+        
         // Formin liikuttelu hiirellä
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
