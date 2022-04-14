@@ -185,7 +185,7 @@
             this.btnPalvelut.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPalvelut.Size = new System.Drawing.Size(186, 45);
             this.btnPalvelut.TabIndex = 2;
-            this.btnPalvelut.Text = "Palvelut";
+            this.btnPalvelut.Text = "Mökit ja Palvelut";
             this.btnPalvelut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPalvelut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnPalvelut.UseVisualStyleBackColor = true;
