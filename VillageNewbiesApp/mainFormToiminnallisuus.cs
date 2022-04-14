@@ -17,7 +17,7 @@ namespace VillageNewbiesApp
         {
             { "Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
-            { "Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Mökit ja Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
