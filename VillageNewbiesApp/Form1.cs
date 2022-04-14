@@ -37,6 +37,7 @@ namespace VillageNewbiesApp
             labelOtsikko.Text = "Etusivu";
             this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Etusivu"]);
             toiminnallisuus.screens["Etusivu"].Show();
+            btnEtusivu.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
         }
   
         private void btnAlueet_Click(object sender, EventArgs e)

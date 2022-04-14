@@ -15,22 +15,31 @@ namespace VillageNewbiesApp
         
         public Dictionary<string, System.Windows.Forms.Form> screens = new Dictionary<string, System.Windows.Forms.Form>()
         {
-            { "Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } },
-            { "Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = false } }
+            { "Etusivu", new frmEtusivu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Toiminta-alueet", new frmAlueet() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Palvelut", new frmPalvelut() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
+            { "Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } }
         };
         
-        // Formien avaus paneeliin
+        // Formien avaus paneeliin ja button värin vaihto
         public void loadScreen(string name, Form1 form1, Button button)
         {
             System.Windows.Forms.Form form = screens[name];
             form1.panelFormLoader.Controls.Clear();
             form1.panelFormLoader.Controls.Add(screens[name]);
             screens[name].Show();
+            button.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
+
+            foreach (Button bt in button.Parent.Controls.OfType<Button>())
+            {
+                if (bt.Name != button.Name)
+                {
+                    bt.BackColor = System.Drawing.Color.FromArgb(24, 30, 54);
+                }
+            }
         }
 
         // Navigointipalkin siirto ja otsikon vaihto
