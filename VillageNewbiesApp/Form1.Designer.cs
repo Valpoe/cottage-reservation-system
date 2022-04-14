@@ -350,8 +350,6 @@
         private System.Windows.Forms.Button btnAsiakkaat;
         private System.Windows.Forms.Button btnVaraukset;
         private System.Windows.Forms.Button btnPalvelut;
-        private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.Label labelOtsikko;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.PictureBox pbExit;
@@ -359,6 +357,8 @@
         private System.Windows.Forms.Button btnEtusivu;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelFormLoader;
+        public System.Windows.Forms.Panel panelNavigation;
+        public System.Windows.Forms.Label labelOtsikko;
     }
 }
 
