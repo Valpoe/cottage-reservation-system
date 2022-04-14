@@ -29,26 +29,49 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.mlvVaraukset = new MaterialSkin.Controls.MaterialListView();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "VARAUKSET";
             // 
+            // mlvVaraukset
+            // 
+            this.mlvVaraukset.AutoSizeTable = false;
+            this.mlvVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mlvVaraukset.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvVaraukset.Depth = 0;
+            this.mlvVaraukset.FullRowSelect = true;
+            this.mlvVaraukset.HideSelection = false;
+            this.mlvVaraukset.Location = new System.Drawing.Point(48, 87);
+            this.mlvVaraukset.MinimumSize = new System.Drawing.Size(200, 100);
+            this.mlvVaraukset.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvVaraukset.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvVaraukset.Name = "mlvVaraukset";
+            this.mlvVaraukset.OwnerDraw = true;
+            this.mlvVaraukset.Size = new System.Drawing.Size(335, 440);
+            this.mlvVaraukset.TabIndex = 1;
+            this.mlvVaraukset.UseCompatibleStateImageBehavior = false;
+            this.mlvVaraukset.View = System.Windows.Forms.View.Details;
+            // 
             // frmVaraukset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(765, 477);
+            this.ClientSize = new System.Drawing.Size(1020, 587);
+            this.Controls.Add(this.mlvVaraukset);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVaraukset";
             this.Text = "frmVaraukset";
             this.ResumeLayout(false);
@@ -59,5 +82,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialListView mlvVaraukset;
     }
 }
