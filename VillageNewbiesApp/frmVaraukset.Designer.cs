@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.mlvVaraukset = new MaterialSkin.Controls.MaterialListView();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -48,6 +51,9 @@
             this.mlvVaraukset.AutoSizeTable = false;
             this.mlvVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mlvVaraukset.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvVaraukset.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.mlvVaraukset.Depth = 0;
             this.mlvVaraukset.FullRowSelect = true;
             this.mlvVaraukset.HideSelection = false;
@@ -62,16 +68,33 @@
             this.mlvVaraukset.UseCompatibleStateImageBehavior = false;
             this.mlvVaraukset.View = System.Windows.Forms.View.Details;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(579, 87);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 2;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Asiakas";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Varaus";
+            this.columnHeader2.Width = 100;
+            // 
             // frmVaraukset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1020, 587);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.mlvVaraukset);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVaraukset";
             this.Text = "frmVaraukset";
             this.ResumeLayout(false);
@@ -83,5 +106,8 @@
 
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialListView mlvVaraukset;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
