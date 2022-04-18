@@ -31,8 +31,10 @@ namespace VillageNewbiesApp
             return connectionString;
         }
 
-        public void SQLselectAll(string select)
+        public List<string> SQLselectAllbyName(string select)
         {
+
+            List<string> SQLResult = new List<string>();
 
             using (MySqlConnection connection = GetConnection())
             {
@@ -42,11 +44,17 @@ namespace VillageNewbiesApp
 
                 while (Reader.Read())
                 {
-                    MessageBox.Show(Reader.GetString(Reader.GetOrdinal("etunimi")));
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("etunimi")));
                 }
             }
 
             Console.WriteLine("connection closed");
+
+            foreach(string a in SQLResult)
+            {
+                MessageBox.Show(a);
+            }
+            return SQLResult;
         }
     }
 
