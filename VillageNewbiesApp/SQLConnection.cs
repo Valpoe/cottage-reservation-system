@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySqlConnector;
 using System;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Collections.Generic;
+using System.Text;
 using System.Windows.Forms;
-using MySqlConnector;
 
 namespace VillageNewbiesApp
 {
@@ -56,11 +50,9 @@ namespace VillageNewbiesApp
                 }
             }
 
+            Console.WriteLine("connection closed");
 
-
-                Console.WriteLine("connection closed");
-
-            foreach(string a in SQLResult)
+            foreach (string a in SQLResult)
             {
                 //MessageBox.Show(a);
             }
@@ -70,6 +62,20 @@ namespace VillageNewbiesApp
 
         public void SQLinsertCustomer(Asiakas asiakas)
         {
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                MySqlCommand command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka)" +
+                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetPostitoimipaikka() + "')", connection);
+
+                MySqlCommand command2 = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro)" +
+                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetEtunimi() + "','" + asiakas.GetSukunimi() + "','" + asiakas.GetOsoite() + "','" + asiakas.GetEmail() + "','" + asiakas.GetPuhnro() + "')", connection);
+
+                command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+            }
+        }
         public List<string> SQLselectAllAlueet()
         {
 
@@ -93,27 +99,6 @@ namespace VillageNewbiesApp
 
             return SQLResult;
         }
-
-            public void SQLinsertCustormer()
-            {
-                using (MySqlConnection connection = GetConnection())
-                {
-                    Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-
-                MySqlCommand command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka)" +
-                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetPostitoimipaikka() + "')", connection);
-
-                MySqlCommand command2 = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro)" +
-                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetEtunimi() + "','" + asiakas.GetSukunimi() + "','" + asiakas.GetOsoite() + "','" + asiakas.GetEmail() + "','" + asiakas.GetPuhnro() + "')", connection);               
-
-
-                command.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
-                  
-            }
-        }
-        
     }
-
-
 }
+

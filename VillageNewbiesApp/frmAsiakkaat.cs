@@ -13,20 +13,20 @@ namespace VillageNewbiesApp
 {
     public partial class frmAsiakkaat : Form
     {
+        SQLConnection mySQL = new SQLConnection();
         public frmAsiakkaat()
         {
             InitializeComponent();
 
 
             //initialize asiakkaat from tietokanta
-            SQLConnection mySQL = new SQLConnection();
-
+            
             List<string> asiakaslista = mySQL.SQLselectAllbyName("asiakas");
 
             foreach(string asiakas in asiakaslista)
             {
                 //MessageBox.Show(asiakas);
-                materialListView1.Items.Add(asiakas);
+                mlvAsiakkaat.Items.Add(asiakas);
             }
             
         }
@@ -49,7 +49,6 @@ namespace VillageNewbiesApp
         {
             Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text, tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
             MessageBox.Show(asiakas.GetEtunimi());
-            SQLConnection mySQL = new SQLConnection();
             mySQL.SQLinsertCustomer(asiakas);
 
         }
