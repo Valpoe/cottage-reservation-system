@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
-            "mikko"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
             this.btnLisaa = new MaterialSkin.Controls.MaterialButton();
             this.btnTyhjenna = new MaterialSkin.Controls.MaterialButton();
             this.tbSukunimi = new MaterialSkin.Controls.MaterialTextBox();
@@ -54,6 +52,8 @@
             this.columnSahkoposti = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnPuhNro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbPostiNumero = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbPostitoimipaikka = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // btnLisaa
@@ -64,7 +64,7 @@
             this.btnLisaa.Depth = 0;
             this.btnLisaa.HighEmphasis = true;
             this.btnLisaa.Icon = null;
-            this.btnLisaa.Location = new System.Drawing.Point(116, 267);
+            this.btnLisaa.Location = new System.Drawing.Point(116, 351);
             this.btnLisaa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLisaa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLisaa.Name = "btnLisaa";
@@ -75,7 +75,7 @@
             this.btnLisaa.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLisaa.UseAccentColor = false;
             this.btnLisaa.UseVisualStyleBackColor = true;
-            this.btnLisaa.Click += new System.EventHandler(this.materialButton1_Click);
+            this.btnLisaa.Click += new System.EventHandler(this.btnLisaa_Click);
             // 
             // btnTyhjenna
             // 
@@ -84,7 +84,7 @@
             this.btnTyhjenna.Depth = 0;
             this.btnTyhjenna.HighEmphasis = true;
             this.btnTyhjenna.Icon = null;
-            this.btnTyhjenna.Location = new System.Drawing.Point(13, 266);
+            this.btnTyhjenna.Location = new System.Drawing.Point(12, 350);
             this.btnTyhjenna.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnTyhjenna.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTyhjenna.Name = "btnTyhjenna";
@@ -95,6 +95,7 @@
             this.btnTyhjenna.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTyhjenna.UseAccentColor = true;
             this.btnTyhjenna.UseVisualStyleBackColor = true;
+            this.btnTyhjenna.Click += new System.EventHandler(this.btnTyhjenna_Click);
             // 
             // tbSukunimi
             // 
@@ -165,7 +166,7 @@
             this.tbSahkoPosti.ForeColor = System.Drawing.Color.Aqua;
             this.tbSahkoPosti.Hint = "Sähköposti";
             this.tbSahkoPosti.LeadingIcon = null;
-            this.tbSahkoPosti.Location = new System.Drawing.Point(13, 180);
+            this.tbSahkoPosti.Location = new System.Drawing.Point(13, 264);
             this.tbSahkoPosti.MaxLength = 50;
             this.tbSahkoPosti.MouseState = MaterialSkin.MouseState.OUT;
             this.tbSahkoPosti.Multiline = false;
@@ -185,7 +186,7 @@
             this.tbPuhelinNumero.ForeColor = System.Drawing.Color.Aqua;
             this.tbPuhelinNumero.Hint = "Puhelinnumero";
             this.tbPuhelinNumero.LeadingIcon = null;
-            this.tbPuhelinNumero.Location = new System.Drawing.Point(13, 222);
+            this.tbPuhelinNumero.Location = new System.Drawing.Point(12, 306);
             this.tbPuhelinNumero.MaxLength = 50;
             this.tbPuhelinNumero.MouseState = MaterialSkin.MouseState.OUT;
             this.tbPuhelinNumero.Multiline = false;
@@ -224,17 +225,16 @@
             this.mlvAsiakkaat.FullRowSelect = true;
             this.mlvAsiakkaat.HideSelection = false;
             this.mlvAsiakkaat.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem12,
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20,
-            listViewItem21,
-            listViewItem22});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
             this.mlvAsiakkaat.Location = new System.Drawing.Point(233, 54);
             this.mlvAsiakkaat.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvAsiakkaat.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -242,7 +242,7 @@
             this.mlvAsiakkaat.Name = "mlvAsiakkaat";
             this.mlvAsiakkaat.OwnerDraw = true;
             this.mlvAsiakkaat.Scrollable = false;
-            this.mlvAsiakkaat.Size = new System.Drawing.Size(520, 288);
+            this.mlvAsiakkaat.Size = new System.Drawing.Size(520, 264);
             this.mlvAsiakkaat.TabIndex = 18;
             this.mlvAsiakkaat.UseCompatibleStateImageBehavior = false;
             this.mlvAsiakkaat.View = System.Windows.Forms.View.Details;
@@ -286,12 +286,54 @@
             this.materialTextBox1.TrailingIcon = null;
             this.materialTextBox1.UseTallSize = false;
             // 
+            // tbPostiNumero
+            // 
+            this.tbPostiNumero.AnimateReadOnly = false;
+            this.tbPostiNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPostiNumero.Depth = 0;
+            this.tbPostiNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPostiNumero.ForeColor = System.Drawing.Color.Aqua;
+            this.tbPostiNumero.Hint = "Postinumero";
+            this.tbPostiNumero.LeadingIcon = null;
+            this.tbPostiNumero.Location = new System.Drawing.Point(12, 180);
+            this.tbPostiNumero.MaxLength = 50;
+            this.tbPostiNumero.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbPostiNumero.Multiline = false;
+            this.tbPostiNumero.Name = "tbPostiNumero";
+            this.tbPostiNumero.Size = new System.Drawing.Size(200, 36);
+            this.tbPostiNumero.TabIndex = 20;
+            this.tbPostiNumero.Text = "";
+            this.tbPostiNumero.TrailingIcon = null;
+            this.tbPostiNumero.UseTallSize = false;
+            // 
+            // tbPostitoimipaikka
+            // 
+            this.tbPostitoimipaikka.AnimateReadOnly = false;
+            this.tbPostitoimipaikka.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPostitoimipaikka.Depth = 0;
+            this.tbPostitoimipaikka.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPostitoimipaikka.ForeColor = System.Drawing.Color.Aqua;
+            this.tbPostitoimipaikka.Hint = "Postitoimipaikka";
+            this.tbPostitoimipaikka.LeadingIcon = null;
+            this.tbPostitoimipaikka.Location = new System.Drawing.Point(13, 222);
+            this.tbPostitoimipaikka.MaxLength = 50;
+            this.tbPostitoimipaikka.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbPostitoimipaikka.Multiline = false;
+            this.tbPostitoimipaikka.Name = "tbPostitoimipaikka";
+            this.tbPostitoimipaikka.Size = new System.Drawing.Size(200, 36);
+            this.tbPostitoimipaikka.TabIndex = 21;
+            this.tbPostitoimipaikka.Text = "";
+            this.tbPostitoimipaikka.TrailingIcon = null;
+            this.tbPostitoimipaikka.UseTallSize = false;
+            // 
             // frmAsiakkaat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.tbPostitoimipaikka);
+            this.Controls.Add(this.tbPostiNumero);
             this.Controls.Add(this.materialTextBox1);
             this.Controls.Add(this.mlvAsiakkaat);
             this.Controls.Add(this.labelAsiakkaanTiedot);
@@ -326,5 +368,7 @@
         private System.Windows.Forms.ColumnHeader columnSahkoposti;
         private System.Windows.Forms.ColumnHeader columnPuhNro;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox tbPostiNumero;
+        private MaterialSkin.Controls.MaterialTextBox tbPostitoimipaikka;
     }
 }

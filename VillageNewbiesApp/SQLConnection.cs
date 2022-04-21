@@ -70,17 +70,25 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
-            public void SQLinsertCustormer()
-            {
+        public void SQLinsertCustomer(Asiakas asiakas)
+        {
                 using (MySqlConnection connection = GetConnection())
                 {
                     Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-                    MySqlCommand Command = new MySqlCommand("INSERT asiakas (etunimi, sukunimi, lahiosoite, email, puhelinnro) VALUES" +
-                        "('Mauri', 'Heinola', 'Kanttorintie 15', 'Mauri.Heinola@heinähattu.fi', 0400011129 )", connection);
 
-                     Command.ExecuteNonQuery();
-                }
+                MySqlCommand command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka)" +
+                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetPostitoimipaikka() + "')", connection);
+
+                MySqlCommand command2 = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro)" +
+                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetEtunimi() + "','" + asiakas.GetSukunimi() + "','" + asiakas.GetOsoite() + "','" + asiakas.GetEmail() + "','" + asiakas.GetPuhnro() + "')", connection);               
+
+
+                command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+                  
+            }
         }
+        
     }
 
 
