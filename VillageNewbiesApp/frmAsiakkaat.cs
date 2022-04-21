@@ -25,8 +25,8 @@ namespace VillageNewbiesApp
 
             foreach(string asiakas in asiakaslista)
             {
-                MessageBox.Show(asiakas);
-                mlvAsiakkaat.Items.Add(asiakas);
+                //MessageBox.Show(asiakas);
+                materialListView1.Items.Add(asiakas);
             }
             
         }

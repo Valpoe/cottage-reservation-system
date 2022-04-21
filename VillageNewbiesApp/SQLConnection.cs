@@ -53,14 +53,12 @@ namespace VillageNewbiesApp
                     SQLResult.Add(result.ToString());
                     result.Clear();
 
-                    //SQLResult.Add(Reader.GetString(Reader.GetOrdinal("sukunimi")));
-                    //SQLResult.Add(Reader.GetValues().ToString());
-                    //SQLResult.Add(Reader[0].ToString());
                 }
             }
 
 
-            Console.WriteLine("connection closed");
+
+                Console.WriteLine("connection closed");
 
             foreach(string a in SQLResult)
             {
@@ -72,6 +70,32 @@ namespace VillageNewbiesApp
 
         public void SQLinsertCustomer(Asiakas asiakas)
         {
+        public List<string> SQLselectAllAlueet()
+        {
+
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+                MySqlCommand Command = new MySqlCommand("SELECT * FROM alue", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    result.Append(Reader.GetString(Reader.GetOrdinal("nimi")));
+
+                    SQLResult.Add(result.ToString());
+                    result.Clear();
+                }
+            }
+
+            return SQLResult;
+        }
+
+            public void SQLinsertCustormer()
+            {
                 using (MySqlConnection connection = GetConnection())
                 {
                     Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");

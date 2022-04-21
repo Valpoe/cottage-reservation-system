@@ -56,8 +56,8 @@
             this.mlvVaraukset.Depth = 0;
             this.mlvVaraukset.FullRowSelect = true;
             this.mlvVaraukset.HideSelection = false;
-            this.mlvVaraukset.Location = new System.Drawing.Point(470, 82);
-            this.mlvVaraukset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mlvVaraukset.Location = new System.Drawing.Point(475, 46);
+            this.mlvVaraukset.Margin = new System.Windows.Forms.Padding(2);
             this.mlvVaraukset.MinimumSize = new System.Drawing.Size(150, 81);
             this.mlvVaraukset.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvVaraukset.MouseState = MaterialSkin.MouseState.OUT;
@@ -81,7 +81,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(15, 29);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
             // 
