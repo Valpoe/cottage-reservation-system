@@ -47,7 +47,7 @@ namespace VillageNewbiesApp
         {
             form1.panelNavigation.Height = button.Height;
             form1.panelNavigation.Top = button.Top;
-            form1.labelOtsikko.Text = button.Text;         
+            form1.lblOtsikko.Text = button.Text;         
         }
 
         // Formin liikuttelu hiirellä
