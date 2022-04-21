@@ -96,6 +96,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlueet";
             this.Text = "frmAlueet";
+            this.Load += new System.EventHandler(this.frmAlueet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
