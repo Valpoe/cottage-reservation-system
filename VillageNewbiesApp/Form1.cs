@@ -26,7 +26,7 @@ namespace VillageNewbiesApp
             materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
             materialSkinManager.EnforceBackcolorOnAllComponents = true;
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.DeepPurple200, MaterialSkin.TextShade.WHITE);
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Pink700, MaterialSkin.TextShade.WHITE);
         }
 
         // Kotisivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
@@ -34,7 +34,7 @@ namespace VillageNewbiesApp
         {
             panelNavigation.Height = btnEtusivu.Height;
             panelNavigation.Top = btnEtusivu.Top;
-            labelOtsikko.Text = "Etusivu";
+            lblOtsikko.Text = "Etusivu";
             this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Etusivu"]);
             toiminnallisuus.screens["Etusivu"].Show();
             btnEtusivu.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
@@ -43,7 +43,7 @@ namespace VillageNewbiesApp
         private void btnAlueet_Click(object sender, EventArgs e)
         {
             toiminnallisuus.ChangeNavbarAndTitle(sender as Button, this);
-            toiminnallisuus.loadScreen(labelOtsikko.Text, this, sender as Button);
+            toiminnallisuus.loadScreen(lblOtsikko.Text, this, sender as Button);
         }
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {

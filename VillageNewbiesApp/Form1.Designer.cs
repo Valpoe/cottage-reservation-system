@@ -32,16 +32,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.btnRaportit = new System.Windows.Forms.Button();
-            this.btnLaskut = new System.Windows.Forms.Button();
+            this.btnLaskutus = new System.Windows.Forms.Button();
             this.btnAsiakkaat = new System.Windows.Forms.Button();
             this.btnVaraukset = new System.Windows.Forms.Button();
-            this.btnPalvelut = new System.Windows.Forms.Button();
-            this.btnAlueet = new System.Windows.Forms.Button();
+            this.btnMokitJaPalvelut = new System.Windows.Forms.Button();
+            this.btnToimintaAlueet = new System.Windows.Forms.Button();
             this.btnEtusivu = new System.Windows.Forms.Button();
             this.panelTopLeft = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFormLoader = new System.Windows.Forms.Panel();
-            this.labelOtsikko = new System.Windows.Forms.Label();
+            this.lblOtsikko = new System.Windows.Forms.Label();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
@@ -60,11 +60,11 @@
             this.panelLeft.Controls.Add(this.pictureBox1);
             this.panelLeft.Controls.Add(this.panelNavigation);
             this.panelLeft.Controls.Add(this.btnRaportit);
-            this.panelLeft.Controls.Add(this.btnLaskut);
+            this.panelLeft.Controls.Add(this.btnLaskutus);
             this.panelLeft.Controls.Add(this.btnAsiakkaat);
             this.panelLeft.Controls.Add(this.btnVaraukset);
-            this.panelLeft.Controls.Add(this.btnPalvelut);
-            this.panelLeft.Controls.Add(this.btnAlueet);
+            this.panelLeft.Controls.Add(this.btnMokitJaPalvelut);
+            this.panelLeft.Controls.Add(this.btnToimintaAlueet);
             this.panelLeft.Controls.Add(this.btnEtusivu);
             this.panelLeft.Controls.Add(this.panelTopLeft);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -111,25 +111,25 @@
             this.btnRaportit.UseVisualStyleBackColor = true;
             this.btnRaportit.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
-            // btnLaskut
+            // btnLaskutus
             // 
-            this.btnLaskut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLaskut.FlatAppearance.BorderSize = 0;
-            this.btnLaskut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLaskut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaskut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btnLaskut.Image = global::VillageNewbiesApp.Properties.Resources.LaskutusIcon;
-            this.btnLaskut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLaskut.Location = new System.Drawing.Point(0, 369);
-            this.btnLaskut.Name = "btnLaskut";
-            this.btnLaskut.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnLaskut.Size = new System.Drawing.Size(186, 45);
-            this.btnLaskut.TabIndex = 2;
-            this.btnLaskut.Text = "Laskutus";
-            this.btnLaskut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLaskut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnLaskut.UseVisualStyleBackColor = true;
-            this.btnLaskut.Click += new System.EventHandler(this.btnAlueet_Click);
+            this.btnLaskutus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLaskutus.FlatAppearance.BorderSize = 0;
+            this.btnLaskutus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaskutus.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaskutus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnLaskutus.Image = global::VillageNewbiesApp.Properties.Resources.LaskutusIcon;
+            this.btnLaskutus.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLaskutus.Location = new System.Drawing.Point(0, 369);
+            this.btnLaskutus.Name = "btnLaskutus";
+            this.btnLaskutus.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnLaskutus.Size = new System.Drawing.Size(186, 45);
+            this.btnLaskutus.TabIndex = 2;
+            this.btnLaskutus.Text = "Laskutus";
+            this.btnLaskutus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaskutus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLaskutus.UseVisualStyleBackColor = true;
+            this.btnLaskutus.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
             // btnAsiakkaat
             // 
@@ -171,45 +171,45 @@
             this.btnVaraukset.UseVisualStyleBackColor = true;
             this.btnVaraukset.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
-            // btnPalvelut
+            // btnMokitJaPalvelut
             // 
-            this.btnPalvelut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPalvelut.FlatAppearance.BorderSize = 0;
-            this.btnPalvelut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPalvelut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPalvelut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btnPalvelut.Image = global::VillageNewbiesApp.Properties.Resources.PalvelutIcon;
-            this.btnPalvelut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPalvelut.Location = new System.Drawing.Point(0, 234);
-            this.btnPalvelut.Name = "btnPalvelut";
-            this.btnPalvelut.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnPalvelut.Size = new System.Drawing.Size(186, 45);
-            this.btnPalvelut.TabIndex = 2;
-            this.btnPalvelut.Text = "Mökit ja Palvelut";
-            this.btnPalvelut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPalvelut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnPalvelut.UseVisualStyleBackColor = true;
-            this.btnPalvelut.Click += new System.EventHandler(this.btnAlueet_Click);
+            this.btnMokitJaPalvelut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMokitJaPalvelut.FlatAppearance.BorderSize = 0;
+            this.btnMokitJaPalvelut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMokitJaPalvelut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMokitJaPalvelut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnMokitJaPalvelut.Image = global::VillageNewbiesApp.Properties.Resources.PalvelutIcon;
+            this.btnMokitJaPalvelut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMokitJaPalvelut.Location = new System.Drawing.Point(0, 234);
+            this.btnMokitJaPalvelut.Name = "btnMokitJaPalvelut";
+            this.btnMokitJaPalvelut.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnMokitJaPalvelut.Size = new System.Drawing.Size(186, 45);
+            this.btnMokitJaPalvelut.TabIndex = 2;
+            this.btnMokitJaPalvelut.Text = "Mökit ja Palvelut";
+            this.btnMokitJaPalvelut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMokitJaPalvelut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMokitJaPalvelut.UseVisualStyleBackColor = true;
+            this.btnMokitJaPalvelut.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
-            // btnAlueet
+            // btnToimintaAlueet
             // 
-            this.btnAlueet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAlueet.FlatAppearance.BorderSize = 0;
-            this.btnAlueet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlueet.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlueet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btnAlueet.Image = global::VillageNewbiesApp.Properties.Resources.LocationIcon;
-            this.btnAlueet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlueet.Location = new System.Drawing.Point(0, 189);
-            this.btnAlueet.Name = "btnAlueet";
-            this.btnAlueet.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAlueet.Size = new System.Drawing.Size(186, 45);
-            this.btnAlueet.TabIndex = 2;
-            this.btnAlueet.Text = "Toiminta-alueet";
-            this.btnAlueet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlueet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAlueet.UseVisualStyleBackColor = true;
-            this.btnAlueet.Click += new System.EventHandler(this.btnAlueet_Click);
+            this.btnToimintaAlueet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnToimintaAlueet.FlatAppearance.BorderSize = 0;
+            this.btnToimintaAlueet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToimintaAlueet.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToimintaAlueet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnToimintaAlueet.Image = global::VillageNewbiesApp.Properties.Resources.LocationIcon;
+            this.btnToimintaAlueet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnToimintaAlueet.Location = new System.Drawing.Point(0, 189);
+            this.btnToimintaAlueet.Name = "btnToimintaAlueet";
+            this.btnToimintaAlueet.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnToimintaAlueet.Size = new System.Drawing.Size(186, 45);
+            this.btnToimintaAlueet.TabIndex = 2;
+            this.btnToimintaAlueet.Text = "Toiminta-alueet";
+            this.btnToimintaAlueet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnToimintaAlueet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnToimintaAlueet.UseVisualStyleBackColor = true;
+            this.btnToimintaAlueet.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
             // btnEtusivu
             // 
@@ -259,16 +259,16 @@
             this.panelFormLoader.Size = new System.Drawing.Size(765, 477);
             this.panelFormLoader.TabIndex = 1;
             // 
-            // labelOtsikko
+            // lblOtsikko
             // 
-            this.labelOtsikko.AutoSize = true;
-            this.labelOtsikko.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOtsikko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.labelOtsikko.Location = new System.Drawing.Point(222, 32);
-            this.labelOtsikko.Name = "labelOtsikko";
-            this.labelOtsikko.Size = new System.Drawing.Size(221, 37);
-            this.labelOtsikko.TabIndex = 0;
-            this.labelOtsikko.Text = "Toiminta-alueet";
+            this.lblOtsikko.AutoSize = true;
+            this.lblOtsikko.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOtsikko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblOtsikko.Location = new System.Drawing.Point(222, 32);
+            this.lblOtsikko.Name = "lblOtsikko";
+            this.lblOtsikko.Size = new System.Drawing.Size(221, 37);
+            this.lblOtsikko.TabIndex = 0;
+            this.lblOtsikko.Text = "Toiminta-alueet";
             // 
             // pbExit
             // 
@@ -316,7 +316,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.pbExit);
-            this.Controls.Add(this.labelOtsikko);
+            this.Controls.Add(this.lblOtsikko);
             this.Controls.Add(this.pbMaximize);
             this.Controls.Add(this.panelFormLoader);
             this.Controls.Add(this.pbMinimize);
@@ -344,12 +344,12 @@
 
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTopLeft;
-        private System.Windows.Forms.Button btnAlueet;
+        private System.Windows.Forms.Button btnToimintaAlueet;
         private System.Windows.Forms.Button btnRaportit;
-        private System.Windows.Forms.Button btnLaskut;
+        private System.Windows.Forms.Button btnLaskutus;
         private System.Windows.Forms.Button btnAsiakkaat;
         private System.Windows.Forms.Button btnVaraukset;
-        private System.Windows.Forms.Button btnPalvelut;
+        private System.Windows.Forms.Button btnMokitJaPalvelut;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.PictureBox pbExit;
@@ -358,7 +358,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panelFormLoader;
         public System.Windows.Forms.Panel panelNavigation;
-        public System.Windows.Forms.Label labelOtsikko;
+        public System.Windows.Forms.Label lblOtsikko;
     }
 }
 
