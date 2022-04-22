@@ -143,7 +143,7 @@
             this.tbOsoite.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbOsoite.Depth = 0;
             this.tbOsoite.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbOsoite.ForeColor = System.Drawing.Color.Aqua;
+            this.tbOsoite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.tbOsoite.Hint = "Osoite";
             this.tbOsoite.LeadingIcon = null;
             this.tbOsoite.Location = new System.Drawing.Point(13, 138);
@@ -201,12 +201,13 @@
             // 
             this.labelAsiakkaanTiedot.AutoSize = true;
             this.labelAsiakkaanTiedot.Depth = 0;
-            this.labelAsiakkaanTiedot.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelAsiakkaanTiedot.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelAsiakkaanTiedot.FontType = MaterialSkin.MaterialSkinManager.fontType.Body2;
             this.labelAsiakkaanTiedot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.labelAsiakkaanTiedot.Location = new System.Drawing.Point(30, 29);
+            this.labelAsiakkaanTiedot.Location = new System.Drawing.Point(15, 32);
             this.labelAsiakkaanTiedot.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelAsiakkaanTiedot.Name = "labelAsiakkaanTiedot";
-            this.labelAsiakkaanTiedot.Size = new System.Drawing.Size(163, 19);
+            this.labelAsiakkaanTiedot.Size = new System.Drawing.Size(143, 17);
             this.labelAsiakkaanTiedot.TabIndex = 17;
             this.labelAsiakkaanTiedot.Text = "Syötä asiakkaan tiedot";
             // 
@@ -235,7 +236,7 @@
             listViewItem8,
             listViewItem9,
             listViewItem10});
-            this.mlvAsiakkaat.Location = new System.Drawing.Point(233, 54);
+            this.mlvAsiakkaat.Location = new System.Drawing.Point(231, 54);
             this.mlvAsiakkaat.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvAsiakkaat.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvAsiakkaat.MouseState = MaterialSkin.MouseState.OUT;
@@ -291,7 +292,7 @@
             this.tbPostiNumero.AnimateReadOnly = false;
             this.tbPostiNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPostiNumero.Depth = 0;
-            this.tbPostiNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPostiNumero.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbPostiNumero.ForeColor = System.Drawing.Color.Aqua;
             this.tbPostiNumero.Hint = "Postinumero";
             this.tbPostiNumero.LeadingIcon = null;
@@ -311,7 +312,7 @@
             this.tbPostitoimipaikka.AnimateReadOnly = false;
             this.tbPostitoimipaikka.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPostitoimipaikka.Depth = 0;
-            this.tbPostitoimipaikka.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPostitoimipaikka.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbPostitoimipaikka.ForeColor = System.Drawing.Color.Aqua;
             this.tbPostitoimipaikka.Hint = "Postitoimipaikka";
             this.tbPostitoimipaikka.LeadingIcon = null;

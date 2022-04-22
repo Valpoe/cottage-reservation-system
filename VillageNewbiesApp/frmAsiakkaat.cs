@@ -43,6 +43,8 @@ namespace VillageNewbiesApp
             tbOsoite.Text = String.Empty;
             tbSahkoPosti.Text = String.Empty;
             tbPuhelinNumero.Text = String.Empty;
+            tbPostiNumero.Text = String.Empty;
+            tbPostitoimipaikka.Text = String.Empty;
         }
 
         public void btnLisaa_Click(object sender, EventArgs e)

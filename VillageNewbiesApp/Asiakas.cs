@@ -8,6 +8,7 @@ namespace VillageNewbiesApp
 {
     internal class Asiakas
     {
+        // Asetetaan muuttujat
         private string Etunimi { get; set; }
         private string Sukunimi { get; set; }
         private string Osoite { get; set; }
@@ -16,7 +17,7 @@ namespace VillageNewbiesApp
         private string Puhnro { get; set; }
         private string Email { get; set; }
 
-        // make constuctor
+        // Tehdään constructor joka saa parametreina kaikki asiakkaan tiedot
         public Asiakas(string etunimi, string sukunimi, string osoite, string postinumero, string postitoimipaikka, string email, string puhnro)
         {
             Etunimi = etunimi;
@@ -28,7 +29,7 @@ namespace VillageNewbiesApp
             Puhnro = puhnro;
         }
 
-        // make getters
+        // Tehdään getterit jotka palauttavat asiakkaan tiedot
         public string GetEtunimi()
         {
             return Etunimi;

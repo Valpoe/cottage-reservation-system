@@ -13,20 +13,13 @@ namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
-        readonly MaterialSkin.MaterialSkinManager materialSkinManager;
+        //readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         mainFormToiminnallisuus toiminnallisuus = new mainFormToiminnallisuus();
  
         public Form1()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-            // Luodaan teema manageri ja tyyli kaikille komponenteille
-            
-            materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.EnforceBackcolorOnAllComponents = true;
-            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Pink700, MaterialSkin.TextShade.WHITE);
         }
 
         // Kotisivu aukeaa ensimmäisenä, kun ohjelma käynnistetään

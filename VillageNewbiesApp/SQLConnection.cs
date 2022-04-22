@@ -60,20 +60,40 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
+        // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan
         public void SQLinsertCustomer(Asiakas asiakas)
         {
             using (MySqlConnection connection = GetConnection())
             {
                 Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
 
-                MySqlCommand command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka)" +
-                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetPostitoimipaikka() + "')", connection);
+                MySqlCommand Command = new MySqlCommand("SELECT postinro FROM posti WHERE postinro LIKE " + asiakas.GetPostinumero(), connection);
 
-                MySqlCommand command2 = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro)" +
-                    "VALUES(" + asiakas.GetPostinumero() + ",'" + asiakas.GetEtunimi() + "','" + asiakas.GetSukunimi() + "','" + asiakas.GetOsoite() + "','" + asiakas.GetEmail() + "','" + asiakas.GetPuhnro() + "')", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
 
-                command.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
+                if (Reader.HasRows != true)
+                {
+                    Reader.Close();
+                    Command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka) VALUES (@postinro, @toimipaikka)", connection);
+
+                    Command.Parameters.AddWithValue("@postinro", asiakas.GetPostinumero());
+                    Command.Parameters.AddWithValue("@toimipaikka", asiakas.GetPostitoimipaikka());
+
+                    Command.ExecuteNonQuery();
+                }
+
+                Reader.Close();
+                
+                Command = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro) VALUES(@postinro, @etunimi, @sukunimi, @lahiosoite, @email, @puhelinnro)", connection);
+
+                Command.Parameters.AddWithValue("@postinro", asiakas.GetPostinumero());
+                Command.Parameters.AddWithValue("@etunimi", asiakas.GetEtunimi());
+                Command.Parameters.AddWithValue("@sukunimi", asiakas.GetSukunimi());
+                Command.Parameters.AddWithValue("@lahiosoite", asiakas.GetOsoite());
+                Command.Parameters.AddWithValue("@email", asiakas.GetEmail());
+                Command.Parameters.AddWithValue("@puhelinnro", asiakas.GetPuhnro());
+
+                Command.ExecuteNonQuery();
             }
         }
         public List<string> SQLselectAllAlueet()
