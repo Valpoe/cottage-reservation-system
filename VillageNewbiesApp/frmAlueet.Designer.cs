@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label1 = new System.Windows.Forms.Label();
             this.mcbToimintaAlue = new MaterialSkin.Controls.MaterialComboBox();
             this.mlvMokit = new MaterialSkin.Controls.MaterialListView();
+            this.Mökki = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hinta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Henkilomäärä = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -46,14 +50,14 @@
             // mcbToimintaAlue
             // 
             this.mcbToimintaAlue.AutoResize = false;
-            this.mcbToimintaAlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mcbToimintaAlue.BackColor = System.Drawing.Color.White;
             this.mcbToimintaAlue.Depth = 0;
             this.mcbToimintaAlue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.mcbToimintaAlue.DropDownHeight = 174;
             this.mcbToimintaAlue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mcbToimintaAlue.DropDownWidth = 121;
             this.mcbToimintaAlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.mcbToimintaAlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mcbToimintaAlue.ForeColor = System.Drawing.Color.Black;
             this.mcbToimintaAlue.FormattingEnabled = true;
             this.mcbToimintaAlue.IntegralHeight = false;
             this.mcbToimintaAlue.ItemHeight = 43;
@@ -64,25 +68,48 @@
             this.mcbToimintaAlue.Size = new System.Drawing.Size(121, 49);
             this.mcbToimintaAlue.StartIndex = 0;
             this.mcbToimintaAlue.TabIndex = 1;
+            this.mcbToimintaAlue.SelectedIndexChanged += new System.EventHandler(this.mcbToimintaAlue_SelectedIndexChanged);
             // 
             // mlvMokit
             // 
             this.mlvMokit.AutoSizeTable = false;
             this.mlvMokit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mlvMokit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvMokit.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Mökki,
+            this.Hinta,
+            this.Henkilomäärä});
             this.mlvMokit.Depth = 0;
             this.mlvMokit.FullRowSelect = true;
             this.mlvMokit.HideSelection = false;
-            this.mlvMokit.Location = new System.Drawing.Point(436, 44);
+            this.mlvMokit.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.mlvMokit.Location = new System.Drawing.Point(405, 44);
             this.mlvMokit.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvMokit.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvMokit.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvMokit.Name = "mlvMokit";
             this.mlvMokit.OwnerDraw = true;
-            this.mlvMokit.Size = new System.Drawing.Size(282, 288);
+            this.mlvMokit.Size = new System.Drawing.Size(299, 196);
             this.mlvMokit.TabIndex = 2;
             this.mlvMokit.UseCompatibleStateImageBehavior = false;
             this.mlvMokit.View = System.Windows.Forms.View.Details;
+            this.mlvMokit.SelectedIndexChanged += new System.EventHandler(this.mlvMokit_SelectedIndexChanged);
+            // 
+            // Mökki
+            // 
+            this.Mökki.Text = "Mökki";
+            this.Mökki.Width = 86;
+            // 
+            // Hinta
+            // 
+            this.Hinta.Text = "Hinta";
+            this.Hinta.Width = 83;
+            // 
+            // Henkilomäärä
+            // 
+            this.Henkilomäärä.Text = "Henkilomäärä";
+            this.Henkilomäärä.Width = 126;
             // 
             // frmAlueet
             // 
@@ -107,5 +134,8 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialComboBox mcbToimintaAlue;
         private MaterialSkin.Controls.MaterialListView mlvMokit;
+        private System.Windows.Forms.ColumnHeader Mökki;
+        private System.Windows.Forms.ColumnHeader Hinta;
+        private System.Windows.Forms.ColumnHeader Henkilomäärä;
     }
 }
