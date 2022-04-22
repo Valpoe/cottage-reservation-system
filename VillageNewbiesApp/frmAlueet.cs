@@ -13,11 +13,11 @@ namespace VillageNewbiesApp
 {
     public partial class frmAlueet : Form
     {
+        SQLConnection mySQL = new SQLConnection();
         public frmAlueet()
         {
             InitializeComponent();
 
-            SQLConnection mySQL = new SQLConnection();
             List<string> Alueet = mySQL.SQLselectAllAlueet();
 
 
@@ -28,6 +28,26 @@ namespace VillageNewbiesApp
         }
 
         private void frmAlueet_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mcbToimintaAlue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            mlvMokit.Items.Clear();
+
+            //MessageBox.Show(mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString());
+            List<string> mokit = mySQL.SQLselectMokit(mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString());
+
+
+            foreach(string a in mokit)
+            {
+                mlvMokit.Items.Add(a);
+            }
+        }
+
+        private void mlvMokit_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

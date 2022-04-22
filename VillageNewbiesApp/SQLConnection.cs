@@ -119,6 +119,38 @@ namespace VillageNewbiesApp
 
             return SQLResult;
         }
+
+        public List<string> SQLselectMokit(string selection)
+        {
+
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                //MessageBox.Show("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + selection + "'");
+
+                MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + selection + "')", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                /*  SELECT* FROM mokki
+                    WHERE alue_id IN
+                    (SELECT alue_id FROM alue WHERE nimi LIKE 'Kuopio')
+                */ 
+                while (Reader.Read())
+                {
+                    result.Append(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
+                    result.Append(Reader.GetDouble(Reader.GetOrdinal("hinta")));
+                    result.Append(Reader.GetInt32(Reader.GetOrdinal("henkilomaara")));
+
+                    SQLResult.Add(result.ToString());
+                    result.Clear();
+                }
+            }
+
+            return SQLResult;
+        }
+
     }
 }
 
