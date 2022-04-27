@@ -9,6 +9,7 @@ namespace VillageNewbiesApp
     internal class Asiakas
     {
         // Asetetaan muuttujat
+        private string Id { get; set; }
         private string Etunimi { get; set; }
         private string Sukunimi { get; set; }
         private string Osoite { get; set; }
@@ -29,7 +30,20 @@ namespace VillageNewbiesApp
             Puhnro = puhnro;
         }
 
+        public Asiakas(string id, string etunimi, string sukunimi, string email, string puhelinnumero)
+        {
+            Id = id;
+            Etunimi = etunimi;
+            Sukunimi = sukunimi;
+            Email = email;
+            Puhnro = puhelinnumero;
+        }
+
         // Tehdään getterit jotka palauttavat asiakkaan tiedot
+        public string GetID()
+        {
+            return Id;
+        }
         public string GetEtunimi()
         {
             return Etunimi;

@@ -3,6 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace VillageNewbiesApp
 {
@@ -25,39 +29,71 @@ namespace VillageNewbiesApp
             return connectionString;
         }
 
-        public List<string> SQLselectAllbyName(string select)
+        public void SQLselectAllbyName()
         {
+            frmAsiakkaat asiakkaat = new frmAsiakkaat();
+            List<Asiakas> asiakaslista = new List<Asiakas>();
+            //int id = 1;
+            //string etunimi = "pekka";
+            //string sukunimi;
+            //string email;
+            //string puhelinnumero;
+            
+            //using (MySqlConnection connection = GetConnection())
+            //{
+            //    MySqlCommand cmd;
+            //    DataTable dt;
+            //    MySqlDataAdapter da;
+            //    DataSet ds;
+            //    Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+            //    asiakkaat.mlvAsiakkaat.Columns.Add("ID", 50);
+            //    asiakkaat.mlvAsiakkaat.Columns.Add("Etunimi", 100);
+            //    asiakkaat.mlvAsiakkaat.Columns.Add("Sukunimi", 100);
+            //    asiakkaat.mlvAsiakkaat.Columns.Add("Email", 100);
+            //    asiakkaat.mlvAsiakkaat.Columns.Add("Puhelinnumero", 100);
+            //    asiakkaat.mlvAsiakkaat.View = View.Details;
+            //    cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
+            //    da = new MySqlDataAdapter(cmd);
+            //    ds = new DataSet();
 
-            List<string> SQLResult = new List<string>();
-            StringBuilder result = new StringBuilder();
+            //    da.Fill(ds, "testitaulu");
 
-            using (MySqlConnection connection = GetConnection())
-            {
-                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-                MySqlCommand Command = new MySqlCommand("SELECT * FROM " + select, connection);
-                MySqlDataReader Reader = Command.ExecuteReader();
+            //    dt = ds.Tables["testitaulu"];
+                
+            //    for(int i = 0; i <= dt.Rows.Count - 1; i++)
+            //    {
+            //        asiakkaat.mlvAsiakkaat.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
+            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[2].ToString());
+            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
+            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[4].ToString());                   
+            //    }
+                
+                //MySqlDataReader Reader = Command.ExecuteReader();
 
-                while (Reader.Read())
-                {
-                    result.Append(Reader.GetInt32(Reader.GetOrdinal("asiakas_id")) + " ; ");
-                    result.Append(Reader.GetString(Reader.GetOrdinal("etunimi")) + " ; ");
-                    result.Append(Reader.GetString(Reader.GetOrdinal("sukunimi")) + " ; ");
-                    result.Append(Reader.GetString(Reader.GetOrdinal("puhelinnro")));
+                //while (Reader.Read())
+                //{
+                //    id = Reader.GetInt32("asiakas_id");
+                //    etunimi = Reader.GetString("etunimi");
+                //    sukunimi = Reader.GetString("sukunimi");
+                //    email = Reader.GetString("email");
+                //    puhelinnumero = Reader.GetString("puhelinnro");
 
-                    SQLResult.Add(result.ToString());
-                    result.Clear();
 
-                }
-            }
+                //    asiakaslista.Add(new Asiakas(id.ToString(), etunimi, sukunimi, email, puhelinnumero));
+                //    asiakkaat.mlvAsiakkaat.Items.Clear();
+                //    foreach(var item in asiakaslista)
+                //    {
+                //        ListViewItem rivi = new ListViewItem(id.ToString());
+                //        rivi.SubItems.Add(etunimi);
+                //        rivi.SubItems.Add(sukunimi);
+                //        rivi.SubItems.Add(email);
+                //        rivi.SubItems.Add(puhelinnumero);
+                //        asiakkaat.mlvAsiakkaat.Items.Add(rivi);
+                //    }
 
-            Console.WriteLine("connection closed");
-
-            foreach (string a in SQLResult)
-            {
-                //MessageBox.Show(a);
-            }
-
-            return SQLResult;
+                //}
+            //}
         }
 
         // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan

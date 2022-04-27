@@ -19,8 +19,8 @@ namespace VillageNewbiesApp
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            SQLConnection mySQLconnection = new SQLConnection();
-            mySQLconnection.SQLselectAllbyName("asiakas");
+            //SQLConnection mySQLconnection = new SQLConnection();
+            //mySQLconnection.SQLselectAllbyName("asiakas");
         }
     }
 }
