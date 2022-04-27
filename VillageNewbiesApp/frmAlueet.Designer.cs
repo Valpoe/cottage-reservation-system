@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label1 = new System.Windows.Forms.Label();
             this.mcbToimintaAlue = new MaterialSkin.Controls.MaterialComboBox();
             this.mlvMokit = new MaterialSkin.Controls.MaterialListView();
@@ -82,15 +81,13 @@
             this.mlvMokit.Depth = 0;
             this.mlvMokit.FullRowSelect = true;
             this.mlvMokit.HideSelection = false;
-            this.mlvMokit.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.mlvMokit.Location = new System.Drawing.Point(405, 44);
+            this.mlvMokit.Location = new System.Drawing.Point(328, 44);
             this.mlvMokit.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvMokit.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvMokit.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvMokit.Name = "mlvMokit";
             this.mlvMokit.OwnerDraw = true;
-            this.mlvMokit.Size = new System.Drawing.Size(299, 196);
+            this.mlvMokit.Size = new System.Drawing.Size(385, 196);
             this.mlvMokit.TabIndex = 2;
             this.mlvMokit.UseCompatibleStateImageBehavior = false;
             this.mlvMokit.View = System.Windows.Forms.View.Details;
@@ -99,7 +96,7 @@
             // Mökki
             // 
             this.Mökki.Text = "Mökki";
-            this.Mökki.Width = 86;
+            this.Mökki.Width = 150;
             // 
             // Hinta
             // 
@@ -109,7 +106,7 @@
             // Henkilomäärä
             // 
             this.Henkilomäärä.Text = "Henkilomäärä";
-            this.Henkilomäärä.Width = 126;
+            this.Henkilomäärä.Width = 150;
             // 
             // frmAlueet
             // 
