@@ -31,6 +31,7 @@ namespace VillageNewbiesApp
             List<string> SQLResult = new List<string>();
             StringBuilder result = new StringBuilder();
 
+
             using (MySqlConnection connection = GetConnection())
             {
                 Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
@@ -120,7 +121,7 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
-        public List<string> SQLselectMokit(string selection)
+        public List<string> SQLselectMokit(string select)
         {
 
             List<string> SQLResult = new List<string>();
@@ -130,7 +131,7 @@ namespace VillageNewbiesApp
             {
                 //MessageBox.Show("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + selection + "'");
 
-                MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + selection + "')", connection);
+                MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "')", connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
 
                 /*  SELECT* FROM mokki
@@ -139,12 +140,9 @@ namespace VillageNewbiesApp
                 */ 
                 while (Reader.Read())
                 {
-                    result.Append(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
-                    result.Append(Reader.GetDouble(Reader.GetOrdinal("hinta")));
-                    result.Append(Reader.GetInt32(Reader.GetOrdinal("henkilomaara")));
-
-                    SQLResult.Add(result.ToString());
-                    result.Clear();
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("henkilomaara")).ToString());
                 }
             }
 

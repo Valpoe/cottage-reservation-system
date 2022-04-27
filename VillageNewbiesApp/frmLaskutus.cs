@@ -16,5 +16,25 @@ namespace VillageNewbiesApp
         {
             InitializeComponent();
         }
+
+        private void frmLaskutus_Load(object sender, EventArgs e)
+        {
+            SQLConnection mySQL = new SQLConnection();
+
+            List<String> Asiakkaat = mySQL.SQLselectAllbyName("asiakas");
+
+
+            foreach(string asiakas in Asiakkaat)
+            {
+                mlvLaskutus.Items.Add(asiakas);
+            }
+
+
+        }
+
+        private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
