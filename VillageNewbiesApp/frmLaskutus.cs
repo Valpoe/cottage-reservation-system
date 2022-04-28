@@ -21,13 +21,13 @@ namespace VillageNewbiesApp
         {
             SQLConnection mySQL = new SQLConnection();
 
-            List<String> Asiakkaat = mySQL.SQLselectAllbyName("asiakas");
+            //List<String> Asiakkaat = mySQL.SQLselectAllbyName("asiakas");
 
 
-            foreach(string asiakas in Asiakkaat)
-            {
-                mlvLaskutus.Items.Add(asiakas);
-            }
+            //foreach(string asiakas in Asiakkaat)
+            //{
+            //    mlvLaskutus.Items.Add(asiakas);
+            //}
 
 
         }

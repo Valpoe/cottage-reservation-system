@@ -169,19 +169,59 @@ namespace VillageNewbiesApp
                 MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "')", connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
 
-                /*  SELECT* FROM mokki
-                    WHERE alue_id IN
-                    (SELECT alue_id FROM alue WHERE nimi LIKE 'Kuopio')
-                */ 
+                //tyhjennetään lista kun haku tehdään, lista täyttyy vain jos siellä on mökkejä
+                List<Mokki> MokkiHolder = new List<Mokki>();
+
                 while (Reader.Read())
                 {
+
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
                     SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
                     SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("henkilomaara")).ToString());
+
+                    //lisätään mökit static listaan - testi
+                    MokkiHolder.Add(new Mokki(Reader.GetInt32(Reader.GetOrdinal("mokki_id")), Reader.GetString(Reader.GetOrdinal("mokkinimi")),
+                        Reader.GetString(Reader.GetOrdinal("katuosoite")), Reader.GetDouble(Reader.GetOrdinal("hinta")), Reader.GetString(Reader.GetOrdinal("kuvaus")),
+                        Reader.GetInt32(Reader.GetOrdinal("henkilomaara")), Reader.GetString(Reader.GetOrdinal("varustelu"))));
                 }
+
+                frmAlueet.AlueenMokit = MokkiHolder;
             }
 
             return SQLResult;
+        }
+
+        public void setAlueID(string select)
+        {
+            using(MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "'", connection);
+                Console.Write("Haettu alueID alueelle" + select);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    frmAlueet.selectedID = Reader.GetInt32(Reader.GetOrdinal("alue_id")).ToString();
+                }
+            }
+        }
+
+        public List<String> aluePalvelut(int alueID)
+        {
+            List<string> palvelut = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("SELECT * FROM palvelu WHERE alue_id LIKE '" + alueID + "'", connection);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    palvelut.Add(Reader.GetString(Reader.GetOrdinal("kuvaus")));
+                }
+                return palvelut;
+            }
         }
 
     }

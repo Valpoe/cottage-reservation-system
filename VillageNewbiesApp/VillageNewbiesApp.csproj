@@ -140,6 +140,7 @@
       <DependentUpon>frmVaraukset.cs</DependentUpon>
     </Compile>
     <Compile Include="mainFormToiminnallisuus.cs" />
+    <Compile Include="Mokki.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConnection.cs" />

@@ -16,6 +16,7 @@ namespace VillageNewbiesApp
     {
 
         SQLConnection mySQL = new SQLConnection();
+        private static string selectedID;
 
         public frmPalvelut()
         {
@@ -26,11 +27,37 @@ namespace VillageNewbiesApp
         private void lblAlue_VisibleChanged(object sender, EventArgs e)
         {
             lblAlue.Text = frmAlueet.selectedAlue;
+
+            mySQL.setAlueID(lblAlue.Text);
+            lblAlueID.Text = frmAlueet.selectedID;
         }
 
         private void lblAlue_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void mcbPalvelut_VisibleChanged(object sender, EventArgs e)
+        {
+            if(frmAlueet.selectedID == selectedID)
+            {
+                return;
+            }
+
+            selectedID = frmAlueet.selectedID;
+
+            List<string> palvelut = mySQL.aluePalvelut(Convert.ToInt32(frmAlueet.selectedID));
+            mcbPalvelut.Items.Clear();
+
+            foreach(string a in palvelut)
+            {
+                mcbPalvelut.Items.Add(a);
+            }
+        }
+
+        private void lblMokki_VisibleChanged(object sender, EventArgs e)
+        {
+            lblMokki.Text = frmAlueet.selectedMokki;
         }
     }
 }
