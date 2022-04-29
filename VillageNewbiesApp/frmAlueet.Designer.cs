@@ -64,7 +64,7 @@
             this.mcbToimintaAlue.MaxDropDownItems = 4;
             this.mcbToimintaAlue.MouseState = MaterialSkin.MouseState.OUT;
             this.mcbToimintaAlue.Name = "mcbToimintaAlue";
-            this.mcbToimintaAlue.Size = new System.Drawing.Size(121, 49);
+            this.mcbToimintaAlue.Size = new System.Drawing.Size(236, 49);
             this.mcbToimintaAlue.StartIndex = 0;
             this.mcbToimintaAlue.TabIndex = 1;
             this.mcbToimintaAlue.SelectedIndexChanged += new System.EventHandler(this.mcbToimintaAlue_SelectedIndexChanged);
@@ -91,6 +91,7 @@
             this.mlvMokit.TabIndex = 2;
             this.mlvMokit.UseCompatibleStateImageBehavior = false;
             this.mlvMokit.View = System.Windows.Forms.View.Details;
+            this.mlvMokit.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.mlvMokit_ItemSelectionChanged);
             this.mlvMokit.SelectedIndexChanged += new System.EventHandler(this.mlvMokit_SelectedIndexChanged);
             // 
             // Mökki
