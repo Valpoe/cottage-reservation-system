@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace VillageNewbiesApp
@@ -77,6 +75,7 @@ namespace VillageNewbiesApp
                 Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text,
                     tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
                 mySQL.SQLinsertCustomer(asiakas);
+                btnTyhjenna_Click(sender, e);
             }
         }
 
@@ -85,6 +84,22 @@ namespace VillageNewbiesApp
         {
             MaterialSkin.Controls.MaterialTextBox tb = (MaterialSkin.Controls.MaterialTextBox)sender;
             errorProvider.SetError(tb, "");
+        }
+
+        // Estetään columnien säätö
+        private void mlvAsiakkaat_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = this.mlvAsiakkaat.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
+        private void mlvTiedot_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = this.mlvTiedot.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
+
+        private void tbSearchBox_TextChanged(object sender, EventArgs e)
+        {
         }
 
         // Tuodaan asiakkaat tietokannasta listviewiin
@@ -112,16 +127,44 @@ namespace VillageNewbiesApp
             }
         }
 
-        // Estetään columnien säätö
-        private void mlvAsiakkaat_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        // Näytetään valitun asiakkaan varaukset
+        private void btnNaytaTiedot_Click(object sender, EventArgs e)
         {
-            e.NewWidth = this.mlvAsiakkaat.Columns[e.ColumnIndex].Width;
-            e.Cancel = true;
-        }
+            List<string> asiakkaat = mySQL.SQLnaytaTiedot();
 
-        private void tbSearchBox_TextChanged(object sender, EventArgs e)
-        {
-       
+            mlvTiedot.Items.Clear();
+
+            string[] lista = new string[5];
+            ListViewItem item;
+
+            for (int i = 0; i < asiakkaat.Count; i++)
+            {
+                lista[0] = asiakkaat[i];
+                i++;
+                lista[1] = asiakkaat[i];
+                i++;
+                lista[2] = asiakkaat[i];
+                i++;
+                lista[3] = asiakkaat[i];
+                i++;
+                lista[4] = asiakkaat[i];
+
+                item = new ListViewItem(lista);
+
+                if (mlvAsiakkaat.SelectedItems.Count > 0)
+                {
+                    if (mlvAsiakkaat.SelectedItems[0].SubItems[1].Text == item.SubItems[0].Text)
+                    {
+                        lblEiVarauksia.Text = "";
+                        mlvTiedot.Items.Add(item);
+                        break;
+                    }
+                    else
+                    {
+                        lblEiVarauksia.Text = "Ei varauksia";
+                    }                   
+                }               
+            }
         }
     }
 }

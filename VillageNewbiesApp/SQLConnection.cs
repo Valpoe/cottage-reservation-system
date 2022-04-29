@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace VillageNewbiesApp
 {
@@ -34,8 +35,6 @@ namespace VillageNewbiesApp
 
                 MySqlCommand cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
 
-                List<Asiakas> asiakaslista = new List<Asiakas>();
-
                 MySqlDataReader Reader = cmd.ExecuteReader();
 
                 while (Reader.Read())
@@ -46,6 +45,33 @@ namespace VillageNewbiesApp
                     SQLResult.Add(kokonimi);
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("email")).ToString());
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("puhelinnro")).ToString());
+                }
+            }
+            return SQLResult;
+        }
+        
+        public List<string> SQLnaytaTiedot()
+        {
+            List<string> SQLResult = new List<string>();
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                MySqlCommand cmd = new MySqlCommand("SELECT a.asiakas_id, a.etunimi, a.sukunimi, m.mokkinimi," +
+                    " v.vahvistus_pvm, v.varattu_alkupvm, v.varattu_loppupvm FROM asiakas a, varaus v," +
+                    " mokki m WHERE a.asiakas_id = v.asiakas_id AND v.mokki_mokki_id = m.mokki_id", connection);
+
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    string kokonimi = Reader.GetString(Reader.GetOrdinal("etunimi")) + " " +
+                        Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    SQLResult.Add(kokonimi);
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("vahvistus_pvm")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_alkupvm")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_loppupvm")).ToString());
                 }
             }
             return SQLResult;
