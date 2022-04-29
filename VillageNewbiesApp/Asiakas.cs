@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VillageNewbiesApp
 {
-    internal class Asiakas
+    public class Asiakas
     {
         // Asetetaan muuttujat
         private string Id { get; set; }

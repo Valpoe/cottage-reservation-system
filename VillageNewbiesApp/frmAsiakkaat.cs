@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySqlConnector;
 
 namespace VillageNewbiesApp
 {
@@ -19,25 +14,14 @@ namespace VillageNewbiesApp
         public frmAsiakkaat()
         {
             InitializeComponent();
-
-
-            //initialize asiakkaat from tietokanta
-            
-            //List<string> asiakaslista = mySQL.SQLselectAllbyName("asiakas");
-
-            //foreach(string asiakas in asiakaslista)
-            //{
-            //    //MessageBox.Show(asiakas);
-            //    mlvAsiakkaat.Items.Add(asiakas);
-            //}
-            
         }
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)
         {
-            
+
         }
 
+        // Tyhjennetään kaikki textboxit
         private void btnTyhjenna_Click(object sender, EventArgs e)
         {
             tbEtunimi.Text = String.Empty;
@@ -49,6 +33,7 @@ namespace VillageNewbiesApp
             tbPostitoimipaikka.Text = String.Empty;
         }
 
+        // Tehdään virheentarkistus ja lisätään uusi asiakas tietokantaan
         public void btnLisaa_Click(object sender, EventArgs e)
         {
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
@@ -89,22 +74,54 @@ namespace VillageNewbiesApp
             }
             else
             {
-                Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text, tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
-                MessageBox.Show(asiakas.GetEtunimi());
+                Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text,
+                    tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
                 mySQL.SQLinsertCustomer(asiakas);
             }
-            
         }
 
+        // Clearataan error
         private void tbEtunimi_MouseClick(object sender, MouseEventArgs e)
         {
             MaterialSkin.Controls.MaterialTextBox tb = (MaterialSkin.Controls.MaterialTextBox)sender;
             errorProvider.SetError(tb, "");
         }
 
+        // Tuodaan asiakkaat tietokannasta listviewiin
         private void btnLataaAsiakkaat_Click(object sender, EventArgs e)
         {
-            mySQL.SQLselectAllbyName();
+            mlvAsiakkaat.Items.Clear();
+            List<string> asiakkaat = mySQL.SQLselectAllbyName();
+
+            string[] lista = new string[4];
+            ListViewItem item;
+
+            for (int i = 0; i < asiakkaat.Count; i++)
+            {
+                lista[0] = asiakkaat[i];
+                i++;
+                lista[1] = asiakkaat[i];
+                i++;
+                lista[2] = asiakkaat[i];
+                i++;
+                lista[3] = asiakkaat[i];
+
+                item = new ListViewItem(lista);
+
+                mlvAsiakkaat.Items.Add(item);
+            }
+        }
+
+        // Estetään columnien säätö
+        private void mlvAsiakkaat_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = this.mlvAsiakkaat.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
+
+        private void tbSearchBox_TextChanged(object sender, EventArgs e)
+        {
+       
         }
     }
 }

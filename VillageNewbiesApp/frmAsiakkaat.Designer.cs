@@ -37,7 +37,11 @@
             this.tbPuhelinNumero = new MaterialSkin.Controls.MaterialTextBox();
             this.labelAsiakkaanTiedot = new MaterialSkin.Controls.MaterialLabel();
             this.mlvAsiakkaat = new MaterialSkin.Controls.MaterialListView();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.ColumnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnKokonimi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPuhnro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbSearchBox = new MaterialSkin.Controls.MaterialTextBox();
             this.tbPostiNumero = new MaterialSkin.Controls.MaterialTextBox();
             this.tbPostitoimipaikka = new MaterialSkin.Controls.MaterialTextBox();
             this.btnLataaAsiakkaat = new MaterialSkin.Controls.MaterialButton();
@@ -208,39 +212,66 @@
             this.mlvAsiakkaat.AutoSizeTable = false;
             this.mlvAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mlvAsiakkaat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvAsiakkaat.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnID,
+            this.columnKokonimi,
+            this.columnEmail,
+            this.columnPuhnro});
             this.mlvAsiakkaat.Depth = 0;
             this.mlvAsiakkaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mlvAsiakkaat.FullRowSelect = true;
             this.mlvAsiakkaat.HideSelection = false;
-            this.mlvAsiakkaat.Location = new System.Drawing.Point(231, 54);
+            this.mlvAsiakkaat.Location = new System.Drawing.Point(230, 54);
             this.mlvAsiakkaat.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvAsiakkaat.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvAsiakkaat.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvAsiakkaat.Name = "mlvAsiakkaat";
             this.mlvAsiakkaat.OwnerDraw = true;
-            this.mlvAsiakkaat.Size = new System.Drawing.Size(530, 235);
+            this.mlvAsiakkaat.Size = new System.Drawing.Size(520, 288);
             this.mlvAsiakkaat.TabIndex = 11;
             this.mlvAsiakkaat.UseCompatibleStateImageBehavior = false;
             this.mlvAsiakkaat.View = System.Windows.Forms.View.Details;
+            this.mlvAsiakkaat.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mlvAsiakkaat_ColumnWidthChanging);
             // 
-            // materialTextBox1
+            // ColumnID
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.Hint = "Etsi asiakkaita";
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(553, 12);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(200, 36);
-            this.materialTextBox1.TabIndex = 10;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.UseTallSize = false;
+            this.ColumnID.Text = "ID";
+            this.ColumnID.Width = 45;
+            // 
+            // columnKokonimi
+            // 
+            this.columnKokonimi.Text = "Nimi";
+            this.columnKokonimi.Width = 135;
+            // 
+            // columnEmail
+            // 
+            this.columnEmail.Text = "Email";
+            this.columnEmail.Width = 215;
+            // 
+            // columnPuhnro
+            // 
+            this.columnPuhnro.Text = "Puhelin";
+            this.columnPuhnro.Width = 125;
+            // 
+            // tbSearchBox
+            // 
+            this.tbSearchBox.AnimateReadOnly = false;
+            this.tbSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearchBox.Depth = 0;
+            this.tbSearchBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbSearchBox.Hint = "Etsi asiakkaita";
+            this.tbSearchBox.LeadingIcon = null;
+            this.tbSearchBox.Location = new System.Drawing.Point(550, 13);
+            this.tbSearchBox.MaxLength = 50;
+            this.tbSearchBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbSearchBox.Multiline = false;
+            this.tbSearchBox.Name = "tbSearchBox";
+            this.tbSearchBox.Size = new System.Drawing.Size(200, 36);
+            this.tbSearchBox.TabIndex = 10;
+            this.tbSearchBox.Text = "";
+            this.tbSearchBox.TrailingIcon = null;
+            this.tbSearchBox.UseTallSize = false;
+            this.tbSearchBox.TextChanged += new System.EventHandler(this.tbSearchBox_TextChanged);
             // 
             // tbPostiNumero
             // 
@@ -291,7 +322,7 @@
             this.btnLataaAsiakkaat.Depth = 0;
             this.btnLataaAsiakkaat.HighEmphasis = true;
             this.btnLataaAsiakkaat.Icon = null;
-            this.btnLataaAsiakkaat.Location = new System.Drawing.Point(593, 327);
+            this.btnLataaAsiakkaat.Location = new System.Drawing.Point(600, 351);
             this.btnLataaAsiakkaat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLataaAsiakkaat.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLataaAsiakkaat.Name = "btnLataaAsiakkaat";
@@ -313,7 +344,7 @@
             this.Controls.Add(this.btnLataaAsiakkaat);
             this.Controls.Add(this.tbPostitoimipaikka);
             this.Controls.Add(this.tbPostiNumero);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.tbSearchBox);
             this.Controls.Add(this.mlvAsiakkaat);
             this.Controls.Add(this.labelAsiakkaanTiedot);
             this.Controls.Add(this.tbPuhelinNumero);
@@ -341,10 +372,14 @@
         private MaterialSkin.Controls.MaterialTextBox tbSahkoPosti;
         private MaterialSkin.Controls.MaterialTextBox tbPuhelinNumero;
         private MaterialSkin.Controls.MaterialLabel labelAsiakkaanTiedot;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox tbSearchBox;
         private MaterialSkin.Controls.MaterialTextBox tbPostiNumero;
         private MaterialSkin.Controls.MaterialTextBox tbPostitoimipaikka;
         private MaterialSkin.Controls.MaterialButton btnLataaAsiakkaat;
         public MaterialSkin.Controls.MaterialListView mlvAsiakkaat;
+        private System.Windows.Forms.ColumnHeader ColumnID;
+        private System.Windows.Forms.ColumnHeader columnKokonimi;
+        private System.Windows.Forms.ColumnHeader columnEmail;
+        private System.Windows.Forms.ColumnHeader columnPuhnro;
     }
 }

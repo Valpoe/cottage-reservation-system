@@ -3,10 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Data;
 
 namespace VillageNewbiesApp
 {
@@ -29,76 +25,32 @@ namespace VillageNewbiesApp
             return connectionString;
         }
 
-        public void SQLselectAllbyName()
+        public List<string> SQLselectAllbyName()
         {
-            frmAsiakkaat asiakkaat = new frmAsiakkaat();
-            List<Asiakas> asiakaslista = new List<Asiakas>();
-            //int id = 1;
-            //string etunimi = "pekka";
-            //string sukunimi;
-            //string email;
-            //string puhelinnumero;
-
+            List<string> SQLResult = new List<string>();
             using (MySqlConnection connection = GetConnection())
             {
                 Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-                asiakkaat.mlvAsiakkaat.View = View.Details;
-                MySqlCommand cmd;
-                DataTable dt;
-                MySqlDataAdapter da;
-                DataSet ds;
-       
-                asiakkaat.mlvAsiakkaat.Columns.Add("ID", 50);
-                asiakkaat.mlvAsiakkaat.Columns.Add("Etunimi", 100);
-                asiakkaat.mlvAsiakkaat.Columns.Add("Sukunimi", 100);
-                asiakkaat.mlvAsiakkaat.Columns.Add("Email", 100);
-                asiakkaat.mlvAsiakkaat.Columns.Add("Puhelinnumero", 100);
-                asiakkaat.mlvAsiakkaat.View = View.Details;
-                cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
-                da = new MySqlDataAdapter(cmd);
-                ds = new DataSet();
 
-                da.Fill(ds, "testitaulu");
+                MySqlCommand cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
 
-                dt = ds.Tables["testitaulu"];
+                List<Asiakas> asiakaslista = new List<Asiakas>();
 
-                for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
                 {
-                    asiakkaat.mlvAsiakkaat.Items.Add(dt.Rows[i].ItemArray[0].ToString());
-                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
-                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[2].ToString());
-                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
-                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[4].ToString());
-                }
-
-                //MySqlDataReader Reader = Command.ExecuteReader();
-
-                //while (Reader.Read())
-                //{
-                //    id = Reader.GetInt32("asiakas_id");
-                //    etunimi = Reader.GetString("etunimi");
-                //    sukunimi = Reader.GetString("sukunimi");
-                //    email = Reader.GetString("email");
-                //    puhelinnumero = Reader.GetString("puhelinnro");
-
-
-                //    asiakaslista.Add(new Asiakas(id.ToString(), etunimi, sukunimi, email, puhelinnumero));
-                //    asiakkaat.mlvAsiakkaat.Items.Clear();
-                //    foreach(var item in asiakaslista)
-                //    {
-                //        ListViewItem rivi = new ListViewItem(id.ToString());
-                //        rivi.SubItems.Add(etunimi);
-                //        rivi.SubItems.Add(sukunimi);
-                //        rivi.SubItems.Add(email);
-                //        rivi.SubItems.Add(puhelinnumero);
-                //        asiakkaat.mlvAsiakkaat.Items.Add(rivi);
-                //    }
-
-                //}
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("asiakas_id")).ToString());
+                    string kokonimi = Reader.GetString(Reader.GetOrdinal("etunimi")) + " " +
+                        Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    SQLResult.Add(kokonimi);
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("email")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("puhelinnro")).ToString());
                 }
             }
+            return SQLResult;
+        }
 
-        // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan
         public void SQLinsertCustomer(Asiakas asiakas)
         {
             using (MySqlConnection connection = GetConnection())
@@ -108,6 +60,8 @@ namespace VillageNewbiesApp
                 MySqlCommand Command = new MySqlCommand("SELECT postinro FROM posti WHERE postinro LIKE " + asiakas.GetPostinumero(), connection);
 
                 MySqlDataReader Reader = Command.ExecuteReader();
+
+                // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan
 
                 if (Reader.HasRows != true)
                 {
@@ -121,7 +75,7 @@ namespace VillageNewbiesApp
                 }
 
                 Reader.Close();
-                
+
                 Command = new MySqlCommand("INSERT INTO asiakas(postinro, etunimi, sukunimi, lahiosoite, email, puhelinnro) VALUES(@postinro, @etunimi, @sukunimi, @lahiosoite, @email, @puhelinnro)", connection);
 
                 Command.Parameters.AddWithValue("@postinro", asiakas.GetPostinumero());
@@ -195,7 +149,7 @@ namespace VillageNewbiesApp
 
         public void setAlueID(string select)
         {
-            using(MySqlConnection connection = GetConnection())
+            using (MySqlConnection connection = GetConnection())
             {
                 MySqlCommand Command = new MySqlCommand("SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "'", connection);
                 Console.Write("Haettu alueID alueelle" + select);
