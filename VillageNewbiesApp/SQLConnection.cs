@@ -38,37 +38,39 @@ namespace VillageNewbiesApp
             //string sukunimi;
             //string email;
             //string puhelinnumero;
-            
-            //using (MySqlConnection connection = GetConnection())
-            //{
-            //    MySqlCommand cmd;
-            //    DataTable dt;
-            //    MySqlDataAdapter da;
-            //    DataSet ds;
-            //    Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-            //    asiakkaat.mlvAsiakkaat.Columns.Add("ID", 50);
-            //    asiakkaat.mlvAsiakkaat.Columns.Add("Etunimi", 100);
-            //    asiakkaat.mlvAsiakkaat.Columns.Add("Sukunimi", 100);
-            //    asiakkaat.mlvAsiakkaat.Columns.Add("Email", 100);
-            //    asiakkaat.mlvAsiakkaat.Columns.Add("Puhelinnumero", 100);
-            //    asiakkaat.mlvAsiakkaat.View = View.Details;
-            //    cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
-            //    da = new MySqlDataAdapter(cmd);
-            //    ds = new DataSet();
 
-            //    da.Fill(ds, "testitaulu");
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+                asiakkaat.mlvAsiakkaat.View = View.Details;
+                MySqlCommand cmd;
+                DataTable dt;
+                MySqlDataAdapter da;
+                DataSet ds;
+       
+                asiakkaat.mlvAsiakkaat.Columns.Add("ID", 50);
+                asiakkaat.mlvAsiakkaat.Columns.Add("Etunimi", 100);
+                asiakkaat.mlvAsiakkaat.Columns.Add("Sukunimi", 100);
+                asiakkaat.mlvAsiakkaat.Columns.Add("Email", 100);
+                asiakkaat.mlvAsiakkaat.Columns.Add("Puhelinnumero", 100);
+                asiakkaat.mlvAsiakkaat.View = View.Details;
+                cmd = new MySqlCommand("SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas", connection);
+                da = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
 
-            //    dt = ds.Tables["testitaulu"];
-                
-            //    for(int i = 0; i <= dt.Rows.Count - 1; i++)
-            //    {
-            //        asiakkaat.mlvAsiakkaat.Items.Add(dt.Rows[i].ItemArray[0].ToString());
-            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
-            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[2].ToString());
-            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
-            //        asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[4].ToString());                   
-            //    }
-                
+                da.Fill(ds, "testitaulu");
+
+                dt = ds.Tables["testitaulu"];
+
+                for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                {
+                    asiakkaat.mlvAsiakkaat.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[1].ToString());
+                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[2].ToString());
+                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[3].ToString());
+                    asiakkaat.mlvAsiakkaat.Items[i].SubItems.Add(dt.Rows[i].ItemArray[4].ToString());
+                }
+
                 //MySqlDataReader Reader = Command.ExecuteReader();
 
                 //while (Reader.Read())
@@ -93,8 +95,8 @@ namespace VillageNewbiesApp
                 //    }
 
                 //}
-            //}
-        }
+                }
+            }
 
         // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan
         public void SQLinsertCustomer(Asiakas asiakas)
