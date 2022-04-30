@@ -9,7 +9,6 @@ namespace VillageNewbiesApp
 {
     class SQLConnection
     {
-
         public static MySqlConnection GetConnection()
         {
             string cString = "datasource=localhost;port=3307;username=root;password=Ruutti;database=vn";
@@ -49,7 +48,8 @@ namespace VillageNewbiesApp
             }
             return SQLResult;
         }
-        
+
+        // Näytetään sen asiakkaan varaustiedot, joka on valittu listasta
         public List<string> SQLnaytaTiedot()
         {
             List<string> SQLResult = new List<string>();
@@ -77,6 +77,7 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
+        // Lisätään asiakas + postitiedot tietokantaan
         public void SQLinsertCustomer(Asiakas asiakas)
         {
             using (MySqlConnection connection = GetConnection())
@@ -86,8 +87,6 @@ namespace VillageNewbiesApp
                 MySqlCommand Command = new MySqlCommand("SELECT postinro FROM posti WHERE postinro LIKE " + asiakas.GetPostinumero(), connection);
 
                 MySqlDataReader Reader = Command.ExecuteReader();
-
-                // Lisätään asiakas ja postinumero + postitoimipaikka tietokantaan
 
                 if (Reader.HasRows != true)
                 {
@@ -114,6 +113,34 @@ namespace VillageNewbiesApp
                 Command.ExecuteNonQuery();
             }
         }
+
+        // Etsitään asiakkaita listasta kirjoittamalla textboxiin
+        public List<string> search(String searchTerm)
+        {
+            List<string> SQLResult = new List<string>();
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                //asiakkaat.mlvAsiakkaat.Items.Clear();
+                string sql = "SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas WHERE asiakas_id LIKE '%" + searchTerm + "%' OR etunimi LIKE '%" + searchTerm + "%' OR sukunimi LIKE '%" +
+                searchTerm + "%' OR email LIKE '%" + searchTerm + "%' OR puhelinnro LIKE '%" + searchTerm + "%'";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("asiakas_id")).ToString());
+                    string kokonimi = Reader.GetString(Reader.GetOrdinal("etunimi")) + " " +
+                        Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    SQLResult.Add(kokonimi);
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("email")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("puhelinnro")).ToString());
+                }
+            }
+            return SQLResult;
+        }
         public List<string> SQLselectAllAlueet()
         {
 
@@ -134,7 +161,6 @@ namespace VillageNewbiesApp
                     result.Clear();
                 }
             }
-
             return SQLResult;
         }
 
@@ -205,7 +231,6 @@ namespace VillageNewbiesApp
                 return palvelut;
             }
         }
-
     }
 }
 

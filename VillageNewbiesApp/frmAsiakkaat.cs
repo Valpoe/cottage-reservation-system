@@ -76,7 +76,25 @@ namespace VillageNewbiesApp
                     tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
                 mySQL.SQLinsertCustomer(asiakas);
                 btnTyhjenna_Click(sender, e);
+
+                // Asiakas lisätty label näkyy 3 sekunnin ajan
+                
+                lblAsiakasLisatty.Visible = true;
+
+                var t = new Timer();
+                t.Interval = 3000;
+                t.Tick += (s, a) =>
+                {
+                    t.Stop();
+                    lblAsiakasLisatty.Visible = false;
+                };
+                t.Start();
             }
+        }
+
+        private void T_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         // Clearataan error
@@ -98,8 +116,29 @@ namespace VillageNewbiesApp
             e.Cancel = true;
         }
 
+        // Etsitään ne asiakkaat tietokannasta, jotka sopivat hakutekstiin
         private void tbSearchBox_TextChanged(object sender, EventArgs e)
         {
+            mlvAsiakkaat.Items.Clear();
+            List<string> asiakkaat = mySQL.search(tbSearchBox.Text);
+
+            string[] lista = new string[4];
+            ListViewItem item;
+
+            for (int i = 0; i < asiakkaat.Count; i++)
+            {
+                lista[0] = asiakkaat[i];
+                i++;
+                lista[1] = asiakkaat[i];
+                i++;
+                lista[2] = asiakkaat[i];
+                i++;
+                lista[3] = asiakkaat[i];
+
+                item = new ListViewItem(lista);
+
+                mlvAsiakkaat.Items.Add(item);
+            }
         }
 
         // Tuodaan asiakkaat tietokannasta listviewiin

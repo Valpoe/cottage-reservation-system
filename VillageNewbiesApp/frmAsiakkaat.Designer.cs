@@ -53,6 +53,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblEiVarauksia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAsiakasLisatty = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLisaa
@@ -345,7 +346,7 @@
             this.btnNaytaTiedot.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnNaytaTiedot.Size = new System.Drawing.Size(150, 36);
             this.btnNaytaTiedot.TabIndex = 13;
-            this.btnNaytaTiedot.Text = "Näytä Tiedot";
+            this.btnNaytaTiedot.Text = "Näytä varaukset";
             this.btnNaytaTiedot.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNaytaTiedot.UseAccentColor = false;
             this.btnNaytaTiedot.UseVisualStyleBackColor = true;
@@ -368,7 +369,7 @@
             this.mlvTiedot.Location = new System.Drawing.Point(204, 240);
             this.mlvTiedot.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvTiedot.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mlvTiedot.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlvTiedot.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvTiedot.Name = "mlvTiedot";
             this.mlvTiedot.OwnerDraw = true;
             this.mlvTiedot.Size = new System.Drawing.Size(550, 175);
@@ -416,12 +417,24 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(13, 21);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 30);
             this.label1.TabIndex = 17;
             this.label1.Text = "Syötä asiakkaan tiedot";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAsiakasLisatty
+            // 
+            this.lblAsiakasLisatty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsiakasLisatty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblAsiakasLisatty.Location = new System.Drawing.Point(12, 403);
+            this.lblAsiakasLisatty.Name = "lblAsiakasLisatty";
+            this.lblAsiakasLisatty.Size = new System.Drawing.Size(180, 30);
+            this.lblAsiakasLisatty.TabIndex = 18;
+            this.lblAsiakasLisatty.Text = "Asiakas lisätty";
+            this.lblAsiakasLisatty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAsiakasLisatty.Visible = false;
             // 
             // frmAsiakkaat
             // 
@@ -429,6 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.lblAsiakasLisatty);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEiVarauksia);
             this.Controls.Add(this.mlvTiedot);
@@ -462,7 +476,6 @@
         private MaterialSkin.Controls.MaterialTextBox tbOsoite;
         private MaterialSkin.Controls.MaterialTextBox tbSahkoPosti;
         private MaterialSkin.Controls.MaterialTextBox tbPuhelinNumero;
-        private MaterialSkin.Controls.MaterialTextBox tbSearchBox;
         private MaterialSkin.Controls.MaterialTextBox tbPostiNumero;
         private MaterialSkin.Controls.MaterialTextBox tbPostitoimipaikka;
         private MaterialSkin.Controls.MaterialButton btnLataaAsiakkaat;
@@ -480,5 +493,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label lblEiVarauksia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAsiakasLisatty;
+        public MaterialSkin.Controls.MaterialTextBox tbSearchBox;
     }
 }
