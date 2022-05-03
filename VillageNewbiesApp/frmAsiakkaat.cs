@@ -7,7 +7,6 @@ namespace VillageNewbiesApp
     public partial class frmAsiakkaat : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        public static string selectedAsiakas;
 
         ErrorProvider errorProvider = new ErrorProvider();
         public frmAsiakkaat()

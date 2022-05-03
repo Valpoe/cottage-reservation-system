@@ -117,5 +117,16 @@ namespace VillageNewbiesApp
             btnKirjauduSisaan.Enabled = true;
             btnKirjauduSisaan.Visible = true;
         }
+
+        public void loadToimintaAlueet()
+        {
+            panelNavigation.Height = btnToimintaAlueet.Height;
+            panelNavigation.Top = btnToimintaAlueet.Top;
+            lblOtsikko.Text = "Toiminta-alueet";
+            this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Toiminta-alueet"]);
+            toiminnallisuus.screens["Toiminta-alueet"].Show();
+            btnToimintaAlueet.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
+            Console.WriteLine("afd");
+        }
     }
 }
