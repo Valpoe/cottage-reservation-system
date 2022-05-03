@@ -462,12 +462,13 @@
             this.btnLuoVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLuoVaraus.Name = "btnLuoVaraus";
             this.btnLuoVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLuoVaraus.Size = new System.Drawing.Size(162, 54);
+            this.btnLuoVaraus.Size = new System.Drawing.Size(109, 36);
             this.btnLuoVaraus.TabIndex = 19;
             this.btnLuoVaraus.Text = "Luo Varaus";
             this.btnLuoVaraus.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuoVaraus.UseAccentColor = false;
             this.btnLuoVaraus.UseVisualStyleBackColor = true;
+            this.btnLuoVaraus.Click += new System.EventHandler(this.btnLuoVaraus_Click);
             // 
             // frmAsiakkaat
             // 

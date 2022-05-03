@@ -7,6 +7,7 @@ namespace VillageNewbiesApp
     public partial class frmAsiakkaat : Form
     {
         SQLConnection mySQL = new SQLConnection();
+        public static string selectedAsiakas;
 
         ErrorProvider errorProvider = new ErrorProvider();
         public frmAsiakkaat()
@@ -204,6 +205,16 @@ namespace VillageNewbiesApp
                     }                   
                 }               
             }
+        }
+
+        private void btnLuoVaraus_Click(object sender, EventArgs e)
+        {
+          // var SelectedItem = (dynamic)mlvAsiakkaat.SelectedItems[0];
+          //  MessageBox.Show(SelectedItem.ToString());
+            selectedAsiakas = mlvAsiakkaat.SelectedItems[0].Text;
+            MessageBox.Show(selectedAsiakas);
+
+            
         }
     }
 }

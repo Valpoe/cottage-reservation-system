@@ -14,8 +14,10 @@ namespace VillageNewbiesApp
     {
         SQLConnection mySQL = new SQLConnection();
         
+
         public frmVaraukset()
         {
+            string id = frmAsiakkaat.selectedAsiakas;
             InitializeComponent();                  
         }
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
