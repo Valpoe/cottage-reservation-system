@@ -57,16 +57,16 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panelLeft.Controls.Add(this.btnKirjauduUlos);
             this.panelLeft.Controls.Add(this.btnKirjauduSisaan);
+            this.panelLeft.Controls.Add(this.btnKirjauduUlos);
             this.panelLeft.Controls.Add(this.pictureBox1);
             this.panelLeft.Controls.Add(this.panelNavigation);
             this.panelLeft.Controls.Add(this.btnRaportit);
             this.panelLeft.Controls.Add(this.btnLaskutus);
-            this.panelLeft.Controls.Add(this.btnAsiakkaat);
             this.panelLeft.Controls.Add(this.btnVaraukset);
             this.panelLeft.Controls.Add(this.btnMokitJaPalvelut);
             this.panelLeft.Controls.Add(this.btnToimintaAlueet);
+            this.panelLeft.Controls.Add(this.btnAsiakkaat);
             this.panelLeft.Controls.Add(this.btnEtusivu);
             this.panelLeft.Controls.Add(this.panelTopLeft);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -184,7 +184,7 @@
             this.btnAsiakkaat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btnAsiakkaat.Image = global::VillageNewbiesApp.Properties.Resources.AsiakkaatIcon;
             this.btnAsiakkaat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAsiakkaat.Location = new System.Drawing.Point(0, 324);
+            this.btnAsiakkaat.Location = new System.Drawing.Point(0, 189);
             this.btnAsiakkaat.Name = "btnAsiakkaat";
             this.btnAsiakkaat.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnAsiakkaat.Size = new System.Drawing.Size(186, 45);
@@ -205,7 +205,7 @@
             this.btnVaraukset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btnVaraukset.Image = global::VillageNewbiesApp.Properties.Resources.VarauksetIcon;
             this.btnVaraukset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVaraukset.Location = new System.Drawing.Point(0, 279);
+            this.btnVaraukset.Location = new System.Drawing.Point(0, 324);
             this.btnVaraukset.Name = "btnVaraukset";
             this.btnVaraukset.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnVaraukset.Size = new System.Drawing.Size(186, 45);
@@ -226,7 +226,7 @@
             this.btnMokitJaPalvelut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btnMokitJaPalvelut.Image = global::VillageNewbiesApp.Properties.Resources.PalvelutIcon;
             this.btnMokitJaPalvelut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMokitJaPalvelut.Location = new System.Drawing.Point(0, 234);
+            this.btnMokitJaPalvelut.Location = new System.Drawing.Point(0, 279);
             this.btnMokitJaPalvelut.Name = "btnMokitJaPalvelut";
             this.btnMokitJaPalvelut.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnMokitJaPalvelut.Size = new System.Drawing.Size(186, 45);
@@ -247,7 +247,7 @@
             this.btnToimintaAlueet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btnToimintaAlueet.Image = global::VillageNewbiesApp.Properties.Resources.LocationIcon;
             this.btnToimintaAlueet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnToimintaAlueet.Location = new System.Drawing.Point(0, 189);
+            this.btnToimintaAlueet.Location = new System.Drawing.Point(0, 234);
             this.btnToimintaAlueet.Name = "btnToimintaAlueet";
             this.btnToimintaAlueet.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnToimintaAlueet.Size = new System.Drawing.Size(186, 45);
