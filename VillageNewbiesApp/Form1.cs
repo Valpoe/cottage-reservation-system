@@ -126,7 +126,16 @@ namespace VillageNewbiesApp
             this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Toiminta-alueet"]);
             toiminnallisuus.screens["Toiminta-alueet"].Show();
             btnToimintaAlueet.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
-            Console.WriteLine("afd");
+
+            Button button = new Button();
+            foreach (Button bt in button.Parent.Controls.OfType<Button>())
+            {
+                if (bt.Name != button.Name)
+                {
+                    bt.BackColor = System.Drawing.Color.FromArgb(24, 30, 54);
+                }
+            }
         }
+
     }
 }
