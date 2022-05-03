@@ -122,7 +122,6 @@ namespace VillageNewbiesApp
             {
                 Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
 
-                //asiakkaat.mlvAsiakkaat.Items.Clear();
                 string sql = "SELECT asiakas_id, etunimi, sukunimi, email, puhelinnro FROM asiakas WHERE asiakas_id LIKE '%" + searchTerm + "%' OR etunimi LIKE '%" + searchTerm + "%' OR sukunimi LIKE '%" +
                 searchTerm + "%' OR email LIKE '%" + searchTerm + "%' OR puhelinnro LIKE '%" + searchTerm + "%'";
 

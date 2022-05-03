@@ -35,7 +35,7 @@ namespace VillageNewbiesApp
             { "Varaukset", new frmVaraukset() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Asiakkaat", new frmAsiakkaat() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
             { "Laskutus", new frmLaskutus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } },
-            { "Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } }
+            { "Raportit", new frmRaportit() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true } }        
         };
         
         // Formien avaus paneeliin ja button värin vaihto

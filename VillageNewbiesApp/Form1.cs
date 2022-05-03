@@ -1,28 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
-        //readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         mainFormToiminnallisuus toiminnallisuus = new mainFormToiminnallisuus();
- 
+
         public Form1()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
         }
 
-        // Kotisivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
+        // Etusivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
         private void Form1_Load(object sender, EventArgs e)
         {
             panelNavigation.Height = btnEtusivu.Height;
@@ -32,7 +26,7 @@ namespace VillageNewbiesApp
             toiminnallisuus.screens["Etusivu"].Show();
             btnEtusivu.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
         }
-  
+
         private void btnAlueet_Click(object sender, EventArgs e)
         {
             toiminnallisuus.ChangeNavbarAndTitle(sender as Button, this);
@@ -88,6 +82,40 @@ namespace VillageNewbiesApp
         private void pbMinimize_MouseLeave(object sender, EventArgs e)
         {
             mouseLeave(sender as PictureBox);
+        }
+
+        private void btnKirjauduSisaan_Click(object sender, EventArgs e)
+        {
+            btnKirjauduSisaan.Enabled = false;
+            frmKirjauduSisaan kirjautuminen = new frmKirjauduSisaan();
+            kirjautuminen.Owner = this;
+            kirjautuminen.Show();
+            this.Enabled = false;
+        }
+
+        private void btnKirjauduUlos_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            
+            foreach (Button bt in button.Parent.Controls.OfType<Button>())
+            {
+                if (bt.Name != button.Name)
+                {
+                    bt.BackColor = System.Drawing.Color.FromArgb(24, 30, 54);
+                }
+            }
+            
+            panelFormLoader.Controls.Clear();
+            Form1_Load(sender, e);
+            btnAsiakkaat.Enabled = false;
+            btnVaraukset.Enabled = false;
+            btnToimintaAlueet.Enabled = false;
+            btnRaportit.Enabled = false;
+            btnMokitJaPalvelut.Enabled = false;
+            btnLaskutus.Enabled = false;
+            btnKirjauduUlos.Visible = false;
+            btnKirjauduSisaan.Enabled = true;
+            btnKirjauduSisaan.Visible = true;
         }
     }
 }

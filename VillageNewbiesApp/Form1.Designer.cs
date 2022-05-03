@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnKirjauduUlos = new System.Windows.Forms.Button();
+            this.btnKirjauduSisaan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.btnRaportit = new System.Windows.Forms.Button();
@@ -43,20 +45,20 @@
             this.panelFormLoader = new System.Windows.Forms.Panel();
             this.lblOtsikko = new System.Windows.Forms.Label();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTopLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelLeft.Controls.Add(this.btnKirjauduUlos);
+            this.panelLeft.Controls.Add(this.btnKirjauduSisaan);
             this.panelLeft.Controls.Add(this.pictureBox1);
             this.panelLeft.Controls.Add(this.panelNavigation);
             this.panelLeft.Controls.Add(this.btnRaportit);
@@ -72,6 +74,45 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(186, 577);
             this.panelLeft.TabIndex = 0;
+            // 
+            // btnKirjauduUlos
+            // 
+            this.btnKirjauduUlos.FlatAppearance.BorderSize = 2;
+            this.btnKirjauduUlos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKirjauduUlos.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKirjauduUlos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnKirjauduUlos.Image = global::VillageNewbiesApp.Properties.Resources.Kirjaudu;
+            this.btnKirjauduUlos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKirjauduUlos.Location = new System.Drawing.Point(15, 476);
+            this.btnKirjauduUlos.Name = "btnKirjauduUlos";
+            this.btnKirjauduUlos.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnKirjauduUlos.Size = new System.Drawing.Size(155, 45);
+            this.btnKirjauduUlos.TabIndex = 6;
+            this.btnKirjauduUlos.Text = "Kirjaudu ulos";
+            this.btnKirjauduUlos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKirjauduUlos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKirjauduUlos.UseVisualStyleBackColor = true;
+            this.btnKirjauduUlos.Visible = false;
+            this.btnKirjauduUlos.Click += new System.EventHandler(this.btnKirjauduUlos_Click);
+            // 
+            // btnKirjauduSisaan
+            // 
+            this.btnKirjauduSisaan.FlatAppearance.BorderSize = 2;
+            this.btnKirjauduSisaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKirjauduSisaan.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKirjauduSisaan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnKirjauduSisaan.Image = global::VillageNewbiesApp.Properties.Resources.Kirjaudu;
+            this.btnKirjauduSisaan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKirjauduSisaan.Location = new System.Drawing.Point(15, 476);
+            this.btnKirjauduSisaan.Name = "btnKirjauduSisaan";
+            this.btnKirjauduSisaan.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnKirjauduSisaan.Size = new System.Drawing.Size(155, 45);
+            this.btnKirjauduSisaan.TabIndex = 5;
+            this.btnKirjauduSisaan.Text = "Kirjaudu";
+            this.btnKirjauduSisaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKirjauduSisaan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKirjauduSisaan.UseVisualStyleBackColor = true;
+            this.btnKirjauduSisaan.Click += new System.EventHandler(this.btnKirjauduSisaan_Click);
             // 
             // pictureBox1
             // 
@@ -94,6 +135,7 @@
             // btnRaportit
             // 
             this.btnRaportit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRaportit.Enabled = false;
             this.btnRaportit.FlatAppearance.BorderSize = 0;
             this.btnRaportit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRaportit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,6 +156,7 @@
             // btnLaskutus
             // 
             this.btnLaskutus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLaskutus.Enabled = false;
             this.btnLaskutus.FlatAppearance.BorderSize = 0;
             this.btnLaskutus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaskutus.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +177,7 @@
             // btnAsiakkaat
             // 
             this.btnAsiakkaat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsiakkaat.Enabled = false;
             this.btnAsiakkaat.FlatAppearance.BorderSize = 0;
             this.btnAsiakkaat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsiakkaat.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +198,7 @@
             // btnVaraukset
             // 
             this.btnVaraukset.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVaraukset.Enabled = false;
             this.btnVaraukset.FlatAppearance.BorderSize = 0;
             this.btnVaraukset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVaraukset.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +219,7 @@
             // btnMokitJaPalvelut
             // 
             this.btnMokitJaPalvelut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMokitJaPalvelut.Enabled = false;
             this.btnMokitJaPalvelut.FlatAppearance.BorderSize = 0;
             this.btnMokitJaPalvelut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMokitJaPalvelut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +240,7 @@
             // btnToimintaAlueet
             // 
             this.btnToimintaAlueet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnToimintaAlueet.Enabled = false;
             this.btnToimintaAlueet.FlatAppearance.BorderSize = 0;
             this.btnToimintaAlueet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToimintaAlueet.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,23 +330,10 @@
             this.pbExit.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
             this.pbExit.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
             // 
-            // pbMaximize
-            // 
-            this.pbMaximize.Image = global::VillageNewbiesApp.Properties.Resources.maximize25x25;
-            this.pbMaximize.Location = new System.Drawing.Point(883, 12);
-            this.pbMaximize.Name = "pbMaximize";
-            this.pbMaximize.Size = new System.Drawing.Size(25, 25);
-            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbMaximize.TabIndex = 4;
-            this.pbMaximize.TabStop = false;
-            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
-            this.pbMaximize.MouseEnter += new System.EventHandler(this.pbMinimize_MouseEnter);
-            this.pbMaximize.MouseLeave += new System.EventHandler(this.pbMinimize_MouseLeave);
-            // 
             // pbMinimize
             // 
             this.pbMinimize.Image = global::VillageNewbiesApp.Properties.Resources.minimize25x251;
-            this.pbMinimize.Location = new System.Drawing.Point(852, 12);
+            this.pbMinimize.Location = new System.Drawing.Point(883, 12);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(25, 25);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -317,7 +351,6 @@
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.lblOtsikko);
-            this.Controls.Add(this.pbMaximize);
             this.Controls.Add(this.panelFormLoader);
             this.Controls.Add(this.pbMinimize);
             this.Controls.Add(this.panelLeft);
@@ -333,7 +366,6 @@
             this.panelTopLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -344,14 +376,7 @@
 
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTopLeft;
-        private System.Windows.Forms.Button btnToimintaAlueet;
-        private System.Windows.Forms.Button btnRaportit;
-        private System.Windows.Forms.Button btnLaskutus;
-        private System.Windows.Forms.Button btnAsiakkaat;
-        private System.Windows.Forms.Button btnVaraukset;
-        private System.Windows.Forms.Button btnMokitJaPalvelut;
         private System.Windows.Forms.PictureBox pbMinimize;
-        private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnEtusivu;
@@ -359,6 +384,14 @@
         public System.Windows.Forms.Panel panelFormLoader;
         public System.Windows.Forms.Panel panelNavigation;
         public System.Windows.Forms.Label lblOtsikko;
+        public System.Windows.Forms.Button btnToimintaAlueet;
+        public System.Windows.Forms.Button btnKirjauduSisaan;
+        public System.Windows.Forms.Button btnRaportit;
+        public System.Windows.Forms.Button btnLaskutus;
+        public System.Windows.Forms.Button btnAsiakkaat;
+        public System.Windows.Forms.Button btnVaraukset;
+        public System.Windows.Forms.Button btnMokitJaPalvelut;
+        public System.Windows.Forms.Button btnKirjauduUlos;
     }
 }
 
