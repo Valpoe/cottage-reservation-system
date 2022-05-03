@@ -39,11 +39,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "VARAUKSET";
+            this.label1.VisibleChanged += new System.EventHandler(this.label1_VisibleChanged);
             // 
             // mlvVaraukset
             // 
@@ -56,14 +58,13 @@
             this.mlvVaraukset.Depth = 0;
             this.mlvVaraukset.FullRowSelect = true;
             this.mlvVaraukset.HideSelection = false;
-            this.mlvVaraukset.Location = new System.Drawing.Point(475, 46);
-            this.mlvVaraukset.Margin = new System.Windows.Forms.Padding(2);
-            this.mlvVaraukset.MinimumSize = new System.Drawing.Size(150, 81);
+            this.mlvVaraukset.Location = new System.Drawing.Point(712, 71);
+            this.mlvVaraukset.MinimumSize = new System.Drawing.Size(225, 125);
             this.mlvVaraukset.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvVaraukset.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvVaraukset.Name = "mlvVaraukset";
             this.mlvVaraukset.OwnerDraw = true;
-            this.mlvVaraukset.Size = new System.Drawing.Size(251, 358);
+            this.mlvVaraukset.Size = new System.Drawing.Size(376, 551);
             this.mlvVaraukset.TabIndex = 1;
             this.mlvVaraukset.UseCompatibleStateImageBehavior = false;
             this.mlvVaraukset.View = System.Windows.Forms.View.Details;
@@ -80,23 +81,26 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(15, 29);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar1.Location = new System.Drawing.Point(22, 45);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
             // 
             // frmVaraukset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(765, 477);
+            this.ClientSize = new System.Drawing.Size(1148, 734);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.mlvVaraukset);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmVaraukset";
             this.Text = "frmVaraukset";
+            this.Activated += new System.EventHandler(this.frmVaraukset_Activated);
+            this.VisibleChanged += new System.EventHandler(this.frmVaraukset_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

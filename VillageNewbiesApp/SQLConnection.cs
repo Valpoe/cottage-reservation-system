@@ -231,6 +231,88 @@ namespace VillageNewbiesApp
                 return palvelut;
             }
         }
+        
+        public List<string> SQLGetReservation(string mokkinimi)
+        {
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("SELECT a.etunimi, a.sukunimi, m.mokkinimi" +
+                    " FROM asiakas a JOIN varaus v" +
+                    " ON a.asiakas_id = v.asiakas_id" +
+                    " JOIN mokki m" +
+                    " ON v.mokki_mokki_id = m.mokki_id" +
+                    " WHERE m.mokkinimi LIKE '" + mokkinimi + "'", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    string nimi = Reader.GetString(Reader.GetOrdinal("etunimi"))+ " " + Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    SQLResult.Add(nimi);
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
+                   
+                }
+                
+            }
+            return SQLResult;
+        }
+        public void SQLMakeReservation(DateTime start, DateTime end, DateTime current)
+        {
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+
+                int aasiakas = 2;
+                int mokkid = 1;
+                string datestart = start.ToString("yyyy-MM-dd");
+                string dateend = end.ToString("yyyy-MM-dd");
+                string thisday = current.ToString("yyyy-MM-dd");
+                MySqlCommand Command = new MySqlCommand("INSERT INTO varaus(asiakas_id, mokki_mokki_id, varattu_alkupvm, varattu_loppupvm, varattu_pvm)"
+                + "VALUES('" + aasiakas + "', '" + mokkid + "','" + datestart + "', '" + dateend + "','" + thisday + "')", connection);
+                Command.ExecuteNonQuery();
+            }
+        }
+        public List<DateTime> SQLCheckReservation(string mokkinimi)
+        {
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+            List<string> varaukset = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+              
+                MySqlCommand Command = new MySqlCommand("SELECT v.varattu_alkupvm, v.varattu_loppupvm" +
+                    " FROM varaus v JOIN mokki m" +
+                    " ON v.mokki_mokki_id = m.mokki_id" +
+                    " WHERE m.mokkinimi LIKE '" + mokkinimi + "'",  connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+                List<DateTime> Reserved2 = new List<DateTime>();
+                while (Reader.Read())
+                {
+                    DateTime date = Reader.GetDateTime(Reader.GetOrdinal("varattu_alkupvm"));
+                    DateTime date2 = Reader.GetDateTime(Reader.GetOrdinal("varattu_loppupvm"));
+
+                    //Kuinka saada DateTime monthcalendarille luettavaan muotoon:
+                    // string datestart = date.ToString("dd/MM/yyyy HH:mm:ss");
+                    //string dateend = date2.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    //List<DateTime> Reserved = new List<DateTime>();
+                    for (DateTime start = date; start <= date2; start = start.AddDays(1))
+                    {
+                        Reserved2.Add(DateTime.Parse(start.ToLongDateString()));
+                    }
+                    // return Reserved;
+
+                }
+                return Reserved2;
+
+            }
+
+
+        }
     }
 }
 
