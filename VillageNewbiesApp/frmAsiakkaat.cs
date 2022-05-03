@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+
 namespace VillageNewbiesApp
 {
     public partial class frmAsiakkaat : Form
@@ -9,9 +10,11 @@ namespace VillageNewbiesApp
         SQLConnection mySQL = new SQLConnection();
         
         ErrorProvider errorProvider = new ErrorProvider();
+        public static string selectedAsiakas;
         public frmAsiakkaat()
         {
             InitializeComponent();
+
         }
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)
@@ -204,6 +207,17 @@ namespace VillageNewbiesApp
                     }                   
                 }               
             }
+        }
+
+        private void btnLuoVaraus_Click(object sender, EventArgs e)
+        {
+          // var SelectedItem = (dynamic)mlvAsiakkaat.SelectedItems[0];
+          //  MessageBox.Show(SelectedItem.ToString());
+            selectedAsiakas = mlvAsiakkaat.SelectedItems[0].Text;
+            MessageBox.Show(selectedAsiakas);
+            // tämä on vettä
+            
+
         }
     }
 }
