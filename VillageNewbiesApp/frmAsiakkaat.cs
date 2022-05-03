@@ -213,7 +213,7 @@ namespace VillageNewbiesApp
           //  MessageBox.Show(SelectedItem.ToString());
             selectedAsiakas = mlvAsiakkaat.SelectedItems[0].Text;
             MessageBox.Show(selectedAsiakas);
-
+            // tämä on vettä
             
         }
     }
