@@ -30,6 +30,7 @@ namespace VillageNewbiesApp
                 (this.Owner as Form1).btnLaskutus.Enabled = true;
                 (this.Owner as Form1).btnKirjauduSisaan.Visible = false;
                 (this.Owner as Form1).btnKirjauduUlos.Visible = true;
+                (this.Owner as Form1).Enabled = true;
                 this.Close();
             }
             else
