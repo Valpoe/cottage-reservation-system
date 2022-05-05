@@ -8,12 +8,12 @@ namespace VillageNewbiesApp
     public partial class frmAsiakkaat : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        public static int selectedAsiakas;      
+        public static int selectedAsiakas;
         ErrorProvider errorProvider = new ErrorProvider();
-  
+
         public frmAsiakkaat()
         {
-            InitializeComponent();          
+            InitializeComponent();
         }
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace VillageNewbiesApp
                 btnTyhjenna_Click(sender, e);
 
                 // Asiakas lisätty label näkyy 3 sekunnin ajan
-                
+
                 lblAsiakasLisatty.Visible = true;
 
                 var t = new Timer();
@@ -173,55 +173,51 @@ namespace VillageNewbiesApp
         private void btnNaytaTiedot_Click(object sender, EventArgs e)
         {
             List<string> asiakkaat = mySQL.SQLnaytaTiedot();
-            
+
             mlvTiedot.Items.Clear();
 
             string[] lista = new string[5];
             ListViewItem item;
 
-            for (int i = 0; i < asiakkaat.Count; i++)
+            if (mlvAsiakkaat.SelectedItems.Count > 0)
             {
-                lista[0] = asiakkaat[i];
-                i++;
-                lista[1] = asiakkaat[i];
-                i++;
-                lista[2] = asiakkaat[i];
-                i++;
-                lista[3] = asiakkaat[i];
-                i++;
-                lista[4] = asiakkaat[i];
-
-                item = new ListViewItem(lista);
-               // mlvAsiakkaat.Items.Add(item);
-
-                if (mlvAsiakkaat.SelectedItems.Count > 0)
+                for (int i = 0; i < asiakkaat.Count; i++)
                 {
+                    lista[0] = asiakkaat[i];
+                    i++;
+                    lista[1] = asiakkaat[i];
+                    i++;
+                    lista[2] = asiakkaat[i];
+                    i++;
+                    lista[3] = asiakkaat[i];
+                    i++;
+                    lista[4] = asiakkaat[i];
+
+                    item = new ListViewItem(lista);
+
                     if (mlvAsiakkaat.SelectedItems[0].SubItems[1].Text == item.SubItems[0].Text)
                     {
-                        lblEiVarauksia.Text = "";
+                        lblEiVarauksia.Visible = false;
                         mlvTiedot.Items.Add(item);
-                     
                     }
-                    else 
+                    else if (mlvTiedot.Items.Count == 0)
                     {
-                        mlvTiedot.Items.Clear();
-                        lblEiVarauksia.Text = "Ei varauksia";
-                    }                 
+                        lblEiVarauksia.Visible = true;
+                    }
                 }
-                
             }
         }
 
         private void btnLuoVaraus_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnLuoVaraus_Click_1(object sender, EventArgs e)
         {
             string text = mlvAsiakkaat.SelectedItems[0].Text;
             selectedAsiakas = Int32.Parse(text);
-           
+
         }
     }
 }
