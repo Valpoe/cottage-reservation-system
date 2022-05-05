@@ -192,6 +192,7 @@ namespace VillageNewbiesApp
                 lista[4] = asiakkaat[i];
 
                 item = new ListViewItem(lista);
+               // mlvAsiakkaat.Items.Add(item);
 
                 if (mlvAsiakkaat.SelectedItems.Count > 0)
                 {
@@ -199,13 +200,15 @@ namespace VillageNewbiesApp
                     {
                         lblEiVarauksia.Text = "";
                         mlvTiedot.Items.Add(item);
-                        break;
+                     
                     }
-                    else
+                    else 
                     {
+                        mlvTiedot.Items.Clear();
                         lblEiVarauksia.Text = "Ei varauksia";
-                    }                   
-                }               
+                    }                 
+                }
+                
             }
         }
 
