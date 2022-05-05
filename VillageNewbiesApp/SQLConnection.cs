@@ -254,8 +254,6 @@ namespace VillageNewbiesApp
                     SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_alkupvm")).ToString());
                     SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_loppupvm")).ToString());
                     SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("vahvistus_pvm")).ToString());
-
-
                 }
             }
             return SQLResult;
