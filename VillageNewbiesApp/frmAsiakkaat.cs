@@ -13,8 +13,7 @@ namespace VillageNewbiesApp
   
         public frmAsiakkaat()
         {
-            InitializeComponent();
-
+            InitializeComponent();          
         }
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)

@@ -8,7 +8,6 @@ namespace VillageNewbiesApp
     public partial class Form1 : Form
     {
         mainFormToiminnallisuus toiminnallisuus = new mainFormToiminnallisuus();
-
         public Form1()
         {
             InitializeComponent();
@@ -95,6 +94,7 @@ namespace VillageNewbiesApp
 
         private void btnKirjauduUlos_Click(object sender, EventArgs e)
         {
+            
             Button button = sender as Button;
             
             foreach (Button bt in button.Parent.Controls.OfType<Button>())
@@ -107,6 +107,7 @@ namespace VillageNewbiesApp
             
             panelFormLoader.Controls.Clear();
             Form1_Load(sender, e);
+            
             btnAsiakkaat.Enabled = false;
             btnVaraukset.Enabled = false;
             btnToimintaAlueet.Enabled = false;
@@ -115,7 +116,7 @@ namespace VillageNewbiesApp
             btnLaskutus.Enabled = false;
             btnKirjauduUlos.Visible = false;
             btnKirjauduSisaan.Enabled = true;
-            btnKirjauduSisaan.Visible = true;
+            btnKirjauduSisaan.Visible = true;       
         }
 
         public void loadToimintaAlueet()
@@ -126,8 +127,9 @@ namespace VillageNewbiesApp
             this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Toiminta-alueet"]);
             toiminnallisuus.screens["Toiminta-alueet"].Show();
             btnToimintaAlueet.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
-
+            
             Button button = new Button();
+            
             foreach (Button bt in button.Parent.Controls.OfType<Button>())
             {
                 if (bt.Name != button.Name)
