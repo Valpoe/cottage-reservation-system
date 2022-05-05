@@ -140,7 +140,7 @@ namespace VillageNewbiesApp
                 item = new ListViewItem(lista);
 
                 mlvAsiakkaat.Items.Add(item);
-                mlvAsiakkaat.
+
             }
         }
 
