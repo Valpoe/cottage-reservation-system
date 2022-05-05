@@ -237,7 +237,7 @@ namespace VillageNewbiesApp
             StringBuilder result = new StringBuilder();
             using (MySqlConnection connection = GetConnection())
             {
-                MySqlCommand Command = new MySqlCommand("SELECT a.etunimi, a.sukunimi, m.mokkinimi" +
+                MySqlCommand Command = new MySqlCommand("SELECT a.etunimi, a.sukunimi, m.mokkinimi, v.vahvistus_pvm, v.varattu_alkupvm, v.varattu_loppupvm, v.varaus_id" +
                     " FROM asiakas a JOIN varaus v" +
                     " ON a.asiakas_id = v.asiakas_id" +
                     " JOIN mokki m" +
@@ -247,30 +247,44 @@ namespace VillageNewbiesApp
 
                 while (Reader.Read())
                 {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("varaus_id")).ToString());
                     string nimi = Reader.GetString(Reader.GetOrdinal("etunimi"))+ " " + Reader.GetString(Reader.GetOrdinal("sukunimi"));
                     SQLResult.Add(nimi);
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
-                   
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_alkupvm")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_loppupvm")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("vahvistus_pvm")).ToString());
+
+
                 }
-                
             }
             return SQLResult;
         }
-        public void SQLMakeReservation(DateTime start, DateTime end, DateTime current)
+        public void SQLMakeReservation(DateTime start, DateTime end, DateTime current, int asiakas_id, string mokki)
         {
             List<string> SQLResult = new List<string>();
             StringBuilder result = new StringBuilder();
-
+            int mokkid;
+            string datestart = start.ToString("yyyy-MM-dd");
+            string dateend = end.ToString("yyyy-MM-dd");
+            string thisday = current.ToString("yyyy-MM-dd");
             using (MySqlConnection connection = GetConnection())
             {
-
-                int aasiakas = 2;
-                int mokkid = 1;
-                string datestart = start.ToString("yyyy-MM-dd");
-                string dateend = end.ToString("yyyy-MM-dd");
-                string thisday = current.ToString("yyyy-MM-dd");
+                MySqlCommand Command = new MySqlCommand("SELECT  m.mokki_id FROM mokki m " +
+                    " where m.mokkinimi LIKE '" + mokki + "'", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    int mokki_id = Reader.GetInt32(Reader.GetOrdinal("mokki_id"));
+                    SQLResult.Add(mokki_id.ToString());
+                }
+                Reader.Close();         
+            }
+            mokkid = Int32.Parse(SQLResult[0]);
+            using (MySqlConnection connection = GetConnection())
+            {
                 MySqlCommand Command = new MySqlCommand("INSERT INTO varaus(asiakas_id, mokki_mokki_id, varattu_alkupvm, varattu_loppupvm, varattu_pvm)"
-                + "VALUES('" + aasiakas + "', '" + mokkid + "','" + datestart + "', '" + dateend + "','" + thisday + "')", connection);
+                + "VALUES('" + asiakas_id + "', '" + mokkid + "','" + datestart + "', '" + dateend + "','" + thisday + "')", connection); ;
                 Command.ExecuteNonQuery();
             }
         }
@@ -293,24 +307,35 @@ namespace VillageNewbiesApp
                 {
                     DateTime date = Reader.GetDateTime(Reader.GetOrdinal("varattu_alkupvm"));
                     DateTime date2 = Reader.GetDateTime(Reader.GetOrdinal("varattu_loppupvm"));
-
                     //Kuinka saada DateTime monthcalendarille luettavaan muotoon:
                     // string datestart = date.ToString("dd/MM/yyyy HH:mm:ss");
                     //string dateend = date2.ToString("dd/MM/yyyy HH:mm:ss");
-
-                    //List<DateTime> Reserved = new List<DateTime>();
                     for (DateTime start = date; start <= date2; start = start.AddDays(1))
                     {
                         Reserved2.Add(DateTime.Parse(start.ToLongDateString()));
                     }
-                    // return Reserved;
-
                 }
                 return Reserved2;
-
             }
-
-
+        }
+        public void SQLRemoveReservation(string varaus_id)
+        {   
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("DELETE FROM varaus WHERE varaus_id = '" + varaus_id + "'", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+            }    
+        }
+        public void SQLAddConfirmation(string varaus_id, DateTime current)
+        {
+            string thisday = current.ToString("yyyy-MM-dd");
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("UPDATE varaus" +
+                    " SET vahvistus_pvm = '" + thisday + "'" +
+                    " WHERE varaus_id = '" + varaus_id + "'", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+            }
         }
     }
 }

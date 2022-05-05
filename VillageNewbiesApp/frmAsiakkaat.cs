@@ -8,9 +8,9 @@ namespace VillageNewbiesApp
     public partial class frmAsiakkaat : Form
     {
         SQLConnection mySQL = new SQLConnection();
-
+        public static int selectedAsiakas;      
         ErrorProvider errorProvider = new ErrorProvider();
-        public static string selectedAsiakas;
+  
         public frmAsiakkaat()
         {
             InitializeComponent();
@@ -173,7 +173,7 @@ namespace VillageNewbiesApp
         private void btnNaytaTiedot_Click(object sender, EventArgs e)
         {
             List<string> asiakkaat = mySQL.SQLnaytaTiedot();
-
+            
             mlvTiedot.Items.Clear();
 
             string[] lista = new string[5];
@@ -211,13 +211,14 @@ namespace VillageNewbiesApp
 
         private void btnLuoVaraus_Click(object sender, EventArgs e)
         {
-          // var SelectedItem = (dynamic)mlvAsiakkaat.SelectedItems[0];
-          //  MessageBox.Show(SelectedItem.ToString());
-            selectedAsiakas = mlvAsiakkaat.SelectedItems[0].Text;
-            MessageBox.Show(selectedAsiakas);
-            // tämä on vettä
             
+        }
 
+        private void btnLuoVaraus_Click_1(object sender, EventArgs e)
+        {
+            string text = mlvAsiakkaat.SelectedItems[0].Text;
+            selectedAsiakas = Int32.Parse(text);
+           
         }
     }
 }
