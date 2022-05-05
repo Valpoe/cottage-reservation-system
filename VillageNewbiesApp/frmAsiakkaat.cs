@@ -10,11 +10,12 @@ namespace VillageNewbiesApp
         SQLConnection mySQL = new SQLConnection();
         
         ErrorProvider errorProvider = new ErrorProvider();
+
         public static string selectedAsiakas;
+
         public frmAsiakkaat()
         {
-            InitializeComponent();
-
+            InitializeComponent();          
         }
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)
@@ -216,8 +217,6 @@ namespace VillageNewbiesApp
             selectedAsiakas = mlvAsiakkaat.SelectedItems[0].Text;
             MessageBox.Show(selectedAsiakas);
             // tämä on vettä
-            
-
         }
     }
 }

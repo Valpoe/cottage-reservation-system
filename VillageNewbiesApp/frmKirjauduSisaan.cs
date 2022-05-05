@@ -62,6 +62,5 @@ namespace VillageNewbiesApp
             }
             flag = !flag;
         }
-
     }
 }
