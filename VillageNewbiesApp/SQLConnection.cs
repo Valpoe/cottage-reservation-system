@@ -168,27 +168,6 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
-        public List<string> loadChart()
-        {
-            List<string> SQLResult = new List<string>();
-
-            using (MySqlConnection connection = GetConnection())
-            {
-                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
-
-                string sql = "SELECT postinro, hinta FROM mokki";
-
-                MySqlCommand cmd = new MySqlCommand(sql, connection);
-                MySqlDataReader Reader = cmd.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    SQLResult.Add(Reader.GetChar(Reader.GetOrdinal("postinro")).ToString());
-                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
-                }
-            }
-            return SQLResult;
-        }
         public List<string> SQLselectAllAlueet()
         {
 
