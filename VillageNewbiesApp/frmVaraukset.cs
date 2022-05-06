@@ -22,15 +22,7 @@ namespace VillageNewbiesApp
         }
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            // Tekee varauksen kun kalenterista mustaa haluttujen päivien välit
-           /* SQLConnection mySQL = new SQLConnection();
-            string datestart = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-            string dateend = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
-            string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
-            DateTime start = DateTime.Parse(datestart);
-            DateTime end = DateTime.Parse(dateend);
-            DateTime current = DateTime.Parse(thisday);
-            mySQL.SQLMakeReservation(start, end, current);*/
+           
         }
 
         private void label1_VisibleChanged(object sender, EventArgs e)
@@ -50,29 +42,45 @@ namespace VillageNewbiesApp
 
         private void btnTeeVaraus_Click(object sender, EventArgs e)
         {
-            // Tekee varauksen kun kalenterista mustaa haluttujen päivien välit
-            SQLConnection mySQL = new SQLConnection();
-            string datestart = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-            string dateend = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
-            string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
-            int asiakas_id = frmAsiakkaat.selectedAsiakas;
-            string mokki = frmAlueet.selectedMokki;
-            DateTime start = DateTime.Parse(datestart);
-            DateTime end = DateTime.Parse(dateend);
-            DateTime current = DateTime.Parse(thisday);
-            //MessageBox.Show(selectedAsiakas.ToString());
-            MessageBox.Show(mokki);
-            MessageBox.Show(asiakas_id.ToString());
-            mySQL.SQLMakeReservation(start, end, current, asiakas_id, mokki);
-            UpdateReservations();
+            
+                // Tekee varauksen kun kalenterista mustaa haluttujen päivien välit
+                SQLConnection mySQL = new SQLConnection();
+            try
+            {
+                string datestart = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                string dateend = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
+                string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
+                int asiakas_id = frmAsiakkaat.selectedAsiakas;
+                string mokki = frmAlueet.selectedMokki;
+                DateTime start = DateTime.Parse(datestart);
+                DateTime end = DateTime.Parse(dateend);
+                DateTime current = DateTime.Parse(thisday);
+                //MessageBox.Show(selectedAsiakas.ToString());
+                MessageBox.Show(mokki);
+                MessageBox.Show(asiakas_id.ToString());
+                mySQL.SQLMakeReservation(start, end, current, asiakas_id, mokki);
+                UpdateReservations();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Valitse asiakas, mökki ja varauspäivät ennen varauksen tekoa");
+            }
+            
         }
 
         private void btnPoistaVaraus_Click(object sender, EventArgs e)
         {
-            string varaus_id = mlvVaraukset.SelectedItems[0].Text;
-            MessageBox.Show(varaus_id);
-            mySQL.SQLRemoveReservation(varaus_id);
-            UpdateReservations();
+            try
+            {
+                string varaus_id = mlvVaraukset.SelectedItems[0].Text;
+                MessageBox.Show(varaus_id);
+                mySQL.SQLRemoveReservation(varaus_id);
+                UpdateReservations();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Poisto epäonnistui, valitse ensin poistettava varaus.");
+            }
         }
         private void UpdateReservations()
         {
@@ -103,17 +111,30 @@ namespace VillageNewbiesApp
             // Tsekkaa varaukset
             List<DateTime> Reserved = mySQL.SQLCheckReservation(mokkinimi);
             Reserved.AddRange(monthCalendar1.BoldedDates);
-            monthCalendar1.BoldedDates = Reserved.ToArray();
+            monthCalendar1.BoldedDates = Reserved.ToArray();  
         }
 
         private void btnVahvistaVaraus_Click(object sender, EventArgs e)
         {
-            string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
-            DateTime current = DateTime.Parse(thisday);
-            string varaus_id = mlvVaraukset.SelectedItems[0].Text;
-            MessageBox.Show(varaus_id);
-            mySQL.SQLAddConfirmation(varaus_id, current);
-            UpdateReservations();
+            try
+            {
+                string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
+                DateTime current = DateTime.Parse(thisday);
+                string varaus_id = mlvVaraukset.SelectedItems[0].Text;
+                MessageBox.Show(varaus_id);
+                mySQL.SQLAddConfirmation(varaus_id, current);
+                UpdateReservations();
+            }
+            catch(Exception)
+            {
+                 MessageBox.Show("Vahvistus epäonnistui, valitse ensin vahvistettava varaus");
+            }
+        }
+        
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }

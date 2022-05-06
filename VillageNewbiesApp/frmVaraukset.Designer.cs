@@ -35,21 +35,20 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnTeeVaraus = new MaterialSkin.Controls.MaterialButton();
             this.btnPoistaVaraus = new MaterialSkin.Controls.MaterialButton();
             this.btnVahvistaVaraus = new MaterialSkin.Controls.MaterialButton();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "VARAUKSET";
             this.label1.VisibleChanged += new System.EventHandler(this.label1_VisibleChanged);
@@ -69,13 +68,14 @@
             this.mlvVaraukset.Depth = 0;
             this.mlvVaraukset.FullRowSelect = true;
             this.mlvVaraukset.HideSelection = false;
-            this.mlvVaraukset.Location = new System.Drawing.Point(12, 45);
-            this.mlvVaraukset.MinimumSize = new System.Drawing.Size(225, 125);
+            this.mlvVaraukset.Location = new System.Drawing.Point(8, 29);
+            this.mlvVaraukset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mlvVaraukset.MinimumSize = new System.Drawing.Size(150, 81);
             this.mlvVaraukset.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvVaraukset.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvVaraukset.Name = "mlvVaraukset";
             this.mlvVaraukset.OwnerDraw = true;
-            this.mlvVaraukset.Size = new System.Drawing.Size(1095, 394);
+            this.mlvVaraukset.Size = new System.Drawing.Size(730, 256);
             this.mlvVaraukset.TabIndex = 1;
             this.mlvVaraukset.UseCompatibleStateImageBehavior = false;
             this.mlvVaraukset.View = System.Windows.Forms.View.Details;
@@ -105,12 +105,18 @@
             this.columnHeader5.Text = "Loppu";
             this.columnHeader5.Width = 120;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Vahvistettu";
+            this.columnHeader6.Width = 120;
+            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 461);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.monthCalendar1.Location = new System.Drawing.Point(8, 300);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // btnTeeVaraus
             // 
@@ -119,8 +125,8 @@
             this.btnTeeVaraus.Depth = 0;
             this.btnTeeVaraus.HighEmphasis = true;
             this.btnTeeVaraus.Icon = null;
-            this.btnTeeVaraus.Location = new System.Drawing.Point(282, 461);
-            this.btnTeeVaraus.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTeeVaraus.Location = new System.Drawing.Point(188, 300);
+            this.btnTeeVaraus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTeeVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTeeVaraus.Name = "btnTeeVaraus";
             this.btnTeeVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -139,8 +145,8 @@
             this.btnPoistaVaraus.Depth = 0;
             this.btnPoistaVaraus.HighEmphasis = true;
             this.btnPoistaVaraus.Icon = null;
-            this.btnPoistaVaraus.Location = new System.Drawing.Point(894, 461);
-            this.btnPoistaVaraus.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoistaVaraus.Location = new System.Drawing.Point(596, 300);
+            this.btnPoistaVaraus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPoistaVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPoistaVaraus.Name = "btnPoistaVaraus";
             this.btnPoistaVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -159,8 +165,8 @@
             this.btnVahvistaVaraus.Depth = 0;
             this.btnVahvistaVaraus.HighEmphasis = true;
             this.btnVahvistaVaraus.Icon = null;
-            this.btnVahvistaVaraus.Location = new System.Drawing.Point(554, 461);
-            this.btnVahvistaVaraus.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVahvistaVaraus.Location = new System.Drawing.Point(369, 300);
+            this.btnVahvistaVaraus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVahvistaVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnVahvistaVaraus.Name = "btnVahvistaVaraus";
             this.btnVahvistaVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -172,17 +178,12 @@
             this.btnVahvistaVaraus.UseVisualStyleBackColor = true;
             this.btnVahvistaVaraus.Click += new System.EventHandler(this.btnVahvistaVaraus_Click);
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Vahvistettu";
-            this.columnHeader6.Width = 120;
-            // 
             // frmVaraukset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1148, 734);
+            this.ClientSize = new System.Drawing.Size(765, 477);
             this.Controls.Add(this.btnVahvistaVaraus);
             this.Controls.Add(this.btnPoistaVaraus);
             this.Controls.Add(this.btnTeeVaraus);
@@ -190,7 +191,6 @@
             this.Controls.Add(this.mlvVaraukset);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmVaraukset";
             this.Text = "frmVaraukset";
             this.Activated += new System.EventHandler(this.frmVaraukset_Activated);

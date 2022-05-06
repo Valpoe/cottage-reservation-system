@@ -7,6 +7,7 @@ namespace VillageNewbiesApp
 {
     public partial class Form1 : Form
     {
+        
         mainFormToiminnallisuus toiminnallisuus = new mainFormToiminnallisuus();
         public Form1()
         {
@@ -14,6 +15,8 @@ namespace VillageNewbiesApp
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
         }
+
+        
 
         // Etusivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
         private void Form1_Load(object sender, EventArgs e)
@@ -24,6 +27,7 @@ namespace VillageNewbiesApp
             this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Etusivu"]);
             toiminnallisuus.screens["Etusivu"].Show();
             btnEtusivu.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
+           
         }
 
         private void btnAlueet_Click(object sender, EventArgs e)
@@ -139,5 +143,24 @@ namespace VillageNewbiesApp
             }
         }
 
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        public void tssl1Quide_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsslQuidelbl1_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStripQuide_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,9 @@ namespace VillageNewbiesApp
     {
         SQLConnection mySQL = new SQLConnection();
         public static int selectedAsiakas;
+
         ErrorProvider errorProvider = new ErrorProvider();
+       
 
         public frmAsiakkaat()
         {
@@ -18,7 +20,7 @@ namespace VillageNewbiesApp
 
         private void frmAsiakkaat_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // Tyhjennetään kaikki textboxit
