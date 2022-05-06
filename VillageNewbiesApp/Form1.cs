@@ -149,17 +149,17 @@ namespace VillageNewbiesApp
 
         public void tssl1Quide_TextChanged(object sender, EventArgs e)
         {
-            
+            //tsslQuidelbl1.Text = frmAsiakkaat.status;
         }
 
         private void tsslQuidelbl1_VisibleChanged(object sender, EventArgs e)
         {
-
+            //tsslQuidelbl1.Text = frmAsiakkaat.status;
         }
 
         private void statusStripQuide_VisibleChanged(object sender, EventArgs e)
         {
-
+           tsslQuidelbl1.Text = frmAsiakkaat.status;
         }
     }
 }

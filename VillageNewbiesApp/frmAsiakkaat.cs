@@ -9,7 +9,7 @@ namespace VillageNewbiesApp
     {
         SQLConnection mySQL = new SQLConnection();
         public static int selectedAsiakas;
-
+        public static string status;
         ErrorProvider errorProvider = new ErrorProvider();
        
 
@@ -217,9 +217,20 @@ namespace VillageNewbiesApp
 
         private void btnLuoVaraus_Click_1(object sender, EventArgs e)
         {
-            string text = mlvAsiakkaat.SelectedItems[0].Text;
-            selectedAsiakas = Int32.Parse(text);
+            try
+            {
 
+
+                string text = mlvAsiakkaat.SelectedItems[0].Text;
+                selectedAsiakas = Int32.Parse(text);
+                MessageBox.Show("Asiakas valittu, valitse seuraavaksi Toiminta-alueista haluttu mökki.");
+                status = "Asiakas valittu, valitse seuraavaksi Toiminta-alueista haluttu mökki.";
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Valinta epäonnistui." +
+                    " Valitse ensin asiakas kelle varaus luodaan.");
+            }
         }
     }
 }
