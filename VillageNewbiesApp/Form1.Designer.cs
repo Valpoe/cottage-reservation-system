@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.btnKirjauduUlos = new System.Windows.Forms.Button();
             this.btnKirjauduSisaan = new System.Windows.Forms.Button();
+            this.btnKirjauduUlos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.btnRaportit = new System.Windows.Forms.Button();
             this.btnLaskutus = new System.Windows.Forms.Button();
-            this.btnAsiakkaat = new System.Windows.Forms.Button();
             this.btnVaraukset = new System.Windows.Forms.Button();
             this.btnMokitJaPalvelut = new System.Windows.Forms.Button();
             this.btnToimintaAlueet = new System.Windows.Forms.Button();
+            this.btnAsiakkaat = new System.Windows.Forms.Button();
             this.btnEtusivu = new System.Windows.Forms.Button();
             this.panelTopLeft = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -75,6 +75,25 @@
             this.panelLeft.Size = new System.Drawing.Size(186, 577);
             this.panelLeft.TabIndex = 0;
             // 
+            // btnKirjauduSisaan
+            // 
+            this.btnKirjauduSisaan.FlatAppearance.BorderSize = 2;
+            this.btnKirjauduSisaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKirjauduSisaan.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKirjauduSisaan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnKirjauduSisaan.Image = global::VillageNewbiesApp.Properties.Resources.Kirjaudu;
+            this.btnKirjauduSisaan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKirjauduSisaan.Location = new System.Drawing.Point(15, 476);
+            this.btnKirjauduSisaan.Name = "btnKirjauduSisaan";
+            this.btnKirjauduSisaan.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnKirjauduSisaan.Size = new System.Drawing.Size(155, 45);
+            this.btnKirjauduSisaan.TabIndex = 5;
+            this.btnKirjauduSisaan.Text = "Kirjaudu";
+            this.btnKirjauduSisaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKirjauduSisaan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKirjauduSisaan.UseVisualStyleBackColor = true;
+            this.btnKirjauduSisaan.Click += new System.EventHandler(this.btnKirjauduSisaan_Click);
+            // 
             // btnKirjauduUlos
             // 
             this.btnKirjauduUlos.FlatAppearance.BorderSize = 2;
@@ -94,25 +113,6 @@
             this.btnKirjauduUlos.UseVisualStyleBackColor = true;
             this.btnKirjauduUlos.Visible = false;
             this.btnKirjauduUlos.Click += new System.EventHandler(this.btnKirjauduUlos_Click);
-            // 
-            // btnKirjauduSisaan
-            // 
-            this.btnKirjauduSisaan.FlatAppearance.BorderSize = 2;
-            this.btnKirjauduSisaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKirjauduSisaan.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKirjauduSisaan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btnKirjauduSisaan.Image = global::VillageNewbiesApp.Properties.Resources.Kirjaudu;
-            this.btnKirjauduSisaan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKirjauduSisaan.Location = new System.Drawing.Point(15, 476);
-            this.btnKirjauduSisaan.Name = "btnKirjauduSisaan";
-            this.btnKirjauduSisaan.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnKirjauduSisaan.Size = new System.Drawing.Size(155, 45);
-            this.btnKirjauduSisaan.TabIndex = 5;
-            this.btnKirjauduSisaan.Text = "Kirjaudu";
-            this.btnKirjauduSisaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKirjauduSisaan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnKirjauduSisaan.UseVisualStyleBackColor = true;
-            this.btnKirjauduSisaan.Click += new System.EventHandler(this.btnKirjauduSisaan_Click);
             // 
             // pictureBox1
             // 
@@ -173,27 +173,6 @@
             this.btnLaskutus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLaskutus.UseVisualStyleBackColor = true;
             this.btnLaskutus.Click += new System.EventHandler(this.btnAlueet_Click);
-            // 
-            // btnAsiakkaat
-            // 
-            this.btnAsiakkaat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAsiakkaat.Enabled = false;
-            this.btnAsiakkaat.FlatAppearance.BorderSize = 0;
-            this.btnAsiakkaat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsiakkaat.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsiakkaat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btnAsiakkaat.Image = global::VillageNewbiesApp.Properties.Resources.AsiakkaatIcon;
-            this.btnAsiakkaat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAsiakkaat.Location = new System.Drawing.Point(0, 189);
-            this.btnAsiakkaat.Name = "btnAsiakkaat";
-            this.btnAsiakkaat.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAsiakkaat.Size = new System.Drawing.Size(186, 45);
-            this.btnAsiakkaat.TabIndex = 2;
-            this.btnAsiakkaat.Text = "Asiakkaat";
-            this.btnAsiakkaat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsiakkaat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAsiakkaat.UseVisualStyleBackColor = true;
-            this.btnAsiakkaat.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
             // btnVaraukset
             // 
@@ -257,6 +236,27 @@
             this.btnToimintaAlueet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnToimintaAlueet.UseVisualStyleBackColor = true;
             this.btnToimintaAlueet.Click += new System.EventHandler(this.btnAlueet_Click);
+            // 
+            // btnAsiakkaat
+            // 
+            this.btnAsiakkaat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsiakkaat.Enabled = false;
+            this.btnAsiakkaat.FlatAppearance.BorderSize = 0;
+            this.btnAsiakkaat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsiakkaat.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsiakkaat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btnAsiakkaat.Image = global::VillageNewbiesApp.Properties.Resources.AsiakkaatIcon;
+            this.btnAsiakkaat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAsiakkaat.Location = new System.Drawing.Point(0, 189);
+            this.btnAsiakkaat.Name = "btnAsiakkaat";
+            this.btnAsiakkaat.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnAsiakkaat.Size = new System.Drawing.Size(186, 45);
+            this.btnAsiakkaat.TabIndex = 2;
+            this.btnAsiakkaat.Text = "Asiakkaat";
+            this.btnAsiakkaat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsiakkaat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAsiakkaat.UseVisualStyleBackColor = true;
+            this.btnAsiakkaat.Click += new System.EventHandler(this.btnAlueet_Click);
             // 
             // btnEtusivu
             // 

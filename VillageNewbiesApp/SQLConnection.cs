@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace VillageNewbiesApp
 {
@@ -25,6 +24,7 @@ namespace VillageNewbiesApp
             return connectionString;
         }
 
+        // Tuodaan asiakkaat tietokannasta listviewiin
         public List<string> SQLselectAllbyName()
         {
             List<string> SQLResult = new List<string>();
@@ -140,6 +140,55 @@ namespace VillageNewbiesApp
             }
             return SQLResult;
         }
+
+        // Kokonaismäärien haku tietokannasta
+        public List<string> frontPageTotals()
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                string sql = "SELECT(SELECT COUNT(mokki_id) FROM mokki) AS mokki_id," +
+                    "(SELECT COUNT(palvelu_id)FROM palvelu) AS palvelu_id,(SELECT COUNT(varaus_id) FROM varaus) AS varaus_id," +
+                    "(SELECT COUNT(asiakas_id) FROM asiakas) AS asiakas_id";
+                
+                MySqlCommand cmd = new MySqlCommand(sql, connection);              
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("mokki_id")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("palvelu_id")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("varaus_id")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("asiakas_id")).ToString());
+                }
+            }
+            return SQLResult;
+        }
+
+        public List<string> loadChart()
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                string sql = "SELECT postinro, hinta FROM mokki";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetChar(Reader.GetOrdinal("postinro")).ToString());
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
+                }
+            }
+            return SQLResult;
+        }
         public List<string> SQLselectAllAlueet()
         {
 
@@ -230,7 +279,7 @@ namespace VillageNewbiesApp
                 return palvelut;
             }
         }
-        
+
         public List<string> SQLGetReservation(string mokkinimi)
         {
             List<string> SQLResult = new List<string>();
@@ -248,7 +297,7 @@ namespace VillageNewbiesApp
                 while (Reader.Read())
                 {
                     SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("varaus_id")).ToString());
-                    string nimi = Reader.GetString(Reader.GetOrdinal("etunimi"))+ " " + Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    string nimi = Reader.GetString(Reader.GetOrdinal("etunimi")) + " " + Reader.GetString(Reader.GetOrdinal("sukunimi"));
                     SQLResult.Add(nimi);
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
                     SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("varattu_alkupvm")).ToString());
@@ -276,7 +325,7 @@ namespace VillageNewbiesApp
                     int mokki_id = Reader.GetInt32(Reader.GetOrdinal("mokki_id"));
                     SQLResult.Add(mokki_id.ToString());
                 }
-                Reader.Close();         
+                Reader.Close();
             }
             mokkid = Int32.Parse(SQLResult[0]);
             using (MySqlConnection connection = GetConnection())
@@ -294,11 +343,11 @@ namespace VillageNewbiesApp
 
             using (MySqlConnection connection = GetConnection())
             {
-              
+
                 MySqlCommand Command = new MySqlCommand("SELECT v.varattu_alkupvm, v.varattu_loppupvm" +
                     " FROM varaus v JOIN mokki m" +
                     " ON v.mokki_mokki_id = m.mokki_id" +
-                    " WHERE m.mokkinimi LIKE '" + mokkinimi + "'",  connection);
+                    " WHERE m.mokkinimi LIKE '" + mokkinimi + "'", connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
                 List<DateTime> Reserved2 = new List<DateTime>();
                 while (Reader.Read())
@@ -317,12 +366,12 @@ namespace VillageNewbiesApp
             }
         }
         public void SQLRemoveReservation(string varaus_id)
-        {   
+        {
             using (MySqlConnection connection = GetConnection())
             {
                 MySqlCommand Command = new MySqlCommand("DELETE FROM varaus WHERE varaus_id = '" + varaus_id + "'", connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
-            }    
+            }
         }
         public void SQLAddConfirmation(string varaus_id, DateTime current)
         {
