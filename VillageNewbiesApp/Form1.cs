@@ -13,7 +13,6 @@ namespace VillageNewbiesApp
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
         }
 
         

@@ -17,6 +17,7 @@ namespace VillageNewbiesApp
         
         public mainFormToiminnallisuus()
         {
+            // Teema 1 : Default
             materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
             materialSkinManager.EnforceBackcolorOnAllComponents = false;
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
@@ -45,8 +46,7 @@ namespace VillageNewbiesApp
             form1.panelFormLoader.Controls.Clear();
             form1.panelFormLoader.Controls.Add(screens[name]);
             screens[name].Show();
-            button.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
-
+            button.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);           
             foreach (Button bt in button.Parent.Controls.OfType<Button>())
             {
                 if (bt.Name != button.Name)
