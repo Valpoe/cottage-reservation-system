@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.lblAika = new System.Windows.Forms.Label();
             this.lblPaivays = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@
             this.lblAika.AutoSize = true;
             this.lblAika.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblAika.Location = new System.Drawing.Point(12, 9);
+            this.lblAika.Location = new System.Drawing.Point(58, 9);
             this.lblAika.Name = "lblAika";
             this.lblAika.Size = new System.Drawing.Size(51, 22);
             this.lblAika.TabIndex = 8;
@@ -99,7 +99,7 @@
             this.lblPaivays.AutoSize = true;
             this.lblPaivays.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaivays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblPaivays.Location = new System.Drawing.Point(12, 38);
+            this.lblPaivays.Location = new System.Drawing.Point(58, 38);
             this.lblPaivays.Name = "lblPaivays";
             this.lblPaivays.Size = new System.Drawing.Size(81, 22);
             this.lblPaivays.TabIndex = 9;
@@ -113,9 +113,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.clock;
-            this.pictureBox1.Location = new System.Drawing.Point(215, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -315,17 +315,17 @@
             // 
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Hinta";
-            this.chart1.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Hinta";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(740, 236);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
