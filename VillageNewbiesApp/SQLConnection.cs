@@ -141,6 +141,21 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
+        // Poistetaan valittu asiakas tietokannata
+        public void SQLdeleteCustomer(string asiakas_id)
+        {
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                MySqlCommand Command = new MySqlCommand("DELETE FROM asiakas WHERE asiakas_id = @asiakas_id", connection);
+
+                Command.Parameters.AddWithValue("@asiakas_id", asiakas_id);
+
+                Command.ExecuteNonQuery();
+            }
+        }
+
         // Kokonaismäärien haku tietokannasta
         public List<string> frontPageTotals()
         {

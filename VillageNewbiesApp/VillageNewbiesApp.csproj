@@ -151,6 +151,12 @@
     <Compile Include="frmLaskutus.Designer.cs">
       <DependentUpon>frmLaskutus.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOhjeet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOhjeet.Designer.cs">
+      <DependentUpon>frmOhjeet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPalvelut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLaskutus.resx">
       <DependentUpon>frmLaskutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOhjeet.resx">
+      <DependentUpon>frmOhjeet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPalvelut.resx">
       <DependentUpon>frmPalvelut.cs</DependentUpon>
@@ -306,6 +315,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clock.png" />
+    <None Include="Resources\info.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

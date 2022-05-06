@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblAsiakasLisatty = new System.Windows.Forms.Label();
             this.btnLuoVaraus = new MaterialSkin.Controls.MaterialButton();
+            this.btnPoistaAsiakas = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // btnLisaa
@@ -314,17 +315,18 @@
             // 
             // btnLataaAsiakkaat
             // 
+            this.btnLataaAsiakkaat.AutoSize = false;
             this.btnLataaAsiakkaat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLataaAsiakkaat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLataaAsiakkaat.Depth = 0;
             this.btnLataaAsiakkaat.HighEmphasis = true;
             this.btnLataaAsiakkaat.Icon = null;
-            this.btnLataaAsiakkaat.Location = new System.Drawing.Point(444, 426);
+            this.btnLataaAsiakkaat.Location = new System.Drawing.Point(204, 424);
             this.btnLataaAsiakkaat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLataaAsiakkaat.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLataaAsiakkaat.Name = "btnLataaAsiakkaat";
             this.btnLataaAsiakkaat.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLataaAsiakkaat.Size = new System.Drawing.Size(150, 36);
+            this.btnLataaAsiakkaat.Size = new System.Drawing.Size(130, 36);
             this.btnLataaAsiakkaat.TabIndex = 12;
             this.btnLataaAsiakkaat.Text = "Lataa asiakkaat";
             this.btnLataaAsiakkaat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -340,12 +342,12 @@
             this.btnNaytaTiedot.Depth = 0;
             this.btnNaytaTiedot.HighEmphasis = true;
             this.btnNaytaTiedot.Icon = null;
-            this.btnNaytaTiedot.Location = new System.Drawing.Point(602, 426);
+            this.btnNaytaTiedot.Location = new System.Drawing.Point(480, 424);
             this.btnNaytaTiedot.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNaytaTiedot.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNaytaTiedot.Name = "btnNaytaTiedot";
             this.btnNaytaTiedot.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnNaytaTiedot.Size = new System.Drawing.Size(150, 36);
+            this.btnNaytaTiedot.Size = new System.Drawing.Size(130, 36);
             this.btnNaytaTiedot.TabIndex = 13;
             this.btnNaytaTiedot.Text = "Näytä varaukset";
             this.btnNaytaTiedot.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -441,17 +443,18 @@
             // 
             // btnLuoVaraus
             // 
+            this.btnLuoVaraus.AutoSize = false;
             this.btnLuoVaraus.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLuoVaraus.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLuoVaraus.Depth = 0;
             this.btnLuoVaraus.HighEmphasis = true;
             this.btnLuoVaraus.Icon = null;
-            this.btnLuoVaraus.Location = new System.Drawing.Point(204, 426);
+            this.btnLuoVaraus.Location = new System.Drawing.Point(617, 424);
             this.btnLuoVaraus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuoVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLuoVaraus.Name = "btnLuoVaraus";
             this.btnLuoVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLuoVaraus.Size = new System.Drawing.Size(109, 36);
+            this.btnLuoVaraus.Size = new System.Drawing.Size(130, 36);
             this.btnLuoVaraus.TabIndex = 19;
             this.btnLuoVaraus.Text = "Luo Varaus";
             this.btnLuoVaraus.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -459,12 +462,34 @@
             this.btnLuoVaraus.UseVisualStyleBackColor = true;
             this.btnLuoVaraus.Click += new System.EventHandler(this.btnLuoVaraus_Click_1);
             // 
+            // btnPoistaAsiakas
+            // 
+            this.btnPoistaAsiakas.AutoSize = false;
+            this.btnPoistaAsiakas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoistaAsiakas.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoistaAsiakas.Depth = 0;
+            this.btnPoistaAsiakas.HighEmphasis = true;
+            this.btnPoistaAsiakas.Icon = null;
+            this.btnPoistaAsiakas.Location = new System.Drawing.Point(342, 424);
+            this.btnPoistaAsiakas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoistaAsiakas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoistaAsiakas.Name = "btnPoistaAsiakas";
+            this.btnPoistaAsiakas.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPoistaAsiakas.Size = new System.Drawing.Size(130, 36);
+            this.btnPoistaAsiakas.TabIndex = 20;
+            this.btnPoistaAsiakas.Text = "Poista asiakas";
+            this.btnPoistaAsiakas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoistaAsiakas.UseAccentColor = false;
+            this.btnPoistaAsiakas.UseVisualStyleBackColor = true;
+            this.btnPoistaAsiakas.Click += new System.EventHandler(this.btnPoistaAsiakas_Click);
+            // 
             // frmAsiakkaat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.btnPoistaAsiakas);
             this.Controls.Add(this.btnLuoVaraus);
             this.Controls.Add(this.lblAsiakasLisatty);
             this.Controls.Add(this.label1);
@@ -488,7 +513,6 @@
             this.Text = "frmAsiakkaat";
             this.Load += new System.EventHandler(this.frmAsiakkaat_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -520,5 +544,6 @@
         private System.Windows.Forms.Label lblAsiakasLisatty;
         public MaterialSkin.Controls.MaterialTextBox tbSearchBox;
         private MaterialSkin.Controls.MaterialButton btnLuoVaraus;
+        private MaterialSkin.Controls.MaterialButton btnPoistaAsiakas;
     }
 }
