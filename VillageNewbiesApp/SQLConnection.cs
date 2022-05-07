@@ -199,8 +199,9 @@ namespace VillageNewbiesApp
                     " FROM mokki m " +
                     " INNER JOIN varaus v ON m.mokki_id = v.mokki_mokki_id" +
                     " INNER JOIN alue a ON a.alue_id = m.alue_id " +
-                    "WHERE a.nimi = '"+ alue +"' AND v.vahvistus_pvm " +
-                    "BETWEEN '" + alku +"' AND '"+ loppu +"'";
+                    "WHERE a.nimi IN("+ alue +") " +
+                    "AND v.vahvistus_pvm " +
+                    "BETWEEN '"+ alku +"' AND '"+ loppu +"'";
 
                 MySqlCommand cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader Reader = cmd.ExecuteReader();
@@ -217,7 +218,6 @@ namespace VillageNewbiesApp
         }
 
         // Varausten raportointi aikajaksolla valituilla toiminta-alueilla
-
         public List<string> palveluData(DateTime alkupvm, DateTime loppupvm, string alue)
         {
             List<string> SQLResult = new List<string>();
@@ -234,8 +234,9 @@ namespace VillageNewbiesApp
                     " INNER JOIN varauksen_palvelut vp ON vp.palvelu_id = p.palvelu_id" +
                     " INNER JOIN varaus v ON v.varaus_id = vp.varaus_id " +
                     " INNER JOIN alue a ON p.alue_id = a.alue_id " +
-                    "WHERE a.nimi = '" + alue + "' AND v.vahvistus_pvm " +
-                    "BETWEEN '" + alku + "' AND '" + loppu + "'";
+                    "WHERE a.nimi IN(" + alue + ") " +
+                    "AND v.vahvistus_pvm " +
+                    "BETWEEN '"+ alku +"' AND '"+ loppu +"'";
 
                 MySqlCommand cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader Reader = cmd.ExecuteReader();
