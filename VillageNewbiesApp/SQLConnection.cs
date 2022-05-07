@@ -183,6 +183,73 @@ namespace VillageNewbiesApp
             return SQLResult;
         }
 
+        // Majoittumisten raportointi aikajaksolla valituilla toiminta-alueilla
+        public List<string> mokkiData(DateTime alkupvm, DateTime loppupvm, string alue)
+        {
+            List<string> SQLResult = new List<string>();
+            
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                string alku = alkupvm.ToString("yyyy-MM-dd");
+                string loppu = loppupvm.ToString("yyyy-MM-dd");
+
+                string sql = "SELECT m.mokkinimi, m.katuosoite, m.postinro, v.vahvistus_pvm" +
+                    " FROM mokki m " +
+                    " INNER JOIN varaus v ON m.mokki_id = v.mokki_mokki_id" +
+                    " INNER JOIN alue a ON a.alue_id = m.alue_id " +
+                    "WHERE a.nimi = '"+ alue +"' AND v.vahvistus_pvm " +
+                    "BETWEEN '" + alku +"' AND '"+ loppu +"'";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("katuosoite")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("postinro")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("vahvistus_pvm")).ToString());
+                }
+            }
+            return SQLResult;
+        }
+
+        // Varausten raportointi aikajaksolla valituilla toiminta-alueilla
+
+        public List<string> palveluData(DateTime alkupvm, DateTime loppupvm, string alue)
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                string alku = alkupvm.ToString("yyyy-MM-dd");
+                string loppu = loppupvm.ToString("yyyy-MM-dd");
+
+                string sql = "SELECT p.nimi, p.tyyppi, p.kuvaus, v.vahvistus_pvm" +
+                    " FROM palvelu p " +
+                    " INNER JOIN varauksen_palvelut vp ON vp.palvelu_id = p.palvelu_id" +
+                    " INNER JOIN varaus v ON v.varaus_id = vp.varaus_id " +
+                    " INNER JOIN alue a ON p.alue_id = a.alue_id " +
+                    "WHERE a.nimi = '" + alue + "' AND v.vahvistus_pvm " +
+                    "BETWEEN '" + alku + "' AND '" + loppu + "'";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader Reader = cmd.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("nimi")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("tyyppi")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("kuvaus")).ToString());
+                    SQLResult.Add(Reader.GetValue(Reader.GetOrdinal("vahvistus_pvm")).ToString());
+                }
+            }
+            return SQLResult;
+        }
         public List<string> SQLselectAllAlueet()
         {
 

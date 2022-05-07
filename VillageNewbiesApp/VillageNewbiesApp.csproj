@@ -110,6 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asiakas.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +147,12 @@
     </Compile>
     <Compile Include="frmKirjauduSisaan.Designer.cs">
       <DependentUpon>frmKirjauduSisaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKokonaisRaportti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKokonaisRaportti.Designer.cs">
+      <DependentUpon>frmKokonaisRaportti.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLaskutus.cs">
       <SubType>Form</SubType>
@@ -200,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKirjauduSisaan.resx">
       <DependentUpon>frmKirjauduSisaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKokonaisRaportti.resx">
+      <DependentUpon>frmKokonaisRaportti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLaskutus.resx">
       <DependentUpon>frmLaskutus.cs</DependentUpon>
