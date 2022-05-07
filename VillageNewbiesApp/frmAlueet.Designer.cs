@@ -112,7 +112,7 @@
             this.mlvMokit.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvMokit.Name = "mlvMokit";
             this.mlvMokit.OwnerDraw = true;
-            this.mlvMokit.Size = new System.Drawing.Size(385, 196);
+            this.mlvMokit.Size = new System.Drawing.Size(386, 263);
             this.mlvMokit.TabIndex = 2;
             this.mlvMokit.UseCompatibleStateImageBehavior = false;
             this.mlvMokit.View = System.Windows.Forms.View.Details;

@@ -30,6 +30,24 @@ namespace VillageNewbiesApp
 
             mySQL.setAlueID(lblAlue.Text);
             lblAlueID.Text = frmAlueet.selectedID;
+
+            if (frmAlueet.selectedID == selectedID)
+            {
+                return;
+            }
+
+            //remove all items
+            mclPalvelut.Items.Clear();
+
+            selectedID = frmAlueet.selectedID;
+
+            List<string> palvelut = mySQL.aluePalvelut(Convert.ToInt32(frmAlueet.selectedID));
+
+
+            foreach (string a in palvelut)
+            {
+                mclPalvelut.Items.Add(a);
+            }
         }
 
         private void lblAlue_TextChanged(object sender, EventArgs e)
@@ -37,27 +55,20 @@ namespace VillageNewbiesApp
 
         }
 
-        private void mcbPalvelut_VisibleChanged(object sender, EventArgs e)
-        {
-            if(frmAlueet.selectedID == selectedID)
-            {
-                return;
-            }
 
-            selectedID = frmAlueet.selectedID;
-
-            List<string> palvelut = mySQL.aluePalvelut(Convert.ToInt32(frmAlueet.selectedID));
-            mcbPalvelut.Items.Clear();
-
-            foreach(string a in palvelut)
-            {
-                mcbPalvelut.Items.Add(a);
-            }
-        }
 
         private void lblMokki_VisibleChanged(object sender, EventArgs e)
         {
             lblMokki.Text = frmAlueet.selectedMokki;
+        }
+
+
+        private void mbtnPoista_Click(object sender, EventArgs e)
+        {
+            foreach (int i in mclPalvelut.CheckedIndices)
+            {
+                mclPalvelut.SetItemCheckState(i, CheckState.Unchecked);
+            }
         }
     }
 }
