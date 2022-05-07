@@ -287,27 +287,42 @@ namespace VillageNewbiesApp
                 MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "')", connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
 
-                //tyhjennetään lista kun haku tehdään, lista täyttyy vain jos siellä on mökkejä
-                List<Mokki> MokkiHolder = new List<Mokki>();
-
                 while (Reader.Read())
                 {
 
                     SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
                     SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
                     SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("henkilomaara")).ToString());
-
-                    //lisätään mökit static listaan - testi
-                    MokkiHolder.Add(new Mokki(Reader.GetInt32(Reader.GetOrdinal("mokki_id")), Reader.GetString(Reader.GetOrdinal("mokkinimi")),
-                        Reader.GetString(Reader.GetOrdinal("katuosoite")), Reader.GetDouble(Reader.GetOrdinal("hinta")), Reader.GetString(Reader.GetOrdinal("kuvaus")),
-                        Reader.GetInt32(Reader.GetOrdinal("henkilomaara")), Reader.GetString(Reader.GetOrdinal("varustelu"))));
                 }
 
-                frmAlueet.AlueenMokit = MokkiHolder;
             }
 
             return SQLResult;
         }
+
+        public List<Mokki> getAllMokki()
+        {
+
+            List<Mokki> SQLResult = new List<Mokki>();
+            using (MySqlConnection connection = GetConnection())
+            {
+                //MessageBox.Show("SELECT * FROM mokki WHERE alue_id IN (SELECT alue_id FROM alue WHERE nimi LIKE '" + selection + "'");
+
+                MySqlCommand Command = new MySqlCommand("SELECT * FROM mokki", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    Mokki item = new Mokki();
+                    item.setNimi(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
+                    item.setID(Reader.GetInt32(Reader.GetOrdinal("mokki_id")));
+                    SQLResult.Add(item);
+                }
+            }
+
+            return SQLResult;
+        }
+
 
         public void setAlueID(string select)
         {
@@ -322,6 +337,24 @@ namespace VillageNewbiesApp
                 {
                     frmAlueet.selectedID = Reader.GetInt32(Reader.GetOrdinal("alue_id")).ToString();
                 }
+            }
+        }
+
+        public int getAlueID(string select)
+        {
+            using (MySqlConnection connection = GetConnection())
+            {
+                int alueID = 0;
+                MySqlCommand Command = new MySqlCommand("SELECT alue_id FROM alue WHERE nimi LIKE '" + select + "'", connection);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                   alueID = Reader.GetInt32(Reader.GetOrdinal("alue_id"));
+                }
+
+                return alueID;
             }
         }
 
@@ -349,8 +382,33 @@ namespace VillageNewbiesApp
 
             using (MySqlConnection connection = GetConnection())
             {
-                //MySqlCommand Command = new MySqlCommand("SELECT mokki_id FROM mokki WHERE mokkinimi LIKE '" + select + "'", connection);
-                //Console.Write("Haettu alueID alueelle" + select);
+
+                try
+                {
+                    MySqlCommand Command = new MySqlCommand("select * FROM posti WHERE postinro LIKE " + mokki.GetPostinumero(), connection);
+                    MySqlDataReader Reader = Command.ExecuteReader();
+
+                    if (!Reader.HasRows)
+                    {
+                        MessageBox.Show("Postinumeroa ei löytynyt, lisätään!");
+                        Reader.Close();
+                        Command = new MySqlCommand("INSERT INTO posti(postinro) VALUES (" + mokki.GetPostinumero() + ")", connection);
+                        Command.ExecuteNonQuery();
+                    }
+
+                    Reader.Close();
+
+                    Command = new MySqlCommand("INSERT INTO mokki(alue_id, postinro, mokkinimi, katuosoite, hinta, kuvaus, henkilomaara, varustelu)" +
+                    " VALUES ('" + mokki.getAlueID() + "', '" + mokki.GetPostinumero() + "', '" + mokki.GetNimi() + "', '" + mokki.GetKatuosoite() + "', " + mokki.GetHinta() +
+                    ", '" + mokki.GetKuvaus() + "', " + mokki.GetHenkilomaara() + ", '" + mokki.GetVarustelu() + "')", connection);
+                    MessageBox.Show(Command.CommandText);
+                   Command.ExecuteNonQuery();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
         }
 
@@ -422,7 +480,7 @@ namespace VillageNewbiesApp
             using (MySqlConnection connection = GetConnection())
             {
                 MySqlCommand Command = new MySqlCommand("INSERT INTO varaus(asiakas_id, mokki_mokki_id, varattu_alkupvm, varattu_loppupvm, varattu_pvm)"
-                + "VALUES('" + asiakas_id + "', '" + mokkid + "','" + datestart + "', '" + dateend + "','" + thisday + "')", connection); ;
+                + "VALUES('" + asiakas_id + "', '" + mokkid + "','" + datestart + "', '" + dateend + "','" + thisday + "')", connection);
                 Command.ExecuteNonQuery();
             }
         }

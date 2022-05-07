@@ -8,30 +8,42 @@ namespace VillageNewbiesApp
 {
     public class Mokki
     {
-        private int id { get; set; }
+        private int ID { get; set; }
+        private int alueID { get; set; }
         private string nimi { get; set; }
         private string katuosoite { get; set; }
         private double hinta { get; set; }
         private string kuvaus { get; set; }
         private int henkilomaara { get; set; }
         private string varustelu { get; set; }
+        private int postinumero { get; set; }
 
-        public Mokki(int MokkiId, string Mokkinimi, string Mokkikatuosoite, double Mokkihinta, string Mokkikuvaus, int MokkiHenkilomaara, string Mokkivarustelu)
+        public Mokki( string Mokkinimi, string Mokkikatuosoite, double Mokkihinta, string Mokkikuvaus, int MokkiHenkilomaara, string Mokkivarustelu, int Mokkipostinumero)
         {
-            id = MokkiId;
             nimi = Mokkinimi;
-            katuosoite = katuosoite;
+            katuosoite = Mokkikatuosoite;
             hinta = Mokkihinta;
             kuvaus = Mokkikuvaus;
             henkilomaara = MokkiHenkilomaara;
             varustelu = Mokkivarustelu;
+            postinumero = Mokkipostinumero;
         }
 
-
-        public int GetMokkiId()
+        public Mokki()
         {
-            return id;
+
         }
+
+        public void setAlueID(int ID)
+        {
+            alueID = ID;
+        }
+
+        public int getAlueID()
+        {
+            return alueID;
+        }
+
         public string GetNimi()
         {
             return nimi;
@@ -59,6 +71,25 @@ namespace VillageNewbiesApp
         {
             return henkilomaara;
         }
-        
+
+        public int GetPostinumero()
+        {
+            return postinumero;
+        }
+        public int GetID()
+        {
+            return ID;
+        }
+
+        public void setNimi(string Mokkinimi)
+        {
+            nimi = Mokkinimi;
+        }
+
+        public void setID(int MokkiID)
+        {
+            ID = MokkiID;
+        }
+
     }
 }
