@@ -57,13 +57,13 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mcbAlueet = new MaterialSkin.Controls.MaterialComboBox();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
             this.btnAvaaRaportti = new MaterialSkin.Controls.MaterialButton();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mclbAlueet = new MaterialSkin.Controls.MaterialCheckedListBox();
+            this.lbAlueet = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).BeginInit();
@@ -286,27 +286,10 @@
             this.columnHeader6.Text = "Kuvaus";
             this.columnHeader6.Width = 120;
             // 
-            // mcbAlueet
+            // columnHeader8
             // 
-            this.mcbAlueet.AutoResize = false;
-            this.mcbAlueet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mcbAlueet.Depth = 0;
-            this.mcbAlueet.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.mcbAlueet.DropDownHeight = 174;
-            this.mcbAlueet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mcbAlueet.DropDownWidth = 121;
-            this.mcbAlueet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.mcbAlueet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mcbAlueet.FormattingEnabled = true;
-            this.mcbAlueet.IntegralHeight = false;
-            this.mcbAlueet.ItemHeight = 43;
-            this.mcbAlueet.Location = new System.Drawing.Point(469, 263);
-            this.mcbAlueet.MaxDropDownItems = 4;
-            this.mcbAlueet.MouseState = MaterialSkin.MouseState.OUT;
-            this.mcbAlueet.Name = "mcbAlueet";
-            this.mcbAlueet.Size = new System.Drawing.Size(198, 49);
-            this.mcbAlueet.StartIndex = 0;
-            this.mcbAlueet.TabIndex = 10;
+            this.columnHeader8.Text = "Pvm";
+            this.columnHeader8.Width = 120;
             // 
             // materialCheckbox1
             // 
@@ -361,7 +344,7 @@
             this.btnAvaaRaportti.Depth = 0;
             this.btnAvaaRaportti.HighEmphasis = true;
             this.btnAvaaRaportti.Icon = null;
-            this.btnAvaaRaportti.Location = new System.Drawing.Point(522, 342);
+            this.btnAvaaRaportti.Location = new System.Drawing.Point(522, 343);
             this.btnAvaaRaportti.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAvaaRaportti.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAvaaRaportti.Name = "btnAvaaRaportti";
@@ -374,23 +357,25 @@
             this.btnAvaaRaportti.UseVisualStyleBackColor = true;
             this.btnAvaaRaportti.Click += new System.EventHandler(this.btnAvaaRaportti_Click);
             // 
-            // columnHeader8
+            // lbAlueet
             // 
-            this.columnHeader8.Text = "Pvm";
-            this.columnHeader8.Width = 120;
+            this.lbAlueet.FormattingEnabled = true;
+            this.lbAlueet.Location = new System.Drawing.Point(482, 25);
+            this.lbAlueet.Name = "lbAlueet";
+            this.lbAlueet.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lbAlueet.Size = new System.Drawing.Size(188, 225);
+            this.lbAlueet.TabIndex = 14;
             // 
-            // mclbAlueet
+            // label4
             // 
-            this.mclbAlueet.AutoScroll = true;
-            this.mclbAlueet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.mclbAlueet.Depth = 0;
-            this.mclbAlueet.Location = new System.Drawing.Point(475, 12);
-            this.mclbAlueet.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mclbAlueet.Name = "mclbAlueet";
-            this.mclbAlueet.Size = new System.Drawing.Size(200, 245);
-            this.mclbAlueet.Striped = false;
-            this.mclbAlueet.StripeDarkColor = System.Drawing.Color.Empty;
-            this.mclbAlueet.TabIndex = 12;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.label4.Location = new System.Drawing.Point(522, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Alue";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRaportit
             // 
@@ -398,9 +383,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
-            this.Controls.Add(this.mclbAlueet);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbAlueet);
             this.Controls.Add(this.btnAvaaRaportti);
-            this.Controls.Add(this.mcbAlueet);
             this.Controls.Add(this.mlvPalveluData);
             this.Controls.Add(this.mlvMokkiData);
             this.Controls.Add(this.label3);
@@ -412,7 +397,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRaportit";
             this.Text = "frmRaportit";
-            this.Load += new System.EventHandler(this.frmRaportit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).EndInit();
@@ -454,12 +438,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private MaterialSkin.Controls.MaterialComboBox mcbAlueet;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox2;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox3;
         private MaterialSkin.Controls.MaterialButton btnAvaaRaportti;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private MaterialSkin.Controls.MaterialCheckedListBox mclbAlueet;
+        private System.Windows.Forms.ListBox lbAlueet;
+        private System.Windows.Forms.Label label4;
     }
 }
