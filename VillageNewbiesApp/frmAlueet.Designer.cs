@@ -83,6 +83,7 @@
             this.mcbToimintaAlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.mcbToimintaAlue.ForeColor = System.Drawing.Color.Black;
             this.mcbToimintaAlue.FormattingEnabled = true;
+            this.mcbToimintaAlue.Hint = "Valitse alue";
             this.mcbToimintaAlue.IntegralHeight = false;
             this.mcbToimintaAlue.ItemHeight = 43;
             this.mcbToimintaAlue.Location = new System.Drawing.Point(35, 44);

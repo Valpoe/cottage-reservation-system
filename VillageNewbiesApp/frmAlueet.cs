@@ -16,6 +16,7 @@ namespace VillageNewbiesApp
         public static string selectedID;
         public static string selectedAlue;
         public static string selectedMokki;
+        public static int selectedMokkiID;
 
         public static List<Mokki> AlueenMokit;
 
@@ -73,6 +74,8 @@ namespace VillageNewbiesApp
             try
             {
                 selectedMokki = mlvMokit.SelectedItems[0].Text;
+                selectedMokkiID = mySQL.getMokkiID(mlvMokit.SelectedItems[0].Text);
+                MessageBox.Show("nimi: " + selectedMokki + ", mokki_id: " + selectedMokkiID);
             }
             catch(Exception ex)
             {

@@ -22,6 +22,15 @@ namespace VillageNewbiesApp
         {
             InitializeComponent();
             lblAlue.Text = "";
+            pnlLisaaMokki.Hide();
+
+            List<string> Alueet = mySQL.SQLselectAllAlueet();
+
+            foreach (string a in Alueet)
+            {
+                mcbToimintaAlue.Items.Add(a);
+            }
+
         }
 
         private void lblAlue_VisibleChanged(object sender, EventArgs e)
@@ -37,7 +46,7 @@ namespace VillageNewbiesApp
             }
 
             //remove all items
-            mclPalvelut.Items.Clear();
+            mclbPalvelut.Controls.Clear();
 
             selectedID = frmAlueet.selectedID;
 
@@ -46,7 +55,7 @@ namespace VillageNewbiesApp
 
             foreach (string a in palvelut)
             {
-                mclPalvelut.Items.Add(a);
+                mclbPalvelut.Items.Add(a);
             }
         }
 
@@ -63,12 +72,42 @@ namespace VillageNewbiesApp
         }
 
 
-        private void mbtnPoista_Click(object sender, EventArgs e)
+        private void btnTyhjenna_Click(object sender, EventArgs e)
         {
-            foreach (int i in mclPalvelut.CheckedIndices)
+            if(pnlLisaaMokki.Visible == true)
             {
-                mclPalvelut.SetItemCheckState(i, CheckState.Unchecked);
+
             }
+        }
+
+        private void btnLisaaMokki_Click(object sender, EventArgs e)
+        {
+            if(pnlPalvelut.Visible == false)
+            {
+                pnlPalvelut.Show();
+                pnlLisaaMokki.Hide();
+                btnLisaaMokki.Text = "Lisää mokki";
+                return;
+            }
+
+            pnlPalvelut.Hide();
+            pnlLisaaMokki.Show();
+            btnLisaaMokki.Text = "Valitse palvelut";
+        }
+
+        private void lblMokki_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMokinLisays_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

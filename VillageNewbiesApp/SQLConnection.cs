@@ -324,6 +324,35 @@ namespace VillageNewbiesApp
             }
         }
 
+        public int getMokkiID(string select)
+        {
+            int mokkiID = 0;
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("SELECT mokki_id FROM mokki WHERE mokkinimi LIKE '" + select + "'", connection);
+                Console.Write("Haettu alueID alueelle" + select);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    mokkiID = Reader.GetInt32(Reader.GetOrdinal("mokki_id"));
+                }
+
+                return mokkiID;
+            }
+        }
+        public void addMokki(Mokki mokki)
+        {
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                //MySqlCommand Command = new MySqlCommand("SELECT mokki_id FROM mokki WHERE mokkinimi LIKE '" + select + "'", connection);
+                //Console.Write("Haettu alueID alueelle" + select);
+            }
+        }
+
         public List<String> aluePalvelut(int alueID)
         {
             List<string> palvelut = new List<string>();
