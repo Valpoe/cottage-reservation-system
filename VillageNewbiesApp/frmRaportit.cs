@@ -15,6 +15,8 @@ namespace VillageNewbiesApp
         {
             InitializeComponent();
 
+            // Alueiden tuonti listboxiin
+            
             List<string> Alueet = mySQL.SQLselectAllAlueet();
 
             string[] arr = new string[Alueet.Count];
@@ -25,6 +27,7 @@ namespace VillageNewbiesApp
             }
         }
 
+        // Mökkien ja palveluiden tuonti listviewiin alueen/alueiden valinnan ja aikajakson mukaan
         private void etsiMokitJaPalvelut()
         {
             selectedAlueet = "";
@@ -41,7 +44,6 @@ namespace VillageNewbiesApp
                 }
             }
             selectedAlueet = firstAlue + selectedAlueet.TrimStart(',', ' ');
-            //Console.WriteLine(selectedAlueet);
 
             mlvMokkiData.Items.Clear();
             mlvPalveluData.Items.Clear();
@@ -101,6 +103,8 @@ namespace VillageNewbiesApp
                 etsiMokitJaPalvelut();
             }
         }
+
+        // Kokonaisraporttiformin aukaisu
         private void btnAvaaRaportti_Click(object sender, EventArgs e)
         {
             frmKokonaisRaportti kokonaisRaportti = new frmKokonaisRaportti();

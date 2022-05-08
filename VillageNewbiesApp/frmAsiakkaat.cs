@@ -8,17 +8,12 @@ namespace VillageNewbiesApp
     public partial class frmAsiakkaat : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        public static int selectedAsiakas;
         ErrorProvider errorProvider = new ErrorProvider();
+        public static int selectedAsiakas;
 
         public frmAsiakkaat()
         {
             InitializeComponent();
-        }
-
-        private void frmAsiakkaat_Load(object sender, EventArgs e)
-        {
-
         }
 
         // Tyhjennetään kaikki textboxit
@@ -40,63 +35,43 @@ namespace VillageNewbiesApp
             int postiNro = 0;
             bool isNumber = int.TryParse(tbPostiNumero.Text, out postiNro);
 
-            if (String.IsNullOrWhiteSpace(tbEtunimi.Text))
+            foreach (Control c in this.Controls)
             {
-                errorProvider.SetError(tbEtunimi, "Etunimi on pakollinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbSukunimi.Text))
-            {
-                errorProvider.SetError(tbSukunimi, "Sukunimi on pakollinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbOsoite.Text))
-            {
-                errorProvider.SetError(tbOsoite, "Osoite on pakollinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbSahkoPosti.Text))
-            {
-                errorProvider.SetError(tbSahkoPosti, "Sähköposti on pakollinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbPuhelinNumero.Text))
-            {
-                errorProvider.SetError(tbPuhelinNumero, "Puhelinnumero on pakollinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbPostiNumero.Text))
-            {
-                errorProvider.SetError(tbPostiNumero, "Postinumero on pakollinen");
-            }
-            else if (!isNumber || tbPostiNumero.Text.Length != 5)
-            {
-                errorProvider.SetError(tbPostiNumero, "Postinumero on virheellinen");
-            }
-            if (String.IsNullOrWhiteSpace(tbPostitoimipaikka.Text))
-            {
-                errorProvider.SetError(tbPostitoimipaikka, "Postitoimipaikka on pakollinen");
-            }
-            else
-            {
-                Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text,
-                    tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
-                mySQL.SQLinsertCustomer(asiakas);
-                btnTyhjenna_Click(sender, e);
-
-                // Asiakas lisätty label näkyy 3 sekunnin ajan
-
-                lblAsiakasLisatty.Visible = true;
-
-                var t = new Timer();
-                t.Interval = 3000;
-                t.Tick += (s, a) =>
+                if (c is MaterialSkin.Controls.MaterialTextBox)
                 {
-                    t.Stop();
-                    lblAsiakasLisatty.Visible = false;
-                };
-                t.Start();
-            }
-        }
+                    MaterialSkin.Controls.MaterialTextBox textBox = c as MaterialSkin.Controls.MaterialTextBox;
+                    if (String.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        errorProvider.SetError(textBox, "Täytä kaikki kentät!");
+                    }
+                    else if (!isNumber || tbPostiNumero.Text.Length != 5)
+                    {
+                        errorProvider.SetError(tbPostiNumero, "Postinumero on virheellinen!");
+                    }
+                    else
+                    {
+                        Asiakas asiakas = new Asiakas(tbEtunimi.Text, tbSukunimi.Text, tbOsoite.Text, tbPostiNumero.Text,
+                            tbPostitoimipaikka.Text, tbSahkoPosti.Text, tbPuhelinNumero.Text);
+                        mySQL.SQLinsertCustomer(asiakas);
+                        btnTyhjenna_Click(sender, e);
 
-        private void T_Tick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+                        // Asiakas lisätty label näkyy 3 sekunnin ajan
+
+                        lblAsiakasLisatty.Visible = true;
+
+                        var t = new Timer();
+                        t.Interval = 3000;
+                        t.Tick += (s, a) =>
+                        {
+                            t.Stop();
+                            lblAsiakasLisatty.Visible = false;
+                        };
+                        t.Start();
+
+                    }
+                }
+            }
+            errorProvider.Clear();
         }
 
         // Clearataan error

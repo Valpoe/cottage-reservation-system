@@ -40,7 +40,6 @@
             this.columnKokonimi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnPuhnro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tbSearchBox = new MaterialSkin.Controls.MaterialTextBox();
             this.tbPostiNumero = new MaterialSkin.Controls.MaterialTextBox();
             this.tbPostitoimipaikka = new MaterialSkin.Controls.MaterialTextBox();
             this.btnLataaAsiakkaat = new MaterialSkin.Controls.MaterialButton();
@@ -56,6 +55,7 @@
             this.lblAsiakasLisatty = new System.Windows.Forms.Label();
             this.btnLuoVaraus = new MaterialSkin.Controls.MaterialButton();
             this.btnPoistaAsiakas = new MaterialSkin.Controls.MaterialButton();
+            this.tbSearchBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.SuspendLayout();
             // 
             // btnLisaa
@@ -66,7 +66,7 @@
             this.btnLisaa.Depth = 0;
             this.btnLisaa.HighEmphasis = true;
             this.btnLisaa.Icon = null;
-            this.btnLisaa.Location = new System.Drawing.Point(108, 351);
+            this.btnLisaa.Location = new System.Drawing.Point(103, 351);
             this.btnLisaa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLisaa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLisaa.Name = "btnLisaa";
@@ -87,7 +87,7 @@
             this.btnTyhjenna.Depth = 0;
             this.btnTyhjenna.HighEmphasis = true;
             this.btnTyhjenna.Icon = null;
-            this.btnTyhjenna.Location = new System.Drawing.Point(12, 351);
+            this.btnTyhjenna.Location = new System.Drawing.Point(9, 351);
             this.btnTyhjenna.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnTyhjenna.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTyhjenna.Name = "btnTyhjenna";
@@ -109,12 +109,12 @@
             this.tbSukunimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbSukunimi.Hint = "Sukunimi";
             this.tbSukunimi.LeadingIcon = null;
-            this.tbSukunimi.Location = new System.Drawing.Point(13, 96);
+            this.tbSukunimi.Location = new System.Drawing.Point(10, 96);
             this.tbSukunimi.MaxLength = 50;
             this.tbSukunimi.MouseState = MaterialSkin.MouseState.OUT;
             this.tbSukunimi.Multiline = false;
             this.tbSukunimi.Name = "tbSukunimi";
-            this.tbSukunimi.Size = new System.Drawing.Size(180, 36);
+            this.tbSukunimi.Size = new System.Drawing.Size(178, 36);
             this.tbSukunimi.TabIndex = 2;
             this.tbSukunimi.Text = "";
             this.tbSukunimi.TrailingIcon = null;
@@ -130,12 +130,12 @@
             this.tbEtunimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbEtunimi.Hint = "Etunimi";
             this.tbEtunimi.LeadingIcon = null;
-            this.tbEtunimi.Location = new System.Drawing.Point(13, 54);
+            this.tbEtunimi.Location = new System.Drawing.Point(10, 54);
             this.tbEtunimi.MaxLength = 50;
             this.tbEtunimi.MouseState = MaterialSkin.MouseState.OUT;
             this.tbEtunimi.Multiline = false;
             this.tbEtunimi.Name = "tbEtunimi";
-            this.tbEtunimi.Size = new System.Drawing.Size(180, 36);
+            this.tbEtunimi.Size = new System.Drawing.Size(178, 36);
             this.tbEtunimi.TabIndex = 1;
             this.tbEtunimi.Text = "";
             this.tbEtunimi.TrailingIcon = null;
@@ -151,12 +151,12 @@
             this.tbOsoite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.tbOsoite.Hint = "Osoite";
             this.tbOsoite.LeadingIcon = null;
-            this.tbOsoite.Location = new System.Drawing.Point(13, 138);
+            this.tbOsoite.Location = new System.Drawing.Point(10, 138);
             this.tbOsoite.MaxLength = 50;
             this.tbOsoite.MouseState = MaterialSkin.MouseState.OUT;
             this.tbOsoite.Multiline = false;
             this.tbOsoite.Name = "tbOsoite";
-            this.tbOsoite.Size = new System.Drawing.Size(180, 36);
+            this.tbOsoite.Size = new System.Drawing.Size(178, 36);
             this.tbOsoite.TabIndex = 3;
             this.tbOsoite.Text = "";
             this.tbOsoite.TrailingIcon = null;
@@ -172,12 +172,12 @@
             this.tbSahkoPosti.ForeColor = System.Drawing.Color.Aqua;
             this.tbSahkoPosti.Hint = "Sähköposti";
             this.tbSahkoPosti.LeadingIcon = null;
-            this.tbSahkoPosti.Location = new System.Drawing.Point(13, 264);
+            this.tbSahkoPosti.Location = new System.Drawing.Point(10, 264);
             this.tbSahkoPosti.MaxLength = 50;
             this.tbSahkoPosti.MouseState = MaterialSkin.MouseState.OUT;
             this.tbSahkoPosti.Multiline = false;
             this.tbSahkoPosti.Name = "tbSahkoPosti";
-            this.tbSahkoPosti.Size = new System.Drawing.Size(180, 36);
+            this.tbSahkoPosti.Size = new System.Drawing.Size(178, 36);
             this.tbSahkoPosti.TabIndex = 6;
             this.tbSahkoPosti.Text = "";
             this.tbSahkoPosti.TrailingIcon = null;
@@ -193,12 +193,12 @@
             this.tbPuhelinNumero.ForeColor = System.Drawing.Color.Aqua;
             this.tbPuhelinNumero.Hint = "Puhelinnumero";
             this.tbPuhelinNumero.LeadingIcon = null;
-            this.tbPuhelinNumero.Location = new System.Drawing.Point(12, 306);
+            this.tbPuhelinNumero.Location = new System.Drawing.Point(9, 306);
             this.tbPuhelinNumero.MaxLength = 50;
             this.tbPuhelinNumero.MouseState = MaterialSkin.MouseState.OUT;
             this.tbPuhelinNumero.Multiline = false;
             this.tbPuhelinNumero.Name = "tbPuhelinNumero";
-            this.tbPuhelinNumero.Size = new System.Drawing.Size(180, 36);
+            this.tbPuhelinNumero.Size = new System.Drawing.Size(178, 36);
             this.tbPuhelinNumero.TabIndex = 7;
             this.tbPuhelinNumero.Text = "";
             this.tbPuhelinNumero.TrailingIcon = null;
@@ -252,26 +252,6 @@
             this.columnPuhnro.Text = "Puhelin";
             this.columnPuhnro.Width = 125;
             // 
-            // tbSearchBox
-            // 
-            this.tbSearchBox.AnimateReadOnly = false;
-            this.tbSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSearchBox.Depth = 0;
-            this.tbSearchBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbSearchBox.Hint = "Etsi asiakkaita";
-            this.tbSearchBox.LeadingIcon = null;
-            this.tbSearchBox.Location = new System.Drawing.Point(554, 10);
-            this.tbSearchBox.MaxLength = 50;
-            this.tbSearchBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbSearchBox.Multiline = false;
-            this.tbSearchBox.Name = "tbSearchBox";
-            this.tbSearchBox.Size = new System.Drawing.Size(200, 36);
-            this.tbSearchBox.TabIndex = 10;
-            this.tbSearchBox.Text = "";
-            this.tbSearchBox.TrailingIcon = null;
-            this.tbSearchBox.UseTallSize = false;
-            this.tbSearchBox.TextChanged += new System.EventHandler(this.tbSearchBox_TextChanged);
-            // 
             // tbPostiNumero
             // 
             this.tbPostiNumero.AnimateReadOnly = false;
@@ -281,12 +261,12 @@
             this.tbPostiNumero.ForeColor = System.Drawing.Color.Aqua;
             this.tbPostiNumero.Hint = "Postinumero";
             this.tbPostiNumero.LeadingIcon = null;
-            this.tbPostiNumero.Location = new System.Drawing.Point(12, 180);
+            this.tbPostiNumero.Location = new System.Drawing.Point(9, 180);
             this.tbPostiNumero.MaxLength = 50;
             this.tbPostiNumero.MouseState = MaterialSkin.MouseState.OUT;
             this.tbPostiNumero.Multiline = false;
             this.tbPostiNumero.Name = "tbPostiNumero";
-            this.tbPostiNumero.Size = new System.Drawing.Size(180, 36);
+            this.tbPostiNumero.Size = new System.Drawing.Size(178, 36);
             this.tbPostiNumero.TabIndex = 4;
             this.tbPostiNumero.Text = "";
             this.tbPostiNumero.TrailingIcon = null;
@@ -302,12 +282,12 @@
             this.tbPostitoimipaikka.ForeColor = System.Drawing.Color.Aqua;
             this.tbPostitoimipaikka.Hint = "Postitoimipaikka";
             this.tbPostitoimipaikka.LeadingIcon = null;
-            this.tbPostitoimipaikka.Location = new System.Drawing.Point(13, 222);
+            this.tbPostitoimipaikka.Location = new System.Drawing.Point(10, 222);
             this.tbPostitoimipaikka.MaxLength = 50;
             this.tbPostitoimipaikka.MouseState = MaterialSkin.MouseState.OUT;
             this.tbPostitoimipaikka.Multiline = false;
             this.tbPostitoimipaikka.Name = "tbPostitoimipaikka";
-            this.tbPostitoimipaikka.Size = new System.Drawing.Size(180, 36);
+            this.tbPostitoimipaikka.Size = new System.Drawing.Size(178, 36);
             this.tbPostitoimipaikka.TabIndex = 5;
             this.tbPostitoimipaikka.Text = "";
             this.tbPostitoimipaikka.TrailingIcon = null;
@@ -423,7 +403,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 30);
             this.label1.TabIndex = 17;
@@ -484,12 +464,44 @@
             this.btnPoistaAsiakas.UseVisualStyleBackColor = true;
             this.btnPoistaAsiakas.Click += new System.EventHandler(this.btnPoistaAsiakas_Click);
             // 
+            // tbSearchBox
+            // 
+            this.tbSearchBox.AnimateReadOnly = false;
+            this.tbSearchBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tbSearchBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbSearchBox.Depth = 0;
+            this.tbSearchBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbSearchBox.HideSelection = true;
+            this.tbSearchBox.Hint = "Etsi asiakkaita";
+            this.tbSearchBox.LeadingIcon = null;
+            this.tbSearchBox.Location = new System.Drawing.Point(503, 10);
+            this.tbSearchBox.MaxLength = 32767;
+            this.tbSearchBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbSearchBox.Name = "tbSearchBox";
+            this.tbSearchBox.PasswordChar = '\0';
+            this.tbSearchBox.PrefixSuffixText = null;
+            this.tbSearchBox.ReadOnly = false;
+            this.tbSearchBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbSearchBox.SelectedText = "";
+            this.tbSearchBox.SelectionLength = 0;
+            this.tbSearchBox.SelectionStart = 0;
+            this.tbSearchBox.ShortcutsEnabled = true;
+            this.tbSearchBox.Size = new System.Drawing.Size(250, 36);
+            this.tbSearchBox.TabIndex = 21;
+            this.tbSearchBox.TabStop = false;
+            this.tbSearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbSearchBox.TrailingIcon = null;
+            this.tbSearchBox.UseSystemPasswordChar = false;
+            this.tbSearchBox.UseTallSize = false;
+            this.tbSearchBox.TextChanged += new System.EventHandler(this.tbSearchBox_TextChanged);
+            // 
             // frmAsiakkaat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.tbSearchBox);
             this.Controls.Add(this.btnPoistaAsiakas);
             this.Controls.Add(this.btnLuoVaraus);
             this.Controls.Add(this.lblAsiakasLisatty);
@@ -500,7 +512,6 @@
             this.Controls.Add(this.btnLataaAsiakkaat);
             this.Controls.Add(this.tbPostitoimipaikka);
             this.Controls.Add(this.tbPostiNumero);
-            this.Controls.Add(this.tbSearchBox);
             this.Controls.Add(this.mlvAsiakkaat);
             this.Controls.Add(this.tbPuhelinNumero);
             this.Controls.Add(this.tbSahkoPosti);
@@ -512,7 +523,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsiakkaat";
             this.Text = "frmAsiakkaat";
-            this.Load += new System.EventHandler(this.frmAsiakkaat_Load);
             this.ResumeLayout(false);
 
         }
@@ -543,8 +553,8 @@
         private System.Windows.Forms.Label lblEiVarauksia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAsiakasLisatty;
-        public MaterialSkin.Controls.MaterialTextBox tbSearchBox;
         private MaterialSkin.Controls.MaterialButton btnLuoVaraus;
         private MaterialSkin.Controls.MaterialButton btnPoistaAsiakas;
+        private MaterialSkin.Controls.MaterialTextBox2 tbSearchBox;
     }
 }

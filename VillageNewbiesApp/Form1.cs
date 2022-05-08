@@ -11,6 +11,9 @@ namespace VillageNewbiesApp
         public Form1()
         {
             InitializeComponent();
+
+            // Formin reunojen pyöristys
+            
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
@@ -26,11 +29,14 @@ namespace VillageNewbiesApp
             btnEtusivu.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
         }
 
+        // Sivupaneelin napeista oikean formin aukaisu ja titlen vaihto
         private void btnAlueet_Click(object sender, EventArgs e)
         {
             toiminnallisuus.ChangeNavbarAndTitle(sender as Button, this);
             toiminnallisuus.loadScreen(lblOtsikko.Text, this, sender as Button);
         }
+
+        // Formin liikuttelu hiirellä
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -71,6 +77,7 @@ namespace VillageNewbiesApp
             mouseLeave(sender as PictureBox);
         }
 
+        // Sisäänkirjautumisformin aukaisu
         private void btnKirjauduSisaan_Click(object sender, EventArgs e)
         {
             btnKirjauduSisaan.Enabled = false;
@@ -80,6 +87,7 @@ namespace VillageNewbiesApp
             this.Enabled = false;
         }
 
+        // Buttoneiden pois käytöstä ottaminen
         private void btnKirjauduUlos_Click(object sender, EventArgs e)
         {
             
@@ -107,26 +115,7 @@ namespace VillageNewbiesApp
             btnKirjauduSisaan.Visible = true;       
         }
 
-        public void loadToimintaAlueet()
-        {
-            panelNavigation.Height = btnToimintaAlueet.Height;
-            panelNavigation.Top = btnToimintaAlueet.Top;
-            lblOtsikko.Text = "Toiminta-alueet";
-            this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Toiminta-alueet"]);
-            toiminnallisuus.screens["Toiminta-alueet"].Show();
-            btnToimintaAlueet.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
-            
-            Button button = new Button();
-            
-            foreach (Button bt in button.Parent.Controls.OfType<Button>())
-            {
-                if (bt.Name != button.Name)
-                {
-                    bt.BackColor = System.Drawing.Color.FromArgb(24, 30, 54);
-                }
-            }
-        }
-
+        // Kellon asettaminen
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblAika.Text = DateTime.Now.ToLongTimeString();
