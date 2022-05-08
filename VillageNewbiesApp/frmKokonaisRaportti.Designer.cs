@@ -35,7 +35,6 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.alueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new VillageNewbiesApp.DataSet1();
             this.mokkiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -43,6 +42,7 @@
             this.varausBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.laskuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.alueTableAdapter1 = new VillageNewbiesApp.DataSet1TableAdapters.alueTableAdapter();
             this.mokkiTableAdapter1 = new VillageNewbiesApp.DataSet1TableAdapters.mokkiTableAdapter();
             this.palveluTableAdapter1 = new VillageNewbiesApp.DataSet1TableAdapters.palveluTableAdapter();
@@ -57,34 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.laskuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.alueBindingSource;
-            reportDataSource2.Name = "mokit";
-            reportDataSource2.Value = this.mokkiBindingSource;
-            reportDataSource3.Name = "palvelut";
-            reportDataSource3.Value = this.palveluBindingSource;
-            reportDataSource4.Name = "varaukset";
-            reportDataSource4.Value = this.varausBindingSource;
-            reportDataSource5.Name = "laskut";
-            reportDataSource5.Value = this.laskuBindingSource;
-            reportDataSource6.Name = "asiakkaat";
-            reportDataSource6.Value = this.asiakasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "VillageNewbiesApp.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(661, 609);
-            this.reportViewer1.TabIndex = 2;
             // 
             // alueBindingSource
             // 
@@ -121,6 +93,34 @@
             this.asiakasBindingSource.DataMember = "asiakas";
             this.asiakasBindingSource.DataSource = this.dataSet1;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.alueBindingSource;
+            reportDataSource2.Name = "mokit";
+            reportDataSource2.Value = this.mokkiBindingSource;
+            reportDataSource3.Name = "palvelut";
+            reportDataSource3.Value = this.palveluBindingSource;
+            reportDataSource4.Name = "varaukset";
+            reportDataSource4.Value = this.varausBindingSource;
+            reportDataSource5.Name = "laskut";
+            reportDataSource5.Value = this.laskuBindingSource;
+            reportDataSource6.Name = "asiakkaat";
+            reportDataSource6.Value = this.asiakasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "VillageNewbiesApp.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(790, 883);
+            this.reportViewer1.TabIndex = 2;
+            // 
             // alueTableAdapter1
             // 
             this.alueTableAdapter1.ClearBeforeFill = true;
@@ -149,12 +149,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 609);
+            this.ClientSize = new System.Drawing.Size(790, 883);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmKokonaisRaportti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmKokonaisRaportti";
             this.Load += new System.EventHandler(this.frmKokonaisRaportti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();

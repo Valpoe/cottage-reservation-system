@@ -136,55 +136,56 @@
             // 
             this.dtpAlkupvm.CustomFormat = "dd/MM/yyy";
             this.dtpAlkupvm.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAlkupvm.Location = new System.Drawing.Point(13, 25);
+            this.dtpAlkupvm.Location = new System.Drawing.Point(568, 12);
             this.dtpAlkupvm.Name = "dtpAlkupvm";
-            this.dtpAlkupvm.Size = new System.Drawing.Size(200, 20);
+            this.dtpAlkupvm.Size = new System.Drawing.Size(166, 20);
             this.dtpAlkupvm.TabIndex = 2;
             // 
             // dtpLoppupvm
             // 
             this.dtpLoppupvm.CustomFormat = "dd/MM/yyyy";
             this.dtpLoppupvm.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpLoppupvm.Location = new System.Drawing.Point(238, 25);
+            this.dtpLoppupvm.Location = new System.Drawing.Point(568, 59);
             this.dtpLoppupvm.Name = "dtpLoppupvm";
-            this.dtpLoppupvm.Size = new System.Drawing.Size(200, 20);
+            this.dtpLoppupvm.Size = new System.Drawing.Size(166, 20);
             this.dtpLoppupvm.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(4, 2);
+            this.label1.Location = new System.Drawing.Point(469, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Alkupvm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(231, 2);
+            this.label2.Location = new System.Drawing.Point(469, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Loppupvm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEtsi
             // 
+            this.btnEtsi.AutoSize = false;
             this.btnEtsi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEtsi.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnEtsi.Depth = 0;
             this.btnEtsi.HighEmphasis = true;
             this.btnEtsi.Icon = null;
-            this.btnEtsi.Location = new System.Drawing.Point(688, 9);
+            this.btnEtsi.Location = new System.Drawing.Point(568, 301);
             this.btnEtsi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEtsi.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEtsi.Name = "btnEtsi";
             this.btnEtsi.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEtsi.Size = new System.Drawing.Size(64, 36);
+            this.btnEtsi.Size = new System.Drawing.Size(166, 36);
             this.btnEtsi.TabIndex = 6;
             this.btnEtsi.Text = "Etsi";
             this.btnEtsi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -197,7 +198,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(217, 22);
+            this.label3.Location = new System.Drawing.Point(640, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 23);
             this.label3.TabIndex = 7;
@@ -216,13 +217,13 @@
             this.mlvMokkiData.Depth = 0;
             this.mlvMokkiData.FullRowSelect = true;
             this.mlvMokkiData.HideSelection = false;
-            this.mlvMokkiData.Location = new System.Drawing.Point(13, 57);
+            this.mlvMokkiData.Location = new System.Drawing.Point(13, 12);
             this.mlvMokkiData.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvMokkiData.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvMokkiData.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvMokkiData.Name = "mlvMokkiData";
             this.mlvMokkiData.OwnerDraw = true;
-            this.mlvMokkiData.Size = new System.Drawing.Size(450, 200);
+            this.mlvMokkiData.Size = new System.Drawing.Size(450, 220);
             this.mlvMokkiData.TabIndex = 8;
             this.mlvMokkiData.UseCompatibleStateImageBehavior = false;
             this.mlvMokkiData.View = System.Windows.Forms.View.Details;
@@ -260,13 +261,13 @@
             this.mlvPalveluData.Depth = 0;
             this.mlvPalveluData.FullRowSelect = true;
             this.mlvPalveluData.HideSelection = false;
-            this.mlvPalveluData.Location = new System.Drawing.Point(13, 263);
+            this.mlvPalveluData.Location = new System.Drawing.Point(13, 245);
             this.mlvPalveluData.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvPalveluData.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvPalveluData.MouseState = MaterialSkin.MouseState.OUT;
             this.mlvPalveluData.Name = "mlvPalveluData";
             this.mlvPalveluData.OwnerDraw = true;
-            this.mlvPalveluData.Size = new System.Drawing.Size(450, 200);
+            this.mlvPalveluData.Size = new System.Drawing.Size(450, 220);
             this.mlvPalveluData.TabIndex = 9;
             this.mlvPalveluData.UseCompatibleStateImageBehavior = false;
             this.mlvPalveluData.View = System.Windows.Forms.View.Details;
@@ -344,7 +345,7 @@
             this.btnAvaaRaportti.Depth = 0;
             this.btnAvaaRaportti.HighEmphasis = true;
             this.btnAvaaRaportti.Icon = null;
-            this.btnAvaaRaportti.Location = new System.Drawing.Point(522, 343);
+            this.btnAvaaRaportti.Location = new System.Drawing.Point(518, 426);
             this.btnAvaaRaportti.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAvaaRaportti.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAvaaRaportti.Name = "btnAvaaRaportti";
@@ -359,23 +360,24 @@
             // 
             // lbAlueet
             // 
+            this.lbAlueet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbAlueet.FormattingEnabled = true;
-            this.lbAlueet.Location = new System.Drawing.Point(482, 25);
+            this.lbAlueet.Location = new System.Drawing.Point(568, 107);
             this.lbAlueet.Name = "lbAlueet";
             this.lbAlueet.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbAlueet.Size = new System.Drawing.Size(188, 225);
+            this.lbAlueet.Size = new System.Drawing.Size(166, 182);
             this.lbAlueet.TabIndex = 14;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(522, 2);
+            this.label4.Location = new System.Drawing.Point(469, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 20);
+            this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Alue";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Text = "Alueet";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmRaportit
             // 

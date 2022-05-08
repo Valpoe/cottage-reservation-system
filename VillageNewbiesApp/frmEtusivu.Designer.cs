@@ -29,14 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
-            this.lblAika = new System.Windows.Forms.Label();
-            this.lblPaivays = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAsiakkaat = new System.Windows.Forms.Panel();
             this.lblAsiakasTotal = new System.Windows.Forms.Label();
@@ -51,18 +44,23 @@
             this.lblMokkiTotal = new System.Windows.Forms.Label();
             this.lblMokit = new System.Windows.Forms.Label();
             this.btnRefresh = new MaterialSkin.Controls.MaterialButton();
-            this.flpChart = new System.Windows.Forms.FlowLayoutPanel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOhjeet = new MaterialSkin.Controls.MaterialButton();
+            this.lblKokonaisMaarat = new System.Windows.Forms.Label();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.cpbVarausaste = new CircularProgressBar.CircularProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelAsiakkaat.SuspendLayout();
             this.panelVaraukset.SuspendLayout();
             this.panelPalvelut.SuspendLayout();
             this.panelMokit.SuspendLayout();
-            this.flpChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.materialCard1.SuspendLayout();
+            this.materialCard3.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -84,49 +82,6 @@
             this.materialDrawer1.Text = "materialDrawer1";
             this.materialDrawer1.UseColors = false;
             // 
-            // lblAika
-            // 
-            this.lblAika.AutoSize = true;
-            this.lblAika.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblAika.Location = new System.Drawing.Point(58, 9);
-            this.lblAika.Name = "lblAika";
-            this.lblAika.Size = new System.Drawing.Size(51, 22);
-            this.lblAika.TabIndex = 8;
-            this.lblAika.Text = "Aika";
-            // 
-            // lblPaivays
-            // 
-            this.lblPaivays.AutoSize = true;
-            this.lblPaivays.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaivays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblPaivays.Location = new System.Drawing.Point(58, 38);
-            this.lblPaivays.Name = "lblPaivays";
-            this.lblPaivays.Size = new System.Drawing.Size(81, 22);
-            this.lblPaivays.TabIndex = 9;
-            this.lblPaivays.Text = "Päiväys";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.materialLabel1.Location = new System.Drawing.Point(14, 79);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(176, 29);
-            this.materialLabel1.TabIndex = 11;
-            this.materialLabel1.Text = "Kokonaismäärät";
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.materialLabel1.UseAccent = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -138,7 +93,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panelVaraukset, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelPalvelut, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelMokit, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 120);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 33);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -147,7 +102,7 @@
             // 
             // panelAsiakkaat
             // 
-            this.panelAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.panelAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelAsiakkaat.Controls.Add(this.lblAsiakasTotal);
             this.panelAsiakkaat.Controls.Add(this.lblAsiakkaat);
             this.panelAsiakkaat.Dock = System.Windows.Forms.DockStyle.Left;
@@ -160,6 +115,7 @@
             // lblAsiakasTotal
             // 
             this.lblAsiakasTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsiakasTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblAsiakasTotal.Location = new System.Drawing.Point(0, 20);
             this.lblAsiakasTotal.Name = "lblAsiakasTotal";
             this.lblAsiakasTotal.Size = new System.Drawing.Size(76, 40);
@@ -169,7 +125,8 @@
             // 
             // lblAsiakkaat
             // 
-            this.lblAsiakkaat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsiakkaat.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsiakkaat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblAsiakkaat.Location = new System.Drawing.Point(0, 0);
             this.lblAsiakkaat.Name = "lblAsiakkaat";
             this.lblAsiakkaat.Size = new System.Drawing.Size(76, 22);
@@ -179,7 +136,7 @@
             // 
             // panelVaraukset
             // 
-            this.panelVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.panelVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelVaraukset.Controls.Add(this.lblVarausTotal);
             this.panelVaraukset.Controls.Add(this.lblVaraukset);
             this.panelVaraukset.Dock = System.Windows.Forms.DockStyle.Left;
@@ -192,6 +149,7 @@
             // lblVarausTotal
             // 
             this.lblVarausTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVarausTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblVarausTotal.Location = new System.Drawing.Point(0, 20);
             this.lblVarausTotal.Name = "lblVarausTotal";
             this.lblVarausTotal.Size = new System.Drawing.Size(79, 40);
@@ -201,7 +159,8 @@
             // 
             // lblVaraukset
             // 
-            this.lblVaraukset.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVaraukset.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVaraukset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblVaraukset.Location = new System.Drawing.Point(0, 0);
             this.lblVaraukset.Name = "lblVaraukset";
             this.lblVaraukset.Size = new System.Drawing.Size(79, 22);
@@ -211,7 +170,7 @@
             // 
             // panelPalvelut
             // 
-            this.panelPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.panelPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelPalvelut.Controls.Add(this.lblPalvelutTotal);
             this.panelPalvelut.Controls.Add(this.lblPalvelut);
             this.panelPalvelut.Dock = System.Windows.Forms.DockStyle.Left;
@@ -224,6 +183,7 @@
             // lblPalvelutTotal
             // 
             this.lblPalvelutTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPalvelutTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblPalvelutTotal.Location = new System.Drawing.Point(0, 20);
             this.lblPalvelutTotal.Name = "lblPalvelutTotal";
             this.lblPalvelutTotal.Size = new System.Drawing.Size(76, 40);
@@ -233,7 +193,8 @@
             // 
             // lblPalvelut
             // 
-            this.lblPalvelut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPalvelut.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPalvelut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblPalvelut.Location = new System.Drawing.Point(0, 0);
             this.lblPalvelut.Name = "lblPalvelut";
             this.lblPalvelut.Size = new System.Drawing.Size(76, 22);
@@ -243,7 +204,7 @@
             // 
             // panelMokit
             // 
-            this.panelMokit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.panelMokit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelMokit.Controls.Add(this.lblMokkiTotal);
             this.panelMokit.Controls.Add(this.lblMokit);
             this.panelMokit.Dock = System.Windows.Forms.DockStyle.Left;
@@ -256,6 +217,7 @@
             // lblMokkiTotal
             // 
             this.lblMokkiTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkiTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblMokkiTotal.Location = new System.Drawing.Point(0, 20);
             this.lblMokkiTotal.Name = "lblMokkiTotal";
             this.lblMokkiTotal.Size = new System.Drawing.Size(76, 40);
@@ -265,7 +227,8 @@
             // 
             // lblMokit
             // 
-            this.lblMokit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblMokit.Location = new System.Drawing.Point(-1, 0);
             this.lblMokit.Name = "lblMokit";
             this.lblMokit.Size = new System.Drawing.Size(77, 22);
@@ -281,7 +244,7 @@
             this.btnRefresh.Depth = 0;
             this.btnRefresh.HighEmphasis = true;
             this.btnRefresh.Icon = null;
-            this.btnRefresh.Location = new System.Drawing.Point(594, 15);
+            this.btnRefresh.Location = new System.Drawing.Point(13, 80);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRefresh.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRefresh.Name = "btnRefresh";
@@ -294,51 +257,15 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // flpChart
-            // 
-            this.flpChart.Controls.Add(this.chart1);
-            this.flpChart.Location = new System.Drawing.Point(12, 219);
-            this.flpChart.Name = "flpChart";
-            this.flpChart.Size = new System.Drawing.Size(740, 236);
-            this.flpChart.TabIndex = 14;
-            // 
-            // chart1
-            // 
-            this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Margin = new System.Windows.Forms.Padding(0);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Hinta";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(740, 236);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.clock;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnOhjeet
             // 
+            this.btnOhjeet.AutoSize = false;
             this.btnOhjeet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOhjeet.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnOhjeet.Depth = 0;
             this.btnOhjeet.HighEmphasis = true;
             this.btnOhjeet.Icon = null;
-            this.btnOhjeet.Location = new System.Drawing.Point(594, 63);
+            this.btnOhjeet.Location = new System.Drawing.Point(13, 128);
             this.btnOhjeet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnOhjeet.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOhjeet.Name = "btnOhjeet";
@@ -350,20 +277,132 @@
             this.btnOhjeet.UseAccentColor = false;
             this.btnOhjeet.UseVisualStyleBackColor = true;
             // 
+            // lblKokonaisMaarat
+            // 
+            this.lblKokonaisMaarat.AutoSize = true;
+            this.lblKokonaisMaarat.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKokonaisMaarat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.lblKokonaisMaarat.Location = new System.Drawing.Point(108, 4);
+            this.lblKokonaisMaarat.Name = "lblKokonaisMaarat";
+            this.lblKokonaisMaarat.Size = new System.Drawing.Size(147, 25);
+            this.lblKokonaisMaarat.TabIndex = 16;
+            this.lblKokonaisMaarat.Text = "Kokonaismäärät";
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.tableLayoutPanel1);
+            this.materialCard1.Controls.Add(this.lblKokonaisMaarat);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(391, 80);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(364, 117);
+            this.materialCard1.TabIndex = 17;
+            // 
+            // cpbVarausaste
+            // 
+            this.cpbVarausaste.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.cpbVarausaste.AnimationSpeed = 500;
+            this.cpbVarausaste.BackColor = System.Drawing.Color.White;
+            this.cpbVarausaste.Font = new System.Drawing.Font("Nirmala UI", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpbVarausaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cpbVarausaste.InnerColor = System.Drawing.Color.White;
+            this.cpbVarausaste.InnerMargin = 0;
+            this.cpbVarausaste.InnerWidth = -1;
+            this.cpbVarausaste.Location = new System.Drawing.Point(73, 29);
+            this.cpbVarausaste.MarqueeAnimationSpeed = 2000;
+            this.cpbVarausaste.Name = "cpbVarausaste";
+            this.cpbVarausaste.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cpbVarausaste.OuterMargin = -26;
+            this.cpbVarausaste.OuterWidth = 26;
+            this.cpbVarausaste.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.cpbVarausaste.ProgressWidth = 25;
+            this.cpbVarausaste.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.cpbVarausaste.Size = new System.Drawing.Size(220, 220);
+            this.cpbVarausaste.StartAngle = 270;
+            this.cpbVarausaste.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.cpbVarausaste.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.cpbVarausaste.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.cpbVarausaste.SubscriptText = "";
+            this.cpbVarausaste.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.cpbVarausaste.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.cpbVarausaste.SuperscriptText = "";
+            this.cpbVarausaste.TabIndex = 18;
+            this.cpbVarausaste.Text = "78%";
+            this.cpbVarausaste.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.cpbVarausaste.Value = 78;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label1.Location = new System.Drawing.Point(109, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "30pv varausaste";
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.label1);
+            this.materialCard3.Controls.Add(this.cpbVarausaste);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(391, 207);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(364, 260);
+            this.materialCard3.TabIndex = 20;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label2);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(59, 15);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(647, 51);
+            this.materialCard2.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label2.Location = new System.Drawing.Point(17, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(612, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Tervetuloa Village Newbies Oy:n varaus- ja asiakashallintajärjestelmään";
+            // 
             // frmEtusivu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.materialCard1);
+            this.Controls.Add(this.materialCard2);
+            this.Controls.Add(this.materialCard3);
             this.Controls.Add(this.btnOhjeet);
-            this.Controls.Add(this.flpChart);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblPaivays);
-            this.Controls.Add(this.lblAika);
             this.Controls.Add(this.materialDrawer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEtusivu";
@@ -374,21 +413,18 @@
             this.panelVaraukset.ResumeLayout(false);
             this.panelPalvelut.ResumeLayout(false);
             this.panelMokit.ResumeLayout(false);
-            this.flpChart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.materialCard3.ResumeLayout(false);
+            this.materialCard3.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
-        private System.Windows.Forms.Label lblAika;
-        private System.Windows.Forms.Label lblPaivays;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelVaraukset;
         private System.Windows.Forms.Panel panelAsiakkaat;
@@ -403,8 +439,14 @@
         private System.Windows.Forms.Label lblMokkiTotal;
         private System.Windows.Forms.Label lblMokit;
         private MaterialSkin.Controls.MaterialButton btnRefresh;
-        private System.Windows.Forms.FlowLayoutPanel flpChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private MaterialSkin.Controls.MaterialButton btnOhjeet;
+        private System.Windows.Forms.Label lblKokonaisMaarat;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private CircularProgressBar.CircularProgressBar cpbVarausaste;
+        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialCard materialCard3;
+        private System.Windows.Forms.Timer timer1;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -16,6 +16,7 @@ namespace VillageNewbiesApp
         public frmKirjauduSisaan()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void btnKirjaudu_Click(object sender, EventArgs e)
@@ -61,6 +62,15 @@ namespace VillageNewbiesApp
                 tbPassword.Focus();
             }
             flag = !flag;
+        }
+
+        private void panelHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mainFormToiminnallisuus.ReleaseCapture();
+                mainFormToiminnallisuus.SendMessage(Handle, mainFormToiminnallisuus.WM_NCLBUTTONDOWN, mainFormToiminnallisuus.HT_CAPTION, 0);
+            }
         }
     }
 }

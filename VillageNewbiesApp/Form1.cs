@@ -17,6 +17,7 @@ namespace VillageNewbiesApp
         // Etusivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             panelNavigation.Height = btnEtusivu.Height;
             panelNavigation.Top = btnEtusivu.Top;
             lblOtsikko.Text = "Etusivu";
@@ -39,22 +40,10 @@ namespace VillageNewbiesApp
             }
         }
 
-        // Minimize, maximize ja exit nappien toiminnallisuus
+        // Minimize ja exit nappien toiminnallisuus
         private void pbMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState != FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -62,7 +51,7 @@ namespace VillageNewbiesApp
             Close();
         }
 
-        // Animoidut minimize, maximize ja exit painikkeet
+        // Animoidut minimize exit painikkeet
         private void mouseHover(PictureBox pictureBox)
         {
             pictureBox.Size = new Size(32, 32);
@@ -138,5 +127,10 @@ namespace VillageNewbiesApp
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblAika.Text = DateTime.Now.ToLongTimeString();
+            lblPaivays.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

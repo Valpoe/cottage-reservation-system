@@ -8,8 +8,7 @@ namespace VillageNewbiesApp
     public partial class frmRaportit : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        public static string selectedAlue;
-        public static string muutAlueet;
+
         public static string selectedAlueet;
         public static string firstAlue;
         public frmRaportit()

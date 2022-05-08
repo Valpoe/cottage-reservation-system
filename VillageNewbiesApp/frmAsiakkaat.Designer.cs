@@ -210,6 +210,7 @@
             this.mlvAsiakkaat.AutoSizeTable = false;
             this.mlvAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mlvAsiakkaat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvAsiakkaat.CheckBoxes = true;
             this.mlvAsiakkaat.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnID,
             this.columnKokonimi,
@@ -342,7 +343,7 @@
             this.btnNaytaTiedot.Depth = 0;
             this.btnNaytaTiedot.HighEmphasis = true;
             this.btnNaytaTiedot.Icon = null;
-            this.btnNaytaTiedot.Location = new System.Drawing.Point(480, 424);
+            this.btnNaytaTiedot.Location = new System.Drawing.Point(484, 424);
             this.btnNaytaTiedot.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNaytaTiedot.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNaytaTiedot.Name = "btnNaytaTiedot";
@@ -409,7 +410,7 @@
             // lblEiVarauksia
             // 
             this.lblEiVarauksia.BackColor = System.Drawing.Color.White;
-            this.lblEiVarauksia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEiVarauksia.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEiVarauksia.Location = new System.Drawing.Point(394, 300);
             this.lblEiVarauksia.Name = "lblEiVarauksia";
             this.lblEiVarauksia.Size = new System.Drawing.Size(167, 55);
@@ -420,9 +421,9 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(15, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 30);
             this.label1.TabIndex = 17;
@@ -431,9 +432,9 @@
             // 
             // lblAsiakasLisatty
             // 
-            this.lblAsiakasLisatty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsiakasLisatty.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsiakasLisatty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblAsiakasLisatty.Location = new System.Drawing.Point(12, 403);
+            this.lblAsiakasLisatty.Location = new System.Drawing.Point(12, 399);
             this.lblAsiakasLisatty.Name = "lblAsiakasLisatty";
             this.lblAsiakasLisatty.Size = new System.Drawing.Size(180, 30);
             this.lblAsiakasLisatty.TabIndex = 18;
@@ -449,7 +450,7 @@
             this.btnLuoVaraus.Depth = 0;
             this.btnLuoVaraus.HighEmphasis = true;
             this.btnLuoVaraus.Icon = null;
-            this.btnLuoVaraus.Location = new System.Drawing.Point(617, 424);
+            this.btnLuoVaraus.Location = new System.Drawing.Point(624, 424);
             this.btnLuoVaraus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuoVaraus.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLuoVaraus.Name = "btnLuoVaraus";
@@ -470,7 +471,7 @@
             this.btnPoistaAsiakas.Depth = 0;
             this.btnPoistaAsiakas.HighEmphasis = true;
             this.btnPoistaAsiakas.Icon = null;
-            this.btnPoistaAsiakas.Location = new System.Drawing.Point(342, 424);
+            this.btnPoistaAsiakas.Location = new System.Drawing.Point(344, 424);
             this.btnPoistaAsiakas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnPoistaAsiakas.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPoistaAsiakas.Name = "btnPoistaAsiakas";
@@ -479,7 +480,7 @@
             this.btnPoistaAsiakas.TabIndex = 20;
             this.btnPoistaAsiakas.Text = "Poista asiakas";
             this.btnPoistaAsiakas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnPoistaAsiakas.UseAccentColor = false;
+            this.btnPoistaAsiakas.UseAccentColor = true;
             this.btnPoistaAsiakas.UseVisualStyleBackColor = true;
             this.btnPoistaAsiakas.Click += new System.EventHandler(this.btnPoistaAsiakas_Click);
             // 

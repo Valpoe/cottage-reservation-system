@@ -19,23 +19,15 @@ namespace VillageNewbiesApp
         {
             InitializeComponent();
             loadTotalNumbers();
-            loadChartData();
+            cpbVarausaste.Value = 0;
         }
 
         private void frmEtusivu_Load(object sender, EventArgs e)
         {
-            timer1.Start();
             panelVaraukset.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelVaraukset.Width, panelVaraukset.Height, 5, 5));
             panelMokit.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelMokit.Width, panelMokit.Height, 5, 5));
             panelPalvelut.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelPalvelut.Width, panelPalvelut.Height, 5, 5));
             panelAsiakkaat.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelAsiakkaat.Width, panelAsiakkaat.Height, 5, 5));
-            flpChart.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, flpChart.Width, flpChart.Height, 5, 5));
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblAika.Text = DateTime.Now.ToLongTimeString();
-            lblPaivays.Text = DateTime.Now.ToLongDateString();
         }
 
         private void loadTotalNumbers()
@@ -50,20 +42,14 @@ namespace VillageNewbiesApp
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadTotalNumbers();
-            loadChartData();
         }
-
-        private void loadChartData()
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            using (MySqlConnection connection = SQLConnection.GetConnection())
+            cpbVarausaste.Value += 1;
+            cpbVarausaste.Text = cpbVarausaste.Value.ToString() + "%";
+            if (cpbVarausaste.Value == 78)
             {
-                DataSet ds = new DataSet();
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT postinro, hinta FROM mokki", connection);
-                da.Fill(ds);
-                chart1.DataSource = ds;
-
-                chart1.Series["Hinta"].XValueMember = "postinro";
-                chart1.Series["Hinta"].YValueMembers = "hinta";
+                timer1.Stop();
             }
         }
     }
