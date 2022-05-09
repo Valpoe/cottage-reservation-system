@@ -67,7 +67,6 @@ namespace VillageNewbiesApp
                             lblAsiakasLisatty.Visible = false;
                         };
                         t.Start();
-
                     }
                 }
             }
@@ -201,7 +200,6 @@ namespace VillageNewbiesApp
                 string text = mlvAsiakkaat.SelectedItems[0].Text;
                 selectedAsiakas = Int32.Parse(text);
                 MessageBox.Show("Asiakas valittu, valitse seuraavaksi Toiminta-alueista haluttu mökki.");
-                
             }
             catch(Exception)
             {
