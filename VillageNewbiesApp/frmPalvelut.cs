@@ -82,6 +82,15 @@ namespace VillageNewbiesApp
 
         private void btnTyhjenna_Click(object sender, EventArgs e)
         {
+            foreach (Control c in pnlLisaaMokki.Controls)
+            {
+                if (c is MaterialSkin.Controls.MaterialTextBox)
+                {
+                    c.Text = String.Empty;
+                }
+            }
+
+            msHenkilomaara.Value = 0;
         }
 
         private void btnLisaaMokki_Click(object sender, EventArgs e)
