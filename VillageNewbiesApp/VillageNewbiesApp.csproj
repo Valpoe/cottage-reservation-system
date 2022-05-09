@@ -334,6 +334,7 @@
   <ItemGroup>
     <None Include="Resources\clock.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\pngfind.com-house-outline-png-849481.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
