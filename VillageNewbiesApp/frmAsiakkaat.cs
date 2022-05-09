@@ -67,7 +67,6 @@ namespace VillageNewbiesApp
                             lblAsiakasLisatty.Visible = false;
                         };
                         t.Start();
-
                     }
                 }
             }

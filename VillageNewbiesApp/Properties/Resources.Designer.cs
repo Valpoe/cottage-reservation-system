@@ -203,6 +203,16 @@ namespace VillageNewbiesApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngfind_com_house_outline_png_849481 {
+            get {
+                object obj = ResourceManager.GetObject("pngfind.com-house-outline-png-849481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RaportitIcon {
             get {
                 object obj = ResourceManager.GetObject("RaportitIcon", resourceCulture);

@@ -53,6 +53,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelAsiakkaat.SuspendLayout();
             this.panelVaraukset.SuspendLayout();
@@ -61,6 +62,7 @@
             this.materialCard1.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -265,12 +267,12 @@
             this.btnOhjeet.Depth = 0;
             this.btnOhjeet.HighEmphasis = true;
             this.btnOhjeet.Icon = null;
-            this.btnOhjeet.Location = new System.Drawing.Point(13, 128);
+            this.btnOhjeet.Location = new System.Drawing.Point(215, 80);
             this.btnOhjeet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnOhjeet.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOhjeet.Name = "btnOhjeet";
             this.btnOhjeet.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnOhjeet.Size = new System.Drawing.Size(76, 36);
+            this.btnOhjeet.Size = new System.Drawing.Size(158, 36);
             this.btnOhjeet.TabIndex = 15;
             this.btnOhjeet.Text = "Ohjeet";
             this.btnOhjeet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -393,12 +395,23 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Tervetuloa Village Newbies Oy:n varaus- ja asiakashallintajärjestelmään";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.pngfind_com_house_outline_png_849481;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 143);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(362, 279);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmEtusivu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialCard2);
             this.Controls.Add(this.materialCard3);
@@ -420,6 +433,7 @@
             this.materialCard3.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,5 +463,6 @@
         private System.Windows.Forms.Timer timer1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
