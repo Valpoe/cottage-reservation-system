@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.lblAika = new System.Windows.Forms.Label();
             this.lblPaivays = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAsiakkaat = new System.Windows.Forms.Panel();
@@ -54,7 +53,8 @@
             this.btnRefresh = new MaterialSkin.Controls.MaterialButton();
             this.flpChart = new System.Windows.Forms.FlowLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOhjeet = new MaterialSkin.Controls.MaterialButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelAsiakkaat.SuspendLayout();
             this.panelVaraukset.SuspendLayout();
@@ -62,6 +62,7 @@
             this.panelMokit.SuspendLayout();
             this.flpChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -88,7 +89,7 @@
             this.lblAika.AutoSize = true;
             this.lblAika.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblAika.Location = new System.Drawing.Point(12, 9);
+            this.lblAika.Location = new System.Drawing.Point(58, 9);
             this.lblAika.Name = "lblAika";
             this.lblAika.Size = new System.Drawing.Size(51, 22);
             this.lblAika.TabIndex = 8;
@@ -99,7 +100,7 @@
             this.lblPaivays.AutoSize = true;
             this.lblPaivays.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaivays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblPaivays.Location = new System.Drawing.Point(12, 38);
+            this.lblPaivays.Location = new System.Drawing.Point(58, 38);
             this.lblPaivays.Name = "lblPaivays";
             this.lblPaivays.Size = new System.Drawing.Size(81, 22);
             this.lblPaivays.TabIndex = 9;
@@ -109,16 +110,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.clock;
-            this.pictureBox1.Location = new System.Drawing.Point(215, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // materialLabel1
             // 
@@ -315,20 +306,49 @@
             // 
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Hinta";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Hinta";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(740, 236);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.clock;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnOhjeet
+            // 
+            this.btnOhjeet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhjeet.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhjeet.Depth = 0;
+            this.btnOhjeet.HighEmphasis = true;
+            this.btnOhjeet.Icon = null;
+            this.btnOhjeet.Location = new System.Drawing.Point(594, 63);
+            this.btnOhjeet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhjeet.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhjeet.Name = "btnOhjeet";
+            this.btnOhjeet.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhjeet.Size = new System.Drawing.Size(158, 36);
+            this.btnOhjeet.TabIndex = 15;
+            this.btnOhjeet.Text = "Ohjeet";
+            this.btnOhjeet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhjeet.UseAccentColor = false;
+            this.btnOhjeet.UseVisualStyleBackColor = true;
             // 
             // frmEtusivu
             // 
@@ -336,6 +356,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.btnOhjeet);
             this.Controls.Add(this.flpChart);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -348,7 +369,6 @@
             this.Name = "frmEtusivu";
             this.Text = "frmKoti";
             this.Load += new System.EventHandler(this.frmEtusivu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelAsiakkaat.ResumeLayout(false);
             this.panelVaraukset.ResumeLayout(false);
@@ -356,6 +376,7 @@
             this.panelMokit.ResumeLayout(false);
             this.flpChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,5 +405,6 @@
         private MaterialSkin.Controls.MaterialButton btnRefresh;
         private System.Windows.Forms.FlowLayoutPanel flpChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private MaterialSkin.Controls.MaterialButton btnOhjeet;
     }
 }

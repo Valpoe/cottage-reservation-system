@@ -210,9 +210,14 @@ namespace VillageNewbiesApp
             }
         }
 
-        private void btnLuoVaraus_Click(object sender, EventArgs e)
+        // Poistetaan valittu asiakas
+        private void btnPoistaAsiakas_Click(object sender, EventArgs e)
         {
-
+            if (mlvAsiakkaat.SelectedItems.Count > 0)
+            {
+                mySQL.SQLdeleteCustomer(mlvAsiakkaat.SelectedItems[0].SubItems[0].Text);
+                mlvAsiakkaat.Items.Remove(mlvAsiakkaat.SelectedItems[0]);
+            }
         }
 
         private void btnLuoVaraus_Click_1(object sender, EventArgs e)
