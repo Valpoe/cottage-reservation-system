@@ -110,6 +110,12 @@ namespace VillageNewbiesApp
 
         private void btnMokinLisays_Click(object sender, EventArgs e)
         {
+
+            if(tbToimipaikka.Text == "")
+            {
+                MessageBox.Show("toimipaikka on pakollinen!");
+            }
+
             try
             {
                 Mokki lisattavaMokki = new Mokki(tbMokkinimi.Text, tbOsoite.Text, Convert.ToDouble(tbHinta.Text), mltbKuvaus.Text, Convert.ToInt32(tbHenkilomaara.Text), mltbVarustelu.Text, Convert.ToInt32(tbPostinumero.Text));
@@ -193,11 +199,12 @@ namespace VillageNewbiesApp
 
         private void btnPoistaValitut_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < count; i++)
-            {
-                MessageBox.Show(mclbMokinPoisto.GetItemCheckState(0).ToString());
-                MessageBox.Show(mclbMokinPoisto.Controls[i].Text);
-            }
+            //for(int i = 0; i < count; i++)
+            //{
+            //    MessageBox.Show(mclbMokinPoisto.GetItemCheckState(0).ToString());
+            //    MessageBox.Show(mclbMokinPoisto.Controls[i].Text);
+            //}
+
 
         }
 

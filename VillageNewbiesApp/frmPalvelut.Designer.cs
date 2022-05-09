@@ -35,27 +35,28 @@
             this.btnTyhjenna = new MaterialSkin.Controls.MaterialButton();
             this.btnLisaaMokki = new MaterialSkin.Controls.MaterialButton();
             this.pnlPalvelut = new System.Windows.Forms.Panel();
-            this.pnlLisaaMokki = new System.Windows.Forms.Panel();
-            this.tbHenkilomaara = new MaterialSkin.Controls.MaterialTextBox();
-            this.tbMokkinimi = new MaterialSkin.Controls.MaterialTextBox();
-            this.tbOsoite = new MaterialSkin.Controls.MaterialTextBox();
-            this.tbHinta = new MaterialSkin.Controls.MaterialTextBox();
-            this.tbPostinumero = new MaterialSkin.Controls.MaterialTextBox();
-            this.mltbVarustelu = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            this.mltbKuvaus = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            this.mcbToimintaAlue = new MaterialSkin.Controls.MaterialComboBox();
             this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
-            this.lblMokkitiedot = new System.Windows.Forms.Label();
-            this.btnMokinLisays = new MaterialSkin.Controls.MaterialButton();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.msHenkilomaara = new MaterialSkin.Controls.MaterialSlider();
-            this.lblVarustelu = new System.Windows.Forms.Label();
+            this.pnlLisaaMokki = new System.Windows.Forms.Panel();
             this.lblKuvaus = new System.Windows.Forms.Label();
+            this.lblVarustelu = new System.Windows.Forms.Label();
+            this.msHenkilomaara = new MaterialSkin.Controls.MaterialSlider();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnMokinLisays = new MaterialSkin.Controls.MaterialButton();
+            this.lblMokkitiedot = new System.Windows.Forms.Label();
+            this.mcbToimintaAlue = new MaterialSkin.Controls.MaterialComboBox();
+            this.mltbKuvaus = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.mltbVarustelu = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.tbPostinumero = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbHinta = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbOsoite = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbMokkinimi = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbHenkilomaara = new MaterialSkin.Controls.MaterialTextBox();
             this.btnPoistaMokki = new MaterialSkin.Controls.MaterialButton();
             this.pnlPoistaMokki = new System.Windows.Forms.Panel();
-            this.lblMokkiPoisto = new System.Windows.Forms.Label();
-            this.mclbMokinPoisto = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.btnPoistaValitut = new MaterialSkin.Controls.MaterialButton();
+            this.mclbMokinPoisto = new MaterialSkin.Controls.MaterialCheckedListBox();
+            this.lblMokkiPoisto = new System.Windows.Forms.Label();
+            this.tbToimipaikka = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlPalvelut.SuspendLayout();
             this.pnlLisaaMokki.SuspendLayout();
             this.pnlPoistaMokki.SuspendLayout();
@@ -159,8 +160,22 @@
             this.pnlPalvelut.TabIndex = 11;
             this.pnlPalvelut.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // mclbPalvelut
+            // 
+            this.mclbPalvelut.AutoScroll = true;
+            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.mclbPalvelut.Depth = 0;
+            this.mclbPalvelut.Location = new System.Drawing.Point(18, 51);
+            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mclbPalvelut.Name = "mclbPalvelut";
+            this.mclbPalvelut.Size = new System.Drawing.Size(467, 279);
+            this.mclbPalvelut.Striped = false;
+            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
+            this.mclbPalvelut.TabIndex = 10;
+            // 
             // pnlLisaaMokki
             // 
+            this.pnlLisaaMokki.Controls.Add(this.tbToimipaikka);
             this.pnlLisaaMokki.Controls.Add(this.lblKuvaus);
             this.pnlLisaaMokki.Controls.Add(this.lblVarustelu);
             this.pnlLisaaMokki.Controls.Add(this.msHenkilomaara);
@@ -180,186 +195,53 @@
             this.pnlLisaaMokki.Size = new System.Drawing.Size(536, 392);
             this.pnlLisaaMokki.TabIndex = 12;
             // 
-            // tbHenkilomaara
+            // lblKuvaus
             // 
-            this.tbHenkilomaara.AnimateReadOnly = false;
-            this.tbHenkilomaara.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbHenkilomaara.Depth = 0;
-            this.tbHenkilomaara.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbHenkilomaara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.tbHenkilomaara.Hint = "Henkilömäärä";
-            this.tbHenkilomaara.LeadingIcon = null;
-            this.tbHenkilomaara.Location = new System.Drawing.Point(18, 217);
-            this.tbHenkilomaara.MaxLength = 50;
-            this.tbHenkilomaara.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbHenkilomaara.Multiline = false;
-            this.tbHenkilomaara.Name = "tbHenkilomaara";
-            this.tbHenkilomaara.Size = new System.Drawing.Size(180, 36);
-            this.tbHenkilomaara.TabIndex = 2;
-            this.tbHenkilomaara.Text = "";
-            this.tbHenkilomaara.TrailingIcon = null;
-            this.tbHenkilomaara.UseTallSize = false;
-            this.tbHenkilomaara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHenkilomaara_KeyPress);
+            this.lblKuvaus.AutoSize = true;
+            this.lblKuvaus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKuvaus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblKuvaus.Location = new System.Drawing.Point(240, 160);
+            this.lblKuvaus.Name = "lblKuvaus";
+            this.lblKuvaus.Size = new System.Drawing.Size(55, 16);
+            this.lblKuvaus.TabIndex = 19;
+            this.lblKuvaus.Text = "Kuvaus:";
             // 
-            // tbMokkinimi
+            // lblVarustelu
             // 
-            this.tbMokkinimi.AnimateReadOnly = false;
-            this.tbMokkinimi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMokkinimi.Depth = 0;
-            this.tbMokkinimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbMokkinimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.tbMokkinimi.Hint = "Mökin nimi";
-            this.tbMokkinimi.LeadingIcon = null;
-            this.tbMokkinimi.Location = new System.Drawing.Point(18, 49);
-            this.tbMokkinimi.MaxLength = 50;
-            this.tbMokkinimi.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbMokkinimi.Multiline = false;
-            this.tbMokkinimi.Name = "tbMokkinimi";
-            this.tbMokkinimi.Size = new System.Drawing.Size(180, 36);
-            this.tbMokkinimi.TabIndex = 3;
-            this.tbMokkinimi.Text = "";
-            this.tbMokkinimi.TrailingIcon = null;
-            this.tbMokkinimi.UseTallSize = false;
+            this.lblVarustelu.AutoSize = true;
+            this.lblVarustelu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVarustelu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblVarustelu.Location = new System.Drawing.Point(240, 52);
+            this.lblVarustelu.Name = "lblVarustelu";
+            this.lblVarustelu.Size = new System.Drawing.Size(67, 16);
+            this.lblVarustelu.TabIndex = 18;
+            this.lblVarustelu.Text = "Varustelu:";
             // 
-            // tbOsoite
+            // msHenkilomaara
             // 
-            this.tbOsoite.AnimateReadOnly = false;
-            this.tbOsoite.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbOsoite.Depth = 0;
-            this.tbOsoite.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbOsoite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.tbOsoite.Hint = "Osoite";
-            this.tbOsoite.LeadingIcon = null;
-            this.tbOsoite.Location = new System.Drawing.Point(18, 91);
-            this.tbOsoite.MaxLength = 50;
-            this.tbOsoite.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbOsoite.Multiline = false;
-            this.tbOsoite.Name = "tbOsoite";
-            this.tbOsoite.Size = new System.Drawing.Size(180, 36);
-            this.tbOsoite.TabIndex = 4;
-            this.tbOsoite.Text = "";
-            this.tbOsoite.TrailingIcon = null;
-            this.tbOsoite.UseTallSize = false;
+            this.msHenkilomaara.Depth = 0;
+            this.msHenkilomaara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.msHenkilomaara.Location = new System.Drawing.Point(12, 301);
+            this.msHenkilomaara.MouseState = MaterialSkin.MouseState.HOVER;
+            this.msHenkilomaara.Name = "msHenkilomaara";
+            this.msHenkilomaara.RangeMax = 25;
+            this.msHenkilomaara.ShowValue = false;
+            this.msHenkilomaara.Size = new System.Drawing.Size(180, 40);
+            this.msHenkilomaara.TabIndex = 17;
+            this.msHenkilomaara.Text = "";
+            this.msHenkilomaara.Value = 0;
+            this.msHenkilomaara.ValueMax = 25;
+            this.msHenkilomaara.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.msHenkilomaara_onValueChanged);
+            this.msHenkilomaara.Click += new System.EventHandler(this.msHenkilomaara_Click);
             // 
-            // tbHinta
+            // lblStatus
             // 
-            this.tbHinta.AnimateReadOnly = false;
-            this.tbHinta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbHinta.Depth = 0;
-            this.tbHinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbHinta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.tbHinta.Hint = "Hinta";
-            this.tbHinta.LeadingIcon = null;
-            this.tbHinta.Location = new System.Drawing.Point(18, 133);
-            this.tbHinta.MaxLength = 50;
-            this.tbHinta.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbHinta.Multiline = false;
-            this.tbHinta.Name = "tbHinta";
-            this.tbHinta.Size = new System.Drawing.Size(180, 36);
-            this.tbHinta.TabIndex = 5;
-            this.tbHinta.Text = "";
-            this.tbHinta.TrailingIcon = null;
-            this.tbHinta.UseTallSize = false;
-            // 
-            // tbPostinumero
-            // 
-            this.tbPostinumero.AnimateReadOnly = false;
-            this.tbPostinumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPostinumero.Depth = 0;
-            this.tbPostinumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbPostinumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.tbPostinumero.Hint = "Postinumero";
-            this.tbPostinumero.LeadingIcon = null;
-            this.tbPostinumero.Location = new System.Drawing.Point(18, 175);
-            this.tbPostinumero.MaxLength = 5;
-            this.tbPostinumero.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbPostinumero.Multiline = false;
-            this.tbPostinumero.Name = "tbPostinumero";
-            this.tbPostinumero.Size = new System.Drawing.Size(180, 36);
-            this.tbPostinumero.TabIndex = 6;
-            this.tbPostinumero.Text = "";
-            this.tbPostinumero.TrailingIcon = null;
-            this.tbPostinumero.UseTallSize = false;
-            this.tbPostinumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPostinumero_KeyDown);
-            this.tbPostinumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPostinumero_KeyPress);
-            // 
-            // mltbVarustelu
-            // 
-            this.mltbVarustelu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mltbVarustelu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mltbVarustelu.Depth = 0;
-            this.mltbVarustelu.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.mltbVarustelu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mltbVarustelu.Hint = "Kuvaus";
-            this.mltbVarustelu.Location = new System.Drawing.Point(243, 75);
-            this.mltbVarustelu.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mltbVarustelu.Name = "mltbVarustelu";
-            this.mltbVarustelu.Size = new System.Drawing.Size(227, 78);
-            this.mltbVarustelu.TabIndex = 8;
-            this.mltbVarustelu.Text = "";
-            // 
-            // mltbKuvaus
-            // 
-            this.mltbKuvaus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mltbKuvaus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mltbKuvaus.Depth = 0;
-            this.mltbKuvaus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.mltbKuvaus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mltbKuvaus.Hint = "Varustelu";
-            this.mltbKuvaus.Location = new System.Drawing.Point(243, 183);
-            this.mltbKuvaus.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mltbKuvaus.Name = "mltbKuvaus";
-            this.mltbKuvaus.Size = new System.Drawing.Size(227, 78);
-            this.mltbKuvaus.TabIndex = 9;
-            this.mltbKuvaus.Text = "";
-            // 
-            // mcbToimintaAlue
-            // 
-            this.mcbToimintaAlue.AutoResize = false;
-            this.mcbToimintaAlue.BackColor = System.Drawing.Color.White;
-            this.mcbToimintaAlue.Depth = 0;
-            this.mcbToimintaAlue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.mcbToimintaAlue.DropDownHeight = 174;
-            this.mcbToimintaAlue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mcbToimintaAlue.DropDownWidth = 121;
-            this.mcbToimintaAlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.mcbToimintaAlue.ForeColor = System.Drawing.Color.Black;
-            this.mcbToimintaAlue.FormattingEnabled = true;
-            this.mcbToimintaAlue.Hint = "Valitse alue";
-            this.mcbToimintaAlue.IntegralHeight = false;
-            this.mcbToimintaAlue.ItemHeight = 43;
-            this.mcbToimintaAlue.Location = new System.Drawing.Point(18, 312);
-            this.mcbToimintaAlue.MaxDropDownItems = 4;
-            this.mcbToimintaAlue.MouseState = MaterialSkin.MouseState.OUT;
-            this.mcbToimintaAlue.Name = "mcbToimintaAlue";
-            this.mcbToimintaAlue.Size = new System.Drawing.Size(236, 49);
-            this.mcbToimintaAlue.StartIndex = 0;
-            this.mcbToimintaAlue.TabIndex = 13;
-            this.mcbToimintaAlue.SelectedIndexChanged += new System.EventHandler(this.mcbToimintaAlue_SelectedIndexChanged);
-            // 
-            // mclbPalvelut
-            // 
-            this.mclbPalvelut.AutoScroll = true;
-            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.mclbPalvelut.Depth = 0;
-            this.mclbPalvelut.Location = new System.Drawing.Point(18, 51);
-            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mclbPalvelut.Name = "mclbPalvelut";
-            this.mclbPalvelut.Size = new System.Drawing.Size(467, 279);
-            this.mclbPalvelut.Striped = false;
-            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
-            this.mclbPalvelut.TabIndex = 10;
-            // 
-            // lblMokkitiedot
-            // 
-            this.lblMokkitiedot.AutoSize = true;
-            this.lblMokkitiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkitiedot.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMokkitiedot.Location = new System.Drawing.Point(14, 7);
-            this.lblMokkitiedot.Name = "lblMokkitiedot";
-            this.lblMokkitiedot.Size = new System.Drawing.Size(137, 20);
-            this.lblMokkitiedot.TabIndex = 14;
-            this.lblMokkitiedot.Text = "Lisää mökin tiedot";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatus.Location = new System.Drawing.Point(315, 348);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblStatus.TabIndex = 16;
             // 
             // btnMokinLisays
             // 
@@ -381,52 +263,173 @@
             this.btnMokinLisays.UseVisualStyleBackColor = true;
             this.btnMokinLisays.Click += new System.EventHandler(this.btnMokinLisays_Click);
             // 
-            // lblStatus
+            // lblMokkitiedot
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblStatus.Location = new System.Drawing.Point(315, 348);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 13);
-            this.lblStatus.TabIndex = 16;
+            this.lblMokkitiedot.AutoSize = true;
+            this.lblMokkitiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkitiedot.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokkitiedot.Location = new System.Drawing.Point(14, 7);
+            this.lblMokkitiedot.Name = "lblMokkitiedot";
+            this.lblMokkitiedot.Size = new System.Drawing.Size(137, 20);
+            this.lblMokkitiedot.TabIndex = 14;
+            this.lblMokkitiedot.Text = "Lisää mökin tiedot";
             // 
-            // msHenkilomaara
+            // mcbToimintaAlue
             // 
-            this.msHenkilomaara.Depth = 0;
-            this.msHenkilomaara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.msHenkilomaara.Location = new System.Drawing.Point(30, 259);
-            this.msHenkilomaara.MouseState = MaterialSkin.MouseState.HOVER;
-            this.msHenkilomaara.Name = "msHenkilomaara";
-            this.msHenkilomaara.ShowValue = false;
-            this.msHenkilomaara.Size = new System.Drawing.Size(180, 40);
-            this.msHenkilomaara.TabIndex = 17;
-            this.msHenkilomaara.Text = "";
-            this.msHenkilomaara.Value = 0;
-            this.msHenkilomaara.ValueMax = 25;
-            this.msHenkilomaara.onValueChanged += new MaterialSkin.Controls.MaterialSlider.ValueChanged(this.msHenkilomaara_onValueChanged);
-            this.msHenkilomaara.Click += new System.EventHandler(this.msHenkilomaara_Click);
+            this.mcbToimintaAlue.AutoResize = false;
+            this.mcbToimintaAlue.BackColor = System.Drawing.Color.White;
+            this.mcbToimintaAlue.Depth = 0;
+            this.mcbToimintaAlue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.mcbToimintaAlue.DropDownHeight = 174;
+            this.mcbToimintaAlue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mcbToimintaAlue.DropDownWidth = 121;
+            this.mcbToimintaAlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.mcbToimintaAlue.ForeColor = System.Drawing.Color.Black;
+            this.mcbToimintaAlue.FormattingEnabled = true;
+            this.mcbToimintaAlue.Hint = "Valitse alue";
+            this.mcbToimintaAlue.IntegralHeight = false;
+            this.mcbToimintaAlue.ItemHeight = 43;
+            this.mcbToimintaAlue.Location = new System.Drawing.Point(12, 336);
+            this.mcbToimintaAlue.MaxDropDownItems = 4;
+            this.mcbToimintaAlue.MouseState = MaterialSkin.MouseState.OUT;
+            this.mcbToimintaAlue.Name = "mcbToimintaAlue";
+            this.mcbToimintaAlue.Size = new System.Drawing.Size(236, 49);
+            this.mcbToimintaAlue.StartIndex = 0;
+            this.mcbToimintaAlue.TabIndex = 13;
+            this.mcbToimintaAlue.SelectedIndexChanged += new System.EventHandler(this.mcbToimintaAlue_SelectedIndexChanged);
             // 
-            // lblVarustelu
+            // mltbKuvaus
             // 
-            this.lblVarustelu.AutoSize = true;
-            this.lblVarustelu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVarustelu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVarustelu.Location = new System.Drawing.Point(240, 52);
-            this.lblVarustelu.Name = "lblVarustelu";
-            this.lblVarustelu.Size = new System.Drawing.Size(67, 16);
-            this.lblVarustelu.TabIndex = 18;
-            this.lblVarustelu.Text = "Varustelu:";
+            this.mltbKuvaus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mltbKuvaus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mltbKuvaus.Depth = 0;
+            this.mltbKuvaus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mltbKuvaus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mltbKuvaus.Hint = "Varustelu";
+            this.mltbKuvaus.Location = new System.Drawing.Point(243, 183);
+            this.mltbKuvaus.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mltbKuvaus.Name = "mltbKuvaus";
+            this.mltbKuvaus.Size = new System.Drawing.Size(227, 78);
+            this.mltbKuvaus.TabIndex = 9;
+            this.mltbKuvaus.Text = "";
             // 
-            // lblKuvaus
+            // mltbVarustelu
             // 
-            this.lblKuvaus.AutoSize = true;
-            this.lblKuvaus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKuvaus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblKuvaus.Location = new System.Drawing.Point(240, 160);
-            this.lblKuvaus.Name = "lblKuvaus";
-            this.lblKuvaus.Size = new System.Drawing.Size(55, 16);
-            this.lblKuvaus.TabIndex = 19;
-            this.lblKuvaus.Text = "Kuvaus:";
+            this.mltbVarustelu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mltbVarustelu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mltbVarustelu.Depth = 0;
+            this.mltbVarustelu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mltbVarustelu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mltbVarustelu.Hint = "Kuvaus";
+            this.mltbVarustelu.Location = new System.Drawing.Point(243, 75);
+            this.mltbVarustelu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mltbVarustelu.Name = "mltbVarustelu";
+            this.mltbVarustelu.Size = new System.Drawing.Size(227, 78);
+            this.mltbVarustelu.TabIndex = 8;
+            this.mltbVarustelu.Text = "";
+            // 
+            // tbPostinumero
+            // 
+            this.tbPostinumero.AnimateReadOnly = false;
+            this.tbPostinumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPostinumero.Depth = 0;
+            this.tbPostinumero.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPostinumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbPostinumero.Hint = "Postinumero";
+            this.tbPostinumero.LeadingIcon = null;
+            this.tbPostinumero.Location = new System.Drawing.Point(18, 175);
+            this.tbPostinumero.MaxLength = 5;
+            this.tbPostinumero.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbPostinumero.Multiline = false;
+            this.tbPostinumero.Name = "tbPostinumero";
+            this.tbPostinumero.Size = new System.Drawing.Size(180, 36);
+            this.tbPostinumero.TabIndex = 6;
+            this.tbPostinumero.Text = "";
+            this.tbPostinumero.TrailingIcon = null;
+            this.tbPostinumero.UseTallSize = false;
+            this.tbPostinumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPostinumero_KeyDown);
+            this.tbPostinumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPostinumero_KeyPress);
+            // 
+            // tbHinta
+            // 
+            this.tbHinta.AnimateReadOnly = false;
+            this.tbHinta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbHinta.Depth = 0;
+            this.tbHinta.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbHinta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbHinta.Hint = "Hinta";
+            this.tbHinta.LeadingIcon = null;
+            this.tbHinta.Location = new System.Drawing.Point(18, 133);
+            this.tbHinta.MaxLength = 50;
+            this.tbHinta.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbHinta.Multiline = false;
+            this.tbHinta.Name = "tbHinta";
+            this.tbHinta.Size = new System.Drawing.Size(180, 36);
+            this.tbHinta.TabIndex = 5;
+            this.tbHinta.Text = "";
+            this.tbHinta.TrailingIcon = null;
+            this.tbHinta.UseTallSize = false;
+            // 
+            // tbOsoite
+            // 
+            this.tbOsoite.AnimateReadOnly = false;
+            this.tbOsoite.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbOsoite.Depth = 0;
+            this.tbOsoite.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbOsoite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbOsoite.Hint = "Osoite";
+            this.tbOsoite.LeadingIcon = null;
+            this.tbOsoite.Location = new System.Drawing.Point(18, 91);
+            this.tbOsoite.MaxLength = 50;
+            this.tbOsoite.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbOsoite.Multiline = false;
+            this.tbOsoite.Name = "tbOsoite";
+            this.tbOsoite.Size = new System.Drawing.Size(180, 36);
+            this.tbOsoite.TabIndex = 4;
+            this.tbOsoite.Text = "";
+            this.tbOsoite.TrailingIcon = null;
+            this.tbOsoite.UseTallSize = false;
+            // 
+            // tbMokkinimi
+            // 
+            this.tbMokkinimi.AnimateReadOnly = false;
+            this.tbMokkinimi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMokkinimi.Depth = 0;
+            this.tbMokkinimi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMokkinimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbMokkinimi.Hint = "Mökin nimi";
+            this.tbMokkinimi.LeadingIcon = null;
+            this.tbMokkinimi.Location = new System.Drawing.Point(18, 49);
+            this.tbMokkinimi.MaxLength = 50;
+            this.tbMokkinimi.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbMokkinimi.Multiline = false;
+            this.tbMokkinimi.Name = "tbMokkinimi";
+            this.tbMokkinimi.Size = new System.Drawing.Size(180, 36);
+            this.tbMokkinimi.TabIndex = 3;
+            this.tbMokkinimi.Text = "";
+            this.tbMokkinimi.TrailingIcon = null;
+            this.tbMokkinimi.UseTallSize = false;
+            // 
+            // tbHenkilomaara
+            // 
+            this.tbHenkilomaara.AnimateReadOnly = false;
+            this.tbHenkilomaara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbHenkilomaara.Depth = 0;
+            this.tbHenkilomaara.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbHenkilomaara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbHenkilomaara.Hint = "Henkilömäärä";
+            this.tbHenkilomaara.LeadingIcon = null;
+            this.tbHenkilomaara.Location = new System.Drawing.Point(18, 217);
+            this.tbHenkilomaara.MaxLength = 50;
+            this.tbHenkilomaara.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbHenkilomaara.Multiline = false;
+            this.tbHenkilomaara.Name = "tbHenkilomaara";
+            this.tbHenkilomaara.Size = new System.Drawing.Size(180, 36);
+            this.tbHenkilomaara.TabIndex = 2;
+            this.tbHenkilomaara.Text = "";
+            this.tbHenkilomaara.TrailingIcon = null;
+            this.tbHenkilomaara.UseTallSize = false;
+            this.tbHenkilomaara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHenkilomaara_KeyPress);
             // 
             // btnPoistaMokki
             // 
@@ -458,30 +461,6 @@
             this.pnlPoistaMokki.Size = new System.Drawing.Size(500, 392);
             this.pnlPoistaMokki.TabIndex = 14;
             // 
-            // lblMokkiPoisto
-            // 
-            this.lblMokkiPoisto.AutoSize = true;
-            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
-            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
-            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
-            this.lblMokkiPoisto.TabIndex = 15;
-            this.lblMokkiPoisto.Text = "Poista mökki";
-            // 
-            // mclbMokinPoisto
-            // 
-            this.mclbMokinPoisto.AutoScroll = true;
-            this.mclbMokinPoisto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.mclbMokinPoisto.Depth = 0;
-            this.mclbMokinPoisto.Location = new System.Drawing.Point(25, 47);
-            this.mclbMokinPoisto.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mclbMokinPoisto.Name = "mclbMokinPoisto";
-            this.mclbMokinPoisto.Size = new System.Drawing.Size(445, 280);
-            this.mclbMokinPoisto.Striped = false;
-            this.mclbMokinPoisto.StripeDarkColor = System.Drawing.Color.Empty;
-            this.mclbMokinPoisto.TabIndex = 16;
-            // 
             // btnPoistaValitut
             // 
             this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -502,16 +481,60 @@
             this.btnPoistaValitut.UseVisualStyleBackColor = true;
             this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
             // 
+            // mclbMokinPoisto
+            // 
+            this.mclbMokinPoisto.AutoScroll = true;
+            this.mclbMokinPoisto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.mclbMokinPoisto.Depth = 0;
+            this.mclbMokinPoisto.Location = new System.Drawing.Point(25, 47);
+            this.mclbMokinPoisto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mclbMokinPoisto.Name = "mclbMokinPoisto";
+            this.mclbMokinPoisto.Size = new System.Drawing.Size(445, 280);
+            this.mclbMokinPoisto.Striped = false;
+            this.mclbMokinPoisto.StripeDarkColor = System.Drawing.Color.Empty;
+            this.mclbMokinPoisto.TabIndex = 16;
+            // 
+            // lblMokkiPoisto
+            // 
+            this.lblMokkiPoisto.AutoSize = true;
+            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
+            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
+            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
+            this.lblMokkiPoisto.TabIndex = 15;
+            this.lblMokkiPoisto.Text = "Poista mökki";
+            // 
+            // tbToimipaikka
+            // 
+            this.tbToimipaikka.AnimateReadOnly = false;
+            this.tbToimipaikka.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbToimipaikka.Depth = 0;
+            this.tbToimipaikka.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbToimipaikka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.tbToimipaikka.Hint = "Toimipaikka";
+            this.tbToimipaikka.LeadingIcon = null;
+            this.tbToimipaikka.Location = new System.Drawing.Point(18, 259);
+            this.tbToimipaikka.MaxLength = 5;
+            this.tbToimipaikka.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbToimipaikka.Multiline = false;
+            this.tbToimipaikka.Name = "tbToimipaikka";
+            this.tbToimipaikka.Size = new System.Drawing.Size(180, 36);
+            this.tbToimipaikka.TabIndex = 20;
+            this.tbToimipaikka.Text = "";
+            this.tbToimipaikka.TrailingIcon = null;
+            this.tbToimipaikka.UseTallSize = false;
+            // 
             // frmPalvelut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.pnlPalvelut);
             this.Controls.Add(this.pnlLisaaMokki);
             this.Controls.Add(this.pnlPoistaMokki);
             this.Controls.Add(this.btnPoistaMokki);
-            this.Controls.Add(this.pnlPalvelut);
             this.Controls.Add(this.btnLisaaMokki);
             this.Controls.Add(this.btnTyhjenna);
             this.Controls.Add(this.label1);
@@ -559,5 +582,6 @@
         private MaterialSkin.Controls.MaterialCheckedListBox mclbMokinPoisto;
         private System.Windows.Forms.Label lblMokkiPoisto;
         private MaterialSkin.Controls.MaterialButton btnPoistaValitut;
+        private MaterialSkin.Controls.MaterialTextBox tbToimipaikka;
     }
 }
