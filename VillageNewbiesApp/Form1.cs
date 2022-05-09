@@ -12,6 +12,9 @@ namespace VillageNewbiesApp
         public Form1()
         {
             InitializeComponent();
+
+            // Formin reunojen pyöristys
+            
             Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
@@ -20,6 +23,7 @@ namespace VillageNewbiesApp
         // Etusivu aukeaa ensimmäisenä, kun ohjelma käynnistetään
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             panelNavigation.Height = btnEtusivu.Height;
             panelNavigation.Top = btnEtusivu.Top;
             lblOtsikko.Text = "Etusivu";
@@ -29,11 +33,14 @@ namespace VillageNewbiesApp
            
         }
 
+        // Sivupaneelin napeista oikean formin aukaisu ja titlen vaihto
         private void btnAlueet_Click(object sender, EventArgs e)
         {
             toiminnallisuus.ChangeNavbarAndTitle(sender as Button, this);
             toiminnallisuus.loadScreen(lblOtsikko.Text, this, sender as Button);
         }
+
+        // Formin liikuttelu hiirellä
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -43,22 +50,10 @@ namespace VillageNewbiesApp
             }
         }
 
-        // Minimize, maximize ja exit nappien toiminnallisuus
+        // Minimize ja exit nappien toiminnallisuus
         private void pbMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState != FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -66,7 +61,7 @@ namespace VillageNewbiesApp
             Close();
         }
 
-        // Animoidut minimize, maximize ja exit painikkeet
+        // Animoidut minimize exit painikkeet
         private void mouseHover(PictureBox pictureBox)
         {
             pictureBox.Size = new Size(32, 32);
@@ -86,6 +81,7 @@ namespace VillageNewbiesApp
             mouseLeave(sender as PictureBox);
         }
 
+        // Sisäänkirjautumisformin aukaisu
         private void btnKirjauduSisaan_Click(object sender, EventArgs e)
         {
             btnKirjauduSisaan.Enabled = false;
@@ -95,6 +91,7 @@ namespace VillageNewbiesApp
             this.Enabled = false;
         }
 
+        // Buttoneiden pois käytöstä ottaminen
         private void btnKirjauduUlos_Click(object sender, EventArgs e)
         {
             
@@ -122,44 +119,11 @@ namespace VillageNewbiesApp
             btnKirjauduSisaan.Visible = true;       
         }
 
-        public void loadToimintaAlueet()
+        // Kellon asettaminen
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            panelNavigation.Height = btnToimintaAlueet.Height;
-            panelNavigation.Top = btnToimintaAlueet.Top;
-            lblOtsikko.Text = "Toiminta-alueet";
-            this.panelFormLoader.Controls.Add(toiminnallisuus.screens["Toiminta-alueet"]);
-            toiminnallisuus.screens["Toiminta-alueet"].Show();
-            btnToimintaAlueet.BackColor = System.Drawing.Color.FromArgb(46, 51, 73);
-            
-            Button button = new Button();
-            
-            foreach (Button bt in button.Parent.Controls.OfType<Button>())
-            {
-                if (bt.Name != button.Name)
-                {
-                    bt.BackColor = System.Drawing.Color.FromArgb(24, 30, 54);
-                }
-            }
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        public void tssl1Quide_TextChanged(object sender, EventArgs e)
-        {
-            //tsslQuidelbl1.Text = frmAsiakkaat.status;
-        }
-
-        private void tsslQuidelbl1_VisibleChanged(object sender, EventArgs e)
-        {
-            //tsslQuidelbl1.Text = frmAsiakkaat.status;
-        }
-
-        private void statusStripQuide_VisibleChanged(object sender, EventArgs e)
-        {
-           tsslQuidelbl1.Text = frmAsiakkaat.status;
+            lblAika.Text = DateTime.Now.ToLongTimeString();
+            lblPaivays.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

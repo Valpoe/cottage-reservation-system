@@ -268,18 +268,6 @@
               </Border>
             </Style>
           </Image>
-          <Line Name="Line1">
-            <Top>2.16641cm</Top>
-            <Height>0cm</Height>
-            <Width>19.49979cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-                <Width>2pt</Width>
-              </Border>
-            </Style>
-          </Line>
           <Textbox Name="Textbox7">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -289,9 +277,9 @@
                   <TextRun>
                     <Value>Päiväys:</Value>
                     <Style>
-                      <FontFamily>century Gothic</FontFamily>
+                      <FontFamily>Nirmala UI</FontFamily>
                       <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -303,7 +291,7 @@
             <Left>4.21662cm</Left>
             <Height>0.6cm</Height>
             <Width>1.85208cm</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -323,7 +311,7 @@
                   <TextRun>
                     <Value>=Globals!ExecutionTime</Value>
                     <Style>
-                      <FontFamily>century Gothic</FontFamily>
+                      <FontFamily>Nirmala UI</FontFamily>
                       <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
@@ -336,7 +324,7 @@
             <Left>6.0687cm</Left>
             <Height>0.6cm</Height>
             <Width>4.7225cm</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -351,7 +339,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>4.72841cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -369,12 +357,14 @@
                                 <TextRun>
                                   <Value>Alueet</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -408,11 +398,13 @@
                                 <TextRun>
                                   <Value>=Fields!nimi.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>nimi</rd:DefaultName>
@@ -449,15 +441,16 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>13.70447cm</Top>
-            <Left>0.46271cm</Left>
+            <Top>12.13599cm</Top>
+            <Left>0.46717cm</Left>
             <Height>1.2cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>4</ZIndex>
+            <Width>4.72841cm</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontFamily>Nirmala UI</FontFamily>
             </Style>
           </Tablix>
           <Tablix Name="Tablix3">
@@ -467,16 +460,16 @@
                   <Width>2.92079cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.7775cm</Width>
+                  <Width>4.28562cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.15604cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>3.10589cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.84396cm</Width>
+                  <Width>1.78178cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.0475cm</Width>
@@ -497,12 +490,14 @@
                                 <TextRun>
                                   <Value>Mokkinimi</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox24</rd:DefaultName>
@@ -531,12 +526,14 @@
                                 <TextRun>
                                   <Value>Katuosoite</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -565,12 +562,14 @@
                                 <TextRun>
                                   <Value>Hinta</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -599,12 +598,14 @@
                                 <TextRun>
                                   <Value>Kuvaus</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -633,12 +634,14 @@
                                 <TextRun>
                                   <Value>Henkilomaara</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -667,12 +670,14 @@
                                 <TextRun>
                                   <Value>Varustelu</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -706,11 +711,13 @@
                                 <TextRun>
                                   <Value>=Fields!mokkinimi.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>mokkinimi</rd:DefaultName>
@@ -738,11 +745,13 @@
                                 <TextRun>
                                   <Value>=Fields!katuosoite.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>katuosoite</rd:DefaultName>
@@ -770,11 +779,13 @@
                                 <TextRun>
                                   <Value>=Fields!hinta.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>hinta</rd:DefaultName>
@@ -802,11 +813,13 @@
                                 <TextRun>
                                   <Value>=Fields!kuvaus.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>kuvaus</rd:DefaultName>
@@ -834,11 +847,13 @@
                                 <TextRun>
                                   <Value>=Fields!henkilomaara.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>henkilomaara</rd:DefaultName>
@@ -866,11 +881,13 @@
                                 <TextRun>
                                   <Value>=Fields!varustelu.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>varustelu</rd:DefaultName>
@@ -912,338 +929,32 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>mokit</DataSetName>
-            <Top>9.5753cm</Top>
-            <Left>0.46271cm</Left>
+            <Top>5.67766cm</Top>
+            <Left>0.46717cm</Left>
             <Height>1.2cm</Height>
-            <Width>18.19564cm</Width>
-            <ZIndex>5</ZIndex>
+            <Width>18.29762cm</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontFamily>Nirmala UI</FontFamily>
             </Style>
           </Tablix>
-          <GaugePanel Name="GaugePanel1">
-            <RadialGauges>
-              <RadialGauge Name="RadialGauge1">
-                <GaugeScales>
-                  <RadialScale Name="RadialScale1">
-                    <GaugePointers>
-                      <RadialPointer Name="RadialPointer1">
-                        <Type>Bar</Type>
-                        <PointerCap>
-                          <Style>
-                            <BackgroundColor>White</BackgroundColor>
-                            <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
-                            <BackgroundGradientEndColor>DimGray</BackgroundGradientEndColor>
-                            <BackgroundHatchType>None</BackgroundHatchType>
-                          </Style>
-                          <CapImage>
-                            <OffsetX>0pt</OffsetX>
-                            <OffsetY>0pt</OffsetY>
-                            <Source>External</Source>
-                            <Value />
-                          </CapImage>
-                          <OnTop>true</OnTop>
-                          <CapStyle>RoundedWithWideIndentation</CapStyle>
-                          <Width>33</Width>
-                        </PointerCap>
-                        <NeedleStyle>Tapered</NeedleStyle>
-                        <Style>
-                          <Border>
-                            <Style>None</Style>
-                          </Border>
-                          <BackgroundColor>CornflowerBlue</BackgroundColor>
-                          <BackgroundGradientType>None</BackgroundGradientType>
-                          <BackgroundGradientEndColor>Orange</BackgroundGradientEndColor>
-                          <BackgroundHatchType>None</BackgroundHatchType>
-                          <ShadowOffset>0pt</ShadowOffset>
-                        </Style>
-                        <GaugeInputValue>
-                          <Value>78</Value>
-                          <Multiplier>1</Multiplier>
-                        </GaugeInputValue>
-                        <PointerImage>
-                          <OffsetX>0pt</OffsetX>
-                          <OffsetY>0pt</OffsetY>
-                          <Source>External</Source>
-                          <Value />
-                        </PointerImage>
-                        <MarkerLength>25</MarkerLength>
-                        <MarkerStyle>Wedge</MarkerStyle>
-                        <Placement>Cross</Placement>
-                        <Width>30</Width>
-                      </RadialPointer>
-                    </GaugePointers>
-                    <Style>
-                      <Border>
-                        <Style>None</Style>
-                      </Border>
-                      <BackgroundColor>LightGrey</BackgroundColor>
-                      <BackgroundGradientType>None</BackgroundGradientType>
-                      <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
-                      <BackgroundHatchType>None</BackgroundHatchType>
-                      <ShadowOffset>0pt</ShadowOffset>
-                    </Style>
-                    <Interval>50</Interval>
-                    <IntervalOffset>NaN</IntervalOffset>
-                    <MaximumValue>
-                      <Value>100</Value>
-                      <Multiplier>1</Multiplier>
-                    </MaximumValue>
-                    <MinimumValue>
-                      <Value>0</Value>
-                      <Multiplier>1</Multiplier>
-                    </MinimumValue>
-                    <GaugeMajorTickMarks>
-                      <Interval>NaN</Interval>
-                      <IntervalOffset>NaN</IntervalOffset>
-                      <Style>
-                        <Border>
-                          <Color>DimGray</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>WhiteSmoke</BackgroundColor>
-                      </Style>
-                      <Placement>Cross</Placement>
-                      <TickMarkImage>
-                        <Source>External</Source>
-                        <Value />
-                      </TickMarkImage>
-                      <Length>14</Length>
-                      <Width>8</Width>
-                      <Shape>Trapezoid</Shape>
-                      <Hidden>true</Hidden>
-                    </GaugeMajorTickMarks>
-                    <GaugeMinorTickMarks>
-                      <Interval>NaN</Interval>
-                      <IntervalOffset>NaN</IntervalOffset>
-                      <Style>
-                        <Border>
-                          <Color>DimGray</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>WhiteSmoke</BackgroundColor>
-                      </Style>
-                      <Placement>Cross</Placement>
-                      <TickMarkImage>
-                        <Source>External</Source>
-                        <Value />
-                      </TickMarkImage>
-                      <Length>8</Length>
-                      <Width>3</Width>
-                      <Hidden>true</Hidden>
-                    </GaugeMinorTickMarks>
-                    <MaximumPin>
-                      <PinLabel>
-                        <Style>
-                          <FontSize>12pt</FontSize>
-                        </Style>
-                        <DistanceFromScale>0</DistanceFromScale>
-                      </PinLabel>
-                      <Style>
-                        <Border>
-                          <Color>DimGray</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>WhiteSmoke</BackgroundColor>
-                      </Style>
-                      <Placement>Cross</Placement>
-                      <TickMarkImage>
-                        <Source>External</Source>
-                        <Value />
-                      </TickMarkImage>
-                      <Length>6</Length>
-                      <Width>6</Width>
-                      <Shape>Circle</Shape>
-                    </MaximumPin>
-                    <MinimumPin>
-                      <PinLabel>
-                        <Style>
-                          <FontSize>12pt</FontSize>
-                        </Style>
-                        <DistanceFromScale>0</DistanceFromScale>
-                      </PinLabel>
-                      <Style>
-                        <Border>
-                          <Color>DimGray</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>WhiteSmoke</BackgroundColor>
-                      </Style>
-                      <Placement>Cross</Placement>
-                      <TickMarkImage>
-                        <Source>External</Source>
-                        <Value />
-                      </TickMarkImage>
-                      <Length>6</Length>
-                      <Width>6</Width>
-                      <Shape>Circle</Shape>
-                    </MinimumPin>
-                    <ScaleLabels>
-                      <Style>
-                        <FontSize>14pt</FontSize>
-                      </Style>
-                      <Interval>NaN</Interval>
-                      <IntervalOffset>NaN</IntervalOffset>
-                      <DistanceFromScale>0</DistanceFromScale>
-                      <Placement>Outside</Placement>
-                      <ShowEndLabels>true</ShowEndLabels>
-                      <UseFontPercent>true</UseFontPercent>
-                    </ScaleLabels>
-                    <Width>30</Width>
-                  </RadialScale>
-                </GaugeScales>
-                <BackFrame>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <BackgroundColor>WhiteSmoke</BackgroundColor>
-                    <BackgroundGradientType>None</BackgroundGradientType>
-                    <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
-                    <BackgroundHatchType>None</BackgroundHatchType>
-                    <ShadowOffset>0pt</ShadowOffset>
-                  </Style>
-                  <FrameShape>CustomCircular2</FrameShape>
-                  <FrameBackground>
-                    <Style>
-                      <BackgroundColor>WhiteSmoke</BackgroundColor>
-                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
-                      <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
-                      <BackgroundHatchType>None</BackgroundHatchType>
-                    </Style>
-                  </FrameBackground>
-                  <FrameImage>
-                    <Source>External</Source>
-                    <Value />
-                  </FrameImage>
-                </BackFrame>
-                <ClipContent>true</ClipContent>
-                <TopImage>
-                  <Source>External</Source>
-                  <Value />
-                </TopImage>
-                <AspectRatio>1</AspectRatio>
-                <Height>100</Height>
-                <Width>100</Width>
-              </RadialGauge>
-            </RadialGauges>
-            <GaugeLabels>
-              <GaugeLabel Name="GaugeLabel1">
-                <Text>78%</Text>
-                <TextShadowOffset>0pt</TextShadowOffset>
-                <UseFontPercent>true</UseFontPercent>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <BackgroundColor>#00ffffff</BackgroundColor>
-                  <BackgroundGradientType>None</BackgroundGradientType>
-                  <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
-                  <FontFamily>Segoe UI Light</FontFamily>
-                  <FontSize>14pt</FontSize>
-                  <TextAlign>Center</TextAlign>
-                  <VerticalAlign>Middle</VerticalAlign>
-                  <Color>#333333</Color>
-                  <ShadowOffset>0pt</ShadowOffset>
-                </Style>
-                <Top>30</Top>
-                <Left>30</Left>
-                <Height>40</Height>
-                <Width>40</Width>
-                <ParentItem>RadialGauges.RadialGauge1</ParentItem>
-              </GaugeLabel>
-            </GaugeLabels>
-            <AutoLayout>true</AutoLayout>
-            <BackFrame>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>Gainsboro</BackgroundColor>
-                <BackgroundGradientType>None</BackgroundGradientType>
-                <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
-                <BackgroundHatchType>None</BackgroundHatchType>
-                <ShadowOffset>0pt</ShadowOffset>
-              </Style>
-              <FrameBackground>
-                <Style>
-                  <BackgroundColor>Silver</BackgroundColor>
-                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
-                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
-                  <BackgroundHatchType>None</BackgroundHatchType>
-                </Style>
-              </FrameBackground>
-              <FrameImage>
-                <Source>External</Source>
-                <Value />
-              </FrameImage>
-            </BackFrame>
-            <TopImage>
-              <Source>External</Source>
-              <Value />
-            </TopImage>
-            <DataSetName>mokit</DataSetName>
-            <Top>3.11919cm</Top>
-            <Left>0.46271cm</Left>
-            <Height>4.56587cm</Height>
-            <Width>7.16693cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>White</BackgroundColor>
-            </Style>
-          </GaugePanel>
-          <Textbox Name="Textbox30">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Tämän hetken varausaste</Value>
-                    <Style>
-                      <FontFamily>century Gothic</FontFamily>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox30</rd:DefaultName>
-            <Top>2.3428cm</Top>
-            <Left>1.57079cm</Left>
-            <Height>0.6cm</Height>
-            <Width>4.59021cm</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.92079cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.09906cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.53842cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.80418cm</Width>
+                  <Width>7.25403cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1261,12 +972,14 @@
                                 <TextRun>
                                   <Value>Palvelu</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox12</rd:DefaultName>
@@ -1295,12 +1008,14 @@
                                 <TextRun>
                                   <Value>Tyyppi</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox14</rd:DefaultName>
@@ -1329,12 +1044,14 @@
                                 <TextRun>
                                   <Value>Hinta</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox21</rd:DefaultName>
@@ -1363,12 +1080,14 @@
                                 <TextRun>
                                   <Value>Kuvaus</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox16</rd:DefaultName>
@@ -1402,11 +1121,13 @@
                                 <TextRun>
                                   <Value>=Fields!nimi.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>nimi1</rd:DefaultName>
@@ -1434,11 +1155,13 @@
                                 <TextRun>
                                   <Value>=Fields!tyyppi.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>tyyppi</rd:DefaultName>
@@ -1466,11 +1189,13 @@
                                 <TextRun>
                                   <Value>=Fields!hinta.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>hinta1</rd:DefaultName>
@@ -1498,11 +1223,13 @@
                                 <TextRun>
                                   <Value>=Fields!kuvaus.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>kuvaus1</rd:DefaultName>
@@ -1542,31 +1269,32 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>palvelut</DataSetName>
-            <Top>10.95169cm</Top>
-            <Left>0.46271cm</Left>
+            <Top>7.83044cm</Top>
+            <Left>0.46717cm</Left>
             <Height>1.2cm</Height>
-            <Width>11.30418cm</Width>
-            <ZIndex>8</ZIndex>
+            <Width>12.8123cm</Width>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontFamily>Nirmala UI</FontFamily>
             </Style>
           </Tablix>
           <Tablix Name="Tablix4">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.51985cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.58168cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.62688cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.80418cm</Width>
+                  <Width>5.59563cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1584,12 +1312,14 @@
                                 <TextRun>
                                   <Value>Varaus ID</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox25</rd:DefaultName>
@@ -1618,12 +1348,14 @@
                                 <TextRun>
                                   <Value>Asiakas ID</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox32</rd:DefaultName>
@@ -1652,12 +1384,14 @@
                                 <TextRun>
                                   <Value>Mokki ID</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox34</rd:DefaultName>
@@ -1686,12 +1420,14 @@
                                 <TextRun>
                                   <Value>Vahvistus pvm</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
@@ -1725,11 +1461,13 @@
                                 <TextRun>
                                   <Value>=Fields!varaus_id.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>varaus_id</rd:DefaultName>
@@ -1757,11 +1495,13 @@
                                 <TextRun>
                                   <Value>=Fields!asiakas_id.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>asiakas_id</rd:DefaultName>
@@ -1789,11 +1529,13 @@
                                 <TextRun>
                                   <Value>=Fields!mokki_mokki_id.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>mokki_mokki_id</rd:DefaultName>
@@ -1821,11 +1563,13 @@
                                 <TextRun>
                                   <Value>=Fields!vahvistus_pvm.Value</Value>
                                   <Style>
-                                    <FontFamily>century gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>vahvistus_pvm</rd:DefaultName>
@@ -1865,31 +1609,32 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>varaukset</DataSetName>
-            <Top>12.32808cm</Top>
-            <Left>0.46271cm</Left>
+            <Top>9.98321cm</Top>
+            <Left>0.46717cm</Left>
             <Height>1.2cm</Height>
-            <Width>11.30418cm</Width>
-            <ZIndex>9</ZIndex>
+            <Width>10.32403cm</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <FontFamily>Nirmala UI</FontFamily>
             </Style>
           </Tablix>
           <Tablix Name="Tablix6">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.8698cm</Width>
+                  <Width>2.92079cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.38604cm</Width>
+                  <Width>4.28562cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.15604cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.35755cm</Width>
+                  <Width>5.51105cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>3.37313cm</Width>
@@ -1910,12 +1655,14 @@
                                 <TextRun>
                                   <Value>Nimi</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -1944,12 +1691,14 @@
                                 <TextRun>
                                   <Value>Osoite</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -1978,12 +1727,14 @@
                                 <TextRun>
                                   <Value>Postinumero</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -2012,12 +1763,14 @@
                                 <TextRun>
                                   <Value>email</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -2046,12 +1799,14 @@
                                 <TextRun>
                                   <Value>puhelinnro</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -2085,23 +1840,25 @@
                                 <TextRun>
                                   <Value>=Fields!etunimi.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value xml:space="preserve"> </Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!sukunimi.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>etunimi</rd:DefaultName>
@@ -2129,11 +1886,13 @@
                                 <TextRun>
                                   <Value>=Fields!lahiosoite.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>lahiosoite</rd:DefaultName>
@@ -2161,11 +1920,13 @@
                                 <TextRun>
                                   <Value>=Fields!postinro.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>postinro</rd:DefaultName>
@@ -2193,11 +1954,13 @@
                                 <TextRun>
                                   <Value>=Fields!email.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>email</rd:DefaultName>
@@ -2225,11 +1988,13 @@
                                 <TextRun>
                                   <Value>=Fields!puhelinnro.Value</Value>
                                   <Style>
-                                    <FontFamily>century Gothic</FontFamily>
+                                    <FontFamily>Nirmala UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>puhelinnro</rd:DefaultName>
@@ -2270,22 +2035,188 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>asiakkaat</DataSetName>
-            <Top>8.19891cm</Top>
-            <Left>0.46271cm</Left>
+            <Top>3.52488cm</Top>
+            <Left>0.46717cm</Left>
             <Height>1.2cm</Height>
-            <Width>15.48652cm</Width>
+            <Width>18.24663cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <FontFamily>Nirmala UI</FontFamily>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Asiakkaat</Value>
+                    <Style>
+                      <FontFamily>Nirmala UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>2.74849cm</Top>
+            <Left>0.46717cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox17">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Mökit</Value>
+                    <Style>
+                      <FontFamily>Nirmala UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>4.90127cm</Top>
+            <Left>0.46717cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Palvelut</Value>
+                    <Style>
+                      <FontFamily>Nirmala UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>7.05405cm</Top>
+            <Left>0.46717cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Tablix>
+          </Textbox>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Varaukset</Value>
+                    <Style>
+                      <FontFamily>Nirmala UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>9.20683cm</Top>
+            <Left>0.46717cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Toiminta-alueet</Value>
+                    <Style>
+                      <FontFamily>Nirmala UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>11.3596cm</Top>
+            <Left>0.46717cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.7284cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>6.11458in</Height>
+        <Height>5.40624in</Height>
         <Style />
       </Body>
-      <Width>7.67708in</Width>
+      <Width>8in</Width>
       <Page>
         <PageFooter>
           <Height>1.11125cm</Height>
@@ -2311,7 +2242,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox23</rd:DefaultName>
               <Top>0.17639cm</Top>
-              <Left>4.7825cm</Left>
+              <Left>5.1926cm</Left>
               <Height>0.6cm</Height>
               <Width>9.93479cm</Width>
               <Style>

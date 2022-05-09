@@ -15,7 +15,8 @@ namespace VillageNewbiesApp
     {
         public static string selectedID;
         public static string selectedAlue;
-        public static string selectedMokki;
+        public static string selectedMokki = "Mökkiä ei ole valittu!";
+        public static int selectedMokkiID;
 
         public static List<Mokki> AlueenMokit;
 
@@ -73,15 +74,13 @@ namespace VillageNewbiesApp
             try
             {
                 selectedMokki = mlvMokit.SelectedItems[0].Text;
+                selectedMokkiID = mySQL.getMokkiID(mlvMokit.SelectedItems[0].Text);
+                Console.WriteLine("nimi: " + selectedMokki + ", mokki_id: " + selectedMokkiID);
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex);
             }
-
-            //MessageBox.Show(AlueenMokit.ElementAt(mlvMokit.SelectedItems[0].Index).GetNimi());
-            //ei vaihdu koska ei haeta uutta mökkiä SQL:ssä
-            //MessageBox.Show(selectedMokkiClass.GetNimi());
         }
     }
 }

@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbUsername = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.tbPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.panelHeader = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +69,7 @@
             this.btnKirjaudu.Depth = 0;
             this.btnKirjaudu.HighEmphasis = true;
             this.btnKirjaudu.Icon = null;
-            this.btnKirjaudu.Location = new System.Drawing.Point(85, 262);
+            this.btnKirjaudu.Location = new System.Drawing.Point(85, 259);
             this.btnKirjaudu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnKirjaudu.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnKirjaudu.Name = "btnKirjaudu";
@@ -89,7 +90,7 @@
             this.btnExit.Depth = 0;
             this.btnExit.HighEmphasis = true;
             this.btnExit.Icon = null;
-            this.btnExit.Location = new System.Drawing.Point(128, 310);
+            this.btnExit.Location = new System.Drawing.Point(130, 309);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExit.Name = "btnExit";
@@ -117,7 +118,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::VillageNewbiesApp.Properties.Resources.VillageNewbiesLogo;
-            this.pictureBox3.Location = new System.Drawing.Point(85, 27);
+            this.pictureBox3.Location = new System.Drawing.Point(83, 41);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(166, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -127,9 +128,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(32, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 149);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
@@ -137,9 +138,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 213);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 218);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -153,7 +154,7 @@
             this.tbUsername.BeepOnError = false;
             this.tbUsername.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.tbUsername.Depth = 0;
-            this.tbUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbUsername.HidePromptOnLeave = false;
             this.tbUsername.HideSelection = true;
             this.tbUsername.Hint = "Käyttäjätunnus";
@@ -230,12 +231,23 @@
             this.tbPassword.UseTallSize = false;
             this.tbPassword.ValidatingType = null;
             // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(335, 25);
+            this.panelHeader.TabIndex = 29;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
+            // 
             // frmKirjauduSisaan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(335, 370);
+            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.btnShowPassword);
@@ -269,5 +281,6 @@
         private System.Windows.Forms.Button btnShowPassword;
         private MaterialSkin.Controls.MaterialMaskedTextBox tbUsername;
         private MaterialSkin.Controls.MaterialMaskedTextBox tbPassword;
+        private System.Windows.Forms.Panel panelHeader;
     }
 }
