@@ -59,6 +59,8 @@
             this.materialCheckbox23 = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCheckbox24 = new MaterialSkin.Controls.MaterialCheckbox();
             this.mäkkäri = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tbAlueNimi = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnLisaaAlue = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // label1
@@ -513,12 +515,52 @@
             this.mäkkäri.Text = "materialCheckbox25";
             this.mäkkäri.UseVisualStyleBackColor = true;
             // 
+            // tbAlueNimi
+            // 
+            this.tbAlueNimi.AnimateReadOnly = false;
+            this.tbAlueNimi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAlueNimi.Depth = 0;
+            this.tbAlueNimi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbAlueNimi.Hint = "Alueen nimi";
+            this.tbAlueNimi.LeadingIcon = null;
+            this.tbAlueNimi.Location = new System.Drawing.Point(35, 212);
+            this.tbAlueNimi.MaxLength = 50;
+            this.tbAlueNimi.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbAlueNimi.Multiline = false;
+            this.tbAlueNimi.Name = "tbAlueNimi";
+            this.tbAlueNimi.Size = new System.Drawing.Size(206, 50);
+            this.tbAlueNimi.TabIndex = 3;
+            this.tbAlueNimi.Text = "";
+            this.tbAlueNimi.TrailingIcon = null;
+            // 
+            // btnLisaaAlue
+            // 
+            this.btnLisaaAlue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLisaaAlue.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLisaaAlue.Depth = 0;
+            this.btnLisaaAlue.HighEmphasis = true;
+            this.btnLisaaAlue.Icon = null;
+            this.btnLisaaAlue.Location = new System.Drawing.Point(83, 271);
+            this.btnLisaaAlue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLisaaAlue.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLisaaAlue.Name = "btnLisaaAlue";
+            this.btnLisaaAlue.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLisaaAlue.Size = new System.Drawing.Size(101, 36);
+            this.btnLisaaAlue.TabIndex = 5;
+            this.btnLisaaAlue.Text = "Lisää alue";
+            this.btnLisaaAlue.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLisaaAlue.UseAccentColor = false;
+            this.btnLisaaAlue.UseVisualStyleBackColor = true;
+            this.btnLisaaAlue.Click += new System.EventHandler(this.btnLisaaAlue_Click);
+            // 
             // frmAlueet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.btnLisaaAlue);
+            this.Controls.Add(this.tbAlueNimi);
             this.Controls.Add(this.mlvMokit);
             this.Controls.Add(this.mcbToimintaAlue);
             this.Controls.Add(this.label1);
@@ -564,5 +606,7 @@
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox23;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox24;
         private MaterialSkin.Controls.MaterialCheckbox mäkkäri;
+        private MaterialSkin.Controls.MaterialTextBox tbAlueNimi;
+        private MaterialSkin.Controls.MaterialButton btnLisaaAlue;
     }
 }

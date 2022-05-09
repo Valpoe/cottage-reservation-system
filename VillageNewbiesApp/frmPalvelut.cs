@@ -165,10 +165,9 @@ namespace VillageNewbiesApp
 
         private void btnPoistaMokki_Click(object sender, EventArgs e)
         {
- 
-            mclbMokinPoisto.Controls.Clear();
-            hidePanels(pnlPoistaMokki);
+            mlvPoistaMokki.Items.Clear();
 
+            hidePanels(pnlPoistaMokki);
 
             List<Mokki> MokkiLista = new List<Mokki>();
             
@@ -176,11 +175,20 @@ namespace VillageNewbiesApp
             MokkiLista.AddRange(mySQL.getAllMokki());
             count = MokkiLista.Count();
 
-            foreach(Mokki a in MokkiLista)
+            ListViewItem itm;
+            string[] arr = new string[3];
+
+
+            foreach (Mokki a in MokkiLista)
             {
-                mclbMokinPoisto.Items.Add(a.GetNimi());
+                arr[0] = a.GetID().ToString();
+                arr[1] = a.GetNimi();
+                arr[2] = a.GetKatuosoite();
+
+                itm = new ListViewItem(arr);
+
+                mlvPoistaMokki.Items.Add(itm);
             }
-            
         }
 
         private void hidePanels(Panel panel)
@@ -199,12 +207,16 @@ namespace VillageNewbiesApp
 
         private void btnPoistaValitut_Click(object sender, EventArgs e)
         {
-            //for(int i = 0; i < count; i++)
-            //{
-            //    MessageBox.Show(mclbMokinPoisto.GetItemCheckState(0).ToString());
-            //    MessageBox.Show(mclbMokinPoisto.Controls[i].Text);
-            //}
 
+            if(mlvPoistaMokki.SelectedItems.Count > 0)
+            {
+                bool check = mySQL.SQLdeleteMokki(mlvPoistaMokki.SelectedItems[0].SubItems[0].Text);
+
+                if(check == true)
+                {
+                    mlvPoistaMokki.Items.Remove(mlvPoistaMokki.SelectedItems[0]);
+                }
+            }
 
         }
 
