@@ -42,28 +42,36 @@ namespace VillageNewbiesApp
 
         private void btnTeeVaraus_Click(object sender, EventArgs e)
         {
-            
-                // Tekee varauksen kun kalenterista mustaa haluttujen päivien välit
-                SQLConnection mySQL = new SQLConnection();
-            try
+            // Tekee varauksen kun kalenterista mustaa haluttujen päivien välit
+            SQLConnection mySQL = new SQLConnection();
+            bool isFree = CheckIfReserved();
+            if (isFree == false)
             {
-                string datestart = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-                string dateend = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
-                string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
-                int asiakas_id = frmAsiakkaat.selectedAsiakas;
-                string mokki = frmAlueet.selectedMokki;
-                DateTime start = DateTime.Parse(datestart);
-                DateTime end = DateTime.Parse(dateend);
-                DateTime current = DateTime.Parse(thisday);
-                //MessageBox.Show(selectedAsiakas.ToString());
-                MessageBox.Show(mokki);
-                MessageBox.Show(asiakas_id.ToString());
-                mySQL.SQLMakeReservation(start, end, current, asiakas_id, mokki);
-                UpdateReservations();
+                MessageBox.Show("Varaus ei onnistu koska valituille päiville on jo varaus");
+                
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Valitse asiakas, mökki ja varauspäivät ennen varauksen tekoa");
+                try
+                {
+                    string datestart = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                    string dateend = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
+                    string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
+                    int asiakas_id = frmAsiakkaat.selectedAsiakas;
+                    string mokki = frmAlueet.selectedMokki;
+                    DateTime start = DateTime.Parse(datestart);
+                    DateTime end = DateTime.Parse(dateend);
+                    DateTime current = DateTime.Parse(thisday);
+                    //MessageBox.Show(selectedAsiakas.ToString());
+                    MessageBox.Show(mokki);
+                    MessageBox.Show(asiakas_id.ToString());
+                    mySQL.SQLMakeReservation(start, end, current, asiakas_id, mokki);
+                    UpdateReservations();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Valitse asiakas, mökki ja varauspäivät ennen varauksen tekoa");
+                }
             }
             
         }
@@ -135,6 +143,32 @@ namespace VillageNewbiesApp
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
+        }
+        public bool CheckIfReserved()
+        {
+            string mokkinimi = frmAlueet.selectedMokki;
+            string datestart1 = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+            string dateend1 = monthCalendar1.SelectionEnd.ToString("yyyy-MM-dd");
+            DateTime start1 = DateTime.Parse(datestart1);
+            DateTime end1 = DateTime.Parse(dateend1);
+            List<DateTime> Reserved = mySQL.SQLCheckReservation(mokkinimi);
+            Reserved.AddRange(monthCalendar1.BoldedDates);
+            Reserved.ToArray();
+
+            List<DateTime> Selected = new List<DateTime>();
+            for (DateTime start = start1; start <= end1; start = start.AddDays(1))
+            {
+                Selected.Add(DateTime.Parse(start.ToLongDateString()));
+            }
+            Selected.ToArray();
+            foreach (DateTime d in Reserved)
+            {   
+                if (Selected.Contains(d))
+                {
+                    return false;
+                } 
+            }
+            return true;
         }
     }
 }

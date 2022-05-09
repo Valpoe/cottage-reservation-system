@@ -343,12 +343,13 @@
             this.btnOhjeet.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOhjeet.Name = "btnOhjeet";
             this.btnOhjeet.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnOhjeet.Size = new System.Drawing.Size(158, 36);
+            this.btnOhjeet.Size = new System.Drawing.Size(76, 36);
             this.btnOhjeet.TabIndex = 15;
             this.btnOhjeet.Text = "Ohjeet";
             this.btnOhjeet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnOhjeet.UseAccentColor = false;
             this.btnOhjeet.UseVisualStyleBackColor = true;
+            this.btnOhjeet.Click += new System.EventHandler(this.btnOhjeet_Click);
             // 
             // frmEtusivu
             // 

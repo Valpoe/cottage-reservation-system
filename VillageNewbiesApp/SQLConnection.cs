@@ -198,7 +198,6 @@ namespace VillageNewbiesApp
                 while (Reader.Read())
                 {
                     result.Append(Reader.GetString(Reader.GetOrdinal("nimi")));
-
                     SQLResult.Add(result.ToString());
                     result.Clear();
                 }

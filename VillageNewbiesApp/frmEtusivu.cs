@@ -66,5 +66,12 @@ namespace VillageNewbiesApp
                 chart1.Series["Hinta"].YValueMembers = "hinta";
             }
         }
+
+        private void btnOhjeet_Click(object sender, EventArgs e)
+        {
+            frmOhjeet f2 = new frmOhjeet();
+            //f2.ShowDialog();
+            f2.Show();
+        }
     }
 }
