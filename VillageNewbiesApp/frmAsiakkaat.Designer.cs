@@ -470,7 +470,8 @@
             this.tbSearchBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tbSearchBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.tbSearchBox.Depth = 0;
-            this.tbSearchBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbSearchBox.Enabled = false;
+            this.tbSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbSearchBox.HideSelection = true;
             this.tbSearchBox.Hint = "Etsi asiakkaita";
             this.tbSearchBox.LeadingIcon = null;

@@ -19,13 +19,13 @@ namespace VillageNewbiesApp
         // Tyhjennetään kaikki textboxit
         private void btnTyhjenna_Click(object sender, EventArgs e)
         {
-            tbEtunimi.Text = String.Empty;
-            tbSukunimi.Text = String.Empty;
-            tbOsoite.Text = String.Empty;
-            tbSahkoPosti.Text = String.Empty;
-            tbPuhelinNumero.Text = String.Empty;
-            tbPostiNumero.Text = String.Empty;
-            tbPostitoimipaikka.Text = String.Empty;
+            foreach (Control c in this.Controls)
+            {
+                if (c is MaterialSkin.Controls.MaterialTextBox)
+                {
+                    c.Text = String.Empty;
+                }
+            }
         }
 
         // Tehdään virheentarkistus ja lisätään uusi asiakas tietokantaan
@@ -141,6 +141,7 @@ namespace VillageNewbiesApp
 
                 mlvAsiakkaat.Items.Add(item);
             }
+            tbSearchBox.Enabled = true;
         }
 
         // Näytetään valitun asiakkaan varaukset
