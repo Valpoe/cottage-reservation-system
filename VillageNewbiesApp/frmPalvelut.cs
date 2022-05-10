@@ -202,7 +202,15 @@ namespace VillageNewbiesApp
 
         private void hidePanels(Panel panel)
         {
-            foreach(Panel p in paneelit)
+            if (panel.Name == pnlLisaaMokki.Name)
+            {
+                btnTyhjenna.Visible = true;
+            }
+            else
+            {
+                btnTyhjenna.Visible = false;
+            }
+            foreach (Panel p in paneelit)
             {
                 if (p == panel)
                 {

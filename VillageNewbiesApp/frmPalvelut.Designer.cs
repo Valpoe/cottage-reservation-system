@@ -778,10 +778,36 @@
             this.columnHeader4.Text = "Nimi";
             this.columnHeader4.Width = 130;
             // 
-            // columnHeader5
+            // btnPoistaValitut
             // 
-            this.columnHeader5.Text = "Hinta";
-            this.columnHeader5.Width = 130;
+            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoistaValitut.Depth = 0;
+            this.btnPoistaValitut.HighEmphasis = true;
+            this.btnPoistaValitut.Icon = null;
+            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
+            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoistaValitut.Name = "btnPoistaValitut";
+            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
+            this.btnPoistaValitut.TabIndex = 14;
+            this.btnPoistaValitut.Text = "Poista valitut";
+            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoistaValitut.UseAccentColor = false;
+            this.btnPoistaValitut.UseVisualStyleBackColor = true;
+            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
+            // 
+            // lblMokkiPoisto
+            // 
+            this.lblMokkiPoisto.AutoSize = true;
+            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
+            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
+            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
+            this.lblMokkiPoisto.TabIndex = 15;
+            this.lblMokkiPoisto.Text = "Poista mökki";
             // 
             // frmPalvelut
             // 

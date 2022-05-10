@@ -274,6 +274,73 @@ namespace VillageNewbiesApp
             }
             return SQLResult;
         }
+
+        // Tuodaan kaikki laskut listviewiin
+        public List<string> selectLasku()
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+                MySqlCommand Command = new MySqlCommand("SELECT l.lasku_id, l.varaus_id, " +
+                    "a.etunimi, a.sukunimi " +
+                    "FROM lasku l " +
+                    "INNER JOIN varaus v ON v.varaus_id = l.varaus_id " +
+                    "INNER JOIN asiakas a ON v.asiakas_id = a.asiakas_id", connection);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("lasku_id")).ToString());
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("varaus_id")).ToString());
+                    string kokonimi = Reader.GetString(Reader.GetOrdinal("etunimi")).ToString() + " " +
+                        Reader.GetString(Reader.GetOrdinal("sukunimi")).ToString();
+                    SQLResult.Add(kokonimi);
+                }
+            }
+            return SQLResult;
+        }
+
+        // Tuodaan laskun kaikki tiedot listview valinnan perusteella
+        public List<string> laskutusTiedot(string laskuID)
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+
+                string cmd = "SELECT l.lasku_id, m.mokkinimi, a.etunimi, a.sukunimi, a.email, a.lahiosoite, a.postinro, " +
+                    "p.toimipaikka, l.summa, l.alv, l.summa + l.alv AS Yhteensa " +
+                    "FROM lasku l INNER JOIN varaus v ON v.varaus_id = l.varaus_id " +
+                    "INNER JOIN mokki m ON m.mokki_id = v.mokki_mokki_id " +
+                    "INNER JOIN asiakas a ON v.asiakas_id = a.asiakas_id " +
+                    "INNER JOIN posti p ON a.postinro = p.postinro " +
+                    "WHERE l.lasku_id = '" + laskuID + "'";
+
+                MySqlCommand Command = new MySqlCommand(cmd, connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("lasku_id")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("mokkinimi")).ToString());
+                    string kokonimi = Reader.GetString(Reader.GetOrdinal("etunimi")) + " " +
+                        Reader.GetString(Reader.GetOrdinal("sukunimi"));
+                    SQLResult.Add(kokonimi);
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("email")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("lahiosoite")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("postinro")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("toimipaikka")).ToString());
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("summa")).ToString());
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("alv")).ToString());
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("Yhteensa")).ToString());
+                }
+            }
+            return SQLResult;
+        }
         public List<string> SQLselectAllAlueet()
         {
 

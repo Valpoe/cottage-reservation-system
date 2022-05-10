@@ -30,15 +30,6 @@ namespace VillageNewbiesApp
             Puhnro = puhnro;
         }
 
-        public Asiakas(string id, string etunimi, string sukunimi, string email, string puhelinnumero)
-        {
-            Id = id;
-            Etunimi = etunimi;
-            Sukunimi = sukunimi;
-            Email = email;
-            Puhnro = puhelinnumero;
-        }
-
         // Tehdään getterit jotka palauttavat asiakkaan tiedot
         public string GetID()
         {
