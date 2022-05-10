@@ -530,33 +530,6 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        lasku_id, mokkinimi, etunimi, sukunimi, email, lahiosoite, postinro, toimipaikka, summa, alv, Yhteensa
-FROM            laskutustiedot</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="email" DataSetColumn="email" />
-              <Mapping SourceColumn="lahiosoite" DataSetColumn="lahiosoite" />
-              <Mapping SourceColumn="postinro" DataSetColumn="postinro" />
-              <Mapping SourceColumn="toimipaikka" DataSetColumn="toimipaikka" />
-              <Mapping SourceColumn="summa" DataSetColumn="summa" />
-              <Mapping SourceColumn="alv" DataSetColumn="alv" />
-              <Mapping SourceColumn="Yhteensa" DataSetColumn="Yhteensa" />
-              <Mapping SourceColumn="lasku_id" DataSetColumn="lasku_id" />
-              <Mapping SourceColumn="mokkinimi" DataSetColumn="mokkinimi" />
-              <Mapping SourceColumn="etunimi" DataSetColumn="etunimi" />
-              <Mapping SourceColumn="sukunimi" DataSetColumn="sukunimi" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -747,65 +720,6 @@ FROM            laskutustiedot</CommandText>
               <xs:element name="vahvistus_pvm" msprop:Generator_UserColumnName="vahvistus_pvm" msprop:Generator_ColumnPropNameInTable="vahvistus_pvmColumn" msprop:Generator_ColumnPropNameInRow="vahvistus_pvm" msprop:Generator_ColumnVarNameInTable="columnvahvistus_pvm" type="xs:dateTime" minOccurs="0" />
               <xs:element name="varattu_alkupvm" msprop:Generator_UserColumnName="varattu_alkupvm" msprop:Generator_ColumnPropNameInTable="varattu_alkupvmColumn" msprop:Generator_ColumnPropNameInRow="varattu_alkupvm" msprop:Generator_ColumnVarNameInTable="columnvarattu_alkupvm" type="xs:dateTime" minOccurs="0" />
               <xs:element name="varattu_loppupvm" msprop:Generator_UserColumnName="varattu_loppupvm" msprop:Generator_ColumnPropNameInTable="varattu_loppupvmColumn" msprop:Generator_ColumnPropNameInRow="varattu_loppupvm" msprop:Generator_ColumnVarNameInTable="columnvarattu_loppupvm" type="xs:dateTime" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="lahiosoite" msprop:Generator_ColumnPropNameInRow="lahiosoite" msprop:Generator_ColumnPropNameInTable="lahiosoiteColumn" msprop:Generator_ColumnVarNameInTable="columnlahiosoite" msprop:Generator_UserColumnName="lahiosoite" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="160" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="postinro" msprop:Generator_ColumnPropNameInRow="postinro" msprop:Generator_ColumnPropNameInTable="postinroColumn" msprop:Generator_ColumnVarNameInTable="columnpostinro" msprop:Generator_UserColumnName="postinro">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="toimipaikka" msprop:Generator_ColumnPropNameInRow="toimipaikka" msprop:Generator_ColumnPropNameInTable="toimipaikkaColumn" msprop:Generator_ColumnVarNameInTable="columntoimipaikka" msprop:Generator_UserColumnName="toimipaikka" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="180" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="summa" msprop:Generator_ColumnPropNameInRow="summa" msprop:Generator_ColumnPropNameInTable="summaColumn" msprop:Generator_ColumnVarNameInTable="columnsumma" msprop:Generator_UserColumnName="summa" type="xs:double" />
-              <xs:element name="alv" msprop:Generator_ColumnPropNameInRow="alv" msprop:Generator_ColumnPropNameInTable="alvColumn" msprop:Generator_ColumnVarNameInTable="columnalv" msprop:Generator_UserColumnName="alv" type="xs:double" />
-              <xs:element name="Yhteensa" msprop:Generator_ColumnPropNameInRow="Yhteensa" msprop:Generator_ColumnPropNameInTable="YhteensaColumn" msprop:Generator_ColumnVarNameInTable="columnYhteensa" msprop:Generator_UserColumnName="Yhteensa" type="xs:double" />
-              <xs:element name="lasku_id" msprop:Generator_ColumnPropNameInRow="lasku_id" msprop:Generator_ColumnPropNameInTable="lasku_idColumn" msprop:Generator_ColumnVarNameInTable="columnlasku_id" msprop:Generator_UserColumnName="lasku_id" type="xs:int" />
-              <xs:element name="mokkinimi" msprop:Generator_ColumnPropNameInRow="mokkinimi" msprop:Generator_ColumnPropNameInTable="mokkinimiColumn" msprop:Generator_ColumnVarNameInTable="columnmokkinimi" msprop:Generator_UserColumnName="mokkinimi" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="180" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="etunimi" msprop:Generator_ColumnPropNameInRow="etunimi" msprop:Generator_ColumnPropNameInTable="etunimiColumn" msprop:Generator_ColumnVarNameInTable="columnetunimi" msprop:Generator_UserColumnName="etunimi" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="80" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="sukunimi" msprop:Generator_ColumnPropNameInRow="sukunimi" msprop:Generator_ColumnPropNameInTable="sukunimiColumn" msprop:Generator_ColumnVarNameInTable="columnsukunimi" msprop:Generator_UserColumnName="sukunimi" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="160" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

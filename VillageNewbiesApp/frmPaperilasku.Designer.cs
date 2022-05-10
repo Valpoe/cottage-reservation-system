@@ -28,70 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new VillageNewbiesApp.DataSet1();
-            this.dataTable1TableAdapter = new VillageNewbiesApp.DataSet1TableAdapters.DataTable1TableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPaperilasku));
+            this.mmltbLaskunTiedon = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnPrint = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // mmltbLaskunTiedon
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "VillageNewbiesApp.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 53);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(645, 545);
-            this.reportViewer1.TabIndex = 0;
+            this.mmltbLaskunTiedon.AnimateReadOnly = false;
+            this.mmltbLaskunTiedon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.mmltbLaskunTiedon.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.mmltbLaskunTiedon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.mmltbLaskunTiedon.Depth = 0;
+            this.mmltbLaskunTiedon.HideSelection = true;
+            this.mmltbLaskunTiedon.Location = new System.Drawing.Point(12, 12);
+            this.mmltbLaskunTiedon.MaxLength = 32767;
+            this.mmltbLaskunTiedon.MouseState = MaterialSkin.MouseState.OUT;
+            this.mmltbLaskunTiedon.Name = "mmltbLaskunTiedon";
+            this.mmltbLaskunTiedon.PasswordChar = '\0';
+            this.mmltbLaskunTiedon.ReadOnly = false;
+            this.mmltbLaskunTiedon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.mmltbLaskunTiedon.SelectedText = "";
+            this.mmltbLaskunTiedon.SelectionLength = 0;
+            this.mmltbLaskunTiedon.SelectionStart = 0;
+            this.mmltbLaskunTiedon.ShortcutsEnabled = true;
+            this.mmltbLaskunTiedon.Size = new System.Drawing.Size(411, 397);
+            this.mmltbLaskunTiedon.TabIndex = 0;
+            this.mmltbLaskunTiedon.TabStop = false;
+            this.mmltbLaskunTiedon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.mmltbLaskunTiedon.UseSystemPasswordChar = false;
             // 
-            // dataTable1BindingSource
+            // printDocument1
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dataSet1;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // dataSet1
+            // printPreviewDialog1
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // dataTable1TableAdapter
+            // btnPrint
             // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPrint.AutoSize = false;
+            this.btnPrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPrint.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPrint.Depth = 0;
+            this.btnPrint.HighEmphasis = true;
+            this.btnPrint.Icon = null;
+            this.btnPrint.Location = new System.Drawing.Point(137, 420);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPrint.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPrint.Size = new System.Drawing.Size(158, 36);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPrint.UseAccentColor = false;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // frmPaperilasku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 598);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.reportViewer1);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.ClientSize = new System.Drawing.Size(435, 469);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.mmltbLaskunTiedon);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmPaperilasku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Paperilasku_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.Load += new System.EventHandler(this.frmPaperilasku_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
-        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.Button button1;
+
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 mmltbLaskunTiedon;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private MaterialSkin.Controls.MaterialButton btnPrint;
     }
 }

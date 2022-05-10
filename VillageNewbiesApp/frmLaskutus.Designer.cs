@@ -351,7 +351,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label10.Location = new System.Drawing.Point(12, 135);
+            this.label10.Location = new System.Drawing.Point(12, 140);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 21);
             this.label10.TabIndex = 26;
@@ -397,17 +397,18 @@
             // 
             // btnLataaLaskut
             // 
+            this.btnLataaLaskut.AutoSize = false;
             this.btnLataaLaskut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLataaLaskut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLataaLaskut.Depth = 0;
             this.btnLataaLaskut.HighEmphasis = true;
             this.btnLataaLaskut.Icon = null;
-            this.btnLataaLaskut.Location = new System.Drawing.Point(16, 93);
+            this.btnLataaLaskut.Location = new System.Drawing.Point(12, 93);
             this.btnLataaLaskut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLataaLaskut.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLataaLaskut.Name = "btnLataaLaskut";
             this.btnLataaLaskut.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLataaLaskut.Size = new System.Drawing.Size(125, 36);
+            this.btnLataaLaskut.Size = new System.Drawing.Size(157, 36);
             this.btnLataaLaskut.TabIndex = 28;
             this.btnLataaLaskut.Text = "Lataa laskut";
             this.btnLataaLaskut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -437,6 +438,7 @@
             // 
             // btnPaperilasku
             // 
+            this.btnPaperilasku.AutoSize = false;
             this.btnPaperilasku.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPaperilasku.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnPaperilasku.Depth = 0;
@@ -447,7 +449,7 @@
             this.btnPaperilasku.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPaperilasku.Name = "btnPaperilasku";
             this.btnPaperilasku.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPaperilasku.Size = new System.Drawing.Size(117, 36);
+            this.btnPaperilasku.Size = new System.Drawing.Size(157, 36);
             this.btnPaperilasku.TabIndex = 30;
             this.btnPaperilasku.Text = "Paperilasku";
             this.btnPaperilasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;

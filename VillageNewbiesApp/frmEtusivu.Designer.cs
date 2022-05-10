@@ -113,7 +113,7 @@
             // lblAsiakasTotal
             // 
             this.lblAsiakasTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsiakasTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblAsiakasTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblAsiakasTotal.Location = new System.Drawing.Point(0, 20);
             this.lblAsiakasTotal.Name = "lblAsiakasTotal";
             this.lblAsiakasTotal.Size = new System.Drawing.Size(76, 40);
@@ -147,7 +147,7 @@
             // lblVarausTotal
             // 
             this.lblVarausTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVarausTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblVarausTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblVarausTotal.Location = new System.Drawing.Point(0, 20);
             this.lblVarausTotal.Name = "lblVarausTotal";
             this.lblVarausTotal.Size = new System.Drawing.Size(79, 40);
@@ -181,7 +181,7 @@
             // lblPalvelutTotal
             // 
             this.lblPalvelutTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPalvelutTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblPalvelutTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblPalvelutTotal.Location = new System.Drawing.Point(0, 20);
             this.lblPalvelutTotal.Name = "lblPalvelutTotal";
             this.lblPalvelutTotal.Size = new System.Drawing.Size(76, 40);
@@ -215,7 +215,7 @@
             // lblMokkiTotal
             // 
             this.lblMokkiTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkiTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblMokkiTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblMokkiTotal.Location = new System.Drawing.Point(0, 20);
             this.lblMokkiTotal.Name = "lblMokkiTotal";
             this.lblMokkiTotal.Size = new System.Drawing.Size(76, 40);
@@ -317,7 +317,7 @@
             this.cpbVarausaste.SuperscriptText = "";
             this.cpbVarausaste.TabIndex = 18;
             this.cpbVarausaste.Text = "78%";
-            this.cpbVarausaste.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.cpbVarausaste.TextMargin = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.cpbVarausaste.Value = 78;
             // 
             // label1

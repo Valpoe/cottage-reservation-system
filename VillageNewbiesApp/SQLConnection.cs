@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
@@ -322,7 +323,6 @@ namespace VillageNewbiesApp
 
                 MySqlCommand Command = new MySqlCommand(cmd, connection);
                 MySqlDataReader Reader = Command.ExecuteReader();
-
                 while (Reader.Read())
                 {
                     SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("lasku_id")).ToString());
