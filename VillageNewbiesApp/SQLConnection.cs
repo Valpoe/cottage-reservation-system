@@ -170,7 +170,7 @@ namespace VillageNewbiesApp
                     Command.ExecuteNonQuery();
                     return true;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Mökkiä ei voi poistaa jos sillä on varauksia!");
                     return false;
@@ -191,8 +191,8 @@ namespace VillageNewbiesApp
                 string sql = "SELECT(SELECT COUNT(mokki_id) FROM mokki) AS mokki_id," +
                     "(SELECT COUNT(palvelu_id)FROM palvelu) AS palvelu_id,(SELECT COUNT(varaus_id) FROM varaus) AS varaus_id," +
                     "(SELECT COUNT(asiakas_id) FROM asiakas) AS asiakas_id";
-                
-                MySqlCommand cmd = new MySqlCommand(sql, connection);              
+
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader Reader = cmd.ExecuteReader();
 
                 while (Reader.Read())
@@ -210,7 +210,7 @@ namespace VillageNewbiesApp
         public List<string> mokkiData(DateTime alkupvm, DateTime loppupvm, string alue)
         {
             List<string> SQLResult = new List<string>();
-            
+
             using (MySqlConnection connection = GetConnection())
             {
                 Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
@@ -222,9 +222,9 @@ namespace VillageNewbiesApp
                     " FROM mokki m " +
                     " INNER JOIN varaus v ON m.mokki_id = v.mokki_mokki_id" +
                     " INNER JOIN alue a ON a.alue_id = m.alue_id " +
-                    "WHERE a.nimi IN("+ alue +") " +
+                    "WHERE a.nimi IN(" + alue + ") " +
                     "AND v.vahvistus_pvm " +
-                    "BETWEEN '"+ alku +"' AND '"+ loppu +"'";
+                    "BETWEEN '" + alku + "' AND '" + loppu + "'";
 
                 MySqlCommand cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader Reader = cmd.ExecuteReader();
@@ -259,7 +259,7 @@ namespace VillageNewbiesApp
                     " INNER JOIN alue a ON p.alue_id = a.alue_id " +
                     "WHERE a.nimi IN(" + alue + ") " +
                     "AND v.vahvistus_pvm " +
-                    "BETWEEN '"+ alku +"' AND '"+ loppu +"'";
+                    "BETWEEN '" + alku + "' AND '" + loppu + "'";
 
                 MySqlCommand cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader Reader = cmd.ExecuteReader();
@@ -373,7 +373,7 @@ namespace VillageNewbiesApp
 
                 while (Reader.Read())
                 {
-                   alueID = Reader.GetInt32(Reader.GetOrdinal("alue_id"));
+                    alueID = Reader.GetInt32(Reader.GetOrdinal("alue_id"));
                 }
 
                 return alueID;
@@ -423,9 +423,9 @@ namespace VillageNewbiesApp
                     Command = new MySqlCommand("INSERT INTO mokki(alue_id, postinro, mokkinimi, katuosoite, hinta, kuvaus, henkilomaara, varustelu)" +
                     " VALUES ('" + mokki.getAlueID() + "', '" + mokki.GetPostinumero() + "', '" + mokki.GetNimi() + "', '" + mokki.GetKatuosoite() + "', " + mokki.GetHinta() +
                     ", '" + mokki.GetKuvaus() + "', " + mokki.GetHenkilomaara() + ", '" + mokki.GetVarustelu() + "')", connection);
-                   Command.ExecuteNonQuery();
+                    Command.ExecuteNonQuery();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -437,11 +437,11 @@ namespace VillageNewbiesApp
         {
 
             using (MySqlConnection connection = GetConnection())
-            {         
+            {
 
-                  MySqlCommand Command = new MySqlCommand("INSERT INTO alue(nimi)" +
-                    " VALUES ('"+ alue +"')", connection);
-                    Command.ExecuteNonQuery();
+                MySqlCommand Command = new MySqlCommand("INSERT INTO alue(nimi)" +
+                  " VALUES ('" + alue + "')", connection);
+                Command.ExecuteNonQuery();
 
                 MessageBox.Show("Alue lisätty!");
             }
@@ -461,6 +461,24 @@ namespace VillageNewbiesApp
                     palvelut.Add(Reader.GetString(Reader.GetOrdinal("kuvaus")));
                 }
                 return palvelut;
+            }
+        }
+        public List<String> Palvelut(int alueID)
+        {
+            List<string> SQLResult = new List<string>();
+
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("SELECT palvelu_id, nimi, hinta FROM palvelu WHERE alue_id LIKE '" + alueID + "'", connection);
+
+                MySqlDataReader Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    SQLResult.Add(Reader.GetInt32(Reader.GetOrdinal("palvelu_id")).ToString());
+                    SQLResult.Add(Reader.GetString(Reader.GetOrdinal("nimi")));
+                    SQLResult.Add(Reader.GetDouble(Reader.GetOrdinal("hinta")).ToString());
+                }
+                return SQLResult;
             }
         }
 
@@ -568,6 +586,31 @@ namespace VillageNewbiesApp
                 MySqlDataReader Reader = Command.ExecuteReader();
             }
         }
+
+        public void AddPalvelu(string alue_id, string nimi, string type, string kuvaus, double hinta, double alvi)
+        {
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("INSERT INTO palvelu(alue_id, nimi, tyyppi, kuvaus, hinta, alv)" +
+                    "VALUES('" + alue_id + "', '" + nimi + "', '" + type + "', '" + kuvaus + "', '" + hinta + "', '" + alvi + "')", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+                Command.ExecuteNonQuery();
+            }
+        }
+        public void RemovePalvelu(string palvelu_id)
+        {
+            List<string> SQLResult = new List<string>();
+            StringBuilder result = new StringBuilder();
+            using (MySqlConnection connection = GetConnection())
+            {
+                MySqlCommand Command = new MySqlCommand("DELETE FROM palvelu WHERE palvelu_id = '" + palvelu_id + "'", connection);
+                MySqlDataReader Reader = Command.ExecuteReader();
+                Command.ExecuteNonQuery();
+            }
+        }
+
     }
 }
 

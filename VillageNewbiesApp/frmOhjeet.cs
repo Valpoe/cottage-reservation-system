@@ -79,5 +79,23 @@ namespace VillageNewbiesApp
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnOhje5_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa asiakas välilehti, syötä asiakkaan tiedot vasemmassa reunassa olevaan kyselyyn ja paina Lisää asiakas.";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje6_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa Toiminta-alueet välilehti, Syötä Lisää alue - painikkeen yläpuolella olevaan kyselyyn alueen nimi ja painiketta painaessa alue lisätään tietokantaan.";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje7_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa Mökit ja Palvelut välilehti. Valitse lisää mökki ja syötä kyselyyn mökin tiedot. Paina uudestaan Lisää Mökki painiketta ja mökki lisätään tietokantaan.";
+            mmltbOhje.Text = text;
+        }
     }
 }

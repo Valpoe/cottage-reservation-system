@@ -28,7 +28,7 @@ namespace VillageNewbiesApp
             paneelit.Add(pnlLisaaMokki);
             paneelit.Add(pnlPalvelut);
             paneelit.Add(pnlPoistaMokki);
-
+            paneelit.Add(pnlPalvelu);
             lblAlue.Text = "";
             pnlLisaaMokki.Hide();
 
@@ -241,6 +241,51 @@ namespace VillageNewbiesApp
             {              
 
                 e.Handled = true;
+            }
+        }
+
+        private void btnPalvelut_Click(object sender, EventArgs e)
+        {
+            selectedID = frmAlueet.selectedID;
+            hidePanels(pnlPalvelu);
+            mlvPalvelut.Items.Clear();
+            UpdatePalvelut();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            
+            string alue_id = frmAlueet.selectedID;
+            string nimi = tbNimi.Text;
+            string type = tbTyyppi.Text;
+            string kuvaus = tbKuvaus.Text;
+            double hinta = Double.Parse(tbPrice.Text);
+            double alvi = Double.Parse(tbAlv.Text);
+            mySQL.AddPalvelu(alue_id, nimi, type, kuvaus, hinta, alvi);
+        }
+
+        private void btnPoistapalvelu_Click(object sender, EventArgs e)
+        {
+            string palvelu_id = mlvPalvelut.SelectedItems[0].Text;
+            mySQL.RemovePalvelu(palvelu_id);
+            UpdatePalvelut();
+        }
+        private void UpdatePalvelut()
+        {
+            List<string> palvelut = mySQL.Palvelut(Convert.ToInt32(frmAlueet.selectedID));
+            string[] tiedot = new string[3];
+            ListViewItem item;
+
+            for (int i = 0; i < palvelut.Count; i++)
+            {
+                tiedot[0] = palvelut[i];
+                i++;
+                tiedot[1] = palvelut[i];
+                i++;
+                tiedot[2] = palvelut[i];
+
+                item = new ListViewItem(tiedot);
+                mlvPalvelut.Items.Add(item);
             }
         }
     }
