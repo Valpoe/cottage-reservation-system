@@ -156,6 +156,29 @@ namespace VillageNewbiesApp
             }
         }
 
+
+        // Poistetaan valittu mökki
+        public bool SQLdeleteMokki(string mokki_id)
+        {
+            using (MySqlConnection connection = GetConnection())
+            {
+                try
+                {
+                    Console.WriteLine("Success, nyt tietokanta on avattu turvallisesti using statementilla!");
+                    MySqlCommand Command = new MySqlCommand("DELETE FROM mokki WHERE mokki_id = @mokki_id", connection);
+                    Command.Parameters.AddWithValue("@mokki_id", mokki_id);
+                    Command.ExecuteNonQuery();
+                    return true;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Mökkiä ei voi poistaa jos sillä on varauksia!");
+                    return false;
+                }
+            }
+        }
+
+
         // Kokonaismäärien haku tietokannasta
         public List<string> frontPageTotals()
         {
@@ -400,7 +423,6 @@ namespace VillageNewbiesApp
                     Command = new MySqlCommand("INSERT INTO mokki(alue_id, postinro, mokkinimi, katuosoite, hinta, kuvaus, henkilomaara, varustelu)" +
                     " VALUES ('" + mokki.getAlueID() + "', '" + mokki.GetPostinumero() + "', '" + mokki.GetNimi() + "', '" + mokki.GetKatuosoite() + "', " + mokki.GetHinta() +
                     ", '" + mokki.GetKuvaus() + "', " + mokki.GetHenkilomaara() + ", '" + mokki.GetVarustelu() + "')", connection);
-                    MessageBox.Show(Command.CommandText);
                    Command.ExecuteNonQuery();
                 }
                 catch(Exception ex)
@@ -408,6 +430,20 @@ namespace VillageNewbiesApp
                     MessageBox.Show(ex.Message);
                 }
 
+            }
+        }
+
+        public void SQLaddAlue(string alue)
+        {
+
+            using (MySqlConnection connection = GetConnection())
+            {         
+
+                  MySqlCommand Command = new MySqlCommand("INSERT INTO alue(nimi)" +
+                    " VALUES ('"+ alue +"')", connection);
+                    Command.ExecuteNonQuery();
+
+                MessageBox.Show("Alue lisätty!");
             }
         }
 

@@ -82,5 +82,20 @@ namespace VillageNewbiesApp
                 Console.WriteLine(ex);
             }
         }
+
+        private void btnLisaaAlue_Click(object sender, EventArgs e)
+        {
+            mySQL.SQLaddAlue(tbAlueNimi.Text);
+
+            mcbToimintaAlue.Items.Clear();
+
+            List<string> Alueet = mySQL.SQLselectAllAlueet();
+
+
+            foreach (string a in Alueet)
+            {
+                mcbToimintaAlue.Items.Add(a);
+            }
+        }
     }
 }
