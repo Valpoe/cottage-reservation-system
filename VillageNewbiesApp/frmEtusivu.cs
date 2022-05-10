@@ -30,6 +30,7 @@ namespace VillageNewbiesApp
             panelMokit.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelMokit.Width, panelMokit.Height, 5, 5));
             panelPalvelut.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelPalvelut.Width, panelPalvelut.Height, 5, 5));
             panelAsiakkaat.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelAsiakkaat.Width, panelAsiakkaat.Height, 5, 5));
+            panel1.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 5, 5));
         }
 
         // Lataa kokonaismäärät mökeistä, palveluista, varauksista ja asiakkaista näkyviin

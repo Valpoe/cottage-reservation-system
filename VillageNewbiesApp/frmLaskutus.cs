@@ -17,8 +17,6 @@ namespace VillageNewbiesApp
     public partial class frmLaskutus : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        MySqlDataAdapter myAdapter = default(MySqlDataAdapter);
-        DataSet1 myDataSet = new DataSet1();
 
         NetworkCredential login;
         SmtpClient client;

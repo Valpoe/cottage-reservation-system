@@ -46,23 +46,19 @@
             this.btnRefresh = new MaterialSkin.Controls.MaterialButton();
             this.btnOhjeet = new MaterialSkin.Controls.MaterialButton();
             this.lblKokonaisMaarat = new System.Windows.Forms.Label();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.cpbVarausaste = new CircularProgressBar.CircularProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelAsiakkaat.SuspendLayout();
             this.panelVaraukset.SuspendLayout();
             this.panelPalvelut.SuspendLayout();
             this.panelMokit.SuspendLayout();
-            this.materialCard1.SuspendLayout();
-            this.materialCard3.SuspendLayout();
-            this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -95,7 +91,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panelVaraukset, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelPalvelut, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelMokit, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 33);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(411, 108);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -104,7 +100,7 @@
             // 
             // panelAsiakkaat
             // 
-            this.panelAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelAsiakkaat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelAsiakkaat.Controls.Add(this.lblAsiakasTotal);
             this.panelAsiakkaat.Controls.Add(this.lblAsiakkaat);
             this.panelAsiakkaat.Dock = System.Windows.Forms.DockStyle.Left;
@@ -138,7 +134,7 @@
             // 
             // panelVaraukset
             // 
-            this.panelVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelVaraukset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelVaraukset.Controls.Add(this.lblVarausTotal);
             this.panelVaraukset.Controls.Add(this.lblVaraukset);
             this.panelVaraukset.Dock = System.Windows.Forms.DockStyle.Left;
@@ -172,7 +168,7 @@
             // 
             // panelPalvelut
             // 
-            this.panelPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelPalvelut.Controls.Add(this.lblPalvelutTotal);
             this.panelPalvelut.Controls.Add(this.lblPalvelut);
             this.panelPalvelut.Dock = System.Windows.Forms.DockStyle.Left;
@@ -206,7 +202,7 @@
             // 
             // panelMokit
             // 
-            this.panelMokit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelMokit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelMokit.Controls.Add(this.lblMokkiTotal);
             this.panelMokit.Controls.Add(this.lblMokit);
             this.panelMokit.Dock = System.Windows.Forms.DockStyle.Left;
@@ -284,42 +280,27 @@
             // 
             this.lblKokonaisMaarat.AutoSize = true;
             this.lblKokonaisMaarat.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKokonaisMaarat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.lblKokonaisMaarat.Location = new System.Drawing.Point(108, 4);
+            this.lblKokonaisMaarat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblKokonaisMaarat.Location = new System.Drawing.Point(499, 69);
             this.lblKokonaisMaarat.Name = "lblKokonaisMaarat";
             this.lblKokonaisMaarat.Size = new System.Drawing.Size(147, 25);
             this.lblKokonaisMaarat.TabIndex = 16;
             this.lblKokonaisMaarat.Text = "Kokonaismäärät";
             // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.tableLayoutPanel1);
-            this.materialCard1.Controls.Add(this.lblKokonaisMaarat);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(391, 80);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(364, 117);
-            this.materialCard1.TabIndex = 17;
-            // 
             // cpbVarausaste
             // 
             this.cpbVarausaste.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.cpbVarausaste.AnimationSpeed = 500;
-            this.cpbVarausaste.BackColor = System.Drawing.Color.White;
+            this.cpbVarausaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cpbVarausaste.Font = new System.Drawing.Font("Nirmala UI", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpbVarausaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cpbVarausaste.InnerColor = System.Drawing.Color.White;
+            this.cpbVarausaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.cpbVarausaste.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cpbVarausaste.InnerMargin = 0;
             this.cpbVarausaste.InnerWidth = -1;
-            this.cpbVarausaste.Location = new System.Drawing.Point(73, 29);
+            this.cpbVarausaste.Location = new System.Drawing.Point(462, 237);
             this.cpbVarausaste.MarqueeAnimationSpeed = 2000;
             this.cpbVarausaste.Name = "cpbVarausaste";
-            this.cpbVarausaste.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cpbVarausaste.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.cpbVarausaste.OuterMargin = -26;
             this.cpbVarausaste.OuterWidth = 26;
             this.cpbVarausaste.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
@@ -343,53 +324,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label1.Location = new System.Drawing.Point(109, 3);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.label1.Location = new System.Drawing.Point(499, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "30pv varausaste";
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.label1);
-            this.materialCard3.Controls.Add(this.cpbVarausaste);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(391, 207);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(364, 260);
-            this.materialCard3.TabIndex = 20;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label2);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(59, 15);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(647, 51);
-            this.materialCard2.TabIndex = 21;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label2.Location = new System.Drawing.Point(17, 13);
+            this.label2.Location = new System.Drawing.Point(30, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(612, 25);
             this.label2.TabIndex = 17;
@@ -398,12 +350,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VillageNewbiesApp.Properties.Resources.pngfind_com_house_outline_png_849481;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 143);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(362, 279);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(46, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(672, 45);
+            this.panel1.TabIndex = 23;
             // 
             // frmEtusivu
             // 
@@ -411,10 +372,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblKokonaisMaarat);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.materialCard2);
-            this.Controls.Add(this.materialCard3);
+            this.Controls.Add(this.cpbVarausaste);
             this.Controls.Add(this.btnOhjeet);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.materialDrawer1);
@@ -427,14 +390,11 @@
             this.panelVaraukset.ResumeLayout(false);
             this.panelPalvelut.ResumeLayout(false);
             this.panelMokit.ResumeLayout(false);
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
-            this.materialCard3.ResumeLayout(false);
-            this.materialCard3.PerformLayout();
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -456,13 +416,11 @@
         private MaterialSkin.Controls.MaterialButton btnRefresh;
         private MaterialSkin.Controls.MaterialButton btnOhjeet;
         private System.Windows.Forms.Label lblKokonaisMaarat;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private CircularProgressBar.CircularProgressBar cpbVarausaste;
         private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialCard materialCard3;
         private System.Windows.Forms.Timer timer1;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
