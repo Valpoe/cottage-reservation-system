@@ -35,6 +35,7 @@
             this.btnTyhjenna = new MaterialSkin.Controls.MaterialButton();
             this.btnLisaaMokki = new MaterialSkin.Controls.MaterialButton();
             this.pnlPalvelut = new System.Windows.Forms.Panel();
+            this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.pnlLisaaMokki = new System.Windows.Forms.Panel();
             this.tbToimipaikka = new MaterialSkin.Controls.MaterialTextBox();
             this.lblKuvaus = new System.Windows.Forms.Label();
@@ -53,13 +54,12 @@
             this.tbHenkilomaara = new MaterialSkin.Controls.MaterialTextBox();
             this.btnPoistaMokki = new MaterialSkin.Controls.MaterialButton();
             this.pnlPoistaMokki = new System.Windows.Forms.Panel();
-            this.btnPoistaValitut = new MaterialSkin.Controls.MaterialButton();
-            this.lblMokkiPoisto = new System.Windows.Forms.Label();
             this.mlvPoistaMokki = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
+            this.btnPoistaValitut = new MaterialSkin.Controls.MaterialButton();
+            this.lblMokkiPoisto = new System.Windows.Forms.Label();
             this.pnlPalvelut.SuspendLayout();
             this.pnlLisaaMokki.SuspendLayout();
             this.pnlPoistaMokki.SuspendLayout();
@@ -162,6 +162,19 @@
             this.pnlPalvelut.Size = new System.Drawing.Size(500, 409);
             this.pnlPalvelut.TabIndex = 11;
             this.pnlPalvelut.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // mclbPalvelut
+            // 
+            this.mclbPalvelut.AutoScroll = true;
+            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.mclbPalvelut.Depth = 0;
+            this.mclbPalvelut.Location = new System.Drawing.Point(18, 54);
+            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mclbPalvelut.Name = "mclbPalvelut";
+            this.mclbPalvelut.Size = new System.Drawing.Size(459, 330);
+            this.mclbPalvelut.Striped = false;
+            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
+            this.mclbPalvelut.TabIndex = 7;
             // 
             // pnlLisaaMokki
             // 
@@ -471,37 +484,6 @@
             this.pnlPoistaMokki.Size = new System.Drawing.Size(500, 392);
             this.pnlPoistaMokki.TabIndex = 14;
             // 
-            // btnPoistaValitut
-            // 
-            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnPoistaValitut.Depth = 0;
-            this.btnPoistaValitut.HighEmphasis = true;
-            this.btnPoistaValitut.Icon = null;
-            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
-            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnPoistaValitut.Name = "btnPoistaValitut";
-            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
-            this.btnPoistaValitut.TabIndex = 14;
-            this.btnPoistaValitut.Text = "Poista valitut";
-            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnPoistaValitut.UseAccentColor = false;
-            this.btnPoistaValitut.UseVisualStyleBackColor = true;
-            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
-            // 
-            // lblMokkiPoisto
-            // 
-            this.lblMokkiPoisto.AutoSize = true;
-            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
-            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
-            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
-            this.lblMokkiPoisto.TabIndex = 15;
-            this.lblMokkiPoisto.Text = "Poista mökki";
-            // 
             // mlvPoistaMokki
             // 
             this.mlvPoistaMokki.AutoSizeTable = false;
@@ -539,18 +521,36 @@
             this.columnHeader3.Text = "Osoite";
             this.columnHeader3.Width = 150;
             // 
-            // mclbPalvelut
+            // btnPoistaValitut
             // 
-            this.mclbPalvelut.AutoScroll = true;
-            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.mclbPalvelut.Depth = 0;
-            this.mclbPalvelut.Location = new System.Drawing.Point(18, 54);
-            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mclbPalvelut.Name = "mclbPalvelut";
-            this.mclbPalvelut.Size = new System.Drawing.Size(459, 330);
-            this.mclbPalvelut.Striped = false;
-            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
-            this.mclbPalvelut.TabIndex = 7;
+            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoistaValitut.Depth = 0;
+            this.btnPoistaValitut.HighEmphasis = true;
+            this.btnPoistaValitut.Icon = null;
+            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
+            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoistaValitut.Name = "btnPoistaValitut";
+            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
+            this.btnPoistaValitut.TabIndex = 14;
+            this.btnPoistaValitut.Text = "Poista valitut";
+            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoistaValitut.UseAccentColor = false;
+            this.btnPoistaValitut.UseVisualStyleBackColor = true;
+            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
+            // 
+            // lblMokkiPoisto
+            // 
+            this.lblMokkiPoisto.AutoSize = true;
+            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
+            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
+            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
+            this.lblMokkiPoisto.TabIndex = 15;
+            this.lblMokkiPoisto.Text = "Poista mökki";
             // 
             // frmPalvelut
             // 
