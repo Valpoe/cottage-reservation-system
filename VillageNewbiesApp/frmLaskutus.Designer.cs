@@ -42,20 +42,31 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbKayttajaTunnus = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbSalasana = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbPortti = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbSmtp = new MaterialSkin.Controls.MaterialTextBox();
+            this.mcSSL = new MaterialSkin.Controls.MaterialCheckbox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mlvLaskut = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnLataaLaskut = new MaterialSkin.Controls.MaterialButton();
+            this.btnSahkopostiLasku = new MaterialSkin.Controls.MaterialButton();
+            this.btnPaperilasku = new MaterialSkin.Controls.MaterialButton();
+            this.mcbALV = new MaterialSkin.Controls.MaterialCheckbox();
             this.SuspendLayout();
             // 
             // btnLahetaLasku
             // 
+            this.btnLahetaLasku.AutoSize = false;
             this.btnLahetaLasku.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLahetaLasku.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLahetaLasku.Depth = 0;
             this.btnLahetaLasku.HighEmphasis = true;
             this.btnLahetaLasku.Icon = null;
-            this.btnLahetaLasku.Location = new System.Drawing.Point(516, 425);
+            this.btnLahetaLasku.Location = new System.Drawing.Point(617, 388);
             this.btnLahetaLasku.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnLahetaLasku.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLahetaLasku.Name = "btnLahetaLasku";
@@ -66,13 +77,14 @@
             this.btnLahetaLasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLahetaLasku.UseAccentColor = false;
             this.btnLahetaLasku.UseVisualStyleBackColor = true;
+            this.btnLahetaLasku.Click += new System.EventHandler(this.btnLahetaLasku_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(257, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 6;
@@ -83,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Location = new System.Drawing.Point(257, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 17);
             this.label2.TabIndex = 7;
@@ -94,7 +106,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(12, 95);
+            this.label3.Location = new System.Drawing.Point(257, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 8;
@@ -105,7 +117,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(12, 138);
+            this.label4.Location = new System.Drawing.Point(257, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 9;
@@ -118,7 +130,7 @@
             this.tbVastaanottaja.Depth = 0;
             this.tbVastaanottaja.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbVastaanottaja.LeadingIcon = null;
-            this.tbVastaanottaja.Location = new System.Drawing.Point(107, 2);
+            this.tbVastaanottaja.Location = new System.Drawing.Point(352, 9);
             this.tbVastaanottaja.MaxLength = 50;
             this.tbVastaanottaja.MouseState = MaterialSkin.MouseState.OUT;
             this.tbVastaanottaja.Multiline = false;
@@ -134,9 +146,9 @@
             this.tbCC.AnimateReadOnly = false;
             this.tbCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCC.Depth = 0;
-            this.tbCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbCC.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbCC.LeadingIcon = null;
-            this.tbCC.Location = new System.Drawing.Point(107, 44);
+            this.tbCC.Location = new System.Drawing.Point(352, 51);
             this.tbCC.MaxLength = 50;
             this.tbCC.MouseState = MaterialSkin.MouseState.OUT;
             this.tbCC.Multiline = false;
@@ -152,9 +164,9 @@
             this.tbAihe.AnimateReadOnly = false;
             this.tbAihe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAihe.Depth = 0;
-            this.tbAihe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbAihe.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbAihe.LeadingIcon = null;
-            this.tbAihe.Location = new System.Drawing.Point(107, 86);
+            this.tbAihe.Location = new System.Drawing.Point(352, 93);
             this.tbAihe.MaxLength = 50;
             this.tbAihe.MouseState = MaterialSkin.MouseState.OUT;
             this.tbAihe.Multiline = false;
@@ -173,13 +185,13 @@
             this.mmltbViesti.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mmltbViesti.Depth = 0;
             this.mmltbViesti.HideSelection = true;
-            this.mmltbViesti.Location = new System.Drawing.Point(107, 128);
+            this.mmltbViesti.Location = new System.Drawing.Point(352, 135);
             this.mmltbViesti.MaxLength = 32767;
             this.mmltbViesti.MouseState = MaterialSkin.MouseState.OUT;
             this.mmltbViesti.Name = "mmltbViesti";
             this.mmltbViesti.PasswordChar = '\0';
             this.mmltbViesti.ReadOnly = false;
-            this.mmltbViesti.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mmltbViesti.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.mmltbViesti.SelectedText = "";
             this.mmltbViesti.SelectionLength = 0;
             this.mmltbViesti.SelectionStart = 0;
@@ -195,7 +207,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(104, 315);
+            this.label5.Location = new System.Drawing.Point(349, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 17);
             this.label5.TabIndex = 15;
@@ -206,7 +218,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label6.Location = new System.Drawing.Point(104, 349);
+            this.label6.Location = new System.Drawing.Point(349, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 16;
@@ -217,7 +229,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label7.Location = new System.Drawing.Point(104, 390);
+            this.label7.Location = new System.Drawing.Point(349, 397);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 17);
             this.label7.TabIndex = 17;
@@ -228,7 +240,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label8.Location = new System.Drawing.Point(105, 432);
+            this.label8.Location = new System.Drawing.Point(350, 439);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 17);
             this.label8.TabIndex = 18;
@@ -239,83 +251,225 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label9.Location = new System.Drawing.Point(267, 432);
+            this.label9.Location = new System.Drawing.Point(512, 439);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 17);
             this.label9.TabIndex = 19;
             this.label9.Text = "Smtp:";
             // 
-            // materialTextBox1
+            // tbKayttajaTunnus
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(205, 341);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(293, 36);
-            this.materialTextBox1.TabIndex = 20;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.UseTallSize = false;
+            this.tbKayttajaTunnus.AnimateReadOnly = false;
+            this.tbKayttajaTunnus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbKayttajaTunnus.Depth = 0;
+            this.tbKayttajaTunnus.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbKayttajaTunnus.LeadingIcon = null;
+            this.tbKayttajaTunnus.Location = new System.Drawing.Point(450, 348);
+            this.tbKayttajaTunnus.MaxLength = 50;
+            this.tbKayttajaTunnus.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbKayttajaTunnus.Multiline = false;
+            this.tbKayttajaTunnus.Name = "tbKayttajaTunnus";
+            this.tbKayttajaTunnus.Size = new System.Drawing.Size(161, 36);
+            this.tbKayttajaTunnus.TabIndex = 20;
+            this.tbKayttajaTunnus.Text = "";
+            this.tbKayttajaTunnus.TrailingIcon = null;
+            this.tbKayttajaTunnus.UseTallSize = false;
             // 
-            // materialTextBox2
+            // tbSalasana
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(205, 383);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(293, 36);
-            this.materialTextBox2.TabIndex = 21;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
-            this.materialTextBox2.UseTallSize = false;
+            this.tbSalasana.AnimateReadOnly = false;
+            this.tbSalasana.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSalasana.Depth = 0;
+            this.tbSalasana.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbSalasana.LeadingIcon = null;
+            this.tbSalasana.Location = new System.Drawing.Point(450, 390);
+            this.tbSalasana.MaxLength = 50;
+            this.tbSalasana.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbSalasana.Multiline = false;
+            this.tbSalasana.Name = "tbSalasana";
+            this.tbSalasana.Password = true;
+            this.tbSalasana.Size = new System.Drawing.Size(161, 36);
+            this.tbSalasana.TabIndex = 21;
+            this.tbSalasana.Text = "";
+            this.tbSalasana.TrailingIcon = null;
+            this.tbSalasana.UseTallSize = false;
             // 
-            // materialTextBox3
+            // tbPortti
             // 
-            this.materialTextBox3.AnimateReadOnly = false;
-            this.materialTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox3.Depth = 0;
-            this.materialTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(205, 426);
-            this.materialTextBox3.MaxLength = 50;
-            this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox3.Multiline = false;
-            this.materialTextBox3.Name = "materialTextBox3";
-            this.materialTextBox3.Size = new System.Drawing.Size(59, 36);
-            this.materialTextBox3.TabIndex = 22;
-            this.materialTextBox3.Text = "";
-            this.materialTextBox3.TrailingIcon = null;
-            this.materialTextBox3.UseTallSize = false;
+            this.tbPortti.AnimateReadOnly = false;
+            this.tbPortti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPortti.Depth = 0;
+            this.tbPortti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbPortti.LeadingIcon = null;
+            this.tbPortti.Location = new System.Drawing.Point(450, 433);
+            this.tbPortti.MaxLength = 50;
+            this.tbPortti.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbPortti.Multiline = false;
+            this.tbPortti.Name = "tbPortti";
+            this.tbPortti.Size = new System.Drawing.Size(59, 36);
+            this.tbPortti.TabIndex = 22;
+            this.tbPortti.Text = "587";
+            this.tbPortti.TrailingIcon = null;
+            this.tbPortti.UseTallSize = false;
             // 
-            // materialTextBox4
+            // tbSmtp
             // 
-            this.materialTextBox4.AnimateReadOnly = false;
-            this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(312, 425);
-            this.materialTextBox4.MaxLength = 50;
-            this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox4.Multiline = false;
-            this.materialTextBox4.Name = "materialTextBox4";
-            this.materialTextBox4.Size = new System.Drawing.Size(186, 36);
-            this.materialTextBox4.TabIndex = 23;
-            this.materialTextBox4.Text = "";
-            this.materialTextBox4.TrailingIcon = null;
-            this.materialTextBox4.UseTallSize = false;
+            this.tbSmtp.AnimateReadOnly = false;
+            this.tbSmtp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSmtp.Depth = 0;
+            this.tbSmtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbSmtp.LeadingIcon = null;
+            this.tbSmtp.Location = new System.Drawing.Point(557, 432);
+            this.tbSmtp.MaxLength = 50;
+            this.tbSmtp.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbSmtp.Multiline = false;
+            this.tbSmtp.Name = "tbSmtp";
+            this.tbSmtp.Size = new System.Drawing.Size(186, 36);
+            this.tbSmtp.TabIndex = 23;
+            this.tbSmtp.Text = "smtp.gmail.com";
+            this.tbSmtp.TrailingIcon = null;
+            this.tbSmtp.UseTallSize = false;
+            // 
+            // mcSSL
+            // 
+            this.mcSSL.AutoSize = true;
+            this.mcSSL.Depth = 0;
+            this.mcSSL.Location = new System.Drawing.Point(617, 347);
+            this.mcSSL.Margin = new System.Windows.Forms.Padding(0);
+            this.mcSSL.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mcSSL.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mcSSL.Name = "mcSSL";
+            this.mcSSL.ReadOnly = false;
+            this.mcSSL.Ripple = true;
+            this.mcSSL.Size = new System.Drawing.Size(64, 37);
+            this.mcSSL.TabIndex = 24;
+            this.mcSSL.Text = "SSL";
+            this.mcSSL.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.label10.Location = new System.Drawing.Point(12, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 21);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Valitse lasku";
+            // 
+            // mlvLaskut
+            // 
+            this.mlvLaskut.AutoSizeTable = false;
+            this.mlvLaskut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mlvLaskut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvLaskut.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.mlvLaskut.Depth = 0;
+            this.mlvLaskut.FullRowSelect = true;
+            this.mlvLaskut.HideSelection = false;
+            this.mlvLaskut.Location = new System.Drawing.Point(12, 173);
+            this.mlvLaskut.MinimumSize = new System.Drawing.Size(200, 100);
+            this.mlvLaskut.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvLaskut.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvLaskut.Name = "mlvLaskut";
+            this.mlvLaskut.OwnerDraw = true;
+            this.mlvLaskut.Size = new System.Drawing.Size(325, 140);
+            this.mlvLaskut.TabIndex = 27;
+            this.mlvLaskut.UseCompatibleStateImageBehavior = false;
+            this.mlvLaskut.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Lasku ID";
+            this.columnHeader1.Width = 95;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Varaus ID";
+            this.columnHeader2.Width = 95;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Asiakas";
+            this.columnHeader3.Width = 135;
+            // 
+            // btnLataaLaskut
+            // 
+            this.btnLataaLaskut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLataaLaskut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLataaLaskut.Depth = 0;
+            this.btnLataaLaskut.HighEmphasis = true;
+            this.btnLataaLaskut.Icon = null;
+            this.btnLataaLaskut.Location = new System.Drawing.Point(16, 93);
+            this.btnLataaLaskut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLataaLaskut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLataaLaskut.Name = "btnLataaLaskut";
+            this.btnLataaLaskut.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLataaLaskut.Size = new System.Drawing.Size(125, 36);
+            this.btnLataaLaskut.TabIndex = 28;
+            this.btnLataaLaskut.Text = "Lataa laskut";
+            this.btnLataaLaskut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLataaLaskut.UseAccentColor = false;
+            this.btnLataaLaskut.UseVisualStyleBackColor = true;
+            this.btnLataaLaskut.Click += new System.EventHandler(this.btnLataaLaskut_Click);
+            // 
+            // btnSahkopostiLasku
+            // 
+            this.btnSahkopostiLasku.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSahkopostiLasku.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSahkopostiLasku.Depth = 0;
+            this.btnSahkopostiLasku.HighEmphasis = true;
+            this.btnSahkopostiLasku.Icon = null;
+            this.btnSahkopostiLasku.Location = new System.Drawing.Point(12, 365);
+            this.btnSahkopostiLasku.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSahkopostiLasku.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSahkopostiLasku.Name = "btnSahkopostiLasku";
+            this.btnSahkopostiLasku.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSahkopostiLasku.Size = new System.Drawing.Size(157, 36);
+            this.btnSahkopostiLasku.TabIndex = 29;
+            this.btnSahkopostiLasku.Text = "Sähköpostilasku";
+            this.btnSahkopostiLasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSahkopostiLasku.UseAccentColor = false;
+            this.btnSahkopostiLasku.UseVisualStyleBackColor = true;
+            this.btnSahkopostiLasku.Click += new System.EventHandler(this.btnSahkopostiLasku_Click);
+            // 
+            // btnPaperilasku
+            // 
+            this.btnPaperilasku.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPaperilasku.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPaperilasku.Depth = 0;
+            this.btnPaperilasku.HighEmphasis = true;
+            this.btnPaperilasku.Icon = null;
+            this.btnPaperilasku.Location = new System.Drawing.Point(12, 413);
+            this.btnPaperilasku.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPaperilasku.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPaperilasku.Name = "btnPaperilasku";
+            this.btnPaperilasku.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPaperilasku.Size = new System.Drawing.Size(117, 36);
+            this.btnPaperilasku.TabIndex = 30;
+            this.btnPaperilasku.Text = "Paperilasku";
+            this.btnPaperilasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPaperilasku.UseAccentColor = false;
+            this.btnPaperilasku.UseVisualStyleBackColor = true;
+            this.btnPaperilasku.Click += new System.EventHandler(this.btnPaperilasku_Click);
+            // 
+            // mcbALV
+            // 
+            this.mcbALV.AutoSize = true;
+            this.mcbALV.Depth = 0;
+            this.mcbALV.Location = new System.Drawing.Point(12, 322);
+            this.mcbALV.Margin = new System.Windows.Forms.Padding(0);
+            this.mcbALV.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mcbALV.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mcbALV.Name = "mcbALV";
+            this.mcbALV.ReadOnly = false;
+            this.mcbALV.Ripple = true;
+            this.mcbALV.Size = new System.Drawing.Size(107, 37);
+            this.mcbALV.TabIndex = 31;
+            this.mcbALV.Text = "Lisää ALV";
+            this.mcbALV.UseVisualStyleBackColor = true;
             // 
             // frmLaskutus
             // 
@@ -323,10 +477,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
-            this.Controls.Add(this.materialTextBox4);
-            this.Controls.Add(this.materialTextBox3);
-            this.Controls.Add(this.materialTextBox2);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.mcbALV);
+            this.Controls.Add(this.btnPaperilasku);
+            this.Controls.Add(this.btnSahkopostiLasku);
+            this.Controls.Add(this.btnLataaLaskut);
+            this.Controls.Add(this.mlvLaskut);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.mcSSL);
+            this.Controls.Add(this.tbSmtp);
+            this.Controls.Add(this.tbPortti);
+            this.Controls.Add(this.tbSalasana);
+            this.Controls.Add(this.tbKayttajaTunnus);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -365,9 +526,19 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
+        private MaterialSkin.Controls.MaterialTextBox tbKayttajaTunnus;
+        private MaterialSkin.Controls.MaterialTextBox tbSalasana;
+        private MaterialSkin.Controls.MaterialTextBox tbPortti;
+        private MaterialSkin.Controls.MaterialTextBox tbSmtp;
+        private MaterialSkin.Controls.MaterialCheckbox mcSSL;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private MaterialSkin.Controls.MaterialButton btnLataaLaskut;
+        private MaterialSkin.Controls.MaterialButton btnSahkopostiLasku;
+        private MaterialSkin.Controls.MaterialButton btnPaperilasku;
+        private MaterialSkin.Controls.MaterialCheckbox mcbALV;
+        public MaterialSkin.Controls.MaterialListView mlvLaskut;
     }
 }
