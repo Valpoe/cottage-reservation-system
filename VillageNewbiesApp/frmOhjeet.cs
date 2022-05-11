@@ -97,5 +97,14 @@ namespace VillageNewbiesApp
             string text = "Avaa Mökit ja Palvelut välilehti. Valitse lisää mökki ja syötä kyselyyn mökin tiedot. Paina uudestaan Lisää Mökki painiketta ja mökki lisätään tietokantaan.";
             mmltbOhje.Text = text;
         }
+
+        private void btnOhje10_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse ensin haluttu toiminta-alue ja mökki, mene palvelut välilehteen, valitse Lisää Palvelu ja syötä palvelun halutut" +
+                " tiedot kyselyyn ja paina lisää palvelu. Kysely lisää palvelun kyseiselle mökille" +
+                " Jos haluat poistaa palvelun, valitse listasta poistettava palvelu ja valitse Poista palvelu." +
+                " HUOM! Et voi poistaa palvelua joka on aktiivisena jossain varauksessa";
+            mmltbOhje.Text = text;
+        }
     }
 }

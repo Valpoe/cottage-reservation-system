@@ -262,39 +262,64 @@ namespace VillageNewbiesApp
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            
-            string alue_id = frmAlueet.selectedID;
-            string nimi = tbNimi.Text;
-            string type = tbTyyppi.Text;
-            string kuvaus = tbKuvaus.Text;
-            double hinta = Double.Parse(tbPrice.Text);
-            double alvi = Double.Parse(tbAlv.Text);
-            mySQL.AddPalvelu(alue_id, nimi, type, kuvaus, hinta, alvi);
+            try
+            {
+                string alue_id = frmAlueet.selectedID;
+                string nimi = tbNimi.Text;
+                string type = tbTyyppi.Text;
+                string kuvaus = tbKuvaus.Text;
+                double hinta = Double.Parse(tbPrice.Text);
+                double alvi = Double.Parse(tbAlv.Text);
+                mySQL.AddPalvelu(alue_id, nimi, type, kuvaus, hinta, alvi);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Virhe! Valitse alue ja syötä halutut tiedot.");
+            }
         }
 
         private void btnPoistapalvelu_Click(object sender, EventArgs e)
         {
-            string palvelu_id = mlvPalvelut.SelectedItems[0].Text;
-            mySQL.RemovePalvelu(palvelu_id);
-            UpdatePalvelut();
+            try
+            {
+                string palvelu_id = mlvPalvelut.SelectedItems[0].Text;
+                mySQL.RemovePalvelu(palvelu_id);
+                UpdatePalvelut();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Valitse ensin poistettava palvelu.");
+            }
         }
         private void UpdatePalvelut()
         {
-            List<string> palvelut = mySQL.Palvelut(Convert.ToInt32(frmAlueet.selectedID));
-            string[] tiedot = new string[3];
-            ListViewItem item;
-
-            for (int i = 0; i < palvelut.Count; i++)
+            try
             {
-                tiedot[0] = palvelut[i];
-                i++;
-                tiedot[1] = palvelut[i];
-                i++;
-                tiedot[2] = palvelut[i];
+                List<string> palvelut = mySQL.Palvelut(Convert.ToInt32(frmAlueet.selectedID));
+                string[] tiedot = new string[3];
+                ListViewItem item;
 
-                item = new ListViewItem(tiedot);
-                mlvPalvelut.Items.Add(item);
+                for (int i = 0; i < palvelut.Count; i++)
+                {
+                    tiedot[0] = palvelut[i];
+                    i++;
+                    tiedot[1] = palvelut[i];
+                    i++;
+                    tiedot[2] = palvelut[i];
+
+                    item = new ListViewItem(tiedot);
+                    mlvPalvelut.Items.Add(item);
+                }
             }
+            catch(Exception)
+            {
+                MessageBox.Show("Valitse ensin alue!");
+            }
+        }
+
+        private void frmPalvelut_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

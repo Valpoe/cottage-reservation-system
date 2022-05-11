@@ -41,6 +41,7 @@
             this.btnOhje7 = new MaterialSkin.Controls.MaterialButton();
             this.btnOhje8 = new MaterialSkin.Controls.MaterialButton();
             this.btnOhje9 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje10 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize2)).BeginInit();
@@ -239,7 +240,7 @@
             this.btnOhje8.Depth = 0;
             this.btnOhje8.HighEmphasis = true;
             this.btnOhje8.Icon = null;
-            this.btnOhje8.Location = new System.Drawing.Point(16, 424);
+            this.btnOhje8.Location = new System.Drawing.Point(132, 371);
             this.btnOhje8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnOhje8.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOhje8.Name = "btnOhje8";
@@ -258,17 +259,37 @@
             this.btnOhje9.Depth = 0;
             this.btnOhje9.HighEmphasis = true;
             this.btnOhje9.Icon = null;
-            this.btnOhje9.Location = new System.Drawing.Point(17, 474);
+            this.btnOhje9.Location = new System.Drawing.Point(196, 323);
             this.btnOhje9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnOhje9.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOhje9.Name = "btnOhje9";
             this.btnOhje9.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnOhje9.Size = new System.Drawing.Size(158, 36);
+            this.btnOhje9.Size = new System.Drawing.Size(91, 36);
             this.btnOhje9.TabIndex = 12;
             this.btnOhje9.Text = "Raportit";
             this.btnOhje9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnOhje9.UseAccentColor = false;
             this.btnOhje9.UseVisualStyleBackColor = true;
+            // 
+            // btnOhje10
+            // 
+            this.btnOhje10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje10.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje10.Depth = 0;
+            this.btnOhje10.HighEmphasis = true;
+            this.btnOhje10.Icon = null;
+            this.btnOhje10.Location = new System.Drawing.Point(12, 419);
+            this.btnOhje10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje10.Name = "btnOhje10";
+            this.btnOhje10.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje10.Size = new System.Drawing.Size(222, 36);
+            this.btnOhje10.TabIndex = 13;
+            this.btnOhje10.Text = "Palvelut lisäys ja poisto";
+            this.btnOhje10.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje10.UseAccentColor = false;
+            this.btnOhje10.UseVisualStyleBackColor = true;
+            this.btnOhje10.Click += new System.EventHandler(this.btnOhje10_Click);
             // 
             // frmOhjeet
             // 
@@ -276,6 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(771, 534);
+            this.Controls.Add(this.btnOhje10);
             this.Controls.Add(this.btnOhje9);
             this.Controls.Add(this.btnOhje8);
             this.Controls.Add(this.btnOhje7);
@@ -319,5 +341,6 @@
         private MaterialSkin.Controls.MaterialButton btnOhje7;
         private MaterialSkin.Controls.MaterialButton btnOhje8;
         private MaterialSkin.Controls.MaterialButton btnOhje9;
+        private MaterialSkin.Controls.MaterialButton btnOhje10;
     }
 }

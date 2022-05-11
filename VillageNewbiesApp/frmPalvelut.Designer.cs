@@ -35,7 +35,12 @@
             this.btnTyhjenna = new MaterialSkin.Controls.MaterialButton();
             this.btnLisaaMokki = new MaterialSkin.Controls.MaterialButton();
             this.pnlPalvelut = new System.Windows.Forms.Panel();
+            this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.pnlPalvelu = new System.Windows.Forms.Panel();
+            this.mlvPalvelut = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPoistapalvelu = new MaterialSkin.Controls.MaterialButton();
             this.lblPalvelulisa = new MaterialSkin.Controls.MaterialLabel();
             this.btnLisaapalvelu = new MaterialSkin.Controls.MaterialButton();
@@ -44,16 +49,8 @@
             this.tbKuvaus = new MaterialSkin.Controls.MaterialTextBox();
             this.tbTyyppi = new MaterialSkin.Controls.MaterialTextBox();
             this.tbNimi = new MaterialSkin.Controls.MaterialTextBox();
-            this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.pnlLisaaMokki = new System.Windows.Forms.Panel();
             this.tbToimipaikka = new MaterialSkin.Controls.MaterialTextBox();
-            this.pnlPoistaMokki = new System.Windows.Forms.Panel();
-            this.mlvPoistaMokki = new MaterialSkin.Controls.MaterialListView();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnPoistaValitut = new MaterialSkin.Controls.MaterialButton();
-            this.lblMokkiPoisto = new System.Windows.Forms.Label();
             this.lblKuvaus = new System.Windows.Forms.Label();
             this.lblVarustelu = new System.Windows.Forms.Label();
             this.msHenkilomaara = new MaterialSkin.Controls.MaterialSlider();
@@ -68,12 +65,15 @@
             this.tbOsoite = new MaterialSkin.Controls.MaterialTextBox();
             this.tbMokkinimi = new MaterialSkin.Controls.MaterialTextBox();
             this.tbHenkilomaara = new MaterialSkin.Controls.MaterialTextBox();
+            this.pnlPoistaMokki = new System.Windows.Forms.Panel();
+            this.mlvPoistaMokki = new MaterialSkin.Controls.MaterialListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnPoistaValitut = new MaterialSkin.Controls.MaterialButton();
+            this.lblMokkiPoisto = new System.Windows.Forms.Label();
             this.btnPoistaMokki = new MaterialSkin.Controls.MaterialButton();
             this.btnPalvelut = new MaterialSkin.Controls.MaterialButton();
-            this.mlvPalvelut = new MaterialSkin.Controls.MaterialListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPalvelut.SuspendLayout();
             this.pnlPalvelu.SuspendLayout();
             this.pnlLisaaMokki.SuspendLayout();
@@ -93,11 +93,11 @@
             // lblAlue
             // 
             this.lblAlue.AutoSize = true;
-            this.lblAlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAlue.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblAlue.Location = new System.Drawing.Point(14, 7);
             this.lblAlue.Name = "lblAlue";
-            this.lblAlue.Size = new System.Drawing.Size(86, 20);
+            this.lblAlue.Size = new System.Drawing.Size(85, 21);
             this.lblAlue.TabIndex = 4;
             this.lblAlue.Text = "ValittuAlue";
             this.lblAlue.TextChanged += new System.EventHandler(this.lblAlue_TextChanged);
@@ -106,21 +106,22 @@
             // lblAlueID
             // 
             this.lblAlueID.AutoSize = true;
-            this.lblAlueID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAlueID.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlueID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblAlueID.Location = new System.Drawing.Point(106, 9);
             this.lblAlueID.Name = "lblAlueID";
-            this.lblAlueID.Size = new System.Drawing.Size(39, 13);
+            this.lblAlueID.Size = new System.Drawing.Size(56, 21);
             this.lblAlueID.TabIndex = 5;
             this.lblAlueID.Text = "AlueID";
             // 
             // lblMokki
             // 
             this.lblMokki.AutoSize = true;
-            this.lblMokki.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokki.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokki.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblMokki.Location = new System.Drawing.Point(180, 7);
             this.lblMokki.Name = "lblMokki";
-            this.lblMokki.Size = new System.Drawing.Size(164, 31);
+            this.lblMokki.Size = new System.Drawing.Size(100, 21);
             this.lblMokki.TabIndex = 6;
             this.lblMokki.Text = "valittu mokki";
             this.lblMokki.VisibleChanged += new System.EventHandler(this.lblMokki_VisibleChanged);
@@ -178,6 +179,19 @@
             this.pnlPalvelut.TabIndex = 11;
             this.pnlPalvelut.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // mclbPalvelut
+            // 
+            this.mclbPalvelut.AutoScroll = true;
+            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.mclbPalvelut.Depth = 0;
+            this.mclbPalvelut.Location = new System.Drawing.Point(29, 64);
+            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mclbPalvelut.Name = "mclbPalvelut";
+            this.mclbPalvelut.Size = new System.Drawing.Size(459, 330);
+            this.mclbPalvelut.Striped = false;
+            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
+            this.mclbPalvelut.TabIndex = 7;
+            // 
             // pnlPalvelu
             // 
             this.pnlPalvelu.Controls.Add(this.mlvPalvelut);
@@ -189,10 +203,44 @@
             this.pnlPalvelu.Controls.Add(this.tbKuvaus);
             this.pnlPalvelu.Controls.Add(this.tbTyyppi);
             this.pnlPalvelu.Controls.Add(this.tbNimi);
+            this.pnlPalvelu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlPalvelu.Location = new System.Drawing.Point(282, 40);
             this.pnlPalvelu.Name = "pnlPalvelu";
             this.pnlPalvelu.Size = new System.Drawing.Size(713, 551);
             this.pnlPalvelu.TabIndex = 16;
+            // 
+            // mlvPalvelut
+            // 
+            this.mlvPalvelut.AutoSizeTable = false;
+            this.mlvPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mlvPalvelut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvPalvelut.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.mlvPalvelut.Depth = 0;
+            this.mlvPalvelut.FullRowSelect = true;
+            this.mlvPalvelut.HideSelection = false;
+            this.mlvPalvelut.Location = new System.Drawing.Point(124, 57);
+            this.mlvPalvelut.MinimumSize = new System.Drawing.Size(200, 100);
+            this.mlvPalvelut.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvPalvelut.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvPalvelut.Name = "mlvPalvelut";
+            this.mlvPalvelut.OwnerDraw = true;
+            this.mlvPalvelut.Size = new System.Drawing.Size(349, 294);
+            this.mlvPalvelut.TabIndex = 9;
+            this.mlvPalvelut.UseCompatibleStateImageBehavior = false;
+            this.mlvPalvelut.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 130;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nimi";
+            this.columnHeader4.Width = 130;
             // 
             // btnPoistapalvelu
             // 
@@ -218,7 +266,8 @@
             // 
             this.lblPalvelulisa.AutoSize = true;
             this.lblPalvelulisa.Depth = 0;
-            this.lblPalvelulisa.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblPalvelulisa.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPalvelulisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblPalvelulisa.Location = new System.Drawing.Point(23, 30);
             this.lblPalvelulisa.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPalvelulisa.Name = "lblPalvelulisa";
@@ -251,7 +300,8 @@
             this.tbAlv.AnimateReadOnly = false;
             this.tbAlv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAlv.Depth = 0;
-            this.tbAlv.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbAlv.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAlv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbAlv.Hint = "Alv";
             this.tbAlv.LeadingIcon = null;
             this.tbAlv.Location = new System.Drawing.Point(13, 302);
@@ -269,7 +319,8 @@
             this.tbPrice.AnimateReadOnly = false;
             this.tbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPrice.Depth = 0;
-            this.tbPrice.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPrice.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbPrice.Hint = "Hinta";
             this.tbPrice.LeadingIcon = null;
             this.tbPrice.Location = new System.Drawing.Point(13, 246);
@@ -287,7 +338,8 @@
             this.tbKuvaus.AnimateReadOnly = false;
             this.tbKuvaus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbKuvaus.Depth = 0;
-            this.tbKuvaus.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbKuvaus.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbKuvaus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbKuvaus.Hint = "Kuvaus";
             this.tbKuvaus.LeadingIcon = null;
             this.tbKuvaus.Location = new System.Drawing.Point(16, 190);
@@ -305,7 +357,8 @@
             this.tbTyyppi.AnimateReadOnly = false;
             this.tbTyyppi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTyyppi.Depth = 0;
-            this.tbTyyppi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTyyppi.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTyyppi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbTyyppi.Hint = "Tyyppi";
             this.tbTyyppi.LeadingIcon = null;
             this.tbTyyppi.Location = new System.Drawing.Point(14, 134);
@@ -323,7 +376,8 @@
             this.tbNimi.AnimateReadOnly = false;
             this.tbNimi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNimi.Depth = 0;
-            this.tbNimi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbNimi.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbNimi.Hint = "Nimi";
             this.tbNimi.LeadingIcon = null;
             this.tbNimi.Location = new System.Drawing.Point(13, 84);
@@ -335,19 +389,6 @@
             this.tbNimi.TabIndex = 0;
             this.tbNimi.Text = "";
             this.tbNimi.TrailingIcon = null;
-            // 
-            // mclbPalvelut
-            // 
-            this.mclbPalvelut.AutoScroll = true;
-            this.mclbPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.mclbPalvelut.Depth = 0;
-            this.mclbPalvelut.Location = new System.Drawing.Point(29, 64);
-            this.mclbPalvelut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mclbPalvelut.Name = "mclbPalvelut";
-            this.mclbPalvelut.Size = new System.Drawing.Size(459, 330);
-            this.mclbPalvelut.Striped = false;
-            this.mclbPalvelut.StripeDarkColor = System.Drawing.Color.Empty;
-            this.mclbPalvelut.TabIndex = 7;
             // 
             // pnlLisaaMokki
             // 
@@ -391,103 +432,25 @@
             this.tbToimipaikka.TrailingIcon = null;
             this.tbToimipaikka.UseTallSize = false;
             // 
-            // pnlPoistaMokki
-            // 
-            this.pnlPoistaMokki.Controls.Add(this.mlvPoistaMokki);
-            this.pnlPoistaMokki.Controls.Add(this.btnPoistaValitut);
-            this.pnlPoistaMokki.Controls.Add(this.lblMokkiPoisto);
-            this.pnlPoistaMokki.Location = new System.Drawing.Point(282, 40);
-            this.pnlPoistaMokki.Name = "pnlPoistaMokki";
-            this.pnlPoistaMokki.Size = new System.Drawing.Size(713, 551);
-            this.pnlPoistaMokki.TabIndex = 14;
-            // 
-            // mlvPoistaMokki
-            // 
-            this.mlvPoistaMokki.AutoSizeTable = false;
-            this.mlvPoistaMokki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mlvPoistaMokki.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mlvPoistaMokki.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.mlvPoistaMokki.Depth = 0;
-            this.mlvPoistaMokki.FullRowSelect = true;
-            this.mlvPoistaMokki.HideSelection = false;
-            this.mlvPoistaMokki.Location = new System.Drawing.Point(12, 33);
-            this.mlvPoistaMokki.MinimumSize = new System.Drawing.Size(200, 100);
-            this.mlvPoistaMokki.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mlvPoistaMokki.MouseState = MaterialSkin.MouseState.OUT;
-            this.mlvPoistaMokki.Name = "mlvPoistaMokki";
-            this.mlvPoistaMokki.OwnerDraw = true;
-            this.mlvPoistaMokki.Size = new System.Drawing.Size(468, 295);
-            this.mlvPoistaMokki.TabIndex = 16;
-            this.mlvPoistaMokki.UseCompatibleStateImageBehavior = false;
-            this.mlvPoistaMokki.View = System.Windows.Forms.View.Details;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mokin nimi";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Osoite";
-            this.columnHeader3.Width = 150;
-            // 
-            // btnPoistaValitut
-            // 
-            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnPoistaValitut.Depth = 0;
-            this.btnPoistaValitut.HighEmphasis = true;
-            this.btnPoistaValitut.Icon = null;
-            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
-            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnPoistaValitut.Name = "btnPoistaValitut";
-            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
-            this.btnPoistaValitut.TabIndex = 14;
-            this.btnPoistaValitut.Text = "Poista valitut";
-            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnPoistaValitut.UseAccentColor = false;
-            this.btnPoistaValitut.UseVisualStyleBackColor = true;
-            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
-            // 
-            // lblMokkiPoisto
-            // 
-            this.lblMokkiPoisto.AutoSize = true;
-            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
-            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
-            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
-            this.lblMokkiPoisto.TabIndex = 15;
-            this.lblMokkiPoisto.Text = "Poista mökki";
-            // 
             // lblKuvaus
             // 
             this.lblKuvaus.AutoSize = true;
-            this.lblKuvaus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKuvaus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblKuvaus.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKuvaus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblKuvaus.Location = new System.Drawing.Point(240, 160);
             this.lblKuvaus.Name = "lblKuvaus";
-            this.lblKuvaus.Size = new System.Drawing.Size(55, 16);
+            this.lblKuvaus.Size = new System.Drawing.Size(63, 21);
             this.lblKuvaus.TabIndex = 19;
             this.lblKuvaus.Text = "Kuvaus:";
             // 
             // lblVarustelu
             // 
             this.lblVarustelu.AutoSize = true;
-            this.lblVarustelu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVarustelu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblVarustelu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVarustelu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblVarustelu.Location = new System.Drawing.Point(240, 52);
             this.lblVarustelu.Name = "lblVarustelu";
-            this.lblVarustelu.Size = new System.Drawing.Size(67, 16);
+            this.lblVarustelu.Size = new System.Drawing.Size(78, 21);
             this.lblVarustelu.TabIndex = 18;
             this.lblVarustelu.Text = "Varustelu:";
             // 
@@ -511,10 +474,11 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatus.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblStatus.Location = new System.Drawing.Point(315, 348);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblStatus.Size = new System.Drawing.Size(0, 21);
             this.lblStatus.TabIndex = 16;
             // 
             // btnMokinLisays
@@ -540,11 +504,11 @@
             // lblMokkitiedot
             // 
             this.lblMokkitiedot.AutoSize = true;
-            this.lblMokkitiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkitiedot.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMokkitiedot.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkitiedot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.lblMokkitiedot.Location = new System.Drawing.Point(14, 7);
             this.lblMokkitiedot.Name = "lblMokkitiedot";
-            this.lblMokkitiedot.Size = new System.Drawing.Size(137, 20);
+            this.lblMokkitiedot.Size = new System.Drawing.Size(137, 21);
             this.lblMokkitiedot.TabIndex = 14;
             this.lblMokkitiedot.Text = "Lisää mökin tiedot";
             // 
@@ -705,6 +669,84 @@
             this.tbHenkilomaara.UseTallSize = false;
             this.tbHenkilomaara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHenkilomaara_KeyPress);
             // 
+            // pnlPoistaMokki
+            // 
+            this.pnlPoistaMokki.Controls.Add(this.mlvPoistaMokki);
+            this.pnlPoistaMokki.Controls.Add(this.btnPoistaValitut);
+            this.pnlPoistaMokki.Controls.Add(this.lblMokkiPoisto);
+            this.pnlPoistaMokki.Location = new System.Drawing.Point(282, 40);
+            this.pnlPoistaMokki.Name = "pnlPoistaMokki";
+            this.pnlPoistaMokki.Size = new System.Drawing.Size(713, 551);
+            this.pnlPoistaMokki.TabIndex = 14;
+            // 
+            // mlvPoistaMokki
+            // 
+            this.mlvPoistaMokki.AutoSizeTable = false;
+            this.mlvPoistaMokki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mlvPoistaMokki.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mlvPoistaMokki.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.mlvPoistaMokki.Depth = 0;
+            this.mlvPoistaMokki.FullRowSelect = true;
+            this.mlvPoistaMokki.HideSelection = false;
+            this.mlvPoistaMokki.Location = new System.Drawing.Point(12, 33);
+            this.mlvPoistaMokki.MinimumSize = new System.Drawing.Size(200, 100);
+            this.mlvPoistaMokki.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mlvPoistaMokki.MouseState = MaterialSkin.MouseState.OUT;
+            this.mlvPoistaMokki.Name = "mlvPoistaMokki";
+            this.mlvPoistaMokki.OwnerDraw = true;
+            this.mlvPoistaMokki.Size = new System.Drawing.Size(468, 295);
+            this.mlvPoistaMokki.TabIndex = 16;
+            this.mlvPoistaMokki.UseCompatibleStateImageBehavior = false;
+            this.mlvPoistaMokki.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mokin nimi";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Osoite";
+            this.columnHeader3.Width = 150;
+            // 
+            // btnPoistaValitut
+            // 
+            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnPoistaValitut.Depth = 0;
+            this.btnPoistaValitut.HighEmphasis = true;
+            this.btnPoistaValitut.Icon = null;
+            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
+            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPoistaValitut.Name = "btnPoistaValitut";
+            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
+            this.btnPoistaValitut.TabIndex = 14;
+            this.btnPoistaValitut.Text = "Poista valitut";
+            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnPoistaValitut.UseAccentColor = false;
+            this.btnPoistaValitut.UseVisualStyleBackColor = true;
+            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
+            // 
+            // lblMokkiPoisto
+            // 
+            this.lblMokkiPoisto.AutoSize = true;
+            this.lblMokkiPoisto.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMokkiPoisto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
+            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
+            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 21);
+            this.lblMokkiPoisto.TabIndex = 15;
+            this.lblMokkiPoisto.Text = "Poista mökki";
+            // 
             // btnPoistaMokki
             // 
             this.btnPoistaMokki.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -745,70 +787,6 @@
             this.btnPalvelut.UseVisualStyleBackColor = true;
             this.btnPalvelut.Click += new System.EventHandler(this.btnPalvelut_Click);
             // 
-            // mlvPalvelut
-            // 
-            this.mlvPalvelut.AutoSizeTable = false;
-            this.mlvPalvelut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mlvPalvelut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mlvPalvelut.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.mlvPalvelut.Depth = 0;
-            this.mlvPalvelut.FullRowSelect = true;
-            this.mlvPalvelut.HideSelection = false;
-            this.mlvPalvelut.Location = new System.Drawing.Point(124, 57);
-            this.mlvPalvelut.MinimumSize = new System.Drawing.Size(200, 100);
-            this.mlvPalvelut.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.mlvPalvelut.MouseState = MaterialSkin.MouseState.OUT;
-            this.mlvPalvelut.Name = "mlvPalvelut";
-            this.mlvPalvelut.OwnerDraw = true;
-            this.mlvPalvelut.Size = new System.Drawing.Size(349, 294);
-            this.mlvPalvelut.TabIndex = 9;
-            this.mlvPalvelut.UseCompatibleStateImageBehavior = false;
-            this.mlvPalvelut.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 130;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nimi";
-            this.columnHeader4.Width = 130;
-            // 
-            // btnPoistaValitut
-            // 
-            this.btnPoistaValitut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPoistaValitut.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnPoistaValitut.Depth = 0;
-            this.btnPoistaValitut.HighEmphasis = true;
-            this.btnPoistaValitut.Icon = null;
-            this.btnPoistaValitut.Location = new System.Drawing.Point(18, 336);
-            this.btnPoistaValitut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnPoistaValitut.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnPoistaValitut.Name = "btnPoistaValitut";
-            this.btnPoistaValitut.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnPoistaValitut.Size = new System.Drawing.Size(135, 36);
-            this.btnPoistaValitut.TabIndex = 14;
-            this.btnPoistaValitut.Text = "Poista valitut";
-            this.btnPoistaValitut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnPoistaValitut.UseAccentColor = false;
-            this.btnPoistaValitut.UseVisualStyleBackColor = true;
-            this.btnPoistaValitut.Click += new System.EventHandler(this.btnPoistaValitut_Click);
-            // 
-            // lblMokkiPoisto
-            // 
-            this.lblMokkiPoisto.AutoSize = true;
-            this.lblMokkiPoisto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMokkiPoisto.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMokkiPoisto.Location = new System.Drawing.Point(8, 9);
-            this.lblMokkiPoisto.Name = "lblMokkiPoisto";
-            this.lblMokkiPoisto.Size = new System.Drawing.Size(98, 20);
-            this.lblMokkiPoisto.TabIndex = 15;
-            this.lblMokkiPoisto.Text = "Poista mökki";
-            // 
             // frmPalvelut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -827,6 +805,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPalvelut";
             this.Text = "frmPalvelut";
+            this.Load += new System.EventHandler(this.frmPalvelut_Load);
             this.pnlPalvelut.ResumeLayout(false);
             this.pnlPalvelut.PerformLayout();
             this.pnlPalvelu.ResumeLayout(false);
