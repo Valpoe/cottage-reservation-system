@@ -36,6 +36,12 @@
             this.btnOhje4 = new MaterialSkin.Controls.MaterialButton();
             this.pbExit2 = new System.Windows.Forms.PictureBox();
             this.pbMinimize2 = new System.Windows.Forms.PictureBox();
+            this.btnOhje5 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje6 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje7 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje8 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje9 = new MaterialSkin.Controls.MaterialButton();
+            this.btnOhje10 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize2)).BeginInit();
@@ -167,12 +173,138 @@
             this.pbMinimize2.TabStop = false;
             this.pbMinimize2.Click += new System.EventHandler(this.pbMinimize2_Click);
             // 
+            // btnOhje5
+            // 
+            this.btnOhje5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje5.Depth = 0;
+            this.btnOhje5.HighEmphasis = true;
+            this.btnOhje5.Icon = null;
+            this.btnOhje5.Location = new System.Drawing.Point(14, 275);
+            this.btnOhje5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje5.Name = "btnOhje5";
+            this.btnOhje5.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje5.Size = new System.Drawing.Size(154, 36);
+            this.btnOhje5.TabIndex = 8;
+            this.btnOhje5.Text = "Asiakkaan lisäys";
+            this.btnOhje5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje5.UseAccentColor = false;
+            this.btnOhje5.UseVisualStyleBackColor = true;
+            this.btnOhje5.Click += new System.EventHandler(this.btnOhje5_Click);
+            // 
+            // btnOhje6
+            // 
+            this.btnOhje6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje6.Depth = 0;
+            this.btnOhje6.HighEmphasis = true;
+            this.btnOhje6.Icon = null;
+            this.btnOhje6.Location = new System.Drawing.Point(13, 323);
+            this.btnOhje6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje6.Name = "btnOhje6";
+            this.btnOhje6.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje6.Size = new System.Drawing.Size(175, 36);
+            this.btnOhje6.TabIndex = 9;
+            this.btnOhje6.Text = "Lisää Toiminta-alue";
+            this.btnOhje6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje6.UseAccentColor = false;
+            this.btnOhje6.UseVisualStyleBackColor = true;
+            this.btnOhje6.Click += new System.EventHandler(this.btnOhje6_Click);
+            // 
+            // btnOhje7
+            // 
+            this.btnOhje7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje7.Depth = 0;
+            this.btnOhje7.HighEmphasis = true;
+            this.btnOhje7.Icon = null;
+            this.btnOhje7.Location = new System.Drawing.Point(13, 371);
+            this.btnOhje7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje7.Name = "btnOhje7";
+            this.btnOhje7.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje7.Size = new System.Drawing.Size(111, 36);
+            this.btnOhje7.TabIndex = 10;
+            this.btnOhje7.Text = "Lisää mökki";
+            this.btnOhje7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje7.UseAccentColor = false;
+            this.btnOhje7.UseVisualStyleBackColor = true;
+            this.btnOhje7.Click += new System.EventHandler(this.btnOhje7_Click);
+            // 
+            // btnOhje8
+            // 
+            this.btnOhje8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje8.Depth = 0;
+            this.btnOhje8.HighEmphasis = true;
+            this.btnOhje8.Icon = null;
+            this.btnOhje8.Location = new System.Drawing.Point(132, 371);
+            this.btnOhje8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje8.Name = "btnOhje8";
+            this.btnOhje8.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje8.Size = new System.Drawing.Size(94, 36);
+            this.btnOhje8.TabIndex = 11;
+            this.btnOhje8.Text = "Laskutus";
+            this.btnOhje8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje8.UseAccentColor = false;
+            this.btnOhje8.UseVisualStyleBackColor = true;
+            this.btnOhje8.Click += new System.EventHandler(this.btnOhje8_Click);
+            // 
+            // btnOhje9
+            // 
+            this.btnOhje9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje9.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje9.Depth = 0;
+            this.btnOhje9.HighEmphasis = true;
+            this.btnOhje9.Icon = null;
+            this.btnOhje9.Location = new System.Drawing.Point(196, 323);
+            this.btnOhje9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje9.Name = "btnOhje9";
+            this.btnOhje9.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje9.Size = new System.Drawing.Size(91, 36);
+            this.btnOhje9.TabIndex = 12;
+            this.btnOhje9.Text = "Raportit";
+            this.btnOhje9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje9.UseAccentColor = false;
+            this.btnOhje9.UseVisualStyleBackColor = true;
+            this.btnOhje9.Click += new System.EventHandler(this.btnOhje9_Click);
+            // 
+            // btnOhje10
+            // 
+            this.btnOhje10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOhje10.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOhje10.Depth = 0;
+            this.btnOhje10.HighEmphasis = true;
+            this.btnOhje10.Icon = null;
+            this.btnOhje10.Location = new System.Drawing.Point(12, 419);
+            this.btnOhje10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOhje10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOhje10.Name = "btnOhje10";
+            this.btnOhje10.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOhje10.Size = new System.Drawing.Size(222, 36);
+            this.btnOhje10.TabIndex = 13;
+            this.btnOhje10.Text = "Palvelut lisäys ja poisto";
+            this.btnOhje10.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOhje10.UseAccentColor = false;
+            this.btnOhje10.UseVisualStyleBackColor = true;
+            this.btnOhje10.Click += new System.EventHandler(this.btnOhje10_Click);
+            // 
             // frmOhjeet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(771, 534);
+            this.Controls.Add(this.btnOhje10);
+            this.Controls.Add(this.btnOhje9);
+            this.Controls.Add(this.btnOhje8);
+            this.Controls.Add(this.btnOhje7);
+            this.Controls.Add(this.btnOhje6);
+            this.Controls.Add(this.btnOhje5);
             this.Controls.Add(this.pbMinimize2);
             this.Controls.Add(this.pbExit2);
             this.Controls.Add(this.btnOhje4);
@@ -206,5 +338,11 @@
         private MaterialSkin.Controls.MaterialButton btnOhje4;
         private System.Windows.Forms.PictureBox pbExit2;
         private System.Windows.Forms.PictureBox pbMinimize2;
+        private MaterialSkin.Controls.MaterialButton btnOhje5;
+        private MaterialSkin.Controls.MaterialButton btnOhje6;
+        private MaterialSkin.Controls.MaterialButton btnOhje7;
+        private MaterialSkin.Controls.MaterialButton btnOhje8;
+        private MaterialSkin.Controls.MaterialButton btnOhje9;
+        private MaterialSkin.Controls.MaterialButton btnOhje10;
     }
 }

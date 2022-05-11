@@ -79,5 +79,51 @@ namespace VillageNewbiesApp
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnOhje5_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa asiakas välilehti, syötä asiakkaan tiedot vasemmassa reunassa olevaan kyselyyn ja paina Lisää asiakas.";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje6_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa Toiminta-alueet välilehti, Syötä Lisää alue - painikkeen yläpuolella olevaan kyselyyn alueen nimi ja painiketta painaessa alue lisätään tietokantaan.";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje7_Click(object sender, EventArgs e)
+        {
+            string text = "Avaa Mökit ja Palvelut välilehti. Valitse lisää mökki ja syötä kyselyyn mökin tiedot. Paina uudestaan Lisää Mökki painiketta ja mökki lisätään tietokantaan.";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje10_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse ensin haluttu toiminta-alue ja mökki, mene palvelut välilehteen, valitse Lisää Palvelu ja syötä palvelun halutut" +
+                " tiedot kyselyyn ja paina lisää palvelu. Kysely lisää palvelun kyseiselle mökille" +
+                " Jos haluat poistaa palvelun, valitse listasta poistettava palvelu ja valitse Poista palvelu." +
+                " HUOM! Et voi poistaa palvelua joka on aktiivisena jossain varauksessa";
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje8_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse Laskutus, valitse lataa laskut, valitse haluttu lasku näkymästä, voit lisätä halutessasi alvin" +
+                " Valitse haluatko sähköposti vai paperilaskun" +
+                " Viimeiseksi valitse haluatko lähettää sähköpostilaskun vai tulostaa paperilaskun";
+                
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje9_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse Raportit välilehti, valitse alueet listasta halutut alueet joista raportteja haetaan." +
+                " Valitse alku- ja loppupäivämäärä joiden väliltä raportteja haetaan." +
+                " Näkymään avautuu raportti tehdyistä varauksista valitulle aikavälille." +
+                "Valitsemalla Avaa Kokonaisraportti saat näkyville raportin kaikista asiakas, mökki ja palvelutiedoista";
+               
+            mmltbOhje.Text = text;
+        }
     }
 }
