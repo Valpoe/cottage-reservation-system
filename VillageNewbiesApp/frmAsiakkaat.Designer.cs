@@ -52,7 +52,6 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblEiVarauksia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblAsiakasLisatty = new System.Windows.Forms.Label();
             this.btnLuoVaraus = new MaterialSkin.Controls.MaterialButton();
             this.btnPoistaAsiakas = new MaterialSkin.Controls.MaterialButton();
             this.tbSearchBox = new MaterialSkin.Controls.MaterialTextBox2();
@@ -410,18 +409,6 @@
             this.label1.Text = "Syötä asiakkaan tiedot";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblAsiakasLisatty
-            // 
-            this.lblAsiakasLisatty.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsiakasLisatty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.lblAsiakasLisatty.Location = new System.Drawing.Point(12, 399);
-            this.lblAsiakasLisatty.Name = "lblAsiakasLisatty";
-            this.lblAsiakasLisatty.Size = new System.Drawing.Size(180, 30);
-            this.lblAsiakasLisatty.TabIndex = 18;
-            this.lblAsiakasLisatty.Text = "Asiakas lisätty";
-            this.lblAsiakasLisatty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAsiakasLisatty.Visible = false;
-            // 
             // btnLuoVaraus
             // 
             this.btnLuoVaraus.AutoSize = false;
@@ -505,7 +492,6 @@
             this.Controls.Add(this.tbSearchBox);
             this.Controls.Add(this.btnPoistaAsiakas);
             this.Controls.Add(this.btnLuoVaraus);
-            this.Controls.Add(this.lblAsiakasLisatty);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEiVarauksia);
             this.Controls.Add(this.mlvTiedot);
@@ -553,7 +539,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label lblEiVarauksia;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblAsiakasLisatty;
         private MaterialSkin.Controls.MaterialButton btnLuoVaraus;
         private MaterialSkin.Controls.MaterialButton btnPoistaAsiakas;
         private MaterialSkin.Controls.MaterialTextBox2 tbSearchBox;

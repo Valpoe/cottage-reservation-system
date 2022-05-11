@@ -1,12 +1,5 @@
-﻿using MySqlConnector;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VillageNewbiesApp
@@ -15,6 +8,8 @@ namespace VillageNewbiesApp
     public partial class frmEtusivu : Form
     {
         SQLConnection mySQL = new SQLConnection();
+        
+
         public frmEtusivu()
         {
             InitializeComponent();
@@ -25,7 +20,7 @@ namespace VillageNewbiesApp
         private void frmEtusivu_Load(object sender, EventArgs e)
         {
             // Paneeleiden reunojen pyöristys
-            
+
             panelVaraukset.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelVaraukset.Width, panelVaraukset.Height, 5, 5));
             panelMokit.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelMokit.Width, panelMokit.Height, 5, 5));
             panelPalvelut.Region = System.Drawing.Region.FromHrgn(mainFormToiminnallisuus.CreateRoundRectRgn(0, 0, panelPalvelut.Width, panelPalvelut.Height, 5, 5));
@@ -63,8 +58,8 @@ namespace VillageNewbiesApp
 
         private void btnOhjeet_Click(object sender, EventArgs e)
         {
-            frmOhjeet f2 = new frmOhjeet();
-            f2.Show();
+            frmOhjeet frmOhjeet = new frmOhjeet();
+            frmOhjeet.Show();
         }
     }
 }

@@ -27,7 +27,7 @@ namespace VillageNewbiesApp
 
         private void label1_VisibleChanged(object sender, EventArgs e)
         {
-           label1.Text = frmAlueet.selectedMokki + " VARAUKSET";
+           label1.Text = frmAlueet.selectedMokki + " Varaukset";
         }
 
         private void frmVaraukset_Activated(object sender, EventArgs e)
@@ -61,12 +61,10 @@ namespace VillageNewbiesApp
                     string mokki = frmAlueet.selectedMokki;
                     DateTime start = DateTime.Parse(datestart);
                     DateTime end = DateTime.Parse(dateend);
-                    DateTime current = DateTime.Parse(thisday);
-                    //MessageBox.Show(selectedAsiakas.ToString());
-                    MessageBox.Show(mokki);
-                    MessageBox.Show(asiakas_id.ToString());
+                    DateTime current = DateTime.Parse(thisday);               
                     mySQL.SQLMakeReservation(start, end, current, asiakas_id, mokki);
                     UpdateReservations();
+                    MessageBox.Show("Varaus onnistui");
                 }
                 catch (Exception)
                 {
@@ -81,9 +79,9 @@ namespace VillageNewbiesApp
             try
             {
                 string varaus_id = mlvVaraukset.SelectedItems[0].Text;
-                MessageBox.Show(varaus_id);
                 mySQL.SQLRemoveReservation(varaus_id);
                 UpdateReservations();
+                MessageBox.Show("Varaus poistettu");
             }
             catch (Exception)
             {
@@ -129,9 +127,9 @@ namespace VillageNewbiesApp
                 string thisday = monthCalendar1.TodayDate.ToString("yyyy-MM-dd");
                 DateTime current = DateTime.Parse(thisday);
                 string varaus_id = mlvVaraukset.SelectedItems[0].Text;
-                MessageBox.Show(varaus_id);
                 mySQL.SQLAddConfirmation(varaus_id, current);
                 UpdateReservations();
+                MessageBox.Show("Varaus vahvistettu");
             }
             catch(Exception)
             {

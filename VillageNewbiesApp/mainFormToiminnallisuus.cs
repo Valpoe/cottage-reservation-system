@@ -64,6 +64,11 @@ namespace VillageNewbiesApp
             form1.lblOtsikko.Text = button.Text;         
         }
 
+        public void ChangeOhjeetTitle(Button button, frmOhjeet frmOhjeet)
+        {
+            frmOhjeet.lblOhjeet.Text = button.Text;
+        }
+
         // Formin liikuttelu hiirellä
 
         public const int WM_NCLBUTTONDOWN = 0xA1;

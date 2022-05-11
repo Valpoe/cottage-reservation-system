@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VillageNewbiesApp
 {
-    
+
 
     public partial class frmPalvelut : Form
     {
@@ -46,7 +42,6 @@ namespace VillageNewbiesApp
             lblAlue.Text = frmAlueet.selectedAlue;
 
             mySQL.setAlueID(lblAlue.Text);
-            lblAlueID.Text = frmAlueet.selectedID;
 
             if (frmAlueet.selectedID == selectedID)
             {
@@ -95,7 +90,7 @@ namespace VillageNewbiesApp
 
         private void btnLisaaMokki_Click(object sender, EventArgs e)
         {
-            if(pnlLisaaMokki.Visible == true)
+            if (pnlLisaaMokki.Visible == true)
             {
                 btnLisaaMokki.Text = "Lisää mökki";
                 hidePanels(pnlPalvelut);
@@ -120,7 +115,7 @@ namespace VillageNewbiesApp
         private void btnMokinLisays_Click(object sender, EventArgs e)
         {
 
-            if(tbToimipaikka.Text == "")
+            if (tbToimipaikka.Text == "")
             {
                 MessageBox.Show("toimipaikka on pakollinen!");
             }
@@ -133,22 +128,18 @@ namespace VillageNewbiesApp
                 //mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString()
                 mySQL.addMokki(lisattavaMokki);
 
-                lblStatus.Visible = true;
-                lblStatus.Text = "Lisäys onnistui!";
-                lblStatus.ForeColor = Color.Green;
+                MessageBox.Show("Mökin lisäys onnistui!");
             }
             catch (Exception ex)
             {
-                lblStatus.Visible = true;
-                lblStatus.Text = "Lisäyksessä tapahtui virhe!";
-                lblStatus.ForeColor = Color.Red;
+                MessageBox.Show("Lisäyksessä tapahtui virhe: " + ex.Message);
             }
         }
 
         private void mcbToimintaAlue_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine(mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString() + " alue_ID: " + mySQL.getAlueID(mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString()));
-            
+
         }
 
         private void msHenkilomaara_Click(object sender, EventArgs e)
@@ -179,7 +170,7 @@ namespace VillageNewbiesApp
             hidePanels(pnlPoistaMokki);
 
             List<Mokki> MokkiLista = new List<Mokki>();
-            
+
 
             MokkiLista.AddRange(mySQL.getAllMokki());
             count = MokkiLista.Count();
@@ -225,11 +216,11 @@ namespace VillageNewbiesApp
         private void btnPoistaValitut_Click(object sender, EventArgs e)
         {
 
-            if(mlvPoistaMokki.SelectedItems.Count > 0)
+            if (mlvPoistaMokki.SelectedItems.Count > 0)
             {
                 bool check = mySQL.SQLdeleteMokki(mlvPoistaMokki.SelectedItems[0].SubItems[0].Text);
 
-                if(check == true)
+                if (check == true)
                 {
                     mlvPoistaMokki.Items.Remove(mlvPoistaMokki.SelectedItems[0]);
                 }
@@ -246,7 +237,7 @@ namespace VillageNewbiesApp
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != '.'))
-            {              
+            {
 
                 e.Handled = true;
             }
@@ -271,10 +262,12 @@ namespace VillageNewbiesApp
                 double hinta = Double.Parse(tbPrice.Text);
                 double alvi = Double.Parse(tbAlv.Text);
                 mySQL.AddPalvelu(alue_id, nimi, type, kuvaus, hinta, alvi);
+                MessageBox.Show("Palvelu lisätty!");
+                UpdatePalvelut();
             }
-            catch(Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Virhe! Valitse alue ja syötä halutut tiedot.");
+                MessageBox.Show("Lisäys epäonnistui: " + ex.Message);
             }
         }
 
@@ -285,8 +278,10 @@ namespace VillageNewbiesApp
                 string palvelu_id = mlvPalvelut.SelectedItems[0].Text;
                 mySQL.RemovePalvelu(palvelu_id);
                 UpdatePalvelut();
+                mlvPalvelut.Items.Remove(mlvPalvelut.SelectedItems[0]);
+                MessageBox.Show("Palvelu poistettu!");
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Valitse ensin poistettava palvelu.");
             }
@@ -311,7 +306,7 @@ namespace VillageNewbiesApp
                     mlvPalvelut.Items.Add(item);
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Valitse ensin alue!");
             }

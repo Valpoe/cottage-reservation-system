@@ -91,5 +91,10 @@ namespace VillageNewbiesApp
             ID = MokkiID;
         }
 
+        public void setKatuosoite(string Mokkikatuosoite)
+        {
+            katuosoite = Mokkikatuosoite;
+        }
+
     }
 }

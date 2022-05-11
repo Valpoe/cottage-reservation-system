@@ -13,6 +13,8 @@ namespace VillageNewbiesApp
     public partial class frmOhjeet : Form
     {
         private Point location;
+
+        mainFormToiminnallisuus mainFormToiminnallisuus = new mainFormToiminnallisuus();
         public frmOhjeet()
         {
             InitializeComponent();
@@ -25,7 +27,8 @@ namespace VillageNewbiesApp
                 "Seuraavaksi valitse Varaukset välilehdestä kalenterista mustaamalla halutut päivät varaukselle." + Environment.NewLine +
                 "HUOM! Kalenteri näyttää mustattuna jo varatut päivät." + Environment.NewLine +
                 "Valittuasi päivät, valitse Luo Varaus ja järjestelmään tallennettaan uusi varaus.";
-            mmltbOhje.Text = text;       
+            mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje2_Click(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace VillageNewbiesApp
             string text = "Valitse Varaukset välilehdessä haluttu tilaus näkymästä." + Environment.NewLine +
                 "Valittuasi halutun tilauksen, valitse Vahvista Varaus ja järjestelmä luo vahvistuksen tilaukselle.";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje3_Click(object sender, EventArgs e)
@@ -40,6 +44,7 @@ namespace VillageNewbiesApp
             string text = "Valitse Varaukset välilehdessä poistettava tilaus näkymästä." + Environment.NewLine +
                 "Valittuasi halutun tilauksen, valitse Poista Varaus ja järjestelmä poistaa varauksen.";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void frmOhjeet_Load(object sender, EventArgs e)
@@ -53,6 +58,7 @@ namespace VillageNewbiesApp
                 "Valittuasi halutun asiakkaan, valitse Poista Asiakas ja asiakas poistetaan järjestelmästä." + Environment.NewLine +
                 "HUOM. Et voi poistaa järjestelmästä asiakasta jolla on tehtyjä varauksia!";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void frmOhjeet_MouseDown(object sender, MouseEventArgs e)
@@ -84,18 +90,21 @@ namespace VillageNewbiesApp
         {
             string text = "Avaa asiakas välilehti, syötä asiakkaan tiedot vasemmassa reunassa olevaan kyselyyn ja paina Lisää asiakas.";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje6_Click(object sender, EventArgs e)
         {
             string text = "Avaa Toiminta-alueet välilehti, Syötä Lisää alue - painikkeen yläpuolella olevaan kyselyyn alueen nimi ja painiketta painaessa alue lisätään tietokantaan.";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje7_Click(object sender, EventArgs e)
         {
             string text = "Avaa Mökit ja Palvelut välilehti. Valitse lisää mökki ja syötä kyselyyn mökin tiedot. Paina uudestaan Lisää Mökki painiketta ja mökki lisätään tietokantaan.";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje10_Click(object sender, EventArgs e)
@@ -105,6 +114,7 @@ namespace VillageNewbiesApp
                 " Jos haluat poistaa palvelun, valitse listasta poistettava palvelu ja valitse Poista palvelu." +
                 " HUOM! Et voi poistaa palvelua joka on aktiivisena jossain varauksessa";
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje8_Click(object sender, EventArgs e)
@@ -114,6 +124,7 @@ namespace VillageNewbiesApp
                 " Viimeiseksi valitse haluatko lähettää sähköpostilaskun vai tulostaa paperilaskun";
                 
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
 
         private void btnOhje9_Click(object sender, EventArgs e)
@@ -124,6 +135,7 @@ namespace VillageNewbiesApp
                 "Valitsemalla Avaa Kokonaisraportti saat näkyville raportin kaikista asiakas, mökki ja palvelutiedoista";
                
             mmltbOhje.Text = text;
+            mainFormToiminnallisuus.ChangeOhjeetTitle(sender as Button, this);
         }
     }
 }

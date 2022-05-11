@@ -56,17 +56,7 @@ namespace VillageNewbiesApp
                         btnTyhjenna_Click(sender, e);
 
                         // Asiakas lisätty label näkyy 3 sekunnin ajan
-
-                        lblAsiakasLisatty.Visible = true;
-
-                        var t = new Timer();
-                        t.Interval = 3000;
-                        t.Tick += (s, a) =>
-                        {
-                            t.Stop();
-                            lblAsiakasLisatty.Visible = false;
-                        };
-                        t.Start();
+                        MessageBox.Show("Asiakas lisätty!");                       
                     }
                 }
             }
@@ -189,6 +179,7 @@ namespace VillageNewbiesApp
             {
                 mySQL.SQLdeleteCustomer(mlvAsiakkaat.SelectedItems[0].SubItems[0].Text);
                 mlvAsiakkaat.Items.Remove(mlvAsiakkaat.SelectedItems[0]);
+                MessageBox.Show("Asiakas poistettu!");
             }
         }
 

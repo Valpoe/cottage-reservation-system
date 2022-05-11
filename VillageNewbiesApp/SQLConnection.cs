@@ -171,7 +171,7 @@ namespace VillageNewbiesApp
                     Command.ExecuteNonQuery();
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Mökkiä ei voi poistaa jos sillä on varauksia!");
                     return false;
@@ -405,6 +405,7 @@ namespace VillageNewbiesApp
                     Mokki item = new Mokki();
                     item.setNimi(Reader.GetString(Reader.GetOrdinal("mokkinimi")));
                     item.setID(Reader.GetInt32(Reader.GetOrdinal("mokki_id")));
+                    item.setKatuosoite(Reader.GetString(Reader.GetOrdinal("katuosoite")));
                     SQLResult.Add(item);
                 }
             }
@@ -657,12 +658,10 @@ namespace VillageNewbiesApp
         public void AddPalvelu(string alue_id, string nimi, string type, string kuvaus, double hinta, double alvi)
         {
             List<string> SQLResult = new List<string>();
-            StringBuilder result = new StringBuilder();
             using (MySqlConnection connection = GetConnection())
             {
                 MySqlCommand Command = new MySqlCommand("INSERT INTO palvelu(alue_id, nimi, tyyppi, kuvaus, hinta, alv)" +
                     "VALUES('" + alue_id + "', '" + nimi + "', '" + type + "', '" + kuvaus + "', '" + hinta + "', '" + alvi + "')", connection);
-                MySqlDataReader Reader = Command.ExecuteReader();
                 Command.ExecuteNonQuery();
             }
         }
@@ -673,7 +672,6 @@ namespace VillageNewbiesApp
             using (MySqlConnection connection = GetConnection())
             {
                 MySqlCommand Command = new MySqlCommand("DELETE FROM palvelu WHERE palvelu_id = '" + palvelu_id + "'", connection);
-                MySqlDataReader Reader = Command.ExecuteReader();
                 Command.ExecuteNonQuery();
             }
         }
