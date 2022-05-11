@@ -18,17 +18,17 @@ namespace VillageNewbiesApp
     {
         SQLConnection mySQL = new SQLConnection();
 
+        frmPaperilasku paperilasku = new frmPaperilasku();
+
         NetworkCredential login;
         SmtpClient client;
         MailMessage message;
-        string laskuID;
         public frmLaskutus()
         {
             InitializeComponent();         
         }
         private void frmLaskutus_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void btnLahetaLasku_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace VillageNewbiesApp
                 mlvLaskut.Items.Add(item);
             }
         }
-
+        
         private void btnSahkopostiLasku_Click(object sender, EventArgs e)
         {
 
@@ -136,30 +136,36 @@ namespace VillageNewbiesApp
         }
         private void btnPaperilasku_Click(object sender, EventArgs e)
         {
-            laskuID = mlvLaskut.SelectedItems[0].SubItems[0].Text;
-
-            using (MySqlConnection connection = SQLConnection.GetConnection())
+            if (mlvLaskut.SelectedItems.Count == 0)
             {
-                Console.WriteLine("paperilasku avattu");
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT l.lasku_id, m.mokkinimi, a.etunimi, a.sukunimi, a.email, a.lahiosoite, a.postinro, " +
-                    "p.toimipaikka, l.summa, l.alv, l.summa + l.alv AS Yhteensa " +
-                    "FROM lasku l INNER JOIN varaus v ON v.varaus_id = l.varaus_id " +
-                    "INNER JOIN mokki m ON m.mokki_id = v.mokki_mokki_id " +
-                    "INNER JOIN asiakas a ON v.asiakas_id = a.asiakas_id " +
-                    "INNER JOIN posti p ON a.postinro = p.postinro " +
-                    "WHERE l.lasku_id = '" + laskuID + "'", connection);
-
-                DataSet1 ds = new DataSet1();
-                da.Fill(ds, "DataTable1");
-
-                ReportDataSource datasource = new ReportDataSource("Dataset_Report", ds.Tables[8]);
-
-                frmPaperilasku paperilasku = new frmPaperilasku();
-                paperilasku.reportViewer1.LocalReport.DataSources.Clear();
-                paperilasku.reportViewer1.LocalReport.DataSources.Add(datasource);
-                paperilasku.reportViewer1.LocalReport.Refresh();
-                paperilasku.Show();
+                MessageBox.Show("Valitse lasku.");
+                return;
             }
+
+            List<string> asiakkaat = mySQL.laskutusTiedot(mlvLaskut.SelectedItems[0].SubItems[0].Text);
+
+            string[] lista = new string[10];
+
+            for (int i = 0; i < asiakkaat.Count; i++)
+            {
+                lista[i] = asiakkaat[i];
+            }
+            string alv;
+            if (mcbALV.Checked)
+            {
+                alv = lista[8];
+            }
+            else
+                alv = "0";
+            
+            string lasku = "Village Newbies lasku\r\n" + "\r\n" +
+                "Mökin nimi: " + lista[1] + "\r\n" + "\r\n" + "Asiakkaan tiedot\r\n" + "\r\n" + "Nimi: " + lista[2] + "\r\n" +
+                "Osoite: " + lista[4] + "\r\n" + "Postinumero: " + lista[5] + "\r\n" + "Postitoimipaikka: " + lista[6] + "\r\n" + "\r\n" +
+                "Laskun tiedot\r\n" + "\r\n" + "Laskun summa: " + lista[7] + "\r\n" + "ALV: " + alv + "\r\n" + "Yhteensä: " + lista[9] + "\r\n" + "\r\n" +
+                "Tilinumero: FI91 2892 1857 1855 85\r\n" + "Viite: 8 20294 38383 19187";
+       
+            paperilasku.laskuntiedot = lasku;
+            paperilasku.Show();
         }
     }
 }
