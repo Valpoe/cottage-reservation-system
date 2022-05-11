@@ -196,7 +196,6 @@
     <Compile Include="frmVaraukset.Designer.cs">
       <DependentUpon>frmVaraukset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lasku.cs" />
     <Compile Include="mainFormToiminnallisuus.cs" />
     <Compile Include="Mokki.cs" />
     <Compile Include="Program.cs" />
