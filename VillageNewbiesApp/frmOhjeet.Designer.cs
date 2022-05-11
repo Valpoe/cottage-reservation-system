@@ -251,6 +251,7 @@
             this.btnOhje8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnOhje8.UseAccentColor = false;
             this.btnOhje8.UseVisualStyleBackColor = true;
+            this.btnOhje8.Click += new System.EventHandler(this.btnOhje8_Click);
             // 
             // btnOhje9
             // 
@@ -270,6 +271,7 @@
             this.btnOhje9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnOhje9.UseAccentColor = false;
             this.btnOhje9.UseVisualStyleBackColor = true;
+            this.btnOhje9.Click += new System.EventHandler(this.btnOhje9_Click);
             // 
             // btnOhje10
             // 

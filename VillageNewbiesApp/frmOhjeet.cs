@@ -106,5 +106,24 @@ namespace VillageNewbiesApp
                 " HUOM! Et voi poistaa palvelua joka on aktiivisena jossain varauksessa";
             mmltbOhje.Text = text;
         }
+
+        private void btnOhje8_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse Laskutus, valitse lataa laskut, valitse haluttu lasku näkymästä, voit lisätä halutessasi alvin" +
+                " Valitse haluatko sähköposti vai paperilaskun" +
+                " Viimeiseksi valitse haluatko lähettää sähköpostilaskun vai tulostaa paperilaskun";
+                
+            mmltbOhje.Text = text;
+        }
+
+        private void btnOhje9_Click(object sender, EventArgs e)
+        {
+            string text = "Valitse Raportit välilehti, valitse alueet listasta halutut alueet joista raportteja haetaan." +
+                " Valitse alku- ja loppupäivämäärä joiden väliltä raportteja haetaan." +
+                " Näkymään avautuu raportti tehdyistä varauksista valitulle aikavälille." +
+                "Valitsemalla Avaa Kokonaisraportti saat näkyville raportin kaikista asiakas, mökki ja palvelutiedoista";
+               
+            mmltbOhje.Text = text;
+        }
     }
 }
