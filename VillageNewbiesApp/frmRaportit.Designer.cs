@@ -139,7 +139,7 @@
             this.dtpAlkupvm.Location = new System.Drawing.Point(568, 12);
             this.dtpAlkupvm.Name = "dtpAlkupvm";
             this.dtpAlkupvm.Size = new System.Drawing.Size(166, 20);
-            this.dtpAlkupvm.TabIndex = 2;
+            this.dtpAlkupvm.TabIndex = 1;
             // 
             // dtpLoppupvm
             // 
@@ -148,7 +148,7 @@
             this.dtpLoppupvm.Location = new System.Drawing.Point(568, 59);
             this.dtpLoppupvm.Name = "dtpLoppupvm";
             this.dtpLoppupvm.Size = new System.Drawing.Size(166, 20);
-            this.dtpLoppupvm.TabIndex = 3;
+            this.dtpLoppupvm.TabIndex = 4;
             // 
             // label1
             // 
@@ -157,7 +157,7 @@
             this.label1.Location = new System.Drawing.Point(469, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Alkupvm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -168,7 +168,7 @@
             this.label2.Location = new System.Drawing.Point(469, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Loppupvm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -186,7 +186,7 @@
             this.btnEtsi.Name = "btnEtsi";
             this.btnEtsi.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnEtsi.Size = new System.Drawing.Size(166, 36);
-            this.btnEtsi.TabIndex = 6;
+            this.btnEtsi.TabIndex = 7;
             this.btnEtsi.Text = "Etsi";
             this.btnEtsi.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEtsi.UseAccentColor = false;
@@ -201,7 +201,7 @@
             this.label3.Location = new System.Drawing.Point(640, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 23);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 2;
             this.label3.Text = "-";
             // 
             // mlvMokkiData
@@ -224,7 +224,7 @@
             this.mlvMokkiData.Name = "mlvMokkiData";
             this.mlvMokkiData.OwnerDraw = true;
             this.mlvMokkiData.Size = new System.Drawing.Size(450, 220);
-            this.mlvMokkiData.TabIndex = 8;
+            this.mlvMokkiData.TabIndex = 9;
             this.mlvMokkiData.UseCompatibleStateImageBehavior = false;
             this.mlvMokkiData.View = System.Windows.Forms.View.Details;
             // 
@@ -268,7 +268,7 @@
             this.mlvPalveluData.Name = "mlvPalveluData";
             this.mlvPalveluData.OwnerDraw = true;
             this.mlvPalveluData.Size = new System.Drawing.Size(450, 220);
-            this.mlvPalveluData.TabIndex = 9;
+            this.mlvPalveluData.TabIndex = 10;
             this.mlvPalveluData.UseCompatibleStateImageBehavior = false;
             this.mlvPalveluData.View = System.Windows.Forms.View.Details;
             // 
@@ -351,7 +351,7 @@
             this.btnAvaaRaportti.Name = "btnAvaaRaportti";
             this.btnAvaaRaportti.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAvaaRaportti.Size = new System.Drawing.Size(190, 36);
-            this.btnAvaaRaportti.TabIndex = 11;
+            this.btnAvaaRaportti.TabIndex = 8;
             this.btnAvaaRaportti.Text = "Avaa kokonaisraportti";
             this.btnAvaaRaportti.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAvaaRaportti.UseAccentColor = false;
@@ -366,7 +366,7 @@
             this.lbAlueet.Name = "lbAlueet";
             this.lbAlueet.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbAlueet.Size = new System.Drawing.Size(166, 182);
-            this.lbAlueet.TabIndex = 14;
+            this.lbAlueet.TabIndex = 6;
             // 
             // label4
             // 
@@ -375,7 +375,7 @@
             this.label4.Location = new System.Drawing.Point(469, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 15;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Alueet";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 

@@ -308,7 +308,7 @@
             this.btnLataaAsiakkaat.Name = "btnLataaAsiakkaat";
             this.btnLataaAsiakkaat.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLataaAsiakkaat.Size = new System.Drawing.Size(130, 36);
-            this.btnLataaAsiakkaat.TabIndex = 12;
+            this.btnLataaAsiakkaat.TabIndex = 13;
             this.btnLataaAsiakkaat.Text = "Lataa asiakkaat";
             this.btnLataaAsiakkaat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLataaAsiakkaat.UseAccentColor = false;
@@ -329,7 +329,7 @@
             this.btnNaytaTiedot.Name = "btnNaytaTiedot";
             this.btnNaytaTiedot.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnNaytaTiedot.Size = new System.Drawing.Size(130, 36);
-            this.btnNaytaTiedot.TabIndex = 13;
+            this.btnNaytaTiedot.TabIndex = 15;
             this.btnNaytaTiedot.Text = "Näytä varaukset";
             this.btnNaytaTiedot.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNaytaTiedot.UseAccentColor = false;
@@ -357,7 +357,7 @@
             this.mlvTiedot.Name = "mlvTiedot";
             this.mlvTiedot.OwnerDraw = true;
             this.mlvTiedot.Size = new System.Drawing.Size(550, 175);
-            this.mlvTiedot.TabIndex = 15;
+            this.mlvTiedot.TabIndex = 12;
             this.mlvTiedot.UseCompatibleStateImageBehavior = false;
             this.mlvTiedot.View = System.Windows.Forms.View.Details;
             this.mlvTiedot.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mlvTiedot_ColumnWidthChanging);
@@ -394,7 +394,7 @@
             this.lblEiVarauksia.Location = new System.Drawing.Point(394, 300);
             this.lblEiVarauksia.Name = "lblEiVarauksia";
             this.lblEiVarauksia.Size = new System.Drawing.Size(167, 55);
-            this.lblEiVarauksia.TabIndex = 16;
+            this.lblEiVarauksia.TabIndex = 17;
             this.lblEiVarauksia.Text = "Ei varauksia";
             this.lblEiVarauksia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblEiVarauksia.Visible = false;
@@ -406,7 +406,7 @@
             this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 30);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Syötä asiakkaan tiedot";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -436,7 +436,7 @@
             this.btnLuoVaraus.Name = "btnLuoVaraus";
             this.btnLuoVaraus.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLuoVaraus.Size = new System.Drawing.Size(130, 36);
-            this.btnLuoVaraus.TabIndex = 19;
+            this.btnLuoVaraus.TabIndex = 16;
             this.btnLuoVaraus.Text = "Luo Varaus";
             this.btnLuoVaraus.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuoVaraus.UseAccentColor = false;
@@ -457,7 +457,7 @@
             this.btnPoistaAsiakas.Name = "btnPoistaAsiakas";
             this.btnPoistaAsiakas.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnPoistaAsiakas.Size = new System.Drawing.Size(130, 36);
-            this.btnPoistaAsiakas.TabIndex = 20;
+            this.btnPoistaAsiakas.TabIndex = 14;
             this.btnPoistaAsiakas.Text = "Poista asiakas";
             this.btnPoistaAsiakas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPoistaAsiakas.UseAccentColor = true;
@@ -488,7 +488,7 @@
             this.tbSearchBox.SelectionStart = 0;
             this.tbSearchBox.ShortcutsEnabled = true;
             this.tbSearchBox.Size = new System.Drawing.Size(250, 36);
-            this.tbSearchBox.TabIndex = 21;
+            this.tbSearchBox.TabIndex = 10;
             this.tbSearchBox.TabStop = false;
             this.tbSearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbSearchBox.TrailingIcon = null;

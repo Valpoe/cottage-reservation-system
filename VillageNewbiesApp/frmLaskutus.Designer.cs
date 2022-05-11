@@ -72,7 +72,7 @@
             this.btnLahetaLasku.Name = "btnLahetaLasku";
             this.btnLahetaLasku.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLahetaLasku.Size = new System.Drawing.Size(126, 36);
-            this.btnLahetaLasku.TabIndex = 5;
+            this.btnLahetaLasku.TabIndex = 24;
             this.btnLahetaLasku.Text = "Lähetä lasku";
             this.btnLahetaLasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLahetaLasku.UseAccentColor = false;
@@ -98,7 +98,7 @@
             this.label2.Location = new System.Drawing.Point(257, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 17);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 8;
             this.label2.Text = "CC:";
             // 
             // label3
@@ -109,7 +109,7 @@
             this.label3.Location = new System.Drawing.Point(257, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 17);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 10;
             this.label3.Text = "Aihe:";
             // 
             // label4
@@ -120,7 +120,7 @@
             this.label4.Location = new System.Drawing.Point(257, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Viesti:";
             // 
             // tbVastaanottaja
@@ -136,7 +136,7 @@
             this.tbVastaanottaja.Multiline = false;
             this.tbVastaanottaja.Name = "tbVastaanottaja";
             this.tbVastaanottaja.Size = new System.Drawing.Size(391, 36);
-            this.tbVastaanottaja.TabIndex = 10;
+            this.tbVastaanottaja.TabIndex = 7;
             this.tbVastaanottaja.Text = "";
             this.tbVastaanottaja.TrailingIcon = null;
             this.tbVastaanottaja.UseTallSize = false;
@@ -154,7 +154,7 @@
             this.tbCC.Multiline = false;
             this.tbCC.Name = "tbCC";
             this.tbCC.Size = new System.Drawing.Size(391, 36);
-            this.tbCC.TabIndex = 11;
+            this.tbCC.TabIndex = 9;
             this.tbCC.Text = "";
             this.tbCC.TrailingIcon = null;
             this.tbCC.UseTallSize = false;
@@ -172,7 +172,7 @@
             this.tbAihe.Multiline = false;
             this.tbAihe.Name = "tbAihe";
             this.tbAihe.Size = new System.Drawing.Size(391, 36);
-            this.tbAihe.TabIndex = 12;
+            this.tbAihe.TabIndex = 11;
             this.tbAihe.Text = "";
             this.tbAihe.TrailingIcon = null;
             this.tbAihe.UseTallSize = false;
@@ -197,7 +197,7 @@
             this.mmltbViesti.SelectionStart = 0;
             this.mmltbViesti.ShortcutsEnabled = true;
             this.mmltbViesti.Size = new System.Drawing.Size(391, 184);
-            this.mmltbViesti.TabIndex = 14;
+            this.mmltbViesti.TabIndex = 13;
             this.mmltbViesti.TabStop = false;
             this.mmltbViesti.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.mmltbViesti.UseSystemPasswordChar = false;
@@ -210,7 +210,7 @@
             this.label5.Location = new System.Drawing.Point(349, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 17);
-            this.label5.TabIndex = 15;
+            this.label5.TabIndex = 14;
             this.label5.Text = "Asetukset";
             // 
             // label6
@@ -221,7 +221,7 @@
             this.label6.Location = new System.Drawing.Point(349, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 17);
-            this.label6.TabIndex = 16;
+            this.label6.TabIndex = 15;
             this.label6.Text = "Käyttäjätunnus:";
             // 
             // label7
@@ -232,7 +232,7 @@
             this.label7.Location = new System.Drawing.Point(349, 397);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 17);
-            this.label7.TabIndex = 17;
+            this.label7.TabIndex = 18;
             this.label7.Text = "Salasana:";
             // 
             // label8
@@ -243,7 +243,7 @@
             this.label8.Location = new System.Drawing.Point(350, 439);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 17);
-            this.label8.TabIndex = 18;
+            this.label8.TabIndex = 20;
             this.label8.Text = "Portti:";
             // 
             // label9
@@ -254,7 +254,7 @@
             this.label9.Location = new System.Drawing.Point(512, 439);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 17);
-            this.label9.TabIndex = 19;
+            this.label9.TabIndex = 22;
             this.label9.Text = "Smtp:";
             // 
             // tbKayttajaTunnus
@@ -270,7 +270,7 @@
             this.tbKayttajaTunnus.Multiline = false;
             this.tbKayttajaTunnus.Name = "tbKayttajaTunnus";
             this.tbKayttajaTunnus.Size = new System.Drawing.Size(161, 36);
-            this.tbKayttajaTunnus.TabIndex = 20;
+            this.tbKayttajaTunnus.TabIndex = 16;
             this.tbKayttajaTunnus.Text = "";
             this.tbKayttajaTunnus.TrailingIcon = null;
             this.tbKayttajaTunnus.UseTallSize = false;
@@ -289,7 +289,7 @@
             this.tbSalasana.Name = "tbSalasana";
             this.tbSalasana.Password = true;
             this.tbSalasana.Size = new System.Drawing.Size(161, 36);
-            this.tbSalasana.TabIndex = 21;
+            this.tbSalasana.TabIndex = 19;
             this.tbSalasana.Text = "";
             this.tbSalasana.TrailingIcon = null;
             this.tbSalasana.UseTallSize = false;
@@ -307,7 +307,7 @@
             this.tbPortti.Multiline = false;
             this.tbPortti.Name = "tbPortti";
             this.tbPortti.Size = new System.Drawing.Size(59, 36);
-            this.tbPortti.TabIndex = 22;
+            this.tbPortti.TabIndex = 21;
             this.tbPortti.Text = "587";
             this.tbPortti.TrailingIcon = null;
             this.tbPortti.UseTallSize = false;
@@ -342,7 +342,7 @@
             this.mcSSL.ReadOnly = false;
             this.mcSSL.Ripple = true;
             this.mcSSL.Size = new System.Drawing.Size(64, 37);
-            this.mcSSL.TabIndex = 24;
+            this.mcSSL.TabIndex = 17;
             this.mcSSL.Text = "SSL";
             this.mcSSL.UseVisualStyleBackColor = true;
             // 
@@ -354,7 +354,7 @@
             this.label10.Location = new System.Drawing.Point(12, 140);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 21);
-            this.label10.TabIndex = 26;
+            this.label10.TabIndex = 1;
             this.label10.Text = "Valitse lasku";
             // 
             // mlvLaskut
@@ -376,7 +376,7 @@
             this.mlvLaskut.Name = "mlvLaskut";
             this.mlvLaskut.OwnerDraw = true;
             this.mlvLaskut.Size = new System.Drawing.Size(325, 140);
-            this.mlvLaskut.TabIndex = 27;
+            this.mlvLaskut.TabIndex = 2;
             this.mlvLaskut.UseCompatibleStateImageBehavior = false;
             this.mlvLaskut.View = System.Windows.Forms.View.Details;
             // 
@@ -409,7 +409,7 @@
             this.btnLataaLaskut.Name = "btnLataaLaskut";
             this.btnLataaLaskut.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnLataaLaskut.Size = new System.Drawing.Size(157, 36);
-            this.btnLataaLaskut.TabIndex = 28;
+            this.btnLataaLaskut.TabIndex = 0;
             this.btnLataaLaskut.Text = "Lataa laskut";
             this.btnLataaLaskut.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLataaLaskut.UseAccentColor = false;
@@ -429,7 +429,7 @@
             this.btnSahkopostiLasku.Name = "btnSahkopostiLasku";
             this.btnSahkopostiLasku.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnSahkopostiLasku.Size = new System.Drawing.Size(157, 36);
-            this.btnSahkopostiLasku.TabIndex = 29;
+            this.btnSahkopostiLasku.TabIndex = 4;
             this.btnSahkopostiLasku.Text = "Sähköpostilasku";
             this.btnSahkopostiLasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSahkopostiLasku.UseAccentColor = false;
@@ -450,7 +450,7 @@
             this.btnPaperilasku.Name = "btnPaperilasku";
             this.btnPaperilasku.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnPaperilasku.Size = new System.Drawing.Size(157, 36);
-            this.btnPaperilasku.TabIndex = 30;
+            this.btnPaperilasku.TabIndex = 5;
             this.btnPaperilasku.Text = "Paperilasku";
             this.btnPaperilasku.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPaperilasku.UseAccentColor = false;
@@ -469,7 +469,7 @@
             this.mcbALV.ReadOnly = false;
             this.mcbALV.Ripple = true;
             this.mcbALV.Size = new System.Drawing.Size(107, 37);
-            this.mcbALV.TabIndex = 31;
+            this.mcbALV.TabIndex = 3;
             this.mcbALV.Text = "Lisää ALV";
             this.mcbALV.UseVisualStyleBackColor = true;
             // 

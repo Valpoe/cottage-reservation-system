@@ -9,6 +9,8 @@ namespace VillageNewbiesApp
     {
         SQLConnection mySQL = new SQLConnection();
 
+        frmKokonaisRaportti kokonaisRaportti = new frmKokonaisRaportti();
+
         public static string selectedAlueet;
         public static string firstAlue;
         public frmRaportit()
@@ -106,8 +108,7 @@ namespace VillageNewbiesApp
 
         // Kokonaisraporttiformin aukaisu
         private void btnAvaaRaportti_Click(object sender, EventArgs e)
-        {
-            frmKokonaisRaportti kokonaisRaportti = new frmKokonaisRaportti();
+        {            
             kokonaisRaportti.Show();
         }
     }

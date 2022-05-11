@@ -55,7 +55,7 @@
             this.mmltbLaskunTiedon.SelectionStart = 0;
             this.mmltbLaskunTiedon.ShortcutsEnabled = true;
             this.mmltbLaskunTiedon.Size = new System.Drawing.Size(411, 397);
-            this.mmltbLaskunTiedon.TabIndex = 0;
+            this.mmltbLaskunTiedon.TabIndex = 1;
             this.mmltbLaskunTiedon.TabStop = false;
             this.mmltbLaskunTiedon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.mmltbLaskunTiedon.UseSystemPasswordChar = false;
@@ -89,7 +89,7 @@
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnPrint.Size = new System.Drawing.Size(158, 36);
-            this.btnPrint.TabIndex = 1;
+            this.btnPrint.TabIndex = 0;
             this.btnPrint.Text = "Print";
             this.btnPrint.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnPrint.UseAccentColor = false;

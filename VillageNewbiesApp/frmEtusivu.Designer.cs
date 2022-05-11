@@ -76,7 +76,7 @@
             this.materialDrawer1.Name = "materialDrawer1";
             this.materialDrawer1.ShowIconsWhenHidden = false;
             this.materialDrawer1.Size = new System.Drawing.Size(8, 8);
-            this.materialDrawer1.TabIndex = 7;
+            this.materialDrawer1.TabIndex = 3;
             this.materialDrawer1.Text = "materialDrawer1";
             this.materialDrawer1.UseColors = false;
             // 
@@ -230,7 +230,7 @@
             this.lblMokit.Location = new System.Drawing.Point(-1, 0);
             this.lblMokit.Name = "lblMokit";
             this.lblMokit.Size = new System.Drawing.Size(77, 22);
-            this.lblMokit.TabIndex = 1;
+            this.lblMokit.TabIndex = 0;
             this.lblMokit.Text = "Mökit";
             this.lblMokit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -248,7 +248,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnRefresh.Size = new System.Drawing.Size(158, 36);
-            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Päivitä";
             this.btnRefresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRefresh.UseAccentColor = false;
@@ -269,7 +269,7 @@
             this.btnOhjeet.Name = "btnOhjeet";
             this.btnOhjeet.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnOhjeet.Size = new System.Drawing.Size(158, 36);
-            this.btnOhjeet.TabIndex = 15;
+            this.btnOhjeet.TabIndex = 2;
             this.btnOhjeet.Text = "Ohjeet";
             this.btnOhjeet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnOhjeet.UseAccentColor = false;
@@ -284,7 +284,7 @@
             this.lblKokonaisMaarat.Location = new System.Drawing.Point(499, 69);
             this.lblKokonaisMaarat.Name = "lblKokonaisMaarat";
             this.lblKokonaisMaarat.Size = new System.Drawing.Size(147, 25);
-            this.lblKokonaisMaarat.TabIndex = 16;
+            this.lblKokonaisMaarat.TabIndex = 4;
             this.lblKokonaisMaarat.Text = "Kokonaismäärät";
             // 
             // cpbVarausaste
@@ -315,7 +315,7 @@
             this.cpbVarausaste.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.cpbVarausaste.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.cpbVarausaste.SuperscriptText = "";
-            this.cpbVarausaste.TabIndex = 18;
+            this.cpbVarausaste.TabIndex = 6;
             this.cpbVarausaste.Text = "78%";
             this.cpbVarausaste.TextMargin = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.cpbVarausaste.Value = 78;
@@ -328,7 +328,7 @@
             this.label1.Location = new System.Drawing.Point(499, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 25);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 5;
             this.label1.Text = "30pv varausaste";
             // 
             // timer1
@@ -364,7 +364,7 @@
             this.panel1.Location = new System.Drawing.Point(46, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 45);
-            this.panel1.TabIndex = 23;
+            this.panel1.TabIndex = 0;
             // 
             // frmEtusivu
             // 
