@@ -111,5 +111,18 @@ namespace VillageNewbiesApp
         {            
             kokonaisRaportti.Show();
         }
+
+        private void materialCheckbox4_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lbAlueet.Items.Count; i++)
+            {
+                lbAlueet.SetSelected(i, true);
+
+                if (materialCheckbox4.Checked == false)
+                {
+                    lbAlueet.SetSelected(i, false);
+                }
+            }
+        }
     }
 }

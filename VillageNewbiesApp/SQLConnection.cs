@@ -654,8 +654,8 @@ namespace VillageNewbiesApp
                 MySqlDataReader Reader = Command.ExecuteReader();
             }
         }
-
-        public void AddPalvelu(string alue_id, string nimi, string type, string kuvaus, double hinta, double alvi)
+        
+        public void AddPalvelu(int alue_id, string nimi, string type, string kuvaus, double hinta, double alvi)
         {
             List<string> SQLResult = new List<string>();
             using (MySqlConnection connection = GetConnection())

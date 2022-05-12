@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.mcbToimintaAlue = new MaterialSkin.Controls.MaterialComboBox();
             this.mlvMokit = new MaterialSkin.Controls.MaterialListView();
             this.Mökki = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,16 +61,6 @@
             this.tbAlueNimi = new MaterialSkin.Controls.MaterialTextBox();
             this.btnLisaaAlue = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ALUEET";
             // 
             // mcbToimintaAlue
             // 
@@ -109,7 +98,7 @@
             this.mlvMokit.Depth = 0;
             this.mlvMokit.FullRowSelect = true;
             this.mlvMokit.HideSelection = false;
-            this.mlvMokit.Location = new System.Drawing.Point(328, 44);
+            this.mlvMokit.Location = new System.Drawing.Point(325, 44);
             this.mlvMokit.MinimumSize = new System.Drawing.Size(200, 100);
             this.mlvMokit.MouseLocation = new System.Drawing.Point(-1, -1);
             this.mlvMokit.MouseState = MaterialSkin.MouseState.OUT;
@@ -523,12 +512,12 @@
             this.tbAlueNimi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbAlueNimi.Hint = "Alueen nimi";
             this.tbAlueNimi.LeadingIcon = null;
-            this.tbAlueNimi.Location = new System.Drawing.Point(35, 212);
+            this.tbAlueNimi.Location = new System.Drawing.Point(35, 118);
             this.tbAlueNimi.MaxLength = 50;
             this.tbAlueNimi.MouseState = MaterialSkin.MouseState.OUT;
             this.tbAlueNimi.Multiline = false;
             this.tbAlueNimi.Name = "tbAlueNimi";
-            this.tbAlueNimi.Size = new System.Drawing.Size(206, 50);
+            this.tbAlueNimi.Size = new System.Drawing.Size(236, 50);
             this.tbAlueNimi.TabIndex = 3;
             this.tbAlueNimi.Text = "";
             this.tbAlueNimi.TrailingIcon = null;
@@ -540,7 +529,7 @@
             this.btnLisaaAlue.Depth = 0;
             this.btnLisaaAlue.HighEmphasis = true;
             this.btnLisaaAlue.Icon = null;
-            this.btnLisaaAlue.Location = new System.Drawing.Point(83, 271);
+            this.btnLisaaAlue.Location = new System.Drawing.Point(105, 177);
             this.btnLisaaAlue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLisaaAlue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLisaaAlue.Name = "btnLisaaAlue";
@@ -563,7 +552,6 @@
             this.Controls.Add(this.tbAlueNimi);
             this.Controls.Add(this.mlvMokit);
             this.Controls.Add(this.mcbToimintaAlue);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlueet";
             this.Text = "frmAlueet";
@@ -574,8 +562,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialComboBox mcbToimintaAlue;
         private MaterialSkin.Controls.MaterialListView mlvMokit;
         private System.Windows.Forms.ColumnHeader Mökki;

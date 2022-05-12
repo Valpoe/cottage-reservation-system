@@ -18,7 +18,7 @@ namespace VillageNewbiesApp
 
         public frmVaraukset()
         {
-            InitializeComponent();                  
+            InitializeComponent();
         }
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
@@ -27,7 +27,7 @@ namespace VillageNewbiesApp
 
         private void label1_VisibleChanged(object sender, EventArgs e)
         {
-           label1.Text = frmAlueet.selectedMokki + " Varaukset";
+           
         }
 
         private void frmVaraukset_Activated(object sender, EventArgs e)

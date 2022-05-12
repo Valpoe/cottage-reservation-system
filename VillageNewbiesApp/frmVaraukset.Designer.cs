@@ -177,9 +177,8 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 30);
+            this.label1.Size = new System.Drawing.Size(374, 30);
             this.label1.TabIndex = 6;
-            this.label1.Text = "gad";
             // 
             // frmVaraukset
             // 

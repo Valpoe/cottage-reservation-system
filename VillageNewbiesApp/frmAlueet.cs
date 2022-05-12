@@ -15,7 +15,8 @@ namespace VillageNewbiesApp
     {
         public static string selectedID;
         public static string selectedAlue;
-        public static string selectedMokki = "Mökkiä ei ole valittu!";
+        public static string selectedMokki;
+        
         public static int selectedMokkiID;
 
         public static List<Mokki> AlueenMokit;
@@ -73,7 +74,7 @@ namespace VillageNewbiesApp
         {
             try
             {
-                selectedMokki = mlvMokit.SelectedItems[0].Text;
+                selectedMokki = mlvMokit.SelectedItems[0].SubItems[0].Text;
                 selectedMokkiID = mySQL.getMokkiID(mlvMokit.SelectedItems[0].Text);
                 Console.WriteLine("nimi: " + selectedMokki + ", mokki_id: " + selectedMokkiID);
             }

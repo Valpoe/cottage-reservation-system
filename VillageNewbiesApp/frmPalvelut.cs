@@ -256,7 +256,7 @@ namespace VillageNewbiesApp
         {
             try
             {
-                string alue_id = frmAlueet.selectedID;
+                int alue_id = Int32.Parse(frmAlueet.selectedID);
                 string nimi = tbNimi.Text;
                 string type = tbTyyppi.Text;
                 string kuvaus = tbKuvaus.Text;
@@ -264,6 +264,7 @@ namespace VillageNewbiesApp
                 double alvi = Double.Parse(tbAlv.Text);
                 mySQL.AddPalvelu(alue_id, nimi, type, kuvaus, hinta, alvi);
                 MessageBox.Show("Palvelu lisätty!");
+                mlvPalvelut.Items.Clear();
                 UpdatePalvelut();
             }
             catch (Exception ex)

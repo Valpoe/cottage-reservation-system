@@ -64,6 +64,7 @@
             this.btnAvaaRaportti = new MaterialSkin.Controls.MaterialButton();
             this.lbAlueet = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).BeginInit();
@@ -180,7 +181,7 @@
             this.btnEtsi.Depth = 0;
             this.btnEtsi.HighEmphasis = true;
             this.btnEtsi.Icon = null;
-            this.btnEtsi.Location = new System.Drawing.Point(568, 301);
+            this.btnEtsi.Location = new System.Drawing.Point(568, 336);
             this.btnEtsi.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEtsi.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEtsi.Name = "btnEtsi";
@@ -246,7 +247,7 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Pvm";
-            this.columnHeader7.Width = 120;
+            this.columnHeader7.Width = 110;
             // 
             // mlvPalveluData
             // 
@@ -285,12 +286,12 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "Kuvaus";
-            this.columnHeader6.Width = 120;
+            this.columnHeader6.Width = 130;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Pvm";
-            this.columnHeader8.Width = 120;
+            this.columnHeader8.Width = 110;
             // 
             // materialCheckbox1
             // 
@@ -379,12 +380,29 @@
             this.label4.Text = "Alueet";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // materialCheckbox4
+            // 
+            this.materialCheckbox4.Depth = 0;
+            this.materialCheckbox4.Location = new System.Drawing.Point(568, 295);
+            this.materialCheckbox4.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox4.Name = "materialCheckbox4";
+            this.materialCheckbox4.ReadOnly = false;
+            this.materialCheckbox4.Ripple = true;
+            this.materialCheckbox4.Size = new System.Drawing.Size(166, 38);
+            this.materialCheckbox4.TabIndex = 11;
+            this.materialCheckbox4.Text = "Valitse kaikki";
+            this.materialCheckbox4.UseVisualStyleBackColor = true;
+            this.materialCheckbox4.CheckedChanged += new System.EventHandler(this.materialCheckbox4_CheckedChanged);
+            // 
             // frmRaportit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 477);
+            this.Controls.Add(this.materialCheckbox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbAlueet);
             this.Controls.Add(this.btnAvaaRaportti);
@@ -447,5 +465,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ListBox lbAlueet;
         private System.Windows.Forms.Label label4;
+        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox4;
     }
 }
