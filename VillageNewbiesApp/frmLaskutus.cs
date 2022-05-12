@@ -130,8 +130,8 @@ namespace VillageNewbiesApp
                 "Laskun tiedot\r\n" + "\r\n" + "Laskun summa: " + lista[7] + "\r\n" + "ALV: " + alv + "\r\n" + "Yhteensä: " + lista[9] + "\r\n" + "\r\n" +
                 "Tilinumero: FI91 2892 1857 1855 85\r\n" + "Viite: 8 20294 38383 19187";
 
-            tbKayttajaTunnus.Text = "anderssontwitter";
-            tbSalasana.Text = "juutinen1992";
+            tbKayttajaTunnus.Text = "admin";
+            tbSalasana.Text = "admin";
             mcSSL.Checked = true;
         }
         private void btnPaperilasku_Click(object sender, EventArgs e)
