@@ -482,7 +482,7 @@ namespace VillageNewbiesApp
                     {
                         MessageBox.Show("Postinumeroa ei löytynyt, lisätään!");
                         Reader.Close();
-                        Command = new MySqlCommand("INSERT INTO posti(postinro) VALUES (" + mokki.GetPostinumero() + ")", connection);
+                        Command = new MySqlCommand("INSERT INTO posti(postinro, toimipaikka) VALUES (" + mokki.GetPostinumero() + ", '" + mokki.getToimipaikka() + "')", connection);
                         Command.ExecuteNonQuery();
                     }
 

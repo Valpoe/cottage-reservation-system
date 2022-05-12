@@ -55,7 +55,6 @@ namespace VillageNewbiesApp
                         mySQL.SQLinsertCustomer(asiakas);
                         btnTyhjenna_Click(sender, e);
 
-                        // Asiakas lisätty label näkyy 3 sekunnin ajan
                         MessageBox.Show("Asiakas lisätty!");                       
                     }
                 }

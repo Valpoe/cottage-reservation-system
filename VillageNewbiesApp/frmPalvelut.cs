@@ -84,8 +84,9 @@ namespace VillageNewbiesApp
                     c.Text = String.Empty;
                 }
             }
-
-            msHenkilomaara.Value = 0;
+            mltbKuvaus.Text = String.Empty;
+            mltbVarustelu.Text = String.Empty;
+            msHenkilomaara.Value = msHenkilomaara.RangeMin;
         }
 
         private void btnLisaaMokki_Click(object sender, EventArgs e)
@@ -99,7 +100,6 @@ namespace VillageNewbiesApp
 
             hidePanels(pnlLisaaMokki);
             btnLisaaMokki.Text = "Valitse palvelut";
-
         }
 
         private void lblMokki_Click(object sender, EventArgs e)
@@ -122,13 +122,14 @@ namespace VillageNewbiesApp
 
             try
             {
-                Mokki lisattavaMokki = new Mokki(tbMokkinimi.Text, tbOsoite.Text, Convert.ToDouble(tbHinta.Text), mltbKuvaus.Text, Convert.ToInt32(tbHenkilomaara.Text), mltbVarustelu.Text, Convert.ToInt32(tbPostinumero.Text));
+                Mokki lisattavaMokki = new Mokki(tbMokkinimi.Text, tbOsoite.Text, Convert.ToDouble(tbHinta.Text), mltbKuvaus.Text, Convert.ToInt32(tbHenkilomaara.Text), mltbVarustelu.Text, Convert.ToInt32(tbPostinumero.Text), tbToimipaikka.Text);
                 string alue = mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString();
                 lisattavaMokki.setAlueID(mySQL.getAlueID(alue));
                 //mcbToimintaAlue.Items[mcbToimintaAlue.SelectedIndex].ToString()
                 mySQL.addMokki(lisattavaMokki);
 
                 MessageBox.Show("Mökin lisäys onnistui!");
+                btnTyhjenna_Click(sender, e);
             }
             catch (Exception ex)
             {

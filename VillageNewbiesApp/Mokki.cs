@@ -18,7 +18,9 @@ namespace VillageNewbiesApp
         private string varustelu { get; set; }
         private int postinumero { get; set; }
 
-        public Mokki( string Mokkinimi, string Mokkikatuosoite, double Mokkihinta, string Mokkikuvaus, int MokkiHenkilomaara, string Mokkivarustelu, int Mokkipostinumero)
+        private string toimipaikka { get; set; }
+
+        public Mokki( string Mokkinimi, string Mokkikatuosoite, double Mokkihinta, string Mokkikuvaus, int MokkiHenkilomaara, string Mokkivarustelu, int Mokkipostinumero, string postitoimipaikka)
         {
             nimi = Mokkinimi;
             katuosoite = Mokkikatuosoite;
@@ -27,6 +29,7 @@ namespace VillageNewbiesApp
             henkilomaara = MokkiHenkilomaara;
             varustelu = Mokkivarustelu;
             postinumero = Mokkipostinumero;
+            toimipaikka = postitoimipaikka;
         }
 
         public Mokki()
@@ -81,6 +84,11 @@ namespace VillageNewbiesApp
             return ID;
         }
 
+        public string getToimipaikka()
+        {
+            return toimipaikka;
+        }
+
         public void setNimi(string Mokkinimi)
         {
             nimi = Mokkinimi;
@@ -95,6 +103,6 @@ namespace VillageNewbiesApp
         {
             katuosoite = Mokkikatuosoite;
         }
-
+        
     }
 }

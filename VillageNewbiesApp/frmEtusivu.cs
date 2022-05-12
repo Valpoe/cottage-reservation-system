@@ -8,7 +8,7 @@ namespace VillageNewbiesApp
     public partial class frmEtusivu : Form
     {
         SQLConnection mySQL = new SQLConnection();
-        
+        frmOhjeet frmOhjeet = new frmOhjeet();
 
         public frmEtusivu()
         {
@@ -58,7 +58,6 @@ namespace VillageNewbiesApp
 
         private void btnOhjeet_Click(object sender, EventArgs e)
         {
-            frmOhjeet frmOhjeet = new frmOhjeet();
             frmOhjeet.Show();
         }
     }

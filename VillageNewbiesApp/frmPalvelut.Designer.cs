@@ -35,6 +35,7 @@
             this.pnlPalvelut = new System.Windows.Forms.Panel();
             this.mclbPalvelut = new MaterialSkin.Controls.MaterialCheckedListBox();
             this.pnlPalvelu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.mlvPalvelut = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -70,7 +71,6 @@
             this.lblMokkiPoisto = new System.Windows.Forms.Label();
             this.btnPoistaMokki = new MaterialSkin.Controls.MaterialButton();
             this.btnPalvelut = new MaterialSkin.Controls.MaterialButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlPalvelut.SuspendLayout();
             this.pnlPalvelu.SuspendLayout();
             this.pnlLisaaMokki.SuspendLayout();
@@ -186,6 +186,17 @@
             this.pnlPalvelu.Name = "pnlPalvelu";
             this.pnlPalvelu.Size = new System.Drawing.Size(713, 551);
             this.pnlPalvelu.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Lisää palvelu";
             // 
             // mlvPalvelut
             // 
@@ -396,7 +407,7 @@
             this.tbToimipaikka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbToimipaikka.Hint = "Toimipaikka";
             this.tbToimipaikka.LeadingIcon = null;
-            this.tbToimipaikka.Location = new System.Drawing.Point(18, 259);
+            this.tbToimipaikka.Location = new System.Drawing.Point(12, 217);
             this.tbToimipaikka.MaxLength = 20;
             this.tbToimipaikka.MouseState = MaterialSkin.MouseState.OUT;
             this.tbToimipaikka.Multiline = false;
@@ -493,7 +504,7 @@
             this.mcbToimintaAlue.Hint = "Valitse alue";
             this.mcbToimintaAlue.IntegralHeight = false;
             this.mcbToimintaAlue.ItemHeight = 43;
-            this.mcbToimintaAlue.Location = new System.Drawing.Point(16, 347);
+            this.mcbToimintaAlue.Location = new System.Drawing.Point(12, 347);
             this.mcbToimintaAlue.MaxDropDownItems = 4;
             this.mcbToimintaAlue.MouseState = MaterialSkin.MouseState.OUT;
             this.mcbToimintaAlue.Name = "mcbToimintaAlue";
@@ -541,7 +552,7 @@
             this.tbPostinumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbPostinumero.Hint = "Postinumero";
             this.tbPostinumero.LeadingIcon = null;
-            this.tbPostinumero.Location = new System.Drawing.Point(18, 175);
+            this.tbPostinumero.Location = new System.Drawing.Point(12, 175);
             this.tbPostinumero.MaxLength = 5;
             this.tbPostinumero.MouseState = MaterialSkin.MouseState.OUT;
             this.tbPostinumero.Multiline = false;
@@ -563,7 +574,7 @@
             this.tbHinta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbHinta.Hint = "Hinta";
             this.tbHinta.LeadingIcon = null;
-            this.tbHinta.Location = new System.Drawing.Point(18, 133);
+            this.tbHinta.Location = new System.Drawing.Point(12, 133);
             this.tbHinta.MaxLength = 50;
             this.tbHinta.MouseState = MaterialSkin.MouseState.OUT;
             this.tbHinta.Multiline = false;
@@ -583,7 +594,7 @@
             this.tbOsoite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbOsoite.Hint = "Osoite";
             this.tbOsoite.LeadingIcon = null;
-            this.tbOsoite.Location = new System.Drawing.Point(18, 91);
+            this.tbOsoite.Location = new System.Drawing.Point(12, 91);
             this.tbOsoite.MaxLength = 50;
             this.tbOsoite.MouseState = MaterialSkin.MouseState.OUT;
             this.tbOsoite.Multiline = false;
@@ -603,7 +614,7 @@
             this.tbMokkinimi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbMokkinimi.Hint = "Mökin nimi";
             this.tbMokkinimi.LeadingIcon = null;
-            this.tbMokkinimi.Location = new System.Drawing.Point(18, 49);
+            this.tbMokkinimi.Location = new System.Drawing.Point(12, 49);
             this.tbMokkinimi.MaxLength = 50;
             this.tbMokkinimi.MouseState = MaterialSkin.MouseState.OUT;
             this.tbMokkinimi.Multiline = false;
@@ -623,7 +634,7 @@
             this.tbHenkilomaara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.tbHenkilomaara.Hint = "Henkilömäärä";
             this.tbHenkilomaara.LeadingIcon = null;
-            this.tbHenkilomaara.Location = new System.Drawing.Point(18, 217);
+            this.tbHenkilomaara.Location = new System.Drawing.Point(12, 259);
             this.tbHenkilomaara.MaxLength = 50;
             this.tbHenkilomaara.MouseState = MaterialSkin.MouseState.OUT;
             this.tbHenkilomaara.Multiline = false;
@@ -756,17 +767,6 @@
             this.btnPalvelut.UseVisualStyleBackColor = true;
             this.btnPalvelut.Click += new System.EventHandler(this.btnPalvelut_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(13, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Lisää palvelu";
-            // 
             // frmPalvelut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,10 +777,10 @@
             this.Controls.Add(this.btnPoistaMokki);
             this.Controls.Add(this.btnLisaaMokki);
             this.Controls.Add(this.btnTyhjenna);
+            this.Controls.Add(this.pnlLisaaMokki);
             this.Controls.Add(this.pnlPalvelut);
             this.Controls.Add(this.pnlPalvelu);
             this.Controls.Add(this.pnlPoistaMokki);
-            this.Controls.Add(this.pnlLisaaMokki);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPalvelut";
             this.Text = "frmPalvelut";
