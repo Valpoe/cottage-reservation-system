@@ -3,6 +3,9 @@
 ###############################################################################
 * text=auto
 
+VillageNewbiesApp/* linguist-documentation=false
+VillageNewbiesApp/* linguist-vendored
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
